@@ -1,2 +1,41 @@
 @import url('normalize.css');
 @import url('reset.css');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+/* Variable */
+:root{
+	--gutter : 24px;
+	--main_tt : 48px;
+	--sub_tt : 40px;
+	--section_tt : 24px;
+	--body_tt : 16px;
+	--body_sub_tt : 12px;
+  --white : #ffffff;
+	--primary : #05141F;
+	--light_gray : #EBEBEB;
+	--medium_gray : #A0A0A0;
+	--dark_gray : #484848;
+	--black : #000000;
+}
+
+/* LayOut */
+.container{
+	width: 70%;
+}
+
+.content_gutter{
+	margin-bottom: var(--gutter);
+}
+
+.title_gutter{
+	margin-bottom: var(--gutter);
+}
+
+.sub_title_gutter{
+	margin-bottom: var(--gutter);
+}
+
+/* Typography */
+body{
+	font:var(--body_tt)/var(--gutter) "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
