@@ -24,15 +24,15 @@
 }
 
 .content_gutter{
-	margin-bottom: var(--gutter);
+	margin-bottom: 220px;
 }
 
 .title_gutter{
-	margin-bottom: var(--gutter);
+	margin-bottom: calc(var(--gutter) * 2);
 }
 
 .sub_title_gutter{
-	margin-bottom: var(--gutter);
+	margin-bottom: calc(var(--gutter) * 3);
 }
 
 /* Typography */
