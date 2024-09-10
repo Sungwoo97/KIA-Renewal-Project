@@ -20,7 +20,20 @@
 
 /* LayOut */
 .container{
-	width: 70%;
+	width: 1344px;
+}
+
+.hidden{
+	display: none !important;
+}
+
+.blind{
+	position: absolute;
+	clip:rect(0 0 0 0);
+	clip-path:inset(0 0 100% 100%);
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
 }
 
 .content_gutter{
