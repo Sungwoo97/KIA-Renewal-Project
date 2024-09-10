@@ -1,5 +1,5 @@
 /* MEMBERS */
-.kia_members, .kia_event{
+.kia_members, .kia_event, .kia_notice{
   margin: 0 auto 220px;
 }
 
@@ -227,3 +227,96 @@
 .ev_slide_container figcaption p{
   color: var(--medium_gray);
 }
+
+
+/* Section 최은화 */
+.no_title{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.no_title h2{
+  font-size: var(--sub_tt);
+  line-height: var(--gutter);
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.no_title p{
+  font-size: var(--section_tt);
+  line-height: var(--gutter);
+  font-weight: 400;
+  color: var(--medium_gray);
+}
+
+.no_tabs{
+  display: flex;
+  justify-content: center;
+}
+
+.no_tabs li{
+  width: 50%;
+  height: 60px;
+  text-align: center;
+  background: var(--light_gray);
+}
+
+.no_tabs a{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+.no_tabs li.active{
+  background: var(--primary);
+}
+
+.no_tabs li.active a{
+  color: var(--white);
+}
+
+.no_box{
+  margin: 70px 63px 62px 63px;
+  height: 580px;
+  display: flex;
+  gap: 125px;
+  justify-content: center;
+}
+
+.no_box .no_sizing{
+  width: 540px;
+  height: 100%;
+  margin: 120px 63px 160px;
+}
+
+.no_box .no_notice{
+  display: flex;
+  gap: 330px;
+  text-wrap: nowrap;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.no_box .no_notice h3{
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.no_box .no_notice button{
+  height: 32px;
+  border: 1px solid var(--primary);
+  background: var(--white);
+}
+
+.no_box .no_ntc li{
+  display: flex;
+}
+
+
+
+
+
+
+/* //Section 최은화 */
