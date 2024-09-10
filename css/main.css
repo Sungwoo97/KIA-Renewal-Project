@@ -1,0 +1,229 @@
+/* MEMBERS */
+.kia_members, .kia_event{
+  margin: 0 auto 220px;
+}
+
+.me_title, .ev_title{
+  text-align: center;
+}
+
+.me_title h2, .ev_title h2{
+  font-size: var(--sub_tt);
+  line-height: var(--gutter);
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.me_title p, .ev_title p{
+  font-size: var(--section_tt);
+  line-height: var(--gutter);
+  font-weight: 400;
+  color: var(--medium_gray);
+}
+
+.me_tabs_menu{
+  display: flex;
+  justify-content: center;
+  line-height: 48px;
+}
+
+.me_tabs_menu li{
+  width: 50%;
+  text-align: center;
+  background: var(--light_gray);
+  cursor: pointer;
+}
+
+.me_tabs_menu li a {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.me_tabs_menu li.active{
+  background: var(--primary);
+  color: var(--white);
+}
+
+.me_tabs_menu li.active a{
+  color: var(--white);
+}
+
+.me_tab_wrapper div h3{
+  font-size: var(--section_tt);
+  font-weight: 700;
+}
+
+#me_tab_members , #me_tab_ev_members{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+#me_tabs > div{
+  display: none;
+}
+
+#me_tabs > div.active{
+   display: flex;
+}
+
+#me_tab_members{
+  margin: 174px 71px 93px 822px;
+}
+
+#me_tab_ev_members{
+  margin: 174px 788px 93px 106px;
+}
+
+.me_icons, .me_ev_icons{
+  display: flex;
+  align-items: start;
+  gap: 30px;
+  margin: 105px 0 72px 0;
+  text-align: center;
+}
+
+ #me_tab_members:after{
+  background: url(../img/me/me_kia_members.png);
+  right: 100%;
+}
+
+ #me_tab_ev_members:after{
+  background-image: url(../img/me/me_kia_ev_members.png);
+  margin-left: 100px;
+  left: 100%;
+}
+
+#me_tab_members:after, #me_tab_ev_members:after{
+  content: '';
+  background-repeat: no-repeat;
+  width: 768px;
+  height: 340px;
+  position: absolute;
+  
+}
+
+#me_tab_members button, #me_tab_ev_members button{
+  background: var(--white);
+  color: var(--black);
+  line-height: 38px;
+  padding: 0 45px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#me_tab_members button:hover, #me_tab_ev_members button:hover{
+  background: var(--primary);
+  color: var(--white);
+}
+
+.me_icons li:after{
+  background: url(../img/me/me_kia_members_icon.png)
+}
+
+.me_ev_icons li:after{
+  background: url(../img/me/me_ev_members_icon.png)
+}
+
+.me_icons li:after, .me_ev_icons li:after{
+  content: '';
+  background-repeat: no-repeat;
+  position: absolute;
+  top:0;
+  left: 50%;
+  height: 64px;
+  transform: translate(-50%, -100%);
+}
+
+.me_icons li{
+  position: relative;
+}
+
+.me_icons li:nth-child(1):after{
+  width: 77px;
+  background-position: left center;
+}
+
+.me_icons li:nth-child(2):after{
+  width: 64px;
+  background-position: -83px center;
+}
+
+.me_icons li:nth-child(3):after{
+  width: 60px;
+  background-position: -156px center;
+}
+
+.me_icons li:nth-child(4):after{
+  width: 57px;
+  background-position: -223px center;
+}
+
+.me_icons li:nth-child(5):after{
+  width: 74px;
+  background-position: -288px center;
+}
+
+.me_ev_icons li{
+  position: relative;
+}
+
+.me_ev_icons li:nth-child(1):after{
+  width: 74px;
+  background-position: left center;
+}
+
+.me_ev_icons li:nth-child(2):after{
+  width: 58px;
+  background-position: -83px center;
+}
+
+.me_ev_icons li:nth-child(3):after{
+  width: 56px;
+  background-position: -152px center;
+}
+
+.me_ev_icons li:nth-child(4):after{
+  width: 57px;
+  background-position: -219px center;
+}
+
+.me_ev_icons li:nth-child(5):after{
+  width: 74px;
+  background-position: -283px center;
+}
+
+/* EVENT */
+.ev_slide_container{
+  display: flex;
+  overflow: hidden;
+  gap: 32px;
+}
+
+.ev_slide_container figure{
+  width: 400px;
+  height: 385px;
+}
+
+.ev_slide_container figure img{
+  width: 400px;
+  height: 252px;
+}
+.ev_slide_container figcaption{
+  height: 113px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ev_slide_container figcaption h3{
+  font-size: var(--section_tt);
+  font-weight: 400;
+}
+
+.ev_slide_container figcaption p{
+  color: var(--medium_gray);
+}
