@@ -1,3 +1,23 @@
+/* BEST KIA */
+.best_kia{
+  margin: 0 auto 220px;
+}
+.be_title{
+  text-align: center;
+}
+.be_title h2{
+  font-size: var(--sub_tt);
+  line-height: var(--gutter);
+  font-weight: 700;
+  color: var(--primary);
+}
+.be_title p{
+  font-size: var(--section_tt);
+  line-height: var(--gutter);
+  font-weight: 400;
+  color: var(--medium_gray);
+}
+
 /* MEMBERS */
 .kia_members, .kia_event{
   margin: 0 auto 220px;
