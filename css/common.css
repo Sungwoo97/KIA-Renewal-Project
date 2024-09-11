@@ -85,6 +85,14 @@
   color: var(--white);
 }
 
+.tabs > div{
+  display: none;
+}
+
+.tabs > div.active{
+   display: flex;
+}
+
 /* // Tabs_menu */
 
 .btn{
