@@ -43,12 +43,12 @@ function setLayout(){
 
 
 $(window).resize(function(){
-  if($(window).width() > 834){
+  if($(window).width() > 1260){
      ev_maxSlides = 3;
      ev_slideWidth = 400;
-  }else if($(window).width() < 834 && $(window).width() > 430){
+  }else if($(window).width() < 1260 && $(window).width() > 768){
      ev_maxSlides = 2;
-     ev_slideWidth = 368;
+     ev_slideWidth = 400;
   }else{
     ev_maxSlides = 1;
     ev_slideWidth = 400;

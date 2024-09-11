@@ -186,6 +186,7 @@
 
 .me_ev_icons li{
   position: relative;
+  width: 70px;
 }
 
 .me_ev_icons li:nth-child(1):after{
@@ -213,14 +214,14 @@
   background-position: -283px center;
 }
 
-@media (max-width:834px) {
+@media (max-width:1240px) {
   .me_tab_members:after{
     bottom: 100%;
-    right: 0;
+    right: 10%;
   }
   .me_tab_ev_members:after{
     bottom: 100%;
-    left: 0;
+    left: 10%;
     margin-left: 0;
   }
   .me_tab_members{
@@ -230,7 +231,32 @@
     margin: 450px 0 93px 0;
   }
 }
-@media (max-width:430px) {
+@media (max-width:768px) {
+  .me_tab_members:after{
+    background-size: 600px;
+    background-position: center center;
+    width: 600px;
+    height: 300px;
+    left: -10%;
+  }
+  .me_tab_ev_members:after{
+    background-size: 600px;
+    background-position: center center;
+    width: 600px;
+    height: 300px;
+  }
+  .me_tab_members{
+    margin: 350px 0 93px 0;
+  }
+  .me_tab_ev_members{
+    margin: 350px 0 93px 0;
+  }
+  .me_icons li, .me_ev_icons li{
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@media (max-width:480px){
   .me_tab_members:after{
     background-size: 390px;
     background-position: center center;
@@ -242,16 +268,6 @@
     background-position: center center;
     width: 390px;
     height: 208px;
-  }
-  .me_tab_members{
-    margin: 268px 0 93px 0;
-  }
-  .me_tab_ev_members{
-    margin: 268px 0 93px 0;
-  }
-  .me_icons li, .me_ev_icons li{
-    font-size: 12px;
-    line-height: 18px;
   }
 }
 
@@ -289,6 +305,7 @@
 .ev_slide_container figure img{
   width: 100%;
   height: 252px;
+  object-fit: cover ;
 }
 .ev_slide_container figcaption{
   height: 113px;
@@ -314,33 +331,39 @@
   color: var(--medium_gray);
   cursor: pointer;
 }
+/* .ev_slide_prev img, .ev_slide_next img{
+  filter:invert(0.8);
+} */
 
 .ev_slide_prev {
-  left: 10px;
+  right: calc(100% - 50px);
 }
 
 .ev_slide_next {
-  right: 10px;
+  left: calc(100% - 50px);
 }
 
-@media (max-width:1344px){
+@media (max-width:1260){
   .kia_event{
    width: 100%;
   }
   .ev_slide_wrapper{
     width: 100%;
-    margin: 0 32px;
   }
 }
-@media (max-width:834px) {
+@media (max-width:1260px) {
+  .ev_slide_wrapper{
+    width: 832px;
+  }
   .ev_slide_container figure{
-    width: 368px;
+    width: 400px;
   }
 }
-@media (max-width:430px) {
+@media (max-width:768px) {
   .ev_slide_wrapper{
     width: 400px;
   }
+ 
   .ev_slide_container figure{
     width: 400px;
   }
