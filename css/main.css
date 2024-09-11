@@ -69,13 +69,13 @@
   color: var(--white);
 } */
 
-.tabs > div{
+/* .tabs > div{
   display: none;
 }
 
 .tabs > div.active{
-   display: flex;
-}
+   display: block;
+} */
 
 
 .me_tab_wrapper div h3{
@@ -328,16 +328,15 @@
   color: var(--white);
 } */
 
-.tabs{
+.no_look{
   display: none;
 }
 
-.tabs.active{
+.no_look.active{
   display: block;
 }
 
-.tab_notice,
-.tab_news{
+.no_box{
   margin: 70px 63px 62px 63px;
   height: 580px;
   display: flex;

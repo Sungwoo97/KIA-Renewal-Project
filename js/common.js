@@ -7,7 +7,7 @@ function tabControl(menu){
     console.log($(this).closest('div'));
     $(this).parent().find('li').removeClass('active');
     $(this).addClass('active');
-    $(this).closest('div').find('.tabs > div').removeClass('active');
+    $(this).parent().parent('div').find('.tabs > div').removeClass('active');
     let target = $(this).find('a').attr('href');
     $(target).addClass('active');
   });
