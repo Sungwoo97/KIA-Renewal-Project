@@ -77,7 +77,7 @@ ev_nextBtn.on('click', debounce(()=>{
 
 ev_prevBtn.on('click', debounce(()=>{
   moveSlide(currentIdx - 1);
-});
+}, 500)) ;
 
 //best kia 슬라이더 (slick 사용)
 const beSlides = $('.best_kia .tab_contents .slides')
