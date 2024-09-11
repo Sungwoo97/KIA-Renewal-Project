@@ -131,11 +131,11 @@
         </div>
         <div class="me_tab_wrapper">
           <ul class="me_tabs_menu">
-            <li class="active"><a href="#me_tab_members">Kia Members</a></li>
-            <li><a href="#me_tab_ev_members">Kia EV Members</a></li>
+            <li class="active"><a href=".me_tab_members">Kia Members</a></li>
+            <li><a href=".me_tab_ev_members">Kia EV Members</a></li>
           </ul>
-          <div id="me_tabs">
-            <div id="me_tab_members" class="active">
+          <div class="me_tabs">
+            <div class="me_tab_members active" >
               <h3>KIA Members 고객을 위한 혜택</h3>
               <ul class="me_icons">
                 <li>기아멤버스 <br>기본점검</li>
@@ -144,9 +144,9 @@
                 <li>프리케어 <br>서비스</li>
                 <li>긴급출동 <br> 무상견인</li>
               </ul>
-              <button>혜택 한눈에 보기</button>
+              <button class="btn">혜택 한눈에 보기</button>
             </div>
-            <div id="me_tab_ev_members">
+            <div class="me_tab_ev_members">
               <h3>KIA Members 고객을 위한 혜택</h3>
               <ul class="me_ev_icons">
                 <li>기아멤버스 기본점검</li>
@@ -155,7 +155,7 @@
                 <li>프리케어 서비스</li>
                 <li>긴급출동 / 무상견인</li>
               </ul>
-              <button>혜택 한눈에 보기</button>
+              <button class="btn">혜택 한눈에 보기</button>
             </div>
           </div>
         </div>
@@ -234,17 +234,17 @@
           <p class="sub_title_gutter">기아 소식을 한눈에 확인해 보세요</p>
         </div>
         <div class="no_content">
-          <ul class="no_tabs">
-            <li class="active"><a href="">Notice</a></li>
-            <li><a href="">News</a></li>
+          <ul class="me_tabs_menu">
+            <li class="active"><a href=".no_notice">Notice</a></li>
+            <li><a href=".no_news">News</a></li>
           </ul>
-          <div class="container">
+          <div class="me_tabs">
             <div class="no_box">
               <figure class="no_img">
                 <img src="img/fo/fo_notice.png" alt="#">
               </figure>
               <div class="no_sizing">
-                <div class="no_notice">
+                <div class="no_notice active">
                   <h3>공지사항</h3>
                   <button>더보기</button>
                 </div>
@@ -362,6 +362,7 @@
     <!-- // Footer 최은화 -->
   </footer>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/common.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

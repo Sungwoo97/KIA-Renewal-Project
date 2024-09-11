@@ -74,7 +74,7 @@
   font-weight: 700;
 }
 
-#me_tab_members , #me_tab_ev_members{
+.me_tab_members , .me_tab_ev_members{
   position: relative;
   display: flex;
   flex-direction: column;
@@ -82,19 +82,19 @@
   gap: 30px;
 }
 
-#me_tabs > div{
+.me_tabs > div{
   display: none;
 }
 
-#me_tabs > div.active{
+.me_tabs > div.active{
    display: flex;
 }
 
-#me_tab_members{
+.me_tab_members{
   margin: 174px 71px 93px 822px;
 }
 
-#me_tab_ev_members{
+.me_tab_ev_members{
   margin: 174px 788px 93px 106px;
 }
 
@@ -106,18 +106,18 @@
   text-align: center;
 }
 
- #me_tab_members:after{
+ .me_tab_members:after{
   background: url(../img/me/me_kia_members.png);
   right: 100%;
 }
 
- #me_tab_ev_members:after{
+ .me_tab_ev_members:after{
   background-image: url(../img/me/me_kia_ev_members.png);
   margin-left: 100px;
   left: 100%;
 }
 
-#me_tab_members:after, #me_tab_ev_members:after{
+.me_tab_members:after, .me_tab_ev_members:after{
   content: '';
   background-repeat: no-repeat;
   width: 768px;
@@ -126,7 +126,7 @@
   
 }
 
-#me_tab_members button, #me_tab_ev_members button{
+/* .me_tab_members button, .me_tab_ev_members button{
   background: var(--white);
   color: var(--black);
   line-height: 38px;
@@ -135,10 +135,10 @@
   font-weight: 600;
 }
 
-#me_tab_members button:hover, #me_tab_ev_members button:hover{
+.me_tab_members button:hover, .me_tab_ev_members button:hover{
   background: var(--primary);
   color: var(--white);
-}
+} */
 
 .me_icons li:after{
   background: url(../img/me/me_kia_members_icon.png)
@@ -215,7 +215,9 @@
   width: 74px;
   background-position: -283px center;
 }
+@media (min-width:768px){
 
+}
 /* EVENT */
 .kia_event{
   position: relative;

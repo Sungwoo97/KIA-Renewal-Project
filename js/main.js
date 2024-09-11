@@ -1,5 +1,4 @@
-const me_tabMenu = $('.me_tabs_menu li');
-const me_tabContent = $('#me_tabs > div');
+
 const ev_slideWrapper = $('.ev_slide_wrapper');
 const ev_slideContainer = $('.ev_slide_container');
 const ev_slides = $('.ev_slide_container figure');
@@ -12,17 +11,7 @@ const ev_prevBtn = $('.ev_slide_prev');
 const ev_nextBtn = $('.ev_slide_next');
 
 
-function tabControl(menu, content){
-  menu.click(function(e){
-    e.preventDefault();
-    menu.removeClass('active');
-    $(this).addClass('active');
-    content.removeClass('active');
-    let target = $(this).find('a').attr('href');
-    $(target).addClass('active');
-  });
-}
-tabControl(me_tabMenu, me_tabContent);
+
 
 let ev_slideHTML = ev_slideContainer.html();
 let ev_clonedSlidesHTML = ev_slideHTML.replace(/<figure>/g, '<figure class="clone">');
