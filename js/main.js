@@ -68,5 +68,7 @@ beSlides.slick({
   fade: true,
   cssEase: 'linear',
   prevArrow:'none',
-  nextArrow:'none'
+  nextArrow:'none',
+  autoplay:true,
+  autoplaySpeed:6000
 });

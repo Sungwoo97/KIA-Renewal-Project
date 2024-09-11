@@ -45,9 +45,24 @@
   position: absolute;
   display: flex;
   z-index: 1000;
-  bottom: 21px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 28px;
+  gap: 24px;
 }
-
+.slick-dots button{
+  background: var(--medium_gray);
+  border: none;
+  width: 84px;
+  height: 5px;
+  font-size: 0;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: 0.3s;
+}
+.slick-dots button:hover{
+  opacity: 1;
+}
 /* MEMBERS */
 .kia_members, .kia_event, .kia_notice{
   margin: 0 auto 220px;
