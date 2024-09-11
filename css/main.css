@@ -473,12 +473,15 @@ footer .no_guide{
 }
 
 footer .no_sns{
+  height: 25px;
   display: flex;
   gap: 40px;
   margin-bottom: 20px;
 }
 
 footer .no_sns li i{
+  width: 32px;
+  height: 32px;
   color: var(--white);
   opacity: 50%;
   font-size: 32px;
