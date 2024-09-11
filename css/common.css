@@ -48,6 +48,53 @@
 	margin-bottom: calc(var(--gutter) * 3);
 }
 
+/* Tabs_menu */
+
+.sec_tt{
+	font-size: var(--sub_tt);
+  line-height: var(--gutter);
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.tabs_menu{
+  display: flex;
+  justify-content: center;
+  line-height: 48px;
+}
+
+.tabs_menu li{
+  width: 50%;
+  text-align: center;
+  background: var(--light_gray);
+  cursor: pointer;
+}
+
+.tabs_menu li a {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.tabs_menu li.active{
+  background: var(--primary);
+  color: var(--white);
+}
+
+.tabs_menu li.active a{
+  color: var(--white);
+}
+
+.tabs > div{
+  display: none;
+}
+
+.tabs > div.active{
+   display: flex;
+}
+
+/* // Tabs_menu */
+
 .btn{
 	background: var(--white);
   color: var(--black);

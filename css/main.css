@@ -86,7 +86,7 @@
   color: var(--medium_gray);
 }
 
-.me_tabs_menu{
+/* .me_tabs_menu{
   display: flex;
   justify-content: center;
   line-height: 48px;
@@ -112,14 +112,23 @@
 
 .me_tabs_menu li.active a{
   color: var(--white);
+} */
+
+/* .tabs > div{
+  display: none;
 }
+
+.tabs > div.active{
+   display: block;
+} */
+
 
 .me_tab_wrapper div h3{
   font-size: var(--section_tt);
   font-weight: 700;
 }
 
-#me_tab_members , #me_tab_ev_members{
+.me_tab_members , .me_tab_ev_members{
   position: relative;
   display: flex;
   flex-direction: column;
@@ -127,19 +136,12 @@
   gap: 30px;
 }
 
-#me_tabs > div{
-  display: none;
-}
 
-#me_tabs > div.active{
-   display: flex;
-}
-
-#me_tab_members{
+.me_tab_members{
   margin: 174px 71px 93px 822px;
 }
 
-#me_tab_ev_members{
+.me_tab_ev_members{
   margin: 174px 788px 93px 106px;
 }
 
@@ -151,18 +153,18 @@
   text-align: center;
 }
 
- #me_tab_members:after{
+ .me_tab_members:after{
   background: url(../img/me/me_kia_members.png);
   right: 100%;
 }
 
- #me_tab_ev_members:after{
+ .me_tab_ev_members:after{
   background-image: url(../img/me/me_kia_ev_members.png);
   margin-left: 100px;
   left: 100%;
 }
 
-#me_tab_members:after, #me_tab_ev_members:after{
+.me_tab_members:after, .me_tab_ev_members:after{
   content: '';
   background-repeat: no-repeat;
   width: 768px;
@@ -171,7 +173,7 @@
   
 }
 
-#me_tab_members button, #me_tab_ev_members button{
+/* .me_tab_members button, .me_tab_ev_members button{
   background: var(--white);
   color: var(--black);
   line-height: 38px;
@@ -180,10 +182,10 @@
   font-weight: 600;
 }
 
-#me_tab_members button:hover, #me_tab_ev_members button:hover{
+.me_tab_members button:hover, .me_tab_ev_members button:hover{
   background: var(--primary);
   color: var(--white);
-}
+} */
 
 .me_icons li:after{
   background: url(../img/me/me_kia_members_icon.png)
@@ -260,7 +262,9 @@
   width: 74px;
   background-position: -283px center;
 }
+@media (min-width:768px){
 
+}
 /* EVENT */
 .kia_event{
   position: relative;
@@ -278,6 +282,12 @@
   width: 100%;
   display: flex;
   gap: 32px;
+  padding: 10px 0;
+}
+
+.ev_slide_container.animate{
+  left: 0;
+  transition: .5s;
 }
 
 .ev_slide_container figure{
@@ -311,7 +321,6 @@
   position: absolute;
   font-size: 48px;
   top: 60%;
-  
   color: var(--medium_gray);
 }
 
@@ -331,13 +340,6 @@
   text-align: center;
 }
 
-.no_title h2{
-  font-size: var(--sub_tt);
-  line-height: var(--gutter);
-  font-weight: 700;
-  color: var(--primary);
-}
-
 .no_title p{
   font-size: var(--section_tt);
   line-height: var(--gutter);
@@ -345,7 +347,7 @@
   color: var(--medium_gray);
 }
 
-.no_tabs{
+/* .no_tabs{
   display: flex;
   justify-content: center;
 }
@@ -369,6 +371,14 @@
 
 .no_tabs li.active a{
   color: var(--white);
+} */
+
+.no_look{
+  display: none;
+}
+
+.no_look.active{
+  display: block;
 }
 
 .no_box{
@@ -377,13 +387,17 @@
   display: flex;
   gap: 125px;
   justify-content: center;
+  align-items: center;
+  position: relative;
+  background: #fff;
 }
 
 .no_box .no_sizing{
   width: 540px;
   height: 100%;
-  margin: 120px 63px 160px;
+  margin-top: 360px;
 }
+
 
 .no_box .no_notice{
   display: flex;
@@ -404,9 +418,66 @@
   background: var(--white);
 }
 
+.no_box .no_ntc{
+  width: 500px;
+  transform: translateX(5px);
+}
+
 .no_box .no_ntc li{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.no_box .no_ntc li:after{
+  content: '';
+  background: var(--primary);
+  width: 500px;
+  height: 1px;
+  position: absolute;
+  transform: translateY(32px);
+}
+
+.no_box .no_ntc li p:hover{
+  text-decoration: underline;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.no_box .no_news{
+  display: flex;
+  gap: 392px;
+  text-wrap: nowrap;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.no_box .no_news h3{
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.no_box .no_news button{
+  height: 32px;
+  border: 1px solid var(--primary);
+  background: var(--white);
+}
+
+/* //Section 최은화 */
+
+/* Footer 최은화 */
+footer{
+  margin-top: 220px;
+  width: 100%;
+  height: 483px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--primary);
+}
+
+.fo_prize{
   display: flex;
 }
 
-
-/* //Section 최은화 */
+/* // Footer 최은화 */
