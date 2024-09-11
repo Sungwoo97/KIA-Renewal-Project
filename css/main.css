@@ -17,6 +17,36 @@
   font-weight: 400;
   color: var(--medium_gray);
 }
+.be_tab_wrapper{
+  display: flex;
+}
+.tab_contents{
+  display: flex;
+}
+.be_tabs_menu{
+  width: 204px;
+}
+.tab_contents .be_tabs{
+  display: none;
+}
+.tab_contents .be_tabs.active{
+  display: block;
+}
+.tab_contents .slides{
+  width: 776px;
+  height: 552px;
+  position: relative;
+}
+.tab_contents .slides img{
+  height: 552px;
+  object-fit: cover;
+}
+.slick-dots{
+  position: absolute;
+  display: flex;
+  z-index: 1000;
+  bottom: 21px;
+}
 
 /* MEMBERS */
 .kia_members, .kia_event, .kia_notice{
