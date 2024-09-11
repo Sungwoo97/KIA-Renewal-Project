@@ -12,49 +12,81 @@ const ev_prevBtn = $('.ev_slide_prev');
 const ev_nextBtn = $('.ev_slide_next');
 console.log(me_tabMenu);
 
-console.log(ev_slideCount);
 
-me_tabMenu.click(function(e){
-  e.preventDefault();
-  me_tabMenu.removeClass('active');
-  $(this).addClass('active');
-  me_tabContent.removeClass('active');
-  let target = $(this).find('a').attr('href');
-  $(target).addClass('active');
-});
+function tabControl(menu, content){
+  menu.click(function(e){
+    e.preventDefault();
+    menu.removeClass('active');
+    $(this).addClass('active');
+    content.removeClass('active');
+    let target = $(this).find('a').attr('href');
+    $(target).addClass('active');
+  });
+}
+tabControl(me_tabMenu, me_tabContent);
 
+let ev_slideHTML = ev_slideContainer.html();
+let ev_clonedSlidesHTML = ev_slideHTML.replace(/<figure>/g, '<figure class="clone">');
+ev_slideContainer.html(ev_clonedSlidesHTML + ev_slideHTML);
+ev_slideContainer.append(ev_clonedSlidesHTML);
+const ev_allslideCount = ev_slideContainer.find('figure').length;
 
-
-console.log(ev_slideWrapper.outerWidth());
 function setLayout(){
-  //slideContainer의 너비를 지정
-  let ev_originWidth = ev_slideWrapper.outerWidth();
-  let ev_maxWidth = (ev_slideWidth * ev_slideCount) + (ev_slideGap * (ev_slideCount - 1));
+  let ev_originWidth = (ev_slideWidth * ev_slideCount) + (ev_slideGap * ev_slideCount);
+  let ev_maxWidth = (ev_slideWidth * ev_allslideCount) + (ev_slideGap * (ev_allslideCount - 1));
   ev_slideContainer.css({width: ev_maxWidth + 'px'});
+  ev_slideContainer.css({ transform: `translateX(-${ev_originWidth}px)` });
 }
 setLayout();
 
 $(window).resize(function(){
   setLayout();
-})
+});
 
+function debounce(callback, time){
+  let slideTrigger = true;
+  return (e)=>{
+    if(slideTrigger){
+      callback(e);
+      slideTrigger = false;
+      setTimeout(()=>{
+        slideTrigger = true;
+      }, time);
+    } 
+  }
+}
 
 function moveSlide(num){
-  if(num > 4){
-    num = 0;
-  }
-  if(num < 0){
-    num = 4;
-  }
-  let numTotal = -num * (ev_slideWidth + ev_slideGap);
-  ev_slideContainer.animate({left : numTotal + 'px' });
+  let numTotal = -num *(ev_slideWidth + ev_slideGap);
+  ev_slideContainer.stop().animate({ left : numTotal +'px'});
   currentIdx = num;
+  if(currentIdx === ev_slideCount*2- ev_maxSlides){
+    setTimeout(()=>{
+      ev_slideContainer.removeClass('animated');
+      ev_slideContainer.css({left :`-${(num - ev_slideCount)*(ev_slideWidth + ev_slideGap)}px` });
+      currentIdx = num-ev_slideCount;
+    }, 500);
+    setTimeout(()=>{
+      ev_slideContainer.addClass('animated');
+    },600);
+  }
+  if(currentIdx === -ev_slideCount){
+    setTimeout(()=>{
+      ev_slideContainer.removeClass('animated');
+      ev_slideContainer.css({left : `0px` })
+      currentIdx = 0;
+    }, 500);
+    setTimeout(()=>{
+      ev_slideContainer.addClass('animated');
+    },600);
+  }
 }
 moveSlide(0);
 
-ev_nextBtn.click(function(){
+ev_nextBtn.on('click', debounce(()=>{
   moveSlide(currentIdx + 1);
-});
-ev_prevBtn.click(function(){
+} , 500));
+
+ev_prevBtn.on('click', debounce(()=>{
   moveSlide(currentIdx - 1);
-});
+} , 500));

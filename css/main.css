@@ -233,6 +233,12 @@
   width: 100%;
   display: flex;
   gap: 32px;
+  padding: 10px 0;
+}
+
+.ev_slide_container.animate{
+  left: 0;
+  transition: .5s;
 }
 
 .ev_slide_container figure{
@@ -266,7 +272,6 @@
   position: absolute;
   font-size: 48px;
   top: 60%;
-  
   color: var(--medium_gray);
 }
 
