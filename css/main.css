@@ -328,15 +328,16 @@
   color: var(--white);
 } */
 
-.no_look{
+.tabs{
   display: none;
 }
 
-.no_look.active{
+.tabs.active{
   display: block;
 }
 
-.no_box{
+.tab_notice,
+.tab_news{
   margin: 70px 63px 62px 63px;
   height: 580px;
   display: flex;
