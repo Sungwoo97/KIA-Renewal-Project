@@ -1,3 +1,23 @@
+/* BEST KIA */
+.best_kia{
+  margin: 0 auto 220px;
+}
+.be_title{
+  text-align: center;
+}
+.be_title h2{
+  font-size: var(--sub_tt);
+  line-height: var(--gutter);
+  font-weight: 700;
+  color: var(--primary);
+}
+.be_title p{
+  font-size: var(--section_tt);
+  line-height: var(--gutter);
+  font-weight: 400;
+  color: var(--medium_gray);
+}
+
 /* MEMBERS */
 .kia_members, .kia_event, .kia_notice{
   margin: 0 auto 220px;
@@ -197,19 +217,32 @@
 }
 
 /* EVENT */
-.ev_slide_container{
-  display: flex;
+.kia_event{
+  position: relative;
+}
+
+.ev_slide_wrapper{
+  position: relative;
+  width: 1264px;
   overflow: hidden;
+  margin: 0 auto;
+}
+
+.ev_slide_container{
+  position: relative;
+  width: 100%;
+  display: flex;
   gap: 32px;
 }
 
 .ev_slide_container figure{
   width: 400px;
   height: 385px;
+  box-shadow: 0 0 3px rgba( 0 ,0 ,0, .1);
 }
 
 .ev_slide_container figure img{
-  width: 400px;
+  width: 100%;
   height: 252px;
 }
 .ev_slide_container figcaption{
@@ -221,6 +254,7 @@
 }
 .ev_slide_container figcaption h3{
   font-size: var(--section_tt);
+  line-height: 29px;
   font-weight: 400;
 }
 
@@ -228,6 +262,21 @@
   color: var(--medium_gray);
 }
 
+.ev_slide_prev, .ev_slide_next{ 
+  position: absolute;
+  font-size: 48px;
+  top: 60%;
+  
+  color: var(--medium_gray);
+}
+
+.ev_slide_prev {
+  right: 100%;
+}
+
+.ev_slide_next {
+  left: 100%;
+}
 
 /* Section 최은화 */
 .no_title{
@@ -313,10 +362,6 @@
 .no_box .no_ntc li{
   display: flex;
 }
-
-
-
-
 
 
 /* //Section 최은화 */
