@@ -41,7 +41,7 @@
   color: var(--medium_gray);
 }
 
-.me_tabs_menu{
+/* .me_tabs_menu{
   display: flex;
   justify-content: center;
   line-height: 48px;
@@ -67,7 +67,7 @@
 
 .me_tabs_menu li.active a{
   color: var(--white);
-}
+} */
 
 .me_tab_wrapper div h3{
   font-size: var(--section_tt);
@@ -286,13 +286,6 @@
   text-align: center;
 }
 
-.no_title h2{
-  font-size: var(--sub_tt);
-  line-height: var(--gutter);
-  font-weight: 700;
-  color: var(--primary);
-}
-
 .no_title p{
   font-size: var(--section_tt);
   line-height: var(--gutter);
@@ -300,7 +293,7 @@
   color: var(--medium_gray);
 }
 
-.no_tabs{
+/* .no_tabs{
   display: flex;
   justify-content: center;
 }
@@ -324,6 +317,14 @@
 
 .no_tabs li.active a{
   color: var(--white);
+} */
+
+.no_look{
+  display: none;
+}
+
+.no_look.active{
+  display: block;
 }
 
 .no_box{
@@ -333,7 +334,7 @@
   gap: 125px;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: relative;
   background: #fff;
 }
 
@@ -342,6 +343,7 @@
   height: 100%;
   margin-top: 360px;
 }
+
 
 .no_box .no_notice{
   display: flex;
@@ -382,6 +384,12 @@
   transform: translateY(32px);
 }
 
+.no_box .no_ntc li p:hover{
+  text-decoration: underline;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .no_box .no_news{
   display: flex;
   gap: 392px;
@@ -401,6 +409,21 @@
   background: var(--white);
 }
 
-
-
 /* //Section 최은화 */
+
+/* Footer 최은화 */
+footer{
+  margin-top: 220px;
+  width: 100%;
+  height: 483px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--primary);
+}
+
+.fo_prize{
+  display: flex;
+}
+
+/* // Footer 최은화 */
