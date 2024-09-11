@@ -3,33 +3,14 @@ const ev_slideContainer = $('.ev_slide_container');
 const ev_slides = $('.ev_slide_container figure');
 const ev_slideCount = ev_slides.length;
 let currentIdx = 0;
-const ev_slideWidth = 400;
+let ev_slideWidth = 400;
 const ev_slideGap = 32;
-const ev_maxSlides = 3;
+let ev_maxSlides = 3;
 const ev_prevBtn = $('.ev_slide_prev');
 const ev_nextBtn = $('.ev_slide_next');
 
 
 
-
-
-let ev_slideHTML = ev_slideContainer.html();
-let ev_clonedSlidesHTML = ev_slideHTML.replace(/<figure>/g, '<figure class="clone">');
-ev_slideContainer.html(ev_clonedSlidesHTML + ev_slideHTML);
-ev_slideContainer.append(ev_clonedSlidesHTML);
-const ev_allslideCount = ev_slideContainer.find('figure').length;
-
-function setLayout(){
-  let ev_originWidth = (ev_slideWidth * ev_slideCount) + (ev_slideGap * ev_slideCount);
-  let ev_maxWidth = (ev_slideWidth * ev_allslideCount) + (ev_slideGap * (ev_allslideCount - 1));
-  ev_slideContainer.css({width: ev_maxWidth + 'px'});
-  ev_slideContainer.css({ transform: `translateX(-${ev_originWidth}px)` });
-}
-setLayout();
-
-$(window).resize(function(){
-  setLayout();
-});
 
 function debounce(callback, time){
   let slideTrigger = true;
@@ -43,6 +24,38 @@ function debounce(callback, time){
     } 
   }
 }
+console.log($(window).width());
+
+let ev_slideHTML = ev_slideContainer.html();
+let ev_clonedSlidesHTML = ev_slideHTML.replace(/<figure>/g, '<figure class="clone">');
+ev_slideContainer.html(ev_clonedSlidesHTML + ev_slideHTML);
+ev_slideContainer.append(ev_clonedSlidesHTML);
+const ev_allslideCount = ev_slideContainer.find('figure').length;
+
+setLayout();
+
+function setLayout(){
+  let ev_originWidth = (ev_slideWidth * ev_slideCount) + (ev_slideGap * ev_slideCount);
+  let ev_maxWidth = (ev_slideWidth * ev_allslideCount) + (ev_slideGap * (ev_allslideCount - 1));
+  ev_slideContainer.css({width: ev_maxWidth + 'px'});
+  ev_slideContainer.css({ transform: `translateX(-${ev_originWidth}px)` });
+}
+
+
+$(window).resize(function(){
+  if($(window).width() > 834){
+     ev_maxSlides = 3;
+     ev_slideWidth = 400;
+  }else if($(window).width() < 834 && $(window).width() > 430){
+     ev_maxSlides = 2;
+     ev_slideWidth = 368;
+  }else{
+    ev_maxSlides = 1;
+    ev_slideWidth = 400;
+  }
+  setLayout();
+});
+
 
 function moveSlide(num){
   let numTotal = -num *(ev_slideWidth + ev_slideGap);
