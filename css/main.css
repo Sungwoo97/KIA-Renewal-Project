@@ -332,12 +332,15 @@
   display: flex;
   gap: 125px;
   justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: #fff;
 }
 
 .no_box .no_sizing{
   width: 540px;
   height: 100%;
-  margin: 120px 63px 160px;
+  margin-top: 360px;
 }
 
 .no_box .no_notice{
@@ -359,9 +362,45 @@
   background: var(--white);
 }
 
+.no_box .no_ntc{
+  width: 500px;
+  transform: translateX(5px);
+}
+
 .no_box .no_ntc li{
   display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
+
+.no_box .no_ntc li:after{
+  content: '';
+  background: var(--primary);
+  width: 500px;
+  height: 1px;
+  position: absolute;
+  transform: translateY(32px);
+}
+
+.no_box .no_news{
+  display: flex;
+  gap: 392px;
+  text-wrap: nowrap;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.no_box .no_news h3{
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.no_box .no_news button{
+  height: 32px;
+  border: 1px solid var(--primary);
+  background: var(--white);
+}
+
 
 
 /* //Section 최은화 */
