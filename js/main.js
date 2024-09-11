@@ -1,4 +1,3 @@
-
 const ev_slideWrapper = $('.ev_slide_wrapper');
 const ev_slideContainer = $('.ev_slide_container');
 const ev_slides = $('.ev_slide_container figure');
@@ -9,6 +8,7 @@ const ev_slideGap = 32;
 const ev_maxSlides = 3;
 const ev_prevBtn = $('.ev_slide_prev');
 const ev_nextBtn = $('.ev_slide_next');
+console.log(me_tabMenu);
 
 
 
