@@ -69,6 +69,15 @@
   color: var(--white);
 } */
 
+.tabs > div{
+  display: none;
+}
+
+.tabs > div.active{
+   display: flex;
+}
+
+
 .me_tab_wrapper div h3{
   font-size: var(--section_tt);
   font-weight: 700;
@@ -82,13 +91,6 @@
   gap: 30px;
 }
 
-.me_tabs > div{
-  display: none;
-}
-
-.me_tabs > div.active{
-   display: flex;
-}
 
 .me_tab_members{
   margin: 174px 71px 93px 822px;
