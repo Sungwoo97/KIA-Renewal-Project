@@ -1,4 +1,4 @@
-const me_tabMenu = $('.me_tabs_menu li');
+const me_tabMenu = $('.tabs_menu li');
 const me_tabContent = $('#me_tabs > div');
 const ev_slideWrapper = $('.ev_slide_wrapper');
 const ev_slideContainer = $('.ev_slide_container');
@@ -10,6 +10,7 @@ const ev_slideGap = 32;
 const ev_maxSlides = 3;
 const ev_prevBtn = $('.ev_slide_prev');
 const ev_nextBtn = $('.ev_slide_next');
+console.log(me_tabMenu);
 
 console.log(ev_slideCount);
 
