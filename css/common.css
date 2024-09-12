@@ -23,6 +23,12 @@
 	width: 1344px;
 }
 
+@media (max-width: 834px){
+	.container{
+		width: 710px;
+	}
+}
+
 .hidden{
 	display: none !important;
 }
@@ -92,6 +98,7 @@
 .tabs > div.active{
    display: flex;
 }
+
 
 /* // Tabs_menu */
 
