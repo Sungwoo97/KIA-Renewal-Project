@@ -1,0 +1,106 @@
+
+
+header .navigation .navigation-items a{
+
+}
+/* HEADER */
+
+header {
+	z-index: 999;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0.5s ease;
+}
+
+header .brand {
+	color: #fff;
+	font-size: 1.5em;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+header .navigation {
+	position: relative;
+	padding: 30px 50px;
+}
+
+header .navigation .navigation-items a {
+	position: relative;
+	color: #000;
+	font-size: 1.25em;
+	font-weight: 700;
+	text-decoration: none;
+	margin-left: 30px;
+	transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before {
+	content: '';
+	position: absolute;
+	background: #fff;
+	width: 0;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before {
+	width: 100%;
+
+}
+
+.ex_tab_wrapper{
+  margin-top: 86px;
+}
+
+.ex_tab_wrapper .tabs > div{
+	flex-direction: column;
+}
+
+.ex_tab_wrapper h4{
+	margin: 96px auto;
+	width: 100%;
+	text-align: center;
+	font-weight: 300;
+	color: var(--dark_gray);
+}
+
+.ex_tab_wrapper .ex_driveBox{
+	width: 888px;
+	margin: 0 auto;
+	background: var(--light_gray);
+	text-align: center;
+}
+.ex_driveBox h3{
+	font-size: 36px;
+	margin-top: 48px;
+}
+.ex_guideBox{
+	background: var(--dark_gray);
+	display: inline-block;
+	padding: 0 24px;
+	border-radius: 12px;
+	margin: 24px 0 48px;
+}
+.ex_guideBox p{
+	font-size: var(--body_sub_tt);
+	color: #fff;
+}
+.ex_driveControls{
+	display: flex;
+	gap: 24px;
+	justify-content: center;
+}
+.ex_driveControls .btn{
+	padding: 0 92px;
+}
+.ex_non_member {
+	margin: 48px auto;
+}

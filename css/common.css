@@ -48,6 +48,10 @@
 	margin-bottom: calc(var(--gutter) * 3);
 }
 
+.section_mg{
+	margin: 0 auto 220px;
+}
+
 /* Tabs_menu */
 
 .sec_tt{
@@ -93,6 +97,8 @@
    display: flex;
 }
 
+
+
 /* // Tabs_menu */
 
 .btn{
@@ -122,3 +128,5 @@ body{
     width: 100%;
   }
 }
+
+

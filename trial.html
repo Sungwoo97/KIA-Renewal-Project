@@ -9,8 +9,33 @@
   <link rel="stylesheet" href="css/trial.css">
 </head>
 <body>
-  <header></header>
-  <div class="ex_tab_wrapper">
+  <header>
+    <div class="navigation">
+      <div class="navigation-items">
+        <a href="#">차량</a>
+        <a href="#">구매</a>
+        <a href="#">체험</a>
+        <a href="#">이벤트</a>
+        <a href="#">고객지원</a>
+        <a href="#">Discover Kia</a>
+      </div>
+    </div>
+    <object data="src/img/kia.svg" class="kia_logo"></object>
+    <div class="globe-btn"></div>
+    <div class="search-glasses"></div>
+    <div class="menu-btn"></div>
+
+
+
+    <div class="navigation">
+      <div class="navigation-items">
+        <a href="#">KOR</a>
+        <a href="#">통합검색</a>
+        <a href="#">로그인</a>
+      </div>
+    </div>
+  </header>
+  <div class="ex_tab_wrapper container section_mg">
     <ul class="tabs_menu">
       <li class="active"><a href=".ex_tab_testDrive" >시승 신청</a></li>
       <li><a href=".ex_tab_salesNetwork">판매 네트워크</a></li>
@@ -18,18 +43,20 @@
     </ul>
     <div class="tabs">
       <div class="ex_tab_testDrive active">
-        <h3>전국 지점, 대리점, 드라이빙센터의 시승을 신청하실 수 있습니다. 또한 기아 플래그십 스토어(강서,인천,부천,광주)에서는 다양한 프로그램으로 전문가의 안내와 함께 시승을 경험 하실 수 있습니다.</h3>
+        <h4>전국 지점, 대리점, 드라이빙센터의 시승을 신청하실 수 있습니다. <br>또한 기아 플래그십 스토어(강서,인천,부천,광주)에서는 다양한 프로그램으로 전문가의 안내와 함께 시승을 경험 하실 수 있습니다.</h4>
         <div class="ex_driveBox">
-          <h2>최적의 시승서비스 체험 공간</h2>
+          <h3 class="sec_tt">최적의 시승서비스 체험 공간</h3>
           <div class="ex_guideBox">
             <p>안내영상</p>
           </div>
           <div class="ex_driveControls">
-            <button>시승 예약</button>
-            <button>신청 조회</button>
+            <button class="btn">시승 예약</button>
+            <button class="btn">신청 조회</button>
           </div>
-          <p>홈페이지 비회원 신청</p>
-          <p>플래그십 스토어 비회원 신청</p>
+          <div class="ex_non_member">
+            <p>홈페이지 비회원 신청</p>
+            <p>플래그십 스토어 비회원 신청</p>
+          </div>
         </div>
         <ul>
           <li>가까운 시승 거점을 확인해 보세요. 전국 시승 거점 목록 보기 ></li>
@@ -136,10 +163,42 @@
         </div>
         <div>Maps</div>
       </div>
-      <div class="ex_tab_experience"></div>
+      <div class="ex_tab_experience">
+        <h3>언플러그드 그라운드</h3>
+        <p>기아 EV와 만나 달라질 당신만의 라이프스타일을 발견해 보세요.</p>
+        <div class="ev_slide_wrapper">
+          <ul class="ev_slide_container">
+            <li class="slide1">
+              <img src="" alt="">
+              <h4></h4>
+              <p></p>
+            </li>
+            <li class="slide2">
+              <img src="" alt="">
+              <h4></h4>
+              <p></p>
+            </li>
+            <li class="slide3">
+              <img src="" alt="">
+              <h4></h4>
+              <p></p>
+            </li>
+            <li class="slide4">
+              <img src="" alt="">
+              <h4></h4>
+              <p></p>
+            </li>
+            <li class="slide5">
+              <img src="" alt="">
+              <h4></h4>
+              <p></p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="js/common.js"></script>
+  <!-- <script src="js/common.js"></script> -->
 </body>
 </html>
