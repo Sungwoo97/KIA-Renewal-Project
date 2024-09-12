@@ -22,6 +22,8 @@ header .navigation {
     position: relative;
 }
 
+
+
 header .navigation .navigation-items a {
     position: relative;
     color: #fff;
@@ -163,7 +165,115 @@ header .navigation .navigation-items a:hover:before {
     border: none;
     margin-top: 10px;
     margin-right: 10px;
+    cursor: pointer;
 }
+
+#right-arrow_white {
+    width: 10px; /* 원하는 크기로 조정 */
+    height: 10px; /* 원하는 크기로 조정 */
+}
+
+
+
+/* ------------------드롭다운 메뉴 성형수술 ------------- */
+/* 기본적으로 ul 숨기기 */
+.navigation-items a ul {
+    display: none; /* 기본적으로 숨김 */
+    position: absolute;
+    top: 100%; /* 부모 요소 바로 아래에 위치 */
+    left: 0; 
+    width: 200px; /* 드롭다운 메뉴 너비 설정 */
+    
+    z-index: 999;
+    border-radius: 5px; /* 살짝 둥근 모서리 */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
+
+/* 드롭다운 메뉴 항목 스타일 */
+.navigation-items a ul li {
+    padding-top: 10px;
+    text-align: left; /* 텍스트 정렬 */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* 항목 사이 구분선 */
+    font-size: 0.8em; /* 항목 글씨 크기 */
+    transition: background-color 0.3s ease; /* 배경색 변환 효과 */
+}
+
+/* 마지막 항목 구분선 제거 */
+.navigation-items a ul li:last-child {
+    border-bottom: none;
+}
+
+/* 드롭다운 메뉴 항목 hover 시 스타일 */
+.navigation-items a ul li:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* 배경색 변경 */
+    color: #ffcc00; /* 글자색 변경 */
+}
+
+
+/* a 태그에 마우스 올렸을 때 ul 나타나게 */
+.navigation-items a:hover ul {
+    display: block; /* ul 표시 */
+}
+
+/* 드롭다운 애니메이션 효과 */
+.navigation-items a ul {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px); /* 살짝 위에서 내려오는 느낌 */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navigation-items a:hover ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* 자연스럽게 나타나도록 */
+}
+
+
+
+/* -----------------------------------------------------------*/
+
+#sub_sub_menus {
+    display: none; /* 기본적으로 숨김 */
+    position: absolute;
+    top: 0; /* 부모 요소의 상단에 맞추기 */
+    left: 100%; /* 부모 요소의 오른쪽에 위치 */
+    width: 200px; /* 서브 메뉴 너비 설정 */
+    z-index: 999; /* 메뉴가 다른 요소들 위에 있도록 설정 */
+    border-radius: 5px; /* 살짝 둥근 모서리 */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    opacity: 0; /* 투명도 설정 */
+    visibility: hidden; /* 숨김 상태 */
+    transform: translateX(-10px); /* 서브 메뉴를 살짝 왼쪽으로 이동 */
+    transition: opacity 0.3s ease, visibility 0s 0.3s, transform 0.3s ease; /* 애니메이션 효과 */
+}
+
+/* 부모 li에 마우스 올렸을 때 sub_sub_menus 표시 */
+.navigation-items li:hover #sub_sub_menus {
+    display: block; /* 메뉴 표시 */
+    opacity: 1; /* 불투명도 설정 */
+    visibility: visible; /* 표시 상태 */
+    transform: translateX(0); /* 서브 메뉴를 제자리로 이동 */
+    transition: opacity 0.3s ease, visibility 0s, transform 0.3s ease; /* 애니메이션 효과 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

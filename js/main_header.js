@@ -65,3 +65,4 @@ window.addEventListener("resize", () => {
     slides2[currentIndex].classList.add("active");
   }
 });
+
