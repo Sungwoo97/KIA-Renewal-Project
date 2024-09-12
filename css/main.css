@@ -381,6 +381,45 @@
   margin-bottom: 32px;
 }
 
+@media (max-width: 834px){
+
+  .kia_notice{
+    margin: 0;
+  }
+  
+  .tabs .notice{
+    gap: 100px;
+    flex-direction: column;
+    background: url(../img/fo/fo_notice_2x.png) no-repeat;
+    background-size: 100%;
+    object-fit: cover;
+  }
+  
+  .tabs .news{
+    gap: 100px;
+    flex-direction: column;
+    background: url(../img/fo/fo_news_2x.png) no-repeat cover;
+    background-size: 100%;
+    object-fit: cover;
+  }
+
+  .tabs .notice img{
+    display: none;
+  }
+
+  .tabs .news img{
+    display: none;
+  }
+
+  .tabs .notice, .tabs .news{
+    margin: auto;
+    height: 700px;
+  }
+
+}
+
+
+
 /* //Section 최은화 */
 
 /* Footer 최은화 */
@@ -400,6 +439,7 @@ footer{
 footer,
 footer a{
   color: var(--white);
+  text-wrap: nowrap;
 }
 
 footer a:hover{
@@ -459,4 +499,34 @@ footer > p:after{
   right: 50%;
   transform: translate(50%, -25px);
 }
+
+@media (max-width: 834px){
+
+  footer .fo_prize{
+    width: 100%;
+  }
+
+  footer .fo_prize p,
+  footer .fo_prize h4{
+    display: none;
+  }
+
+  footer .no_guide{
+    gap: 35px;
+    align-items: center;
+    object-fit: cover;
+  }
+
+  footer .fo_smallmenu a,
+  footer .no_guide a{
+    font-size: var(--body_tt);
+    text-wrap: nowrap;
+  }
+
+  footer > p:after{
+    width: 700px;
+  }
+
+}
+
 /* // Footer 최은화 */
