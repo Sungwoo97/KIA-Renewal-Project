@@ -130,6 +130,8 @@
 .me_tab_members:after, .me_tab_ev_members:after{
   content: '';
   background-repeat: no-repeat;
+  background-position: center center;
+
   width: 768px;
   height: 340px;
   position: absolute;
@@ -137,16 +139,17 @@
 }
 
 .me_icons li:after{
-  background: url(../img/me/me_kia_members_icon.png)
+  background: url(../img/me/me_kia_members_icon.png);
 }
 
 .me_ev_icons li:after{
-  background: url(../img/me/me_ev_members_icon.png)
+  background: url(../img/me/me_ev_members_icon.png);
 }
 
 .me_icons li:after, .me_ev_icons li:after{
   content: '';
   background-repeat: no-repeat;
+  
   position: absolute;
   top:0;
   left: 50%;
@@ -217,11 +220,12 @@
 @media (max-width:1240px) {
   .me_tab_members:after{
     bottom: 100%;
-    right: 10%;
+    right: 0;
+    left: 0;
   }
   .me_tab_ev_members:after{
     bottom: 100%;
-    left: 10%;
+    left: 0; right: 0;
     margin-left: 0;
   }
   .me_tab_members{
@@ -233,16 +237,15 @@
 }
 @media (max-width:768px) {
   .me_tab_members:after{
-    background-size: 600px;
+    background-size: 100%;
     background-position: center center;
-    width: 600px;
+    width: 100%;
     height: 300px;
-    left: -10%;
   }
   .me_tab_ev_members:after{
-    background-size: 600px;
+    background-size: 100%;
     background-position: center center;
-    width: 600px;
+    width: 100%;
     height: 300px;
   }
   .me_tab_members{
@@ -258,16 +261,28 @@
 }
 @media (max-width:480px){
   .me_tab_members:after{
-    background-size: 390px;
+    background-size: 100%;
     background-position: center center;
-    width: 390px;
+    width: 100%;
     height: 208px;
+    left: 5%;
   }
   .me_tab_ev_members:after{
-    background-size: 390px;
+    background-size: 100%;
     background-position: center center;
-    width: 390px;
+    left: 0;
+    width: 100%;
     height: 208px;
+    
+  }
+  .me_icons, .me_ev_icons{
+    gap: 10px;
+  }
+  .me_tab_members{
+    margin: 250px 0 93px 0;
+  }
+  .me_tab_ev_members{
+    margin: 250px 0 93px 0;
   }
 }
 
