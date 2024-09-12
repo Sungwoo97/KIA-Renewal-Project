@@ -55,6 +55,13 @@
   color: var(--primary);
 }
 
+.sec_desc{
+  font-size: var(--section_tt);
+  line-height: var(--gutter);
+  font-weight: 400;
+  color: var(--medium_gray);
+}
+
 /* Tabs_menu */
 .tabs_menu{
   display: flex;
@@ -93,7 +100,6 @@
 }
 
 /* // Tabs_menu */
-
 .btn{
 	background: var(--white);
   color: var(--black);
