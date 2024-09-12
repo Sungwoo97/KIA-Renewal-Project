@@ -213,37 +213,25 @@
 .me_tab_members:after, .me_tab_ev_members:after{
   content: '';
   background-repeat: no-repeat;
+  background-position: center center;
   width: 768px;
   height: 340px;
   position: absolute;
-  
+ 
 }
-
-/* .me_tab_members button, .me_tab_ev_members button{
-  background: var(--white);
-  color: var(--black);
-  line-height: 38px;
-  padding: 0 45px;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.me_tab_members button:hover, .me_tab_ev_members button:hover{
-  background: var(--primary);
-  color: var(--white);
-} */
 
 .me_icons li:after{
-  background: url(../img/me/me_kia_members_icon.png)
+  background: url(../img/me/me_kia_members_icon.png);
 }
 
 .me_ev_icons li:after{
-  background: url(../img/me/me_ev_members_icon.png)
+  background: url(../img/me/me_ev_members_icon.png);
 }
 
 .me_icons li:after, .me_ev_icons li:after{
   content: '';
   background-repeat: no-repeat;
+  
   position: absolute;
   top:0;
   left: 50%;
@@ -308,9 +296,95 @@
   width: 74px;
   background-position: -283px center;
 }
-@media (min-width:768px){
+@media (max-width:1344px){
 
+  .me_tab_members{
+    margin: 174px 0px 93px 822px;
+  }
+  
+  .me_tab_ev_members{
+    margin: 174px 788px 93px 0px;
+  }
+  
 }
+
+@media (max-width:1200px) {
+  .me_tab_members:after{
+    background-size: 100%;
+  width: 50%;
+  }
+  
+  .me_tab_ev_members:after{
+    margin-left: 0;
+  }
+  .me_tab_members{
+    margin: 450px 0 93px 0;
+  }
+  .me_tab_ev_members{
+    margin: 450px 0 93px 0;
+  }
+}
+@media (max-width:1000px){
+  .me_tab_members:after{
+    bottom: 100%;
+  }
+  .me_tab_ev_members:after{
+    bottom: 100%;
+  
+    margin-left: 0;
+  }
+}
+@media (max-width:834) {
+  .me_tab_members:after{
+    background-size: 100%;
+    background-position: center center;
+    width: 100%;
+    height: 300px;
+  }
+  .me_tab_ev_members:after{
+    background-size: 100%;
+    background-position: center center;
+    width: 100%;
+    height: 300px;
+  }
+  .me_tab_members{
+    margin: 350px 0 93px 0;
+  }
+  .me_tab_ev_members{
+    margin: 350px 0 93px 0;
+  }
+  .me_icons li, .me_ev_icons li{
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@media (max-width:480px){
+  .me_tab_members:after{
+    background-size: 100%;
+    background-position: center center;
+    width: 100%;
+    height: 208px;
+    left: 5%;
+  }
+  .me_tab_ev_members:after{
+    background-size: 100%;
+    background-position: center center;
+    left: 0;
+    width: 100%;
+    height: 208px;
+    
+  }
+  .me_icons, .me_ev_icons{
+    gap: 10px;
+  }
+  .me_tab_members{
+    margin: 250px 0 93px 0;
+  }
+  .me_tab_ev_members{
+    margin: 250px 0 93px 0;
+  }
+}
+
 /* EVENT */
 .kia_event{
   position: relative;
@@ -472,24 +546,154 @@
   margin-bottom: 32px;
 }
 
+/* Section 최은화 */
+.no_title{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.no_title p{
+  font-size: var(--section_tt);
+  line-height: var(--gutter);
+  font-weight: 400;
+  color: var(--medium_gray);
+}
+
+.tabs .notice,
+.tabs .news{
+  margin: 72px 63px 62px 63px;
+  height: 580px;
+  gap: 125px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: #fff;
+}
+
+
+.tabs .no_notice{
+  display: flex;
+  gap: 330px;
+  text-wrap: nowrap;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.tabs .no_notice h3,
+.tabs .no_news h3{
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.tabs .no_notice button,
+.tabs .no_news button{
+  height: 32px;
+  border: 1px solid var(--primary);
+  background: var(--white);
+}
+
+.tabs .no_notice button:hover,
+.tabs .no_news button:hover{
+  height: 32px;
+  color: var(--white);
+  background: var(--primary);
+}
+
+.tabs .no_img{
+  height: 450px;
+  box-shadow: 0 0 10px 1px #bdbdbd;
+}
+
+.tabs .no_ntc{
+  width: 500px;
+  transform: translateX(5px);
+}
+
+.tabs .no_ntc li{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.tabs .no_ntc li:after{
+  content: '';
+  background: var(--primary);
+  width: 500px;
+  height: 1px;
+  position: absolute;
+  transform: translateY(32px);
+}
+
+.tabs .no_ntc li p:hover{
+  text-decoration: underline;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tabs .no_news{
+  display: flex;
+  gap: 392px;
+  text-wrap: nowrap;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+@media (max-width:1200px){
+  
+  .tabs .no_img{
+    width: 70%;
+    box-shadow: none;
+  }
+
+  .tabs .no_ntc{
+    width: 400px;
+    transform: translateX(5px);
+  }
+  
+  .tabs .no_ntc li{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .tabs .no_ntc li:after{
+    content: '';
+    background: var(--primary);
+    width: 500px;
+    height: 1px;
+    position: absolute;
+    transform: translateY(32px);
+  }
+
+}
+
 @media (max-width: 834px){
 
   .kia_notice{
     margin: 0;
   }
+
+  .tabs{
+    object-fit: cover;
+    justify-content: center;
+  }
   
-  .tabs .notice{
+  .tabs .notice,
+  .tabs .news{
     gap: 100px;
     flex-direction: column;
+  }
+
+  .tabs .notice{
     background: url(../img/fo/fo_notice_2x.png) no-repeat;
     background-size: 100%;
     object-fit: cover;
   }
   
   .tabs .news{
-    gap: 100px;
-    flex-direction: column;
-    background: url(../img/fo/fo_news_2x.png) no-repeat cover;
+    background: url(../img/fo/fo_news_2x.png) no-repeat;
     background-size: 100%;
     object-fit: cover;
   }
@@ -505,6 +709,10 @@
   .tabs .notice, .tabs .news{
     margin: auto;
     height: 700px;
+  }
+
+  .tabs .no_img{
+    box-shadow: none;
   }
 
 }
@@ -589,6 +797,19 @@ footer > p:after{
   position: absolute;
   right: 50%;
   transform: translate(50%, -25px);
+}
+
+@media (max-width: 1200px){
+
+  footer .fo_prize{
+    width: 1200px;
+    gap: 50px;
+    justify-content: center;
+  }
+
+  footer .fo_prize li{
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 834px){
