@@ -1,13 +1,13 @@
 /* BEST KIA */
 .best_kia{
-  margin: 0 auto 220px;
+  margin: 220px auto 220px;
 }
 .be_title{
   text-align: center;
 }
 .be_title h2{
   font-size: var(--sub_tt);
-  line-height: var(--gutter);
+  line-height: var(--sub_tt);
   font-weight: 700;
   color: var(--primary);
 }
@@ -17,7 +17,98 @@
   font-weight: 400;
   color: var(--medium_gray);
 }
+.be_tab_wrapper{
+  display: flex;
+}
+.tab_contents{
+  display: flex;
+}
+.be_tabs_menu{
+  width: 204px;
+  margin-right: 24px;
+  text-align: center;
+  background-color: var(--light_gray);
+  font-size: 20px;
+  line-height: 48px;
+}
+.be_tabs_menu li a{
+  display: block;
+}
+.be_tabs_menu li.active a{
+  line-height: 408px;
+  background-color: var(--primary);
+  color: var(--white);
+}
+.tab_contents .be_tabs{
+  display: none;
+}
+.tab_contents .be_tabs.active{
+  display: block;
+}
+.tab_contents .slides{
+  width: 776px;
+  height: 552px;
+  position: relative;
+}
+.tab_contents .slides img{
+  height: 552px;
+  object-fit: cover;
+}
+.toplanks .detail_ex{
+  display: flex;
+  gap:24px;
+  line-height: var(--section_tt);
+  margin: 10px 0 14px;
+}
 
+.toplanks ul li span{
+  color: var(--medium_gray);
+}
+.slick-dots{
+  position: absolute;
+  display: flex;
+  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 28px;
+  gap: 24px;
+}
+.slick-dots button{
+  background: var(--medium_gray);
+  border: none;
+  width: 84px;
+  height: 5px;
+  font-size: 0;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: 0.3s;
+}
+.slick-dots button:hover{
+  opacity: 1;
+}
+.tab_contents .be_tabs li{
+  display: none;
+}
+.tab_contents .be_tabs li.active{
+  display: block;
+}
+.tab_contents .be_tabs li img{
+  width: 316px;
+  height: 140px;
+  object-fit: cover;
+  margin: 48px 0 46px;
+}
+.tab_contents .be_tabs li h3{
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: bold;
+  color: var(--primary);
+  text-align: right;
+}
+.tab_depth{
+  display: flex;
+  gap: 24px;
+}
 /* MEMBERS */
 .kia_members, .kia_event, .kia_notice{
   margin: 0 auto 220px;
