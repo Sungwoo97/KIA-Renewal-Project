@@ -72,56 +72,19 @@
   text-align: center;
 }
 
-.me_title h2, .ev_title h2{
+/* .me_title h2, .ev_title h2{
   font-size: var(--sub_tt);
   line-height: var(--gutter);
   font-weight: 700;
   color: var(--primary);
-}
+} */
 
-.me_title p, .ev_title p{
+/* .me_title p, .ev_title p{
   font-size: var(--section_tt);
   line-height: var(--gutter);
   font-weight: 400;
   color: var(--medium_gray);
-}
-
-/* .me_tabs_menu{
-  display: flex;
-  justify-content: center;
-  line-height: 48px;
-}
-
-.me_tabs_menu li{
-  width: 50%;
-  text-align: center;
-  background: var(--light_gray);
-  cursor: pointer;
-}
-
-.me_tabs_menu li a {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--black);
-}
-
-.me_tabs_menu li.active{
-  background: var(--primary);
-  color: var(--white);
-}
-
-.me_tabs_menu li.active a{
-  color: var(--white);
 } */
-
-/* .tabs > div{
-  display: none;
-}
-
-.tabs > div.active{
-   display: block;
-} */
-
 
 .me_tab_wrapper div h3{
   font-size: var(--section_tt);
@@ -173,20 +136,6 @@
   
 }
 
-/* .me_tab_members button, .me_tab_ev_members button{
-  background: var(--white);
-  color: var(--black);
-  line-height: 38px;
-  padding: 0 45px;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.me_tab_members button:hover, .me_tab_ev_members button:hover{
-  background: var(--primary);
-  color: var(--white);
-} */
-
 .me_icons li:after{
   background: url(../img/me/me_kia_members_icon.png)
 }
@@ -207,6 +156,7 @@
 
 .me_icons li{
   position: relative;
+  width: 70px;
 }
 
 .me_icons li:nth-child(1):after{
@@ -236,20 +186,21 @@
 
 .me_ev_icons li{
   position: relative;
+  width: 70px;
 }
 
 .me_ev_icons li:nth-child(1):after{
-  width: 74px;
+  width: 77px;
   background-position: left center;
 }
 
 .me_ev_icons li:nth-child(2):after{
-  width: 58px;
+  width: 64px;
   background-position: -83px center;
 }
 
 .me_ev_icons li:nth-child(3):after{
-  width: 56px;
+  width: 60px;
   background-position: -152px center;
 }
 
@@ -262,9 +213,64 @@
   width: 74px;
   background-position: -283px center;
 }
-@media (min-width:768px){
 
+@media (max-width:1240px) {
+  .me_tab_members:after{
+    bottom: 100%;
+    right: 10%;
+  }
+  .me_tab_ev_members:after{
+    bottom: 100%;
+    left: 10%;
+    margin-left: 0;
+  }
+  .me_tab_members{
+    margin: 450px 0 93px 0;
+  }
+  .me_tab_ev_members{
+    margin: 450px 0 93px 0;
+  }
 }
+@media (max-width:768px) {
+  .me_tab_members:after{
+    background-size: 600px;
+    background-position: center center;
+    width: 600px;
+    height: 300px;
+    left: -10%;
+  }
+  .me_tab_ev_members:after{
+    background-size: 600px;
+    background-position: center center;
+    width: 600px;
+    height: 300px;
+  }
+  .me_tab_members{
+    margin: 350px 0 93px 0;
+  }
+  .me_tab_ev_members{
+    margin: 350px 0 93px 0;
+  }
+  .me_icons li, .me_ev_icons li{
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@media (max-width:480px){
+  .me_tab_members:after{
+    background-size: 390px;
+    background-position: center center;
+    width: 390px;
+    height: 208px;
+  }
+  .me_tab_ev_members:after{
+    background-size: 390px;
+    background-position: center center;
+    width: 390px;
+    height: 208px;
+  }
+}
+
 /* EVENT */
 .kia_event{
   position: relative;
@@ -299,6 +305,7 @@
 .ev_slide_container figure img{
   width: 100%;
   height: 252px;
+  object-fit: cover ;
 }
 .ev_slide_container figcaption{
   height: 113px;
@@ -320,16 +327,46 @@
 .ev_slide_prev, .ev_slide_next{ 
   position: absolute;
   font-size: 48px;
-  top: 60%;
+  top: 55%;
   color: var(--medium_gray);
+  cursor: pointer;
 }
+/* .ev_slide_prev img, .ev_slide_next img{
+  filter:invert(0.8);
+} */
 
 .ev_slide_prev {
-  right: 100%;
+  right: calc(100% - 50px);
 }
 
 .ev_slide_next {
-  left: 100%;
+  left: calc(100% - 50px);
+}
+
+@media (max-width:1260){
+  .kia_event{
+   width: 100%;
+  }
+  .ev_slide_wrapper{
+    width: 100%;
+  }
+}
+@media (max-width:1260px) {
+  .ev_slide_wrapper{
+    width: 832px;
+  }
+  .ev_slide_container figure{
+    width: 400px;
+  }
+}
+@media (max-width:768px) {
+  .ev_slide_wrapper{
+    width: 400px;
+  }
+ 
+  .ev_slide_container figure{
+    width: 400px;
+  }
 }
 
 /* Section 최은화 */
