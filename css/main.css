@@ -25,7 +25,7 @@
 }
 .be_tabs_menu{
   width: 204px;
-  margin-right: ;
+  margin-right: 24px;
 }
 .tab_contents .be_tabs{
   display: none;
@@ -84,6 +84,7 @@
 }
 .tab_depth{
   display: flex;
+  gap: 24px;
 }
 /* MEMBERS */
 .kia_members, .kia_event, .kia_notice{
@@ -94,19 +95,56 @@
   text-align: center;
 }
 
-/* .me_title h2, .ev_title h2{
+.me_title h2, .ev_title h2{
   font-size: var(--sub_tt);
   line-height: var(--gutter);
   font-weight: 700;
   color: var(--primary);
-} */
+}
 
-/* .me_title p, .ev_title p{
+.me_title p, .ev_title p{
   font-size: var(--section_tt);
   line-height: var(--gutter);
   font-weight: 400;
   color: var(--medium_gray);
+}
+
+/* .me_tabs_menu{
+  display: flex;
+  justify-content: center;
+  line-height: 48px;
+}
+
+.me_tabs_menu li{
+  width: 50%;
+  text-align: center;
+  background: var(--light_gray);
+  cursor: pointer;
+}
+
+.me_tabs_menu li a {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.me_tabs_menu li.active{
+  background: var(--primary);
+  color: var(--white);
+}
+
+.me_tabs_menu li.active a{
+  color: var(--white);
 } */
+
+/* .tabs > div{
+  display: none;
+}
+
+.tabs > div.active{
+   display: block;
+} */
+
 
 .me_tab_wrapper div h3{
   font-size: var(--section_tt);
@@ -158,6 +196,20 @@
   
 }
 
+/* .me_tab_members button, .me_tab_ev_members button{
+  background: var(--white);
+  color: var(--black);
+  line-height: 38px;
+  padding: 0 45px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.me_tab_members button:hover, .me_tab_ev_members button:hover{
+  background: var(--primary);
+  color: var(--white);
+} */
+
 .me_icons li:after{
   background: url(../img/me/me_kia_members_icon.png)
 }
@@ -178,7 +230,6 @@
 
 .me_icons li{
   position: relative;
-  width: 70px;
 }
 
 .me_icons li:nth-child(1):after{
@@ -208,21 +259,20 @@
 
 .me_ev_icons li{
   position: relative;
-  width: 70px;
 }
 
 .me_ev_icons li:nth-child(1):after{
-  width: 77px;
+  width: 74px;
   background-position: left center;
 }
 
 .me_ev_icons li:nth-child(2):after{
-  width: 64px;
+  width: 58px;
   background-position: -83px center;
 }
 
 .me_ev_icons li:nth-child(3):after{
-  width: 60px;
+  width: 56px;
   background-position: -152px center;
 }
 
@@ -235,64 +285,9 @@
   width: 74px;
   background-position: -283px center;
 }
+@media (min-width:768px){
 
-@media (max-width:1240px) {
-  .me_tab_members:after{
-    bottom: 100%;
-    right: 10%;
-  }
-  .me_tab_ev_members:after{
-    bottom: 100%;
-    left: 10%;
-    margin-left: 0;
-  }
-  .me_tab_members{
-    margin: 450px 0 93px 0;
-  }
-  .me_tab_ev_members{
-    margin: 450px 0 93px 0;
-  }
 }
-@media (max-width:768px) {
-  .me_tab_members:after{
-    background-size: 600px;
-    background-position: center center;
-    width: 600px;
-    height: 300px;
-    left: -10%;
-  }
-  .me_tab_ev_members:after{
-    background-size: 600px;
-    background-position: center center;
-    width: 600px;
-    height: 300px;
-  }
-  .me_tab_members{
-    margin: 350px 0 93px 0;
-  }
-  .me_tab_ev_members{
-    margin: 350px 0 93px 0;
-  }
-  .me_icons li, .me_ev_icons li{
-    font-size: 12px;
-    line-height: 18px;
-  }
-}
-@media (max-width:480px){
-  .me_tab_members:after{
-    background-size: 390px;
-    background-position: center center;
-    width: 390px;
-    height: 208px;
-  }
-  .me_tab_ev_members:after{
-    background-size: 390px;
-    background-position: center center;
-    width: 390px;
-    height: 208px;
-  }
-}
-
 /* EVENT */
 .kia_event{
   position: relative;
@@ -327,7 +322,6 @@
 .ev_slide_container figure img{
   width: 100%;
   height: 252px;
-  object-fit: cover ;
 }
 .ev_slide_container figcaption{
   height: 113px;
@@ -349,46 +343,16 @@
 .ev_slide_prev, .ev_slide_next{ 
   position: absolute;
   font-size: 48px;
-  top: 55%;
+  top: 60%;
   color: var(--medium_gray);
-  cursor: pointer;
 }
-/* .ev_slide_prev img, .ev_slide_next img{
-  filter:invert(0.8);
-} */
 
 .ev_slide_prev {
-  right: calc(100% - 50px);
+  right: 100%;
 }
 
 .ev_slide_next {
-  left: calc(100% - 50px);
-}
-
-@media (max-width:1260){
-  .kia_event{
-   width: 100%;
-  }
-  .ev_slide_wrapper{
-    width: 100%;
-  }
-}
-@media (max-width:1260px) {
-  .ev_slide_wrapper{
-    width: 832px;
-  }
-  .ev_slide_container figure{
-    width: 400px;
-  }
-}
-@media (max-width:768px) {
-  .ev_slide_wrapper{
-    width: 400px;
-  }
- 
-  .ev_slide_container figure{
-    width: 400px;
-  }
+  left: 100%;
 }
 
 /* Section 최은화 */
@@ -406,44 +370,10 @@
   color: var(--medium_gray);
 }
 
-/* .no_tabs{
-  display: flex;
-  justify-content: center;
-}
-
-.no_tabs li{
-  width: 50%;
-  height: 60px;
-  text-align: center;
-  background: var(--light_gray);
-}
-
-.no_tabs a{
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 56px;
-}
-
-.no_tabs li.active{
-  background: var(--primary);
-}
-
-.no_tabs li.active a{
-  color: var(--white);
-} */
-
-.no_look{
-  display: none;
-}
-
-.no_look.active{
-  display: block;
-}
-
-.no_box{
-  margin: 70px 63px 62px 63px;
+.tabs .notice,
+.tabs .news{
+  margin: 72px 63px 62px 63px;
   height: 580px;
-  display: flex;
   gap: 125px;
   justify-content: center;
   align-items: center;
@@ -451,14 +381,8 @@
   background: #fff;
 }
 
-.no_box .no_sizing{
-  width: 540px;
-  height: 100%;
-  margin-top: 360px;
-}
 
-
-.no_box .no_notice{
+.tabs .no_notice{
   display: flex;
   gap: 330px;
   text-wrap: nowrap;
@@ -466,29 +390,43 @@
   margin-bottom: 32px;
 }
 
-.no_box .no_notice h3{
+.tabs .no_notice h3,
+.tabs .no_news h3{
   font-size: 36px;
   font-weight: 700;
 }
 
-.no_box .no_notice button{
+.tabs .no_notice button,
+.tabs .no_news button{
   height: 32px;
   border: 1px solid var(--primary);
   background: var(--white);
 }
 
-.no_box .no_ntc{
+.tabs .no_notice button:hover,
+.tabs .no_news button:hover{
+  height: 32px;
+  color: var(--white);
+  background: var(--primary);
+}
+
+.tabs .no_img{
+  height: 450px;
+  box-shadow: 0 0 10px 1px #bdbdbd;
+}
+
+.tabs .no_ntc{
   width: 500px;
   transform: translateX(5px);
 }
 
-.no_box .no_ntc li{
+.tabs .no_ntc li{
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
 
-.no_box .no_ntc li:after{
+.tabs .no_ntc li:after{
   content: '';
   background: var(--primary);
   width: 500px;
@@ -497,13 +435,13 @@
   transform: translateY(32px);
 }
 
-.no_box .no_ntc li p:hover{
+.tabs .no_ntc li p:hover{
   text-decoration: underline;
   font-weight: 600;
   cursor: pointer;
 }
 
-.no_box .no_news{
+.tabs .no_news{
   display: flex;
   gap: 392px;
   text-wrap: nowrap;
@@ -511,32 +449,82 @@
   margin-bottom: 32px;
 }
 
-.no_box .no_news h3{
-  font-size: 36px;
-  font-weight: 700;
-}
-
-.no_box .no_news button{
-  height: 32px;
-  border: 1px solid var(--primary);
-  background: var(--white);
-}
-
 /* //Section 최은화 */
 
 /* Footer 최은화 */
 footer{
   margin-top: 220px;
-  width: 100%;
-  height: 483px;
-  position: relative;
+  padding: 50px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  position: relative;
   background: var(--primary);
+  font-weight: 100;
+  line-height: 16px;
 }
 
-.fo_prize{
+footer,
+footer a{
+  color: var(--white);
+}
+
+footer a:hover{
+  font-weight: 300;
+}
+
+footer .fo_prize{
+  width: 1400px;
   display: flex;
+  justify-content: space-between;
+  padding: 0 0 20px 0;
 }
 
+footer .fo_prize li{
+  display: flex;
+  gap: 10px;
+  text-wrap: nowrap;
+  align-items: center;
+  font-size: 12px;
+}
+
+footer .fo_prize li img{
+  width: 88px;
+  height: 50px;
+}
+
+footer .fo_smallmenu,
+footer .no_guide{
+  display: flex;
+  gap: 50px;
+}
+
+footer .no_sns{
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+footer .no_sns li i{
+  color: var(--white);
+  opacity: 50%;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+footer .no_sns li i:hover{
+  opacity: 100%;
+}
+
+footer > p:after{
+  content: '';
+  background: var(--medium_gray);
+  /* width: 1224px; */
+  width: 1400px;
+  height: 1px;
+  position: absolute;
+  right: 50%;
+  transform: translate(50%, -25px);
+}
 /* // Footer 최은화 */
