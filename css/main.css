@@ -109,6 +109,11 @@
   display: flex;
   gap: 24px;
 }
+.caution{
+  position: absolute;
+  color: var(--medium_gray);
+  font-size: var(--body_sub_tt);
+}
 /* MEMBERS */
 .kia_members, .kia_event, .kia_notice{
   margin: 0 auto 220px;
