@@ -1,13 +1,13 @@
 /* BEST KIA */
 .best_kia{
-  margin: 0 auto 220px;
+  margin: 220px auto 220px;
 }
 .be_title{
   text-align: center;
 }
 .be_title h2{
   font-size: var(--sub_tt);
-  line-height: var(--gutter);
+  line-height: var(--sub_tt);
   font-weight: 700;
   color: var(--primary);
 }
@@ -26,6 +26,18 @@
 .be_tabs_menu{
   width: 204px;
   margin-right: 24px;
+  text-align: center;
+  background-color: var(--light_gray);
+  font-size: 20px;
+  line-height: 48px;
+}
+.be_tabs_menu li a{
+  display: block;
+}
+.be_tabs_menu li.active a{
+  line-height: 408px;
+  background-color: var(--primary);
+  color: var(--white);
 }
 .tab_contents .be_tabs{
   display: none;
@@ -41,6 +53,16 @@
 .tab_contents .slides img{
   height: 552px;
   object-fit: cover;
+}
+.toplanks .detail_ex{
+  display: flex;
+  gap:24px;
+  line-height: var(--section_tt);
+  margin: 10px 0 14px;
+}
+
+.toplanks ul li span{
+  color: var(--medium_gray);
 }
 .slick-dots{
   position: absolute;
@@ -74,6 +96,7 @@
   width: 316px;
   height: 140px;
   object-fit: cover;
+  margin: 48px 0 46px;
 }
 .tab_contents .be_tabs li h3{
   font-size: 36px;
