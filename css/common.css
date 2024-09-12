@@ -96,7 +96,7 @@
 }
 
 .tabs > div.active{
-   display: flex;
+   display: block;
 }
 
 /* // Tabs_menu */
