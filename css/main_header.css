@@ -1,9 +1,8 @@
-* {
+header, div.navigation, section.home {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
+  }
 
 header {
     z-index: 999;
@@ -18,13 +17,6 @@ header {
     transition: 0.5s ease;
 }
 
-header .brand {
-    color: #fff;
-    font-size: 1.5em;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
-}
 
 header .navigation {
     position: relative;
@@ -132,11 +124,9 @@ header .navigation .navigation-items a:hover:before {
 
 .main_header_content{
     position: absolute;
-    top : 30%;
-    left : 30%;
-    width: 350px;
-    height: 350px;
-    background: red;
+    top : 65%;
+    left : 50px;    
+    color: var(--white);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0s 0.5s;
@@ -144,16 +134,35 @@ header .navigation .navigation-items a:hover:before {
 }
 
 .main_header_content.active{
-    position: absolute;
-    top : 30%;
-    left : 30%;
-    width: 350px;
-    height: 350px;
-    background: red;
     opacity: 1;
     visibility: visible;
     z-index: 888;
     transition: opacity 0.5s ease, visibility 0s;
+}
+
+.main_header_content p{
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.main_header_content h1{
+    font-size: 35px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.main_header_content h2{
+    font-size: 35px;
+    line-height: 35px;
+    margin-bottom: 15px;
+    /* font-weight: 500; */
+}
+
+.main_header_content button{
+    border: none;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
 

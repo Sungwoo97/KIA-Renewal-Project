@@ -3,115 +3,118 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 /* Variable */
-:root{
-	--gutter : 24px;
-	--main_tt : 48px;
-	--sub_tt : 40px;
-	--section_tt : 24px;
-	--body_tt : 16px;
-	--body_sub_tt : 12px;
-  --white : #ffffff;
-	--primary : #05141F;
-	--light_gray : #EBEBEB;
-	--medium_gray : #A0A0A0;
-	--dark_gray : #484848;
-	--black : #000000;
+:root {
+    --gutter: 24px;
+    --main_tt: 48px;
+    --sub_tt: 40px;
+    --section_tt: 24px;
+    --body_tt: 16px;
+    --body_sub_tt: 12px;
+    --white: #ffffff;
+    --primary: #05141F;
+    --light_gray: #EBEBEB;
+    --medium_gray: #A0A0A0;
+    --dark_gray: #484848;
+    --black: #000000;
 }
 
 /* LayOut */
-.container{
-	width: 1344px;
+.container {
+    width: 1344px;
 }
 
-.hidden{
-	display: none !important;
+.hidden {
+    display: none !important;
 }
 
-.blind{
-	position: absolute;
-	clip:rect(0 0 0 0);
-	clip-path:inset(0 0 100% 100%);
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    clip-path: inset(0 0 100% 100%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
-.content_gutter{
-	margin-bottom: 220px;
+.content_gutter {
+    margin-bottom: 220px;
 }
 
-.title_gutter{
-	margin-bottom: calc(var(--gutter) * 2);
+.title_gutter {
+    margin-bottom: calc(var(--gutter) * 2);
 }
 
-.sub_title_gutter{
-	margin-bottom: calc(var(--gutter) * 3);
+.sub_title_gutter {
+    margin-bottom: calc(var(--gutter) * 3);
 }
 
 /* Tabs_menu */
 
-.sec_tt{
-	font-size: var(--sub_tt);
-  line-height: var(--gutter);
-  font-weight: 700;
-  color: var(--primary);
+.sec_tt {
+    font-size: var(--sub_tt);
+    line-height: var(--gutter);
+    font-weight: 700;
+    color: var(--primary);
 }
 
-.tabs_menu{
-  display: flex;
-  justify-content: center;
-  line-height: 48px;
+.tabs_menu {
+    display: flex;
+    justify-content: center;
+    line-height: 48px;
 }
 
-.tabs_menu li{
-  width: 50%;
-  text-align: center;
-  background: var(--light_gray);
-  cursor: pointer;
+.tabs_menu li {
+    width: 50%;
+    text-align: center;
+    background: var(--light_gray);
+    cursor: pointer;
 }
 
 .tabs_menu li a {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--black);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--black);
 }
 
-.tabs_menu li.active{
-  background: var(--primary);
-  color: var(--white);
+.tabs_menu li.active {
+    background: var(--primary);
+    color: var(--white);
 }
 
-.tabs_menu li.active a{
-  color: var(--white);
+.tabs_menu li.active a {
+    color: var(--white);
 }
 
-.tabs > div{
-  display: none;
+.tabs>div {
+    display: none;
 }
 
-.tabs > div.active{
-   display: flex;
+.tabs>div.active {
+    display: flex;
 }
 
 /* // Tabs_menu */
 
-.btn{
-	background: var(--white);
-  color: var(--black);
-  line-height: 38px;
-  padding: 0 45px;
-  font-size: 12px;
-  font-weight: 600;
-	transition: 0.3s;
-	border-width: 1px;
-	border-color: var(--primary);
-}
-.btn:hover{
-	background: var(--primary);
-  color: var(--white);
+.btn {
+    background: var(--white);
+    color: var(--black);
+    line-height: 38px;
+    padding: 0 45px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+    border-width: 1px;
+    border-color: var(--primary);
 }
 
+.btn:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+
+
 /* Typography */
-body{
-	font:var(--body_tt)/var(--gutter) "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+body {
+    font: var(--body_tt)/var(--gutter) "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
