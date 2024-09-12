@@ -19,13 +19,8 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-/* article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-} */
-
 article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav,  section {
+footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
@@ -45,4 +40,8 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+a{
+  text-decoration: none;
+  color: #000;
 }
