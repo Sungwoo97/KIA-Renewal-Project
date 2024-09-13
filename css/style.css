@@ -1,0 +1,226 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+} */
+
+header {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    transition: 0.5s ease;
+}
+
+header .brand {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header .navigation {
+    position: relative;
+}
+
+header .navigation .navigation-items a {
+    position: relative;
+    color: #fff;
+    font-size: 1.25em;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before {
+    width: 100%;
+
+}
+
+.kia_logo {
+    fill: white;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.slider-navigation {
+    z-index: 888;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.slider-navigation .nav-btn {
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+}
+
+.slider-navigation .nav-btn.active {
+    background: #000;
+}
+
+
+.slider-navigation .nav-btn:not(:last-child) {
+    margin-right: 20px;
+
+}
+
+.slider-navigation .nav-btn:hover {
+    transform: scale(1.2);
+}
+
+
+
+.video-slide, .video-slide2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.5s;
+}
+
+.video-slide.active, .video-slide2.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0s;
+}
+
+.main_header_content{
+    position: absolute;
+    top : 30%;
+    left : 30%;
+    width: 350px;
+    height: 350px;
+    background: red;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.5s;
+    z-index: 888;
+}
+
+.main_header_content.active{
+    position: absolute;
+    top : 30%;
+    left : 30%;
+    width: 350px;
+    height: 350px;
+    background: red;
+    opacity: 1;
+    visibility: visible;
+    z-index: 888;
+    transition: opacity 0.5s ease, visibility 0s;
+}
+
+
+
+
+@media (max-width:1400px) {
+    header .navigation .navigation-items a {
+        font-size: var(--body_tt);
+        margin-left: 10px;
+    }
+}
+
+
+@media (max-width:1010px) {
+    header {
+        padding: 12px 20px;
+        display: flex;
+        justify-content: end;
+    }
+
+    header .navigation {
+        display: none;
+    }
+
+    .search-glasses {
+        background: url(../img/search.svg)no-repeat;
+        background-size: 20px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        /* filter: invert(100%); */
+    }
+
+    .globe-btn {
+        background: url(../img/earth-globe-tool.svg)no-repeat;
+        background-size: 20px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        /* filter: invert(100%); */
+    }
+
+    .menu-btn {
+        background: url(../img/menu.svg)no-repeat;
+        background-size: 20px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        /* filter: invert(100%); */
+    }
+
+    .menu-btn.active {
+        z-index: 999;
+        background: url(../img/menu.svg)no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: 0.3s ease;
+    }
+}
+
+@media (max-width:700px) {
+    
+
+}

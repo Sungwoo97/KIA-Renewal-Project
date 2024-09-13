@@ -104,5 +104,5 @@ beSlides.slick({
   prevArrow:'none',
   nextArrow:'none',
   autoplay:true,
-  autoplaySpeed:6000
+  autoplaySpeed:10000
 });
