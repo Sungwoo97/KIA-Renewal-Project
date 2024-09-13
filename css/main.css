@@ -108,6 +108,7 @@
 .tab_depth{
   display: flex;
   gap: 24px;
+  overflow: hidden;
 }
 .caution{
   position: absolute;
