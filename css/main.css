@@ -64,6 +64,10 @@
   display: flex;
   gap: 30px;
 }
+.toplanks .pager a.visible{
+  font-weight: bold;
+  color: var(--primary);
+}
 .toplanks .detail_ex{
   display: flex;
   gap:24px;
