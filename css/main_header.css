@@ -1,9 +1,11 @@
 header,
 div.navigation,
+div.navigation-items,
 section.home {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
 header {
@@ -19,21 +21,21 @@ header {
     transition: 0.5s ease;
 }
 
-header .navigation {
-    position: relative;
+header .navigation-items {
+    display: flex;
 }
 
-header .navigation .navigation-items a {
+header .navigation-items li a {
     position: relative;
     color: #fff;
-    font-size: 1.25em;
+    font-size: 1.2em;
     font-weight: 700;
     text-decoration: none;
     margin-left: 30px;
     transition: 0.3s ease;
 }
 
-header .navigation .navigation-items a:before {
+header  .navigation-items li a:before {
     content: '';
     position: absolute;
     background: #fff;
@@ -44,7 +46,7 @@ header .navigation .navigation-items a:before {
     transition: 0.3s ease;
 }
 
-header .navigation .navigation-items a:hover:before {
+header  .navigation-items li a:hover:before {
     width: 100%;
 }
 
@@ -173,60 +175,53 @@ header .navigation .navigation-items a:hover:before {
 
 /* ------------------드롭다운 메뉴 ------------- */
 /* 기본적으로 ul 숨기기 */
-.navigation-items a ul {
+.navigation-items li a ul {
     display: none;
-    /* 기본적으로 숨김 */
     position: absolute;
     top: 100%;
-    /* 부모 요소 바로 아래에 위치 */
     left: 0;
     width: 150px;
     z-index: 999;
     border-radius: 5px;
-    /* 살짝 둥근 모서리 */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    /* 그림자 효과 */
 }
 
 /* 드롭다운 메뉴 항목 스타일 */
-.navigation-items a ul li {
+.navigation-items li a ul li {
     padding-top: 10px;
     text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    /* 구분선 */
     font-size: 0.8em;
     transition: background-color 0.3s ease;
     /* 배경색 변환 효과 */
 }
 
 /* 마지막 항목 구분선 제거 */
-.navigation-items a ul li:last-child {
+.navigation-items li a ul li:last-child {
     border-bottom: none;
 }
 
 /*순서 => 마우스를 a태그에 올림 => ul 나옴 => ul li들이 나옴 */
 
 /* a 태그에 마우스 올렸을 때 ul 나타나게 */
-.navigation-items a:hover ul {
+.navigation-items li a:hover > ul {
     display: block;
-    /* ul 표시 */
 }
 
 /* 드롭다운 메뉴 항목 hover 시 스타일 */
-.navigation-items a {
+.navigation-items li a {
     color: #fff;
 }
 
-.navigation-items>a>ul>li:hover {
+.navigation-items > li > a > ul > li:hover {
     background-color: rgba(255, 255, 255, 0.1);
     color: #ffcc00;
 }
 
 /* 상위 메뉴 항목에 hover 시 하위 메뉴 배경색을 명시적으로 설정 */
-.navigation-items a ul>li>ul {
+.navigation-items li>a>ul>li>ul {
     background-color: transparent;
     /* 상위 hover의 배경색이 하위에 영향을 주지 않도록 */
-
 }
 
 /* 하위 메뉴 항목에는 상위 메뉴의 스타일이 상속되지 않도록 함 */
@@ -267,28 +262,22 @@ header .navigation .navigation-items a:hover:before {
     position: absolute;
     top: 0;
     left: 100%;
-    /* 오른쪽에 위치 */
     width: 200px;
-    /* 서브 메뉴 너비 설정 */
     z-index: 999;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    /* 그림자 효과 */
     opacity: 0;
     visibility: hidden;
     transform: translateX(-10px);
-    /* 서브 메뉴를 살짝 왼쪽으로 이동 */
     transition: opacity 0.3s ease, visibility 0s 0.3s, transform 0.3s ease;
 }
 
 /* 부모 li에 마우스 올렸을 때 sub_sub_menus 표시 */
-.navigation-items li:hover #sub_sub_menus {
+.navigation-items li a ul li:hover #sub_sub_menus {
     display: block;
-    /* 메뉴 표시 */
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
-    /* 서브 메뉴를 제자리로 이동 */
     transition: opacity 0.3s ease, visibility 0s, transform 0.3s ease;
 }
 
@@ -298,11 +287,74 @@ header .navigation .navigation-items a:hover:before {
 
 
 
+/* 모달 페이지*/
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; 
+    padding: 30px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    width: 70%;
+    max-width: 600px;
+    position: relative; 
+}
 
+.close {
+    color: #333;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
 
+.close:hover,
+.close:focus {
+    color: var(--primary);;
+}
 
+.modal-content input[type="text"] {
+    width: calc(100% - 20px); 
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
 
+.modal-content input[type="text"]:focus {
+    border-color: var(--primary);
+}
 
+.modal-content button {
+    background-color: var(--primary);
+    color: #fff; 
+    border: none;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-content button:hover {
+    transform: scale(1.05); 
+}
 
 
 
@@ -314,29 +366,24 @@ header .navigation .navigation-items a:hover:before {
 
 
 @media (max-width:1400px) {
-    header .navigation .navigation-items a {
-        font-size: var(--body_tt);
+    header .navigation-items li a {
+        font-size: 1em;
         margin-left: 10px;
     }
 
-    .navigation-items a ul {
+    .navigation-items li a ul {
         width: 130px;
     }
 
-
+    .kia_logo {
+        width: 90px;
+        height: 90px;
+    }
 }
 
 
-@media (max-width:1010px) {
-    .kia_logo {
-        fill: white;
-        width: 80px;
-        height: 80px;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
-    }
+@media (max-width:880px) {
+    
 
     header {
         padding: 12px 20px;
@@ -345,7 +392,7 @@ header .navigation .navigation-items a:hover:before {
 
     }
 
-    header .navigation {
+    header .navigation-items {
         display: none;
     }
 
@@ -434,4 +481,10 @@ header .navigation .navigation-items a:hover:before {
         /* font-weight: 500; */
     }
 
+    .modal-content {
+        width: 40;
+        max-width: 400px;
+
+    }
 }
+
