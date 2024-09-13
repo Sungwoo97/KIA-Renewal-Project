@@ -92,17 +92,5 @@ ev_prevBtn.on('click', debounce(()=>{
   moveSlide(currentIdx - 1);
 }, 500)) ;
 
-//best kia 슬라이더 (slick 사용)
-const beSlides = $('.best_kia .tab_depth .slides')
-
-beSlides.slick({
-  dots: true,
-  infinite: true,
-  speed: 500,
-  fade: true,
-  cssEase: 'linear',
-  prevArrow:'none',
-  nextArrow:'none',
-  autoplay:true,
-  autoplaySpeed:10000
-});
+//로딩 직후 바로 1번탭이 보이도록 강제로 잡아두기
+$('#be_tabs1').addClass('active')
