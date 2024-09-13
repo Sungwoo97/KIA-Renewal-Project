@@ -19,6 +19,7 @@
 }
 .be_tab_wrapper{
   display: flex;
+  position: relative;
 }
 .be_tab_wrapper .tabs_menu{
   display: block;
@@ -130,14 +131,19 @@
 .tab_depth{
   display: flex;
   gap: 24px;
-  position: relative;
 }
 .caution{
   position: absolute;
   color: var(--medium_gray);
   font-size: var(--body_sub_tt);
-  left: 329px;
-  top: 607px;
+  top: calc(100% + 55px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  cursor: default;
+}
+.tabs_menu li.active .caution{
+  display: block;
 }
 /* MEMBERS */
 .kia_members, .kia_event, .kia_notice{
