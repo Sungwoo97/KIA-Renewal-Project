@@ -117,9 +117,39 @@ header .navigation .navigation-items a:hover:before {
   margin-top: 100px;
 }
 
-.subimg .ellipse img{
+.subimg img,
+.subimg svg{
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* --------------------------------------------------------------- */
+
+.icontab{
+  margin-top: 300px;
+  height: 400px;
+  position: relative;
+}
+
+.icontab ul{
+  display: flex;
+  gap: 150px;
+  justify-content: center;
+}
+
+.icontab ul li:after{
+  content: '';
+  background: var(--medium_gray);
+  width: 1px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  
+}
+
+.icontab ul li:last-child:after{
+  content: none;
 }
