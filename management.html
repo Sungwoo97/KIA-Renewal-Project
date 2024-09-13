@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sustainability Management</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/management.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="js/parallax.min.js"></script>
 </head>
 <body>
   <header>
@@ -68,13 +71,12 @@
           <i class="fa-solid fa-user-shield"></i>
           <p>Safety and Quality</p>
           <h3>고객 안전 및 품질</h3>
-
         </li>
       </ul>
     </div>
     <section class="ca">
-      <div class="banner1">
-        <img src="img/ma/section_img1.png" alt="#">
+      <div class="banner">
+        <!-- <img src="img/ma/section_img1.png" alt="#"> -->
         <p>Climate Action</p>
         <h3>기후 변화</h3>
       </div>
@@ -107,7 +109,7 @@
       </div>
     </section>
     <section class="cc">
-      <div class="banner2">
+      <div class="banner parallax">
         <img src="img/ma/section_img2.png" alt="#">
         <p>Cleaner & Circular</p>
         <h3>자원 순환</h3>
@@ -141,7 +143,7 @@
       </div>
     </section>
     <section class="saq">
-      <div class="banner3">
+      <div class="banner">
         <img src="img/ma/section_img3.png" alt="#">
         <p>Safety and Quality</p>
         <h3>고객 안전 및 품질</h3>
@@ -176,5 +178,82 @@
       </div>
     </section>
   </main>
+  <footer>
+    <h1 class="fo_logo">
+      <img src="img/fo/fo_logo.png" alt="logo">
+    </h1>
+    <ul class="fo_prize">
+      <li>
+        <img src="img/fo/fo_ncsi.png" alt="ncsi">
+        <div>
+          <h4>23년 국가고객만족도(NCSI)</h4>
+          <p>경형승용(9년연속), 중형승용(4년연속)</p>
+          <p>컴팩트RV, 대형 RV 1위</p>
+        </div>
+      </li>
+      <li>
+        <img src="img/fo/fo_ks_sqi.png" alt="ks_sqi">
+        <div>
+          <h4>24년 한국 산업의 서비스 품질지수</h4>
+          <p>우수 콜센터 선정(21년 연속)</p>
+        </div>
+      </li>
+      <li>
+        <img src="img/fo/fo_ksqi1.png" alt="ksqi1">
+        <div>
+          <h4>24년 한국산업의 서비스 품질지수</h4>
+          <p>자동차 A/S부문 1위 (11년 연속)</p>
+        </div>
+      </li>
+      <li>
+        <img src="img/fo/fo_ksqi2.png" alt="ksqi2">
+        <div>
+          <h4>23년 한국서비스품질지수(KS-SQI)</h4>
+          <p>자동차 판매서비스 부문 1위 (4년 연속)</p>
+        </div>
+      </li>
+      <li>
+        <img src="img/fo/fo_wa.png" alt="웹접근성품질인증">
+        <div>
+          <h4>웹 접근성 품질인증</h4>
+        </div>
+      </li>
+    </ul>
+    <div class="fo_smallmenu">
+      <a href="#">판매 네트워크</a>
+      <a href="#">견적 내기</a>
+      <a href="#">구매 상담 신청</a>
+      <a href="#">시승 신청</a>
+      <a href="#">기아 렌터카</a>
+    </div>
+    <div class="no_guide">
+      <div class="fo_top">
+        <a href="#">개인정보 처리 방침</a>
+        <a href="#">프라이버시 센터</a>
+        <a href="#">이용약관</a>
+      </div>
+      <div class="fo_bottom">
+        <a href="#">윤리경영 사이버 감사실</a>
+        <a href="#">전자 공고</a>
+        <a href="#">사이트맵</a>
+      </div>
+    </div>
+    <ul class="no_sns">
+      <li><i class="fa-solid fa-blog"></i></li>
+      <li><i class="fa-brands fa-facebook"></i></li>
+      <li><i class="fa-brands fa-instagram"></i></li>
+      <li><i class="fa-brands fa-youtube"></i></li>
+    </ul>
+    <p>© Kia Corp. All rights reserved</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/parallax.min.js"></script>
+  </script>
+  <script>
+    $('.ca .banner').parallax({
+        imageSrc: 'img/ma/section_img1.png',
+        speed: 1.5
+      });
+  </script>
 </body>
 </html>
