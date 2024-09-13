@@ -172,27 +172,47 @@ header .navigation .navigation-items a:hover:before {
   font-weight: 900;
 }
 
-/* --------------------- Section ------------------------ */
+/* --------------------- Section1 ------------------------ */
 
 .ca .banner{
-  padding-top: 165px;
-}
-
-.parallax-slider {
-  background: transparent;
   height: 213px;
+  background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(255, 255, 255, .1));
 }
 
 .ca .banner p,
 .ca .banner h3{
   font-size: var(--section_tt);
   color: var(--white);
+  line-height: var(--gutter);
+  position: relative;
+  top: calc(50% - 15px);
+  left: 15%;
+  transform: translateY(-50%);
 }
 
 .ca .banner h3{
   font-size: 36px;
+  font-weight: 700;
+  margin-top: 10px;
 }
 
+.ca .expanation{
+  position: relative;
+  left: 15%;
+  top: 100px;  
+}
+
+.ca .expanation h3{
+  font-size: 36px;
+  font-weight:900;
+  line-height: 42px;
+}
+
+.ca .expanation p{
+  font-size: var(--body_tt);
+  color: #6E6E6E;
+  margin-top: 10px;
+}
 
 
 
