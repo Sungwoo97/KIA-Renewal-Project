@@ -93,7 +93,7 @@ ev_prevBtn.on('click', debounce(()=>{
 }, 500)) ;
 
 //best kia 슬라이더 (slick 사용)
-const beSlides = $('.best_kia .tab_contents .slides')
+const beSlides = $('.best_kia .tab_depth .slides')
 
 beSlides.slick({
   dots: true,

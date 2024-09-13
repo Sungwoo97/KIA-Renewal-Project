@@ -32,11 +32,13 @@
   width: 204px;
   display: block;
   transition: 0.3s;
+  font-weight: 400;
 }
 .be_tab_wrapper .tabs_menu li.active a{
   line-height: 408px;
   background-color: var(--primary);
   color: var(--white);
+  font-weight: 700;
 }
 .tabs{
   position: relative;
@@ -47,13 +49,13 @@
 .tabs .be_tabs.active{
   display: block;
 }
-.tabs .slides{
+.be_tab_wrapper .tabs .slides{
   width: 776px;
   height: 552px;
   position: relative;
   overflow: hidden;
 }
-.tabs .slides img{
+.be_tab_wrapper .tabs .slides img{
   height: 552px;
   object-fit: cover;
 }
@@ -73,21 +75,17 @@
   line-height: var(--section_tt);
   margin: 10px 0 14px;
 }
-
 .toplanks ul li span{
   color: var(--medium_gray);
 }
-
 .be_btn{
   margin-top: 21px;
   display: flex;
   gap: 8px;
 }
-
 .be_btn .btn{
   width: 154px;
 }
-
 .slick-dots{
   position: absolute;
   display: flex;
