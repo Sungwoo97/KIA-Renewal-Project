@@ -39,6 +39,9 @@
   background-color: var(--primary);
   color: var(--white);
 }
+.tab_contents{
+  position: relative;
+}
 .tab_contents .be_tabs{
   display: none;
 }
@@ -49,6 +52,7 @@
   width: 776px;
   height: 552px;
   position: relative;
+  overflow: hidden;
 }
 .tab_contents .slides img{
   height: 552px;
@@ -108,12 +112,14 @@
 .tab_depth{
   display: flex;
   gap: 24px;
-  overflow: hidden;
+  position: relative;
 }
 .caution{
   position: absolute;
   color: var(--medium_gray);
   font-size: var(--body_sub_tt);
+  left: 329px;
+  top: 607px;
 }
 /* MEMBERS */
 .kia_members, .kia_event, .kia_notice{
