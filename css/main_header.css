@@ -1,8 +1,10 @@
-header, div.navigation, section.home {
+header,
+div.navigation,
+section.home {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
 header {
     z-index: 999;
@@ -17,12 +19,9 @@ header {
     transition: 0.5s ease;
 }
 
-
 header .navigation {
     position: relative;
 }
-
-
 
 header .navigation .navigation-items a {
     position: relative;
@@ -47,7 +46,6 @@ header .navigation .navigation-items a:before {
 
 header .navigation .navigation-items a:hover:before {
     width: 100%;
-
 }
 
 .kia_logo {
@@ -96,19 +94,16 @@ header .navigation .navigation-items a:hover:before {
     background: #000;
 }
 
-
 .slider-navigation .nav-btn:not(:last-child) {
     margin-right: 20px;
-
 }
 
 .slider-navigation .nav-btn:hover {
     transform: scale(1.2);
 }
 
-
-
-.video-slide, .video-slide2 {
+.video-slide,
+.video-slide2 {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -118,16 +113,17 @@ header .navigation .navigation-items a:hover:before {
     transition: opacity 0.3s ease, visibility 0s 0.5s;
 }
 
-.video-slide.active, .video-slide2.active {
+.video-slide.active,
+.video-slide2.active {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.5s ease, visibility 0s;
 }
 
-.main_header_content{
+.main_header_content {
     position: absolute;
-    top : 65%;
-    left : 50px;    
+    top: 70%;
+    left: 70px;
     color: var(--white);
     opacity: 0;
     visibility: hidden;
@@ -135,33 +131,33 @@ header .navigation .navigation-items a:hover:before {
     z-index: 888;
 }
 
-.main_header_content.active{
+.main_header_content.active {
     opacity: 1;
     visibility: visible;
     z-index: 888;
     transition: opacity 0.5s ease, visibility 0s;
 }
 
-.main_header_content p{
+.main_header_content p {
     font-size: 15px;
     margin-bottom: 15px;
 }
 
-.main_header_content h1{
+.main_header_content h1 {
     font-size: 35px;
     margin-bottom: 15px;
     font-weight: 700;
     letter-spacing: 2px;
 }
 
-.main_header_content h2{
+.main_header_content h2 {
     font-size: 35px;
     line-height: 35px;
     margin-bottom: 15px;
     /* font-weight: 500; */
 }
 
-.main_header_content button{
+.main_header_content button {
     border: none;
     margin-top: 10px;
     margin-right: 10px;
@@ -169,33 +165,38 @@ header .navigation .navigation-items a:hover:before {
 }
 
 #right-arrow_white {
-    width: 10px; /* 원하는 크기로 조정 */
-    height: 10px; /* 원하는 크기로 조정 */
+    width: 10px;
+    /* 원하는 크기로 조정 */
+    height: 10px;
+    /* 원하는 크기로 조정 */
 }
 
-
-
-/* ------------------드롭다운 메뉴 성형수술 ------------- */
+/* ------------------드롭다운 메뉴 ------------- */
 /* 기본적으로 ul 숨기기 */
 .navigation-items a ul {
-    display: none; /* 기본적으로 숨김 */
+    display: none;
+    /* 기본적으로 숨김 */
     position: absolute;
-    top: 100%; /* 부모 요소 바로 아래에 위치 */
-    left: 0; 
-    width: 200px; /* 드롭다운 메뉴 너비 설정 */
-    
+    top: 100%;
+    /* 부모 요소 바로 아래에 위치 */
+    left: 0;
+    width: 150px;
     z-index: 999;
-    border-radius: 5px; /* 살짝 둥근 모서리 */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    border-radius: 5px;
+    /* 살짝 둥근 모서리 */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /* 그림자 효과 */
 }
 
 /* 드롭다운 메뉴 항목 스타일 */
 .navigation-items a ul li {
     padding-top: 10px;
-    text-align: left; /* 텍스트 정렬 */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* 항목 사이 구분선 */
-    font-size: 0.8em; /* 항목 글씨 크기 */
-    transition: background-color 0.3s ease; /* 배경색 변환 효과 */
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    /* 구분선 */
+    font-size: 0.8em;
+    transition: background-color 0.3s ease;
+    /* 배경색 변환 효과 */
 }
 
 /* 마지막 항목 구분선 제거 */
@@ -203,58 +204,92 @@ header .navigation .navigation-items a:hover:before {
     border-bottom: none;
 }
 
-/* 드롭다운 메뉴 항목 hover 시 스타일 */
-.navigation-items a ul li:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* 배경색 변경 */
-    color: #ffcc00; /* 글자색 변경 */
-}
-
+/*순서 => 마우스를 a태그에 올림 => ul 나옴 => ul li들이 나옴 */
 
 /* a 태그에 마우스 올렸을 때 ul 나타나게 */
 .navigation-items a:hover ul {
-    display: block; /* ul 표시 */
+    display: block;
+    /* ul 표시 */
 }
 
-/* 드롭다운 애니메이션 효과 */
-.navigation-items a ul {
+/* 드롭다운 메뉴 항목 hover 시 스타일 */
+.navigation-items a {
+    color: #fff;
+}
+
+.navigation-items>a>ul>li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffcc00;
+}
+
+/* 상위 메뉴 항목에 hover 시 하위 메뉴 배경색을 명시적으로 설정 */
+.navigation-items a ul>li>ul {
+    background-color: transparent;
+    /* 상위 hover의 배경색이 하위에 영향을 주지 않도록 */
+
+}
+
+/* 하위 메뉴 항목에는 상위 메뉴의 스타일이 상속되지 않도록 함 */
+.navigation-items a ul>li>ul>li {
+    background-color: transparent;
+    /* 배경색 초기화 */
+    color: #fff;
+}
+
+.navigation-items a ul>li>ul>li:hover {
+    background-color: transparent;
+    /* 배경색 초기화 */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffcc00;
+}
+
+
+/* 드롭다운 애니메이션 효과 불필요할듯...?  */
+/* .navigation-items a ul {
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px); /* 살짝 위에서 내려오는 느낌 */
+    transform: translateY(-10px); 
     transition: opacity 0.3s ease, transform 0.3s ease;
-}
+} */
 
-.navigation-items a:hover ul {
+/* .navigation-items a:hover ul {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0); /* 자연스럽게 나타나도록 */
-}
+    transform: translateY(0); 
+} */
 
 
 
-/* -----------------------------------------------------------*/
+/* -------------------------서브 서브 메뉴----------------------------*/
 
 #sub_sub_menus {
-    display: none; /* 기본적으로 숨김 */
+    display: none;
     position: absolute;
-    top: 0; /* 부모 요소의 상단에 맞추기 */
-    left: 100%; /* 부모 요소의 오른쪽에 위치 */
-    width: 200px; /* 서브 메뉴 너비 설정 */
-    z-index: 999; /* 메뉴가 다른 요소들 위에 있도록 설정 */
-    border-radius: 5px; /* 살짝 둥근 모서리 */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
-    opacity: 0; /* 투명도 설정 */
-    visibility: hidden; /* 숨김 상태 */
-    transform: translateX(-10px); /* 서브 메뉴를 살짝 왼쪽으로 이동 */
-    transition: opacity 0.3s ease, visibility 0s 0.3s, transform 0.3s ease; /* 애니메이션 효과 */
+    top: 0;
+    left: 100%;
+    /* 오른쪽에 위치 */
+    width: 200px;
+    /* 서브 메뉴 너비 설정 */
+    z-index: 999;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /* 그림자 효과 */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+    /* 서브 메뉴를 살짝 왼쪽으로 이동 */
+    transition: opacity 0.3s ease, visibility 0s 0.3s, transform 0.3s ease;
 }
 
 /* 부모 li에 마우스 올렸을 때 sub_sub_menus 표시 */
 .navigation-items li:hover #sub_sub_menus {
-    display: block; /* 메뉴 표시 */
-    opacity: 1; /* 불투명도 설정 */
-    visibility: visible; /* 표시 상태 */
-    transform: translateX(0); /* 서브 메뉴를 제자리로 이동 */
-    transition: opacity 0.3s ease, visibility 0s, transform 0.3s ease; /* 애니메이션 효과 */
+    display: block;
+    /* 메뉴 표시 */
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    /* 서브 메뉴를 제자리로 이동 */
+    transition: opacity 0.3s ease, visibility 0s, transform 0.3s ease;
 }
 
 
@@ -283,14 +318,31 @@ header .navigation .navigation-items a:hover:before {
         font-size: var(--body_tt);
         margin-left: 10px;
     }
+
+    .navigation-items a ul {
+        width: 130px;
+    }
+
+
 }
 
 
 @media (max-width:1010px) {
+    .kia_logo {
+        fill: white;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+    }
+
     header {
         padding: 12px 20px;
         display: flex;
         justify-content: end;
+
     }
 
     header .navigation {
@@ -298,7 +350,7 @@ header .navigation .navigation-items a:hover:before {
     }
 
     .search-glasses {
-        background: url(../img/search.svg)no-repeat;
+        background: url(../img/main_header/search.svg)no-repeat;
         background-size: 20px;
         background-position: center;
         width: 40px;
@@ -309,7 +361,7 @@ header .navigation .navigation-items a:hover:before {
     }
 
     .globe-btn {
-        background: url(../img/earth-globe-tool.svg)no-repeat;
+        background: url(../img/main_header/earth-globe-tool.svg)no-repeat;
         background-size: 20px;
         background-position: center;
         width: 40px;
@@ -320,7 +372,7 @@ header .navigation .navigation-items a:hover:before {
     }
 
     .menu-btn {
-        background: url(../img/menu.svg)no-repeat;
+        background: url(../img/main_header/menu.svg)no-repeat;
         background-size: 20px;
         background-position: center;
         width: 40px;
@@ -332,7 +384,7 @@ header .navigation .navigation-items a:hover:before {
 
     .menu-btn.active {
         z-index: 999;
-        background: url(../img/menu.svg)no-repeat;
+        background: url(../img/main_header/menu.svg)no-repeat;
         background-size: 25px;
         background-position: center;
         transition: 0.3s ease;
@@ -340,6 +392,46 @@ header .navigation .navigation-items a:hover:before {
 }
 
 @media (max-width:700px) {
-    
+    .btn {
+        border: none;
+        padding: 0px 20px;
+    }
+
+    .main_header_content {
+        position: absolute;
+        top: 65%;
+        left: 50px;
+        color: var(--white);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0s 0.5s;
+        z-index: 888;
+    }
+
+    .main_header_content.active {
+        opacity: 1;
+        visibility: visible;
+        z-index: 888;
+        transition: opacity 0.5s ease, visibility 0s;
+    }
+
+    .main_header_content p {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .main_header_content h1 {
+        font-size: 25px;
+        margin-bottom: 12px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+
+    .main_header_content h2 {
+        font-size: 25px;
+        line-height: 25px;
+        margin-bottom: 12px;
+        /* font-weight: 500; */
+    }
 
 }

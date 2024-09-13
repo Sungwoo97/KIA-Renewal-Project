@@ -28,11 +28,21 @@ function sliderNav(manual) {
     mainHeaderCarContents[manual].classList.add("active");
 
   } else {
-    // 넓이가 700px 이하일 때 video-slide2를 활성화
+    //우선!! z-index아래서 재생되던 동영상 안보이게
+    slides.forEach((slide, i) => {  
+      slide.classList.remove("active");
+    });
+
+    //넓이가 700px 이하일 때 video-slide2를 활성화
     slides2.forEach((slide, i) => {
       slide.classList.remove("active");
     });
+
     slides2[manual].classList.add("active");
+    mainHeaderCarContents.forEach( (context, i) =>{
+      context.classList.remove("active");
+    });
+    mainHeaderCarContents[manual].classList.add("active");
   }
 
   // 버튼 활성화
