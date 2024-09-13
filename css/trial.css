@@ -176,7 +176,7 @@ header .navigation .navigation-items a:hover:before {
 .ex_tab_salesNetwork .ex_maps{
   width: 66%;
   background: #ccc;
-  height: 1000px;
+  height: 900px;
 }
 
 .tabs .maps_search{
@@ -189,7 +189,7 @@ header .navigation .navigation-items a:hover:before {
 .ex_tab_salesNetwork .tabs > div{
   overflow-x: hidden;
   margin-left: 90px;
-  height: 945px;
+  height: 845px;
 }
 
 .ex_tab_salesNetwork .tabs_menu{
@@ -239,23 +239,27 @@ header .navigation .navigation-items a:hover:before {
 .ex_slide_wrapper{
   width: 100%;
   overflow: hidden;
-  margin-bottom: var();
+  position: relative;
+  height: 700px;
 }
 .ex_slide_container{
   width: 2360px;
   display: flex;
   gap: 72px;
+  position: absolute;
 }
 .ex_slide_container h4{
   font-size: 36px;
   font-weight: 500;
   margin: 48px 0 24px;
   display: none;
+  transition: .3s;
 }
 
 .ex_slide_container p{
   font-weight: 300; 
   display: none;
+  transition: .3s;
 }
 
 .ex_slide_container li{
@@ -269,3 +273,23 @@ header .navigation .navigation-items a:hover:before {
 .ex_slide_container .active h4, .ex_slide_container .active p{
   display: block;
 }
+
+.ex_slide_prev,.ex_slide_next{
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  background: #ccc;
+  opacity: 0;
+}
+
+.ex_slide_prev:hover ,.ex_slide_next:hover{
+  opacity: 0.1;
+}
+
+.ex_slide_prev{
+  left: 0;
+}
+
+.ex_slide_next{
+  right: 0;
+} 
