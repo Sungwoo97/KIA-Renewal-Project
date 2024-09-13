@@ -129,27 +129,275 @@ header .navigation .navigation-items a:hover:before {
 
 .icontab{
   margin-top: 300px;
-  height: 400px;
-  position: relative;
+  margin-bottom: 300px;
 }
 
 .icontab ul{
   display: flex;
-  gap: 150px;
   justify-content: center;
 }
 
-.icontab ul li:after{
+.icontab ul li{
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-right: 1px solid var(--medium_gray);
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.icontab ul li:last-child{
+  border-right: none;
+}
+
+.icontab ul li i{
+  color: var(--primary);
+  font-size: 100px;
+  margin-bottom: 50px;
+}
+
+.icontab ul li p{
+  font-size: var(--section_tt);
+  font-weight: 700;
+  opacity: 50%;
+}
+
+.icontab ul li h3{
+  font-size: 32px;
+  font-weight: 900;
+}
+
+/* --------------------- Section ------------------------ */
+
+.ca .banner{
+  padding-top: 165px;
+}
+
+.parallax-slider {
+  background: transparent;
+  height: 213px;
+}
+
+.ca .banner p,
+.ca .banner h3{
+  font-size: var(--section_tt);
+  color: var(--white);
+}
+
+.ca .banner h3{
+  font-size: 36px;
+}
+
+
+
+
+/* Footer */
+footer{
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 220px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  background: var(--primary);
+  font-weight: 100;
+  line-height: 16px;
+}
+
+footer,
+footer a{
+  color: var(--white);
+  text-wrap: nowrap;
+}
+
+footer a:hover{
+  font-weight: 300;
+}
+
+footer .fo_prize{
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 20px 0;
+}
+
+footer .fo_prize li{
+  display: flex;
+  gap: 10px;
+  text-wrap: nowrap;
+  align-items: center;
+  font-size: 12px;
+}
+
+footer .fo_prize li img{
+  width: 88px;
+  height: 50px;
+}
+
+footer .fo_smallmenu,
+footer .no_guide{
+  display: flex;
+  gap: 50px;
+  transition: 0.3s;
+}
+  
+footer .no_guide .fo_top{
+  display: flex;
+  gap: 50px;
+  transition: 0.3s;
+}
+
+footer .no_guide .fo_bottom{
+  display: flex;
+  gap: 50px;
+  transition: 0.3s;
+}
+
+footer .no_sns{
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+footer .no_sns li i{
+  color: var(--white);
+  opacity: 50%;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+footer .no_sns li i:hover{
+  opacity: 100%;
+}
+
+footer > p:after{
   content: '';
   background: var(--medium_gray);
-  width: 1px;
-  height: 400px;
+  /* width: 1224px; */
+  width: 1400px;
+  height: 1px;
   position: absolute;
-  left: 50%;
-  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, -25px);
+  transition: 0.3s;
+}
+
+@media (max-width: 1200px){
+
+  footer .fo_prize{
+    width: 1200px;
+    gap: 50px;
+    justify-content: center;
+  }
+
+  footer .fo_prize li{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 834px){
+
+  footer .fo_prize{
+    width: 100%;
+  }
+
+  footer .fo_prize p,
+  footer .fo_prize h4{
+    display: none;
+  }
+
+  footer .no_guide{
+    gap: 35px;
+    align-items: center;
+    object-fit: cover;
+  }
+  
+  footer .no_guide .fo_top{
+    display: flex;
+    gap: 35px;
+  }
+  
+  footer .no_guide .fo_bottom{
+    display: flex;
+    gap: 35px;
+  }
+
+  footer .fo_smallmenu a,
+  footer .no_guide a{
+    font-size: var(--body_tt);
+    text-wrap: nowrap;
+  }
+
+  footer > p:after{
+    width: 700px;
+  }
+
+}
+
+@media (max-width: 660px){
+
+  footer{
+    gap: 25px;
+  }
+
+  footer .fo_prize li img{
+   width: 68px;
+   height: 40px; 
+  }
+
+  footer .fo_smallmenu{
+    gap: 25px;
+  }
+
+  footer .no_guide{
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  footer .no_guide .fo_top{
+    gap: 30px;
+  }
+  
+  footer .no_guide .fo_bottom{
+    gap: 30px;
+  }
+
+  footer > p:after{
+    width: 500px;
+  }
   
 }
 
-.icontab ul li:last-child:after{
-  content: none;
+@media (max-width: 480px){
+  footer .fo_smallmenu{
+    gap: 15px;
+  }
+
+  footer .no_guide{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  footer .no_guide .fo_top{
+    gap: 30px;
+  }
+  
+  footer .no_guide .fo_bottom{
+    gap: 30px;
+  }
+
+  footer > p:after{
+    width: 400px;
+  }
 }
+
+/* // Footer */
