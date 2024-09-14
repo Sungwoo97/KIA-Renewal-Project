@@ -1,4 +1,8 @@
 /* BEST KIA */
+
+
+
+
 .best_kia{
   margin: 220px auto 220px;
 }
@@ -108,6 +112,7 @@
 .tab_depth{
   display: flex;
   gap: 24px;
+  overflow: hidden;
 }
 .caution{
   position: absolute;
@@ -302,12 +307,15 @@
   background-position: -283px center;
 }
 @media (max-width:1344px){
+
   .me_tab_members{
     margin: 174px 0px 93px 822px;
   }
+  
   .me_tab_ev_members{
     margin: 174px 788px 93px 0px;
   }
+  
 }
 
 @media (max-width:1200px) {
@@ -341,10 +349,23 @@
   }
   .me_tab_ev_members:after{
     bottom: 100%;
+  
     margin-left: 0;
   }
 }
-@media (max-width:834px) {
+@media (max-width:834) {
+  .me_tab_members:after{
+    background-size: 100%;
+    background-position: center center;
+    width: 100%;
+    height: 300px;
+  }
+  .me_tab_ev_members:after{
+    background-size: 100%;
+    background-position: center center;
+    width: 100%;
+    height: 300px;
+  }
   .me_tab_members{
     margin: 350px 0 93px 0;
   }
@@ -370,6 +391,7 @@
     left: 0;
     width: 100%;
     height: 208px;
+    
   }
   .me_icons, .me_ev_icons{
     gap: 10px;
@@ -556,10 +578,217 @@
   margin-bottom: 32px;
 }
 
+/* Section 최은화 */
+.no_title{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.no_title p{
+  font-size: var(--section_tt);
+  line-height: var(--gutter);
+  font-weight: 400;
+  color: var(--medium_gray);
+}
+
+.tabs .notice,
+.tabs .news{
+  margin: 72px 63px 62px 63px;
+  height: 580px;
+  gap: 125px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: #fff;
+  transition: 0.3s;
+}
+
+
+.tabs .no_notice{
+  display: flex;
+  gap: 330px;
+  text-wrap: nowrap;
+  text-align: center;
+  margin-bottom: 32px;
+  transition: 0.3s;
+}
+
+.tabs .no_notice h3,
+.tabs .no_news h3{
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.tabs .no_notice button,
+.tabs .no_news button{
+  height: 32px;
+  border: 1px solid var(--primary);
+  background: var(--white);
+}
+
+.tabs .no_notice button:hover,
+.tabs .no_news button:hover{
+  height: 32px;
+  color: var(--white);
+  background: var(--primary);
+}
+
+.tabs .no_img{
+  height: 450px;
+  box-shadow: 0 0 10px 1px #bdbdbd;
+}
+
+.tabs .no_ntc{
+  width: 500px;
+  transform: translateX(5px);
+  transition: 0.3s;
+}
+
+.tabs .no_ntc li{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.tabs .no_ntc li:after{
+  content: '';
+  background: var(--primary);
+  width: 500px;
+  height: 1px;
+  position: absolute;
+  transform: translateY(32px);
+  transition: 0.3s;
+}
+
+.tabs .no_ntc li p:hover{
+  text-decoration: underline;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tabs .no_news{
+  display: flex;
+  gap: 392px;
+  text-wrap: nowrap;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+@media (max-width:1200px){
+
+  .tabs .notice,
+  .tabs .news{
+    gap: 70px;
+  }
+
+  .tabs .no_notice{
+    gap: 220px;
+  }
+  
+  .tabs .no_img{
+    width: 70%;
+    box-shadow: none;
+  }
+
+  .tabs .no_ntc{
+    width: 400px;
+    transform: translateX(5px);
+  }
+  
+  .tabs .no_ntc li{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .tabs .no_ntc li:after{
+    content: '';
+    background: var(--primary);
+    width: 400px;
+    height: 1px;
+    position: absolute;
+    transform: translateY(32px);
+  }
+
+}
+
+@media (max-width: 1000px){
+  
+  .kia_notice{
+    margin: 0;
+  }
+
+  .tabs{
+    object-fit: cover;
+    justify-content: center;
+  }
+  
+  .tabs .notice,
+  .tabs .news{
+    margin: auto;
+    height: 20%;
+    gap: 200px;
+    flex-direction: column;
+  }
+
+  .tabs .notice{
+    background: url(../img/fo/fo_notice_2x.png) no-repeat;
+    background-size: 100%;
+    object-fit: cover;
+  }
+  
+  .tabs .news{
+    background: url(../img/fo/fo_news_2x.png) no-repeat;
+    background-size: 100%;
+    object-fit: cover;
+  }
+
+  .tabs .notice img{
+    display: none;
+  }
+
+  .tabs .news img{
+    display: none;
+  }
+
+  .tabs .no_notice{
+    gap: 330px;
+  }
+
+  .tabs .no_ntc{
+    width: 500px;
+  }
+
+  .tabs .no_img{
+    box-shadow: none;
+  }
+
+  .tabs .no_ntc li:after{
+    width: 500px;
+  }
+
+}
+
+@media (max-width: 834px){
+  
+  .tabs .notice,
+  .tabs .news{
+    margin: auto;
+    height: 20%;
+    gap: 100px;
+  }
+
+}
+
 /* //Section 최은화 */
 
 /* Footer 최은화 */
 footer{
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin-top: 220px;
   padding: 50px;
   display: flex;
@@ -575,6 +804,7 @@ footer{
 footer,
 footer a{
   color: var(--white);
+  text-wrap: nowrap;
 }
 
 footer a:hover{
@@ -605,6 +835,19 @@ footer .fo_smallmenu,
 footer .no_guide{
   display: flex;
   gap: 50px;
+  transition: 0.3s;
+}
+  
+footer .no_guide .fo_top{
+  display: flex;
+  gap: 50px;
+  transition: 0.3s;
+}
+
+footer .no_guide .fo_bottom{
+  display: flex;
+  gap: 50px;
+  transition: 0.3s;
 }
 
 footer .no_sns{
@@ -633,5 +876,116 @@ footer > p:after{
   position: absolute;
   right: 50%;
   transform: translate(50%, -25px);
+  transition: 0.3s;
 }
+
+@media (max-width: 1200px){
+
+  footer .fo_prize{
+    width: 1200px;
+    gap: 50px;
+    justify-content: center;
+  }
+
+  footer .fo_prize li{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 834px){
+
+  footer .fo_prize{
+    width: 100%;
+  }
+
+  footer .fo_prize p,
+  footer .fo_prize h4{
+    display: none;
+  }
+
+  footer .no_guide{
+    gap: 35px;
+    align-items: center;
+    object-fit: cover;
+  }
+  
+  footer .no_guide .fo_top{
+    display: flex;
+    gap: 35px;
+  }
+  
+  footer .no_guide .fo_bottom{
+    display: flex;
+    gap: 35px;
+  }
+
+  footer .fo_smallmenu a,
+  footer .no_guide a{
+    font-size: var(--body_tt);
+    text-wrap: nowrap;
+  }
+
+  footer > p:after{
+    width: 700px;
+  }
+
+}
+
+@media (max-width: 660px){
+
+  footer{
+    gap: 25px;
+  }
+
+  footer .fo_prize li img{
+   width: 68px;
+   height: 40px; 
+  }
+
+  footer .fo_smallmenu{
+    gap: 25px;
+  }
+
+  footer .no_guide{
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  footer .no_guide .fo_top{
+    gap: 30px;
+  }
+  
+  footer .no_guide .fo_bottom{
+    gap: 30px;
+  }
+
+  footer > p:after{
+    width: 500px;
+  }
+  
+}
+
+@media (max-width: 480px){
+  footer .fo_smallmenu{
+    gap: 15px;
+  }
+
+  footer .no_guide{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  footer .no_guide .fo_top{
+    gap: 30px;
+  }
+  
+  footer .no_guide .fo_bottom{
+    gap: 30px;
+  }
+
+  footer > p:after{
+    width: 400px;
+  }
+}
+
 /* // Footer 최은화 */

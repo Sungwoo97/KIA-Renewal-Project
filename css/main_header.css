@@ -1,0 +1,490 @@
+header,
+div.navigation,
+div.navigation-items,
+section.home {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+header {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    transition: 0.5s ease;
+}
+
+header .navigation-items {
+    display: flex;
+}
+
+header .navigation-items li a {
+    position: relative;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+header  .navigation-items li a:before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header  .navigation-items li a:hover:before {
+    width: 100%;
+}
+
+.kia_logo {
+    fill: white;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.slider-navigation {
+    z-index: 888;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.slider-navigation .nav-btn {
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+}
+
+.slider-navigation .nav-btn.active {
+    background: #000;
+}
+
+.slider-navigation .nav-btn:not(:last-child) {
+    margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover {
+    transform: scale(1.2);
+}
+
+.video-slide,
+.video-slide2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.5s;
+}
+
+.video-slide.active,
+.video-slide2.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0s;
+}
+
+.main_header_content {
+    position: absolute;
+    top: 70%;
+    left: 70px;
+    color: var(--white);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.5s;
+    z-index: 888;
+}
+
+.main_header_content.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 888;
+    transition: opacity 0.5s ease, visibility 0s;
+}
+
+.main_header_content p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.main_header_content h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.main_header_content h2 {
+    font-size: 35px;
+    line-height: 35px;
+    margin-bottom: 15px;
+    /* font-weight: 500; */
+}
+
+.main_header_content button {
+    border: none;
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#right-arrow_white {
+    width: 10px;
+    /* 원하는 크기로 조정 */
+    height: 10px;
+    /* 원하는 크기로 조정 */
+}
+
+/* ------------------드롭다운 메뉴 ------------- */
+/* 기본적으로 ul 숨기기 */
+.navigation-items li a ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 150px;
+    z-index: 999;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 드롭다운 메뉴 항목 스타일 */
+.navigation-items li a ul li {
+    padding-top: 10px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.8em;
+    transition: background-color 0.3s ease;
+    /* 배경색 변환 효과 */
+}
+
+/* 마지막 항목 구분선 제거 */
+.navigation-items li a ul li:last-child {
+    border-bottom: none;
+}
+
+/*순서 => 마우스를 a태그에 올림 => ul 나옴 => ul li들이 나옴 */
+
+/* a 태그에 마우스 올렸을 때 ul 나타나게 */
+.navigation-items li a:hover > ul {
+    display: block;
+}
+
+/* 드롭다운 메뉴 항목 hover 시 스타일 */
+.navigation-items li a {
+    color: #fff;
+}
+
+.navigation-items > li > a > ul > li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffcc00;
+}
+
+/* 상위 메뉴 항목에 hover 시 하위 메뉴 배경색을 명시적으로 설정 */
+.navigation-items li>a>ul>li>ul {
+    background-color: transparent;
+    /* 상위 hover의 배경색이 하위에 영향을 주지 않도록 */
+}
+
+/* 하위 메뉴 항목에는 상위 메뉴의 스타일이 상속되지 않도록 함 */
+.navigation-items a ul>li>ul>li {
+    background-color: transparent;
+    /* 배경색 초기화 */
+    color: #fff;
+}
+
+.navigation-items a ul>li>ul>li:hover {
+    background-color: transparent;
+    /* 배경색 초기화 */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffcc00;
+}
+
+
+/* 드롭다운 애니메이션 효과 불필요할듯...?  */
+/* .navigation-items a ul {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px); 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+} */
+
+/* .navigation-items a:hover ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); 
+} */
+
+
+
+/* -------------------------서브 서브 메뉴----------------------------*/
+
+#sub_sub_menus {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200px;
+    z-index: 999;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+    transition: opacity 0.3s ease, visibility 0s 0.3s, transform 0.3s ease;
+}
+
+/* 부모 li에 마우스 올렸을 때 sub_sub_menus 표시 */
+.navigation-items li a ul li:hover #sub_sub_menus {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    transition: opacity 0.3s ease, visibility 0s, transform 0.3s ease;
+}
+
+
+
+
+
+
+
+/* 모달 페이지*/
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; 
+    padding: 30px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    width: 70%;
+    max-width: 600px;
+    position: relative; 
+}
+
+.close {
+    color: #333;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--primary);;
+}
+
+.modal-content input[type="text"] {
+    width: calc(100% - 20px); 
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.modal-content input[type="text"]:focus {
+    border-color: var(--primary);
+}
+
+.modal-content button {
+    background-color: var(--primary);
+    color: #fff; 
+    border: none;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-content button:hover {
+    transform: scale(1.05); 
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1400px) {
+    header .navigation-items li a {
+        font-size: 1em;
+        margin-left: 10px;
+    }
+
+    .navigation-items li a ul {
+        width: 130px;
+    }
+
+    .kia_logo {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+
+@media (max-width:880px) {
+    
+
+    header {
+        padding: 12px 20px;
+        display: flex;
+        justify-content: end;
+
+    }
+
+    header .navigation-items {
+        display: none;
+    }
+
+    .search-glasses {
+        background: url(../img/main_header/search.svg)no-repeat;
+        background-size: 20px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        /* filter: invert(100%); */
+    }
+
+    .globe-btn {
+        background: url(../img/main_header/earth-globe-tool.svg)no-repeat;
+        background-size: 20px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        /* filter: invert(100%); */
+    }
+
+    .menu-btn {
+        background: url(../img/main_header/menu.svg)no-repeat;
+        background-size: 20px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        /* filter: invert(100%); */
+    }
+
+    .menu-btn.active {
+        z-index: 999;
+        background: url(../img/main_header/menu.svg)no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: 0.3s ease;
+    }
+}
+
+@media (max-width:700px) {
+    .btn {
+        border: none;
+        padding: 0px 20px;
+    }
+
+    .main_header_content {
+        position: absolute;
+        top: 65%;
+        left: 50px;
+        color: var(--white);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0s 0.5s;
+        z-index: 888;
+    }
+
+    .main_header_content.active {
+        opacity: 1;
+        visibility: visible;
+        z-index: 888;
+        transition: opacity 0.5s ease, visibility 0s;
+    }
+
+    .main_header_content p {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .main_header_content h1 {
+        font-size: 25px;
+        margin-bottom: 12px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+
+    .main_header_content h2 {
+        font-size: 25px;
+        line-height: 25px;
+        margin-bottom: 12px;
+        /* font-weight: 500; */
+    }
+
+    .modal-content {
+        width: 40;
+        max-width: 400px;
+
+    }
+}
+
