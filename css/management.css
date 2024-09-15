@@ -1,0 +1,423 @@
+/* Header */
+
+header {
+	z-index: 999;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0.5s ease;
+  
+  height: 80px;
+  background: var(--white);
+  opacity: 70%;
+}
+
+header .brand {
+	color: #fff;
+	font-size: 1.5em;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+header .navigation {
+	position: relative;
+	padding: 30px 50px;
+}
+
+header .navigation .navigation-items a {
+	position: relative;
+	color: #000;
+	font-size: 1.25em;
+	font-weight: 700;
+	text-decoration: none;
+	margin-left: 30px;
+	transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before {
+	content: '';
+	position: absolute;
+	background: #fff;
+	width: 0;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before {
+	width: 100%;
+}
+
+/* Main */
+
+.maintitle{
+  width: 100vw;
+  height: 100vh;
+}
+
+.maintitle img{
+  position: absolute;
+  width: 100%;
+  height: 90%;
+}
+
+.maintitle .text{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--white);
+}
+
+.maintitle .text h3,
+.maintitle .text h2{
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.maintitle .text h3{
+  font-size: 36px;
+}
+
+.maintitle .text h2{
+  font-size: 60px;
+}
+
+/* --------------------------------------------------------------- */
+
+.subtitle .sub{
+  text-align: center;
+}
+
+.subtitle .sub h3{
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 700;
+}
+
+.subtitle .sub p{
+  font-size: 20px;
+  line-height: var(--gutter);
+  margin-top: 7px;
+}
+
+.subimg{
+  position: relative;
+  height: 620px;
+  margin-top: 100px;
+}
+
+.subimg img,
+.subimg svg{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* --------------------------------------------------------------- */
+
+.icontab{
+  margin-top: 300px;
+  margin-bottom: 300px;
+}
+
+.icontab ul{
+  display: flex;
+  justify-content: center;
+}
+
+.icontab ul li{
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-right: 1px solid var(--medium_gray);
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.icontab ul li:last-child{
+  border-right: none;
+}
+
+.icontab ul li i{
+  color: var(--primary);
+  font-size: 100px;
+  margin-bottom: 50px;
+}
+
+.icontab ul li p{
+  font-size: var(--section_tt);
+  font-weight: 700;
+  opacity: 50%;
+}
+
+.icontab ul li h3{
+  font-size: 32px;
+  font-weight: 900;
+}
+
+/* --------------------- Section1 ------------------------ */
+
+.ca .banner{
+  height: 213px;
+  background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(255, 255, 255, .1));
+}
+
+.ca .banner p,
+.ca .banner h3{
+  font-size: var(--section_tt);
+  color: var(--white);
+  line-height: var(--gutter);
+  position: relative;
+  top: calc(50% - 15px);
+  left: 15%;
+  transform: translateY(-50%);
+}
+
+.ca .banner h3{
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.ca .expanation{
+  position: relative;
+  left: 15%;
+  top: 100px;  
+}
+
+.ca .expanation h3{
+  font-size: 36px;
+  font-weight:900;
+  line-height: 42px;
+}
+
+.ca .expanation p{
+  font-size: var(--body_tt);
+  color: #6E6E6E;
+  margin-top: 10px;
+}
+
+
+
+/* Footer */
+footer{
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 220px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  background: var(--primary);
+  font-weight: 100;
+  line-height: 16px;
+}
+
+footer,
+footer a{
+  color: var(--white);
+  text-wrap: nowrap;
+}
+
+footer a:hover{
+  font-weight: 300;
+}
+
+footer .fo_prize{
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 20px 0;
+}
+
+footer .fo_prize li{
+  display: flex;
+  gap: 10px;
+  text-wrap: nowrap;
+  align-items: center;
+  font-size: 12px;
+}
+
+footer .fo_prize li img{
+  width: 88px;
+  height: 50px;
+}
+
+footer .fo_smallmenu,
+footer .no_guide{
+  display: flex;
+  gap: 50px;
+  transition: 0.3s;
+}
+  
+footer .no_guide .fo_top{
+  display: flex;
+  gap: 50px;
+  transition: 0.3s;
+}
+
+footer .no_guide .fo_bottom{
+  display: flex;
+  gap: 50px;
+  transition: 0.3s;
+}
+
+footer .no_sns{
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+footer .no_sns li i{
+  color: var(--white);
+  opacity: 50%;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+footer .no_sns li i:hover{
+  opacity: 100%;
+}
+
+footer > p:after{
+  content: '';
+  background: var(--medium_gray);
+  /* width: 1224px; */
+  width: 1400px;
+  height: 1px;
+  position: absolute;
+  right: 50%;
+  transform: translate(50%, -25px);
+  transition: 0.3s;
+}
+
+@media (max-width: 1200px){
+
+  footer .fo_prize{
+    width: 1200px;
+    gap: 50px;
+    justify-content: center;
+  }
+
+  footer .fo_prize li{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 834px){
+
+  footer .fo_prize{
+    width: 100%;
+  }
+
+  footer .fo_prize p,
+  footer .fo_prize h4{
+    display: none;
+  }
+
+  footer .no_guide{
+    gap: 35px;
+    align-items: center;
+    object-fit: cover;
+  }
+  
+  footer .no_guide .fo_top{
+    display: flex;
+    gap: 35px;
+  }
+  
+  footer .no_guide .fo_bottom{
+    display: flex;
+    gap: 35px;
+  }
+
+  footer .fo_smallmenu a,
+  footer .no_guide a{
+    font-size: var(--body_tt);
+    text-wrap: nowrap;
+  }
+
+  footer > p:after{
+    width: 700px;
+  }
+
+}
+
+@media (max-width: 660px){
+
+  footer{
+    gap: 25px;
+  }
+
+  footer .fo_prize li img{
+   width: 68px;
+   height: 40px; 
+  }
+
+  footer .fo_smallmenu{
+    gap: 25px;
+  }
+
+  footer .no_guide{
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  footer .no_guide .fo_top{
+    gap: 30px;
+  }
+  
+  footer .no_guide .fo_bottom{
+    gap: 30px;
+  }
+
+  footer > p:after{
+    width: 500px;
+  }
+  
+}
+
+@media (max-width: 480px){
+  footer .fo_smallmenu{
+    gap: 15px;
+  }
+
+  footer .no_guide{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  footer .no_guide .fo_top{
+    gap: 30px;
+  }
+  
+  footer .no_guide .fo_bottom{
+    gap: 30px;
+  }
+
+  footer > p:after{
+    width: 400px;
+  }
+}
+
+/* // Footer */

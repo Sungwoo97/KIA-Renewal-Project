@@ -22,17 +22,27 @@ function sliderNav(manual) {
     slides[manual].classList.add("active");
 
     //마찬가지로 콘텐츠 설명란 보여주기
-    mainHeaderCarContents.forEach( (context, i) =>{
+    mainHeaderCarContents.forEach((context, i) => {
       context.classList.remove("active");
     });
     mainHeaderCarContents[manual].classList.add("active");
 
   } else {
-    // 넓이가 700px 이하일 때 video-slide2를 활성화
+    //우선!! z-index아래서 재생되던 동영상 안보이게
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+    });
+
+    //넓이가 700px 이하일 때 video-slide2를 활성화
     slides2.forEach((slide, i) => {
       slide.classList.remove("active");
     });
+
     slides2[manual].classList.add("active");
+    mainHeaderCarContents.forEach((context, i) => {
+      context.classList.remove("active");
+    });
+    mainHeaderCarContents[manual].classList.add("active");
   }
 
   // 버튼 활성화
@@ -64,4 +74,54 @@ window.addEventListener("resize", () => {
     });
     slides2[currentIndex].classList.add("active");
   }
+});
+
+//모달창 관련
+document.addEventListener('DOMContentLoaded', (event) => {
+  var modal = document.getElementById("search-modal");
+  var search_btn = document.getElementById("searching-index");
+  var search_btn2 = document.getElementById("searching-index2");
+  var search_span = document.getElementsByClassName("close")[0];
+
+  if (modal && search_btn && search_span && search_btn2) {
+
+    search_btn.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    search_btn2.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    search_span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  }
+
+  // var small_menu = document.getElementById("small-menu-modal");
+  // var open_smallMenu_btn = document.getElementById("open-small-menus");
+  // var search_span2 = document.getElementsByClassName("small-menu-close")[0];
+
+  // if(small_menu && open_smallMenu_btn && search_span2){
+  //   open_smallMenu_btn.onclick = function(){
+  //     small_menu.style.display = "block";
+  //   }
+
+  //   search_span2.onclick = function(){
+  //     small_menu.style.display = "none";
+  //   }
+
+  //   window.onclick = function (event) {
+  //     if (event.target == modal) {
+  //       modal.style.display = "none";
+  //     }
+  //   }
+  // }
+
 });
