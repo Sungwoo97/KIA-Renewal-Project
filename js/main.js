@@ -117,7 +117,16 @@ $('.be_tabs').each(function() {
     $(this).addClass('visible');
 
   });
-
-
   bePager.find('.pager_btn').first().click();
+});
+
+
+$('.safe_modal_container').hide();
+
+$('.detail_ex button').click(function(){
+  $('.safe_modal_container').fadeIn();
+});
+
+$('.safe_modal_container').click(function(){
+  $(this).fadeOut();
 });
