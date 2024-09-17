@@ -94,3 +94,30 @@ ev_prevBtn.on('click', debounce(()=>{
 
 //로딩 직후 바로 1번탭이 보이도록 강제로 잡아두기
 $('#be_tabs1').addClass('active')
+
+//Best Kia pager
+$('.be_tabs').each(function() {
+  var tabs = $(this);
+  var toplankDepth = tabs.find('.toplank_depth');
+  var bePager = tabs.find('.pager');
+  
+  var bepagerHtml = '';
+  toplankDepth.find('li').each(function(index) {
+    bepagerHtml += `<button class="pager_btn" data-index="${index}">TOP ${index + 1}</button>`;
+  });
+  bePager.html(bepagerHtml);
+  
+  bePager.find('.pager_btn').on('click', function() {
+    var index = $(this).data('index');
+    
+    toplankDepth.find('li').removeClass('active');
+    toplankDepth.find('li').eq(index).addClass('active');
+
+    bePager.find('.pager_btn').removeClass('visible');
+    $(this).addClass('visible');
+
+  });
+
+
+  bePager.find('.pager_btn').first().click();
+});
