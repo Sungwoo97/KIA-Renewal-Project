@@ -8,6 +8,26 @@ const ev_slideGap = 72;
 let ev_maxSlides = 3;
 const ev_prevBtn = $('.ex_slide_prev');
 const ev_nextBtn = $('.ex_slide_next');
+const ex_tabMenu = $('.ex_salesNetwork_list .tabs_menu li');
+let searchCenter = $('.ex_salesNetwork_list .tabs > div.active').attr('data-tab');
+let searchName = $('.ex_salesNetwork_list .tabs > div.active').attr('data-name');
+const ex_tabSalesNetwork = $('.ex_tab_salesNetwork');
+const ex_tabContent = $('.ex_tab_salesNetwork .tabs > div');
+
+
+
+ex_tabMenu.click(function(e){
+    e.preventDefault();
+    $(this).parent().find('li').removeClass('active');
+    $(this).addClass('active');
+    $(this).parent().parent('div').find('.tabs > div').removeClass('active');
+    let target = $(this).find('a').attr('href');
+    $(target).addClass('active');
+    searchCenter = $('.ex_salesNetwork_list .tabs > div.active').attr('data-tab');
+    searchName = $('.ex_salesNetwork_list .tabs > div.active').attr('data-name');
+    searchPlaces(searchCenter);
+  });
+
 
 
 function debounce(callback, time){
@@ -22,7 +42,7 @@ function debounce(callback, time){
     } 
   }
 }
-console.log($(window).width());
+
 
 let ev_slideHTML = ev_slideContainer.html();
 let ev_clonedSlidesHTML = ev_slideHTML.replace(/<li>/g, '<li class="clone">');
@@ -49,67 +69,53 @@ $(window).resize(function(){
 function moveSlide(num){
   let numTotal = -num *(ev_slideWidth + ev_slideGap);
   ev_slideContainer.stop().animate({ left : numTotal +'px'});
-  /*if(!ev_slides.hasClass('active')){
-    let pastTarget = ev_slideContainer.find('li').eq((currentIdx+1)+ev_slideCount).find('img').attr('src').replace( '_on.jpg','.jpg');
-    ev_slideContainer.find('li').eq((currentIdx+1)+ev_slideCount).find('img').attr('src', pastTarget);
-  }*/
   currentIdx = num;
-  //let ev_allSlides = ev_slideContainer.find('li');
 
   let nextSlide = (currentIdx+1)+ev_slideCount;
   ev_allSlides.removeClass('active');
   ev_allSlides.eq(nextSlide).addClass('active');
-  if(ev_allSlides.hasClass('active')){
-    ev_allSlides.each(function() {
-      //let pastTarget = ev_slides.find('img').attr('src').replace( '_on.jpg','.jpg');
-    })
-    //let target = ev_allSlides.eq(nextSlide).find('img').attr('src').replace( '.jpg','_on.jpg');
-    //ev_allSlides.eq(nextSlide).find('img').attr('src', target);
-  
 
-  }
  
   
   if(currentIdx === ev_slideCount*2- ev_maxSlides){
     setTimeout(()=>{
-      //ev_slideContainer.removeClass('animated');
+
       ev_slideContainer.css({left :`-${(num - ev_slideCount)*(ev_slideWidth + ev_slideGap)}px` });
       currentIdx = num-ev_slideCount;
-      console.log(ev_allSlides.eq((ev_slideCount*2)+ev_maxSlides ));
-      ev_slides.find('img').attr('src', ev_allSlides.eq((ev_slideCount*2)+ev_maxSlides ).find('img').attr('src').replace( '_on.jpg','.jpg') );
+      console.log(ev_allSlides.eq(currentIdx));
+      ev_allSlides.eq((currentIdx+1)+ev_slideCount).addClass('active');
     }, 500);
     setTimeout(()=>{
-    //  ev_allSlides.eq(currentIdx+1).addClass('active');
-      //ev_slideContainer.addClass('animated');
     },600);
   }
   if(currentIdx === -ev_slideCount){
     setTimeout(()=>{
       //ev_slideContainer.removeClass('animated');
-      ev_slideContainer.css({left : `0px` })
+      ev_slideContainer.css({left : `0px` });
       currentIdx = 0;
     }, 500);
     setTimeout(()=>{
-    //ev_slideContainer.find('.ex_slide_container li').eq(currentIdx+1).addClass('active');
-      //ev_slideContainer.addClass('animated');
+
     },600);
   }
 }
 moveSlide(0);
-
-ev_nextBtn.on('click', debounce(()=>{
-  moveSlide(currentIdx + 1);
-} , 500));
-
-ev_prevBtn.on('click', debounce(()=>{
-  moveSlide(currentIdx - 1);
-}, 500)) ;
-
+let timer
 function autoSlide(){
-  setInterval(()=>{
+  timer = setInterval(()=>{
     moveSlide(currentIdx+1);
   },4000)
 }
+
+ev_slideContainer.hover(function(){
+  console.log('작동');
+  clearInterval(timer);
+},function(){
+  autoSlide();
+}
+);
+
+
 autoSlide();
 
 
@@ -129,20 +135,26 @@ autoSlide();
 //   let lat = result.latitude; 
 //   let lon = result.longitude; 
 //   //locate.innerHTML = city;
-//   makeMap('.ex_maps' ,lat, lon, city);
-
+//   //makeMap('.ex_maps' ,lat, lon, city);
+  
 // });
+console.log(ex_tabSalesNetwork.is('display'));
 
+if(ex_tabSalesNetwork.css('display') !== 'none'){
+  console.log('작동');
+}
 var markers = [];
 
-var mapContainer = document.getElementById('ex_maps'), // 지도를 표시할 div 
-    mapOption = {
-        center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };  
+  var mapContainer = document.getElementById('ex_maps'), // 지도를 표시할 div 
+      mapOption = {
+          center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
+          level: 3 // 지도의 확대 레벨
+      };  
+      // 지도를 생성합니다    
+      var map = new kakao.maps.Map(mapContainer, mapOption); 
 
-// 지도를 생성합니다    
-var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+
 
 // 장소 검색 객체를 생성합니다
 var ps = new kakao.maps.services.Places();  
@@ -150,14 +162,19 @@ var ps = new kakao.maps.services.Places();
 // 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다
 var infowindow = new kakao.maps.InfoWindow({zIndex:1});
 
+var level = map.getLevel();
+
+//사용자 속성에 미리 검색할 키워드를 입력
+
+
 // 키워드로 장소를 검색합니다
-searchPlaces();
+searchPlaces(searchCenter);
 
 // 키워드 검색을 요청하는 함수입니다
-function searchPlaces() {
+function searchPlaces(center) {
 
     //var keyword = document.getElementById('maps_search').getAttribute('data-val');
-    var keyword = '기아 서울 지점';
+    var keyword = center;
 
     if (!keyword.replace(/^\s+|\s+$/g, '')) {
         alert('키워드를 입력해주세요!');
@@ -193,10 +210,10 @@ function placesSearchCB(data, status, pagination) {
 }
 
 // 검색 결과 목록과 마커를 표출하는 함수입니다
-function displayPlaces(places) {
+function displayPlaces(places , name) {
 
-    var listEl = document.querySelector('.placesList'), 
-    menuEl = document.querySelector('.menu_wrap'),
+    var listEl = document.querySelector(`${searchName} .placesList`), 
+    menuEl = document.querySelector(`${searchName} .menu_wrap`),
     fragment = document.createDocumentFragment(), 
     bounds = new kakao.maps.LatLngBounds(), 
     listStr = '';
@@ -221,27 +238,27 @@ function displayPlaces(places) {
         // 해당 장소에 인포윈도우에 장소명을 표시합니다
         // mouseout 했을 때는 인포윈도우를 닫습니다
         (function(marker, title) {
-            kakao.maps.event.addListener(marker, 'mouseover', function() {
-                 (marker, title);
-            });
+            // kakao.maps.event.addListener(marker, 'mouseover', function() {
+            //      (marker, title);
+            // });
 
-            kakao.maps.event.addListener(marker, 'mouseout', function() {
-                infowindow.close();
-            });
+            // kakao.maps.event.addListener(marker, 'mouseout', function() {
+            //     infowindow.close();
+            // });
 
-            itemEl.onmouseover =  function () {
-                displayInfowindow(marker, title);
-            };
+            // itemEl.onmouseover =  function () {
+            //     displayInfowindow(marker, title);
+            // };
 
-            itemEl.onmouseout =  function () {
-                infowindow.close();
-            };
+            // itemEl.onmouseout =  function () {
+            //     infowindow.close();
+            // };
 
 						itemEl.onclick =  function () {
 							let targetPos = marker.getPosition();
-							console.log(targetPos);
+              map.setLevel(8);
+              panTo(Number(targetPos.Ma),Number(targetPos.La));
 							
-							map.setCenter(new kakao.maps.LatLng(targetPos.La, targetPos.Ma));
 					};
 
         })(marker, places[i].place_name);
@@ -355,7 +372,12 @@ function removeAllChildNods(el) {
         el.removeChild (el.lastChild);
     }
 }
-
-	
-
-
+function panTo(lat, lng) {
+  // 이동할 위도 경도 위치를 생성합니다 
+  console.log(lat, lng);
+  map.setLevel(4);
+  var moveLatLon = new kakao.maps.LatLng(lat, lng);
+  // 지도 중심을 부드럽게 이동시킵니다
+  // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+  map.panTo(moveLatLon);            
+}  

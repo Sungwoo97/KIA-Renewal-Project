@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>기아 - 체험 페이지</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/trial.css">
 </head>
@@ -35,13 +36,13 @@
   <main>
     <div class="ex_tab_wrapper ">
       <ul class="tabs_menu container ">
-        <li ><a href=".ex_tab_testDrive" >시승 신청</a></li>
-        <li class="active"><a href=".ex_tab_salesNetwork">판매 네트워크</a></li>
+        <li class="active"><a href=".ex_tab_testDrive" >시승 신청</a></li>
+        <li ><a href=".ex_tab_salesNetwork">판매 네트워크</a></li>
         <li ><a href=".ex_tab_experience">체험 거점</a></li>
       </ul>
       <hr>
       <div class="tabs">
-        <div class="ex_tab_testDrive container ">
+        <div class="ex_tab_testDrive container active">
           <h4>전국 지점, 대리점, 드라이빙센터의 시승을 신청하실 수 있습니다. <br>또한 기아 플래그십 스토어(강서,인천,부천,광주)에서는 다양한 프로그램으로 전문가의 안내와 함께 시승을 경험 하실 수 있습니다.</h4>
           <div class="ex_driveBox">
             <h3 class="sec_tt">최적의 시승서비스 체험 공간</h3>
@@ -76,10 +77,10 @@
                 <li><a href=".maps_output">출고 센터</a></li>
               </ul>
               <div class="tabs">
-                <div class="maps_spot active">
+                <div class="maps_spot active" data-tab="기아 서울 지점" data-name=".maps_spot">
                   <form onsubmit="searchPlaces(); return false;">
                     <label for="maps_search1" class="blind">키워드 : </label>
-                    <input type="text" value="검색" id="maps_search1" class="maps_search" size="15"> 
+                    <input type="text" placeholder="검색" id="maps_search1" class="maps_search" size="15"> 
                     <button type="submit" class="btn">검색하기</button> 
                   </form>
                   <div class="map_wrap">
@@ -95,36 +96,40 @@
                     </div>
                   </div>
                 </div>
-                <div class="maps_drive">
+                <div class="maps_drive" data-tab="기아 드라이빙" data-name=".maps_drive">
                   <form onsubmit="searchPlaces(); return false;">
                     <label for="maps_search2" class="blind">키워드 : </label>
-                    <input type="text" value="검색" id="maps_search2" class="maps_search"` size="15"> 
+                    <input type="text" placeholder="검색" id="maps_search2" class="maps_search"` size="15"> 
                     <button type="submit" class="btn">검색하기</button> 
                   </form>
-                  <div id="menu_wrap" class="bg_white">
-                    <div class="option">
-                      <div>
+                  <div class="map_wrap">
+                    <div class="menu_wrap" class="bg_white">
+                      <div class="option">
+                        <div>
+                        </div>
                       </div>
+                      <hr>
+                      <ul class="placesList"></ul>
+                      <div class="pagination"></div>
                     </div>
-                    <hr>
-                    <ul class="placesList"></ul>
-                    <div class="pagination"></div>
                   </div>
                 </div>
-                <div class="maps_output">
+                <div class="maps_output " data-tab="기아 출고" data-name=".maps_output">
                   <form onsubmit="searchPlaces(); return false;">
-                    <label for="maps_search2" class="blind">키워드 : </label>
-                    <input type="text" value="검색" id="maps_search2" class="maps_search"` size="15"> 
+                    <label for="maps_search3" class="blind">키워드 : </label>
+                    <input type="text" placeholder="검색" id="maps_search3" class="maps_search"` size="15"> 
                     <button type="submit" class="btn">검색하기</button> 
                   </form>
-                  <div id="menu_wrap" class="bg_white">
-                    <div class="option">
-                      <div>
+                  <div class="map_wrap">
+                    <div class="menu_wrap" class="bg_white">
+                      <div class="option">
+                        <div>
+                        </div>
                       </div>
+                      <hr>
+                      <ul class="placesList"></ul>
+                      <div class="pagination"></div>
                     </div>
-                    <hr>
-                    <ul class="placesList"></ul>
-                    <div class="pagination"></div>
                   </div>
                 </div>
               </div>
@@ -168,8 +173,8 @@
                 </p>
               </li>
             </ul>
-            <div class="ex_slide_prev"></div>
-            <div class="ex_slide_next"></div>
+            <!-- <div class="ex_slide_prev"></div>
+            <div class="ex_slide_next"></div> -->
           </div>
         </div>
       </div>
@@ -180,6 +185,7 @@
   </footer>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=69c6c45b28abc32737e63a1c342245bc&libraries=services"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
   <script src="js/common.js"></script>
   <script src="js/trial.js"></script>
 </body>

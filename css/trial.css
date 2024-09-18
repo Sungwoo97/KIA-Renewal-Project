@@ -64,6 +64,11 @@ header .navigation .navigation-items a:hover:before {
   margin: 0 auto;
 }
 
+.ex_tab_testDrive{
+  height: auto;
+  overflow: hidden;
+}
+
 /* 탭 구분 선 */
 .ex_tab_wrapper hr{
   position: absolute;
@@ -223,6 +228,11 @@ header .navigation .navigation-items a:hover:before {
   justify-content: space-between;
   padding: 5px;
   cursor: pointer;
+  background: rgba(235,235,235,.2);
+}
+
+.ex_tab_salesNetwork .tabs ul li:hover{
+  background: var(--light_gray);
 }
 
 .ex_tab_salesNetwork .tabs ul div{

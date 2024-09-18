@@ -1,6 +1,5 @@
 const tabMenu = $('.tabs_menu li');
 
-
 function tabControl(menu){
   menu.click(function(e){
     e.preventDefault();
