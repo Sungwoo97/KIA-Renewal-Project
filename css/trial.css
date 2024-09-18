@@ -163,6 +163,8 @@ header .navigation .navigation-items a:hover:before {
 
 .ex_salesNetwork_wrapper{
   display: flex;
+  flex: 1;
+  justify-content: space-between;
 }
 
 .ex_tab_salesNetwork .tabs_menu li a{
@@ -179,17 +181,37 @@ header .navigation .navigation-items a:hover:before {
   height: 900px;
 }
 
+.tabs form{
+  display: flex;
+  padding-left: 90px;
+  margin-right: 20px;
+}
+
 .tabs .maps_search{
-  width: 100%;
   font-size: var(--gutter);
   line-height: 29px;
   padding: 10px;
+  flex:1;
+
 }
 
-.ex_tab_salesNetwork .tabs > div{
+.ex_tab_salesNetwork .tabs .map_wrap{
   overflow-x: hidden;
   margin-left: 90px;
   height: 845px;
+
+}
+
+.pagination{
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  
+}
+
+.pagination a {
+  cursor: pointer;
 }
 
 .ex_tab_salesNetwork .tabs_menu{
@@ -200,6 +222,7 @@ header .navigation .navigation-items a:hover:before {
   display: flex;
   justify-content: space-between;
   padding: 5px;
+  cursor: pointer;
 }
 
 .ex_tab_salesNetwork .tabs ul div{
@@ -208,7 +231,7 @@ header .navigation .navigation-items a:hover:before {
   gap: 8px;
 }
 
-.ex_tab_salesNetwork .tabs ul li h3{
+.ex_tab_salesNetwork .tabs ul li h5{
   font-size: var(--section_tt);
 }
 
