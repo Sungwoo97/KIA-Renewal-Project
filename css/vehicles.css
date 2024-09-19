@@ -1,0 +1,96 @@
+/* HEADER */
+
+header {
+	z-index: 999;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0.5s ease;
+}
+
+header .brand {
+	color: #fff;
+	font-size: 1.5em;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+header .navigation {
+	position: relative;
+	padding: 30px 50px;
+}
+
+header .navigation .navigation-items a {
+	position: relative;
+	color: #000;
+	font-size: 1.25em;
+	font-weight: 700;
+	text-decoration: none;
+	margin-left: 30px;
+	transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before {
+	content: '';
+	position: absolute;
+	background: #fff;
+	width: 0;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before {
+	width: 100%;
+} 
+
+/* vehicles */
+.ve_tab_wrapper{
+  margin-top: 86px;
+}
+
+.ve_tab_wrapper .tabs_menu{
+  margin: 0 auto;
+}
+
+.ve_tab_testDrive{
+  height: auto;
+  overflow: hidden;
+}
+
+/* 탭 구분 선 */
+.ve_tab_wrapper hr{
+  position: absolute;
+  top: 135px;
+  left: 0;
+  right: 0;
+}
+
+.ve_tab_wrapper .tabs_menu li{
+  background: var(--white);
+  border-bottom: 5px solid transparent;
+}
+
+.ve_tab_wrapper .tabs_menu li.active{
+  border-bottom: 5px solid var(--primary);
+}
+
+.ve_tab_wrapper .tabs_menu li a{
+  font-size: 29px;
+  font-weight: 500;
+}
+
+.ve_tab_wrapper .tabs_menu li.active a{
+  font-weight: 700;
+  color: var(--black);
+}
+
+.ve_tab_wrapper .tabs > div{
+	flex-direction: column;
+}
