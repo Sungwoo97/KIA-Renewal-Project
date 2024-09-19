@@ -81,17 +81,41 @@ header .navigation .navigation-items a:hover:before {
 
 .maintitle .text h3,
 .maintitle .text h2{
+  position: relative;
   font-weight: 700;
   line-height: 48px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.maintitle .text.active h3,
+.maintitle .text.active h2{
+  top: 0;
+  opacity: 1;
 }
 
 .maintitle .text h3{
   font-size: 36px;
+  animation: fadeInUp 0.6s ease-in-out forwards;
 }
 
 .maintitle .text h2{
   font-size: 60px;
+  animation: fadeInUp 0.6s ease-in-out 0.5s forwards;
 }
+
+@keyframes fadeInUp{
+  from{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* --------------------------------------------------------------- */
 
@@ -99,16 +123,32 @@ header .navigation .navigation-items a:hover:before {
   text-align: center;
 }
 
+.subtitle .sub h3,
+.subtitle .sub p{
+  position: relative;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.subtitle .sub.active h3,
+.subtitle .sub.active p,
+.subimg img{
+  top: 0;
+  opacity: 1;
+}
+
 .subtitle .sub h3{
   font-size: 36px;
   line-height: 48px;
   font-weight: 700;
+  animation: fadeInUp 0.6s ease-in-out forwards;
 }
 
 .subtitle .sub p{
   font-size: 20px;
   line-height: var(--gutter);
   margin-top: 7px;
+  animation: fadeInUp 0.6s ease-in-out 0.5s forwards;
 }
 
 .subimg{
@@ -123,6 +163,26 @@ header .navigation .navigation-items a:hover:before {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.subimg img{
+  opacity: 0;
+  transition: 0.5;
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+.subimg.sub.active img{
+  opacity: 1;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
 }
 
 /* --------------------------------------------------------------- */
@@ -174,13 +234,13 @@ header .navigation .navigation-items a:hover:before {
 
 /* --------------------- Section1 ------------------------ */
 
-.ca .banner{
+section .banner{
   height: 213px;
   background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(255, 255, 255, .1));
 }
 
-.ca .banner p,
-.ca .banner h3{
+section .banner p,
+section .banner h3{
   font-size: var(--section_tt);
   color: var(--white);
   line-height: var(--gutter);
@@ -190,28 +250,86 @@ header .navigation .navigation-items a:hover:before {
   transform: translateY(-50%);
 }
 
-.ca .banner h3{
+section .banner h3{
   font-size: 36px;
   font-weight: 700;
   margin-top: 10px;
 }
 
-.ca .expanation{
+section .expanation{
   position: relative;
   left: 15%;
   top: 100px;  
 }
 
-.ca .expanation h3{
+section .expanation h3{
   font-size: 36px;
   font-weight:900;
   line-height: 42px;
 }
 
-.ca .expanation p{
+section .expanation p{
   font-size: var(--body_tt);
   color: #6E6E6E;
   margin-top: 10px;
+}
+
+section .diagram{
+  width: 100%;
+  height: 1100px;
+  position: relative;
+}
+
+section .diagram svg{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section .diagram ul{
+  width: 100%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+}
+
+section .diagram ul li img{
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+}
+
+section .diagram ul li span{
+  font-size: var(--section_tt);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+section .diagram ul li p{
+  font-size: var(--body_tt);
+}
+
+section .diagram ul .ellipse,
+section .diagram ul .plus1,
+section .diagram ul .plus2{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+section .diagram ul .ellipse{
+  left: -350px;
+  top: 85px;
+
+}
+
+section .diagram ul .plus1{
+  transform: translateY(-90px);
+}
+
+section .diagram ul .plus2{
+  transform: translate(500px, 65px);
 }
 
 
