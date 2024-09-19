@@ -81,17 +81,41 @@ header .navigation .navigation-items a:hover:before {
 
 .maintitle .text h3,
 .maintitle .text h2{
+  position: relative;
   font-weight: 700;
   line-height: 48px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.maintitle .text.active h3,
+.maintitle .text.active h2{
+  top: 0;
+  opacity: 1;
 }
 
 .maintitle .text h3{
   font-size: 36px;
+  animation: fadeInUp 0.6s ease-in-out forwards;
 }
 
 .maintitle .text h2{
   font-size: 60px;
+  animation: fadeInUp 0.6s ease-in-out 0.5s forwards;
 }
+
+@keyframes fadeInUp{
+  from{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* --------------------------------------------------------------- */
 
@@ -99,16 +123,32 @@ header .navigation .navigation-items a:hover:before {
   text-align: center;
 }
 
+.subtitle .sub h3,
+.subtitle .sub p{
+  position: relative;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.subtitle .sub.active h3,
+.subtitle .sub.active p,
+.subimg img{
+  top: 0;
+  opacity: 1;
+}
+
 .subtitle .sub h3{
   font-size: 36px;
   line-height: 48px;
   font-weight: 700;
+  animation: fadeInUp 0.6s ease-in-out forwards;
 }
 
 .subtitle .sub p{
   font-size: 20px;
   line-height: var(--gutter);
   margin-top: 7px;
+  animation: fadeInUp 0.6s ease-in-out 0.5s forwards;
 }
 
 .subimg{
@@ -117,9 +157,385 @@ header .navigation .navigation-items a:hover:before {
   margin-top: 100px;
 }
 
-.subimg .ellipse img{
+.subimg img,
+.subimg svg{
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+.subimg img{
+  opacity: 0;
+  transition: 0.5;
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+.subimg.sub.active img{
+  opacity: 1;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+/* --------------------------------------------------------------- */
+
+.icontab{
+  margin-top: 300px;
+  margin-bottom: 300px;
+}
+
+.icontab ul{
+  display: flex;
+  justify-content: center;
+}
+
+.icontab ul li{
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-right: 1px solid var(--medium_gray);
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.icontab ul li:last-child{
+  border-right: none;
+}
+
+.icontab ul li i{
+  color: var(--primary);
+  font-size: 100px;
+  margin-bottom: 50px;
+}
+
+.icontab ul li p{
+  font-size: var(--section_tt);
+  font-weight: 700;
+  opacity: 50%;
+}
+
+.icontab ul li h3{
+  font-size: 32px;
+  font-weight: 900;
+}
+
+/* --------------------- Section1 ------------------------ */
+
+section .banner{
+  height: 213px;
+  background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(255, 255, 255, .1));
+}
+
+section .banner p,
+section .banner h3{
+  font-size: var(--section_tt);
+  color: var(--white);
+  line-height: var(--gutter);
+  position: relative;
+  top: calc(50% - 15px);
+  left: 15%;
+  transform: translateY(-50%);
+}
+
+section .banner h3{
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+section .expanation{
+  position: relative;
+  left: 15%;
+  top: 100px;  
+}
+
+section .expanation h3{
+  font-size: 36px;
+  font-weight:900;
+  line-height: 42px;
+}
+
+section .expanation p{
+  font-size: var(--body_tt);
+  color: #6E6E6E;
+  margin-top: 10px;
+}
+
+section .diagram{
+  width: 100%;
+  height: 1100px;
+  position: relative;
+}
+
+section .diagram svg{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section .diagram ul{
+  width: 100%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+}
+
+section .diagram ul li img{
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+}
+
+section .diagram ul li span{
+  font-size: var(--section_tt);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+section .diagram ul li p{
+  font-size: var(--body_tt);
+}
+
+section .diagram ul .ellipse,
+section .diagram ul .plus1,
+section .diagram ul .plus2{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+section .diagram ul .ellipse{
+  left: -350px;
+  top: 85px;
+
+}
+
+section .diagram ul .plus1{
+  transform: translateY(-90px);
+}
+
+section .diagram ul .plus2{
+  transform: translate(500px, 65px);
+}
+
+
+
+/* Footer */
+footer{
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 220px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  background: var(--primary);
+  font-weight: 100;
+  line-height: 16px;
+}
+
+footer,
+footer a{
+  color: var(--white);
+  text-wrap: nowrap;
+}
+
+footer a:hover{
+  font-weight: 300;
+}
+
+footer .fo_prize{
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 20px 0;
+}
+
+footer .fo_prize li{
+  display: flex;
+  gap: 10px;
+  text-wrap: nowrap;
+  align-items: center;
+  font-size: 12px;
+}
+
+footer .fo_prize li img{
+  width: 88px;
+  height: 50px;
+}
+
+footer .fo_smallmenu,
+footer .no_guide{
+  display: flex;
+  gap: 50px;
+  transition: 0.3s;
+}
+  
+footer .no_guide .fo_top{
+  display: flex;
+  gap: 50px;
+  transition: 0.3s;
+}
+
+footer .no_guide .fo_bottom{
+  display: flex;
+  gap: 50px;
+  transition: 0.3s;
+}
+
+footer .no_sns{
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+footer .no_sns li i{
+  color: var(--white);
+  opacity: 50%;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+footer .no_sns li i:hover{
+  opacity: 100%;
+}
+
+footer > p:after{
+  content: '';
+  background: var(--medium_gray);
+  /* width: 1224px; */
+  width: 1400px;
+  height: 1px;
+  position: absolute;
+  right: 50%;
+  transform: translate(50%, -25px);
+  transition: 0.3s;
+}
+
+@media (max-width: 1200px){
+
+  footer .fo_prize{
+    width: 1200px;
+    gap: 50px;
+    justify-content: center;
+  }
+
+  footer .fo_prize li{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 834px){
+
+  footer .fo_prize{
+    width: 100%;
+  }
+
+  footer .fo_prize p,
+  footer .fo_prize h4{
+    display: none;
+  }
+
+  footer .no_guide{
+    gap: 35px;
+    align-items: center;
+    object-fit: cover;
+  }
+  
+  footer .no_guide .fo_top{
+    display: flex;
+    gap: 35px;
+  }
+  
+  footer .no_guide .fo_bottom{
+    display: flex;
+    gap: 35px;
+  }
+
+  footer .fo_smallmenu a,
+  footer .no_guide a{
+    font-size: var(--body_tt);
+    text-wrap: nowrap;
+  }
+
+  footer > p:after{
+    width: 700px;
+  }
+
+}
+
+@media (max-width: 660px){
+
+  footer{
+    gap: 25px;
+  }
+
+  footer .fo_prize li img{
+   width: 68px;
+   height: 40px; 
+  }
+
+  footer .fo_smallmenu{
+    gap: 25px;
+  }
+
+  footer .no_guide{
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  footer .no_guide .fo_top{
+    gap: 30px;
+  }
+  
+  footer .no_guide .fo_bottom{
+    gap: 30px;
+  }
+
+  footer > p:after{
+    width: 500px;
+  }
+  
+}
+
+@media (max-width: 480px){
+  footer .fo_smallmenu{
+    gap: 15px;
+  }
+
+  footer .no_guide{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  footer .no_guide .fo_top{
+    gap: 30px;
+  }
+  
+  footer .no_guide .fo_bottom{
+    gap: 30px;
+  }
+
+  footer > p:after{
+    width: 400px;
+  }
+}
+
+/* // Footer */

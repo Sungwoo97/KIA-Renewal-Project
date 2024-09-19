@@ -355,21 +355,26 @@
             <p class="sub_title_gutter">기아 유저들이 선택한 분야별 최다 판매 차량</p>
           </div>
           <div class="be_tab_wrapper">
-            <ul class="be_tabs_menu">
-              <li><a href="#be_tabs1">최근 출시</a></li>
+            <ul class="tabs_menu be_tabs_menu">
+              <li class="active"><a href="#be_tabs1">최근 출시</a></li>
               <li><a href="#be_tabs2">연비 효율</a></li>
               <li><a href="#be_tabs3">적재공간</a></li>
               <li><a href="#be_tabs4">안전성</a></li>
             </ul>
-            <div class="tab_contents">
-              <div id="be_tabs1" class="be_tabs active">
+            <div class="tabs">
+              <div id="be_tabs1" class="be_tabs">
                 <div class="tab_depth">
                   <div class="slides">
-                    <img src="img/be/be_tabs1_slides1_Sorento.jpg" alt="The 2025 Sorento">
-                    <img src="img/be/be_tabs1_slides2_EV9.jpg" alt="The 2025 EV9">
-                    <img src="img/be/be_tabs1_slides3_Niro.jpg" alt="The 2025 Niro">
+                    <img src="img/be/be_tabs1_slides1_Sorento.jpg" alt="최근 출시 1위 Sorento">
+                    <img src="img/be/be_tabs1_slides2_EV9.jpg" alt="최근 출시 2위 EV9">
+                    <img src="img/be/be_tabs1_slides3_Niro.jpg" alt="최근 출시 3위 Niro">
                   </div>
                   <div class="toplanks">
+                    <p class="pager">
+                      <a href="" class="visible">top 1</a>
+                      <a href="">top 2</a>
+                      <a href="">top 3</a>
+                    </p>
                     <ul>
                       <li class="top1 active">
                         <h3>The 2025 Sorento</h3>
@@ -386,10 +391,14 @@
                           </div>
                         </div>
                         <span>1.6 HEB | 이승 시그니처 2WD</span>
+                        <div class="be_btn">
+                          <button class="btn">자세히 보기</button>
+                          <button class="btn">견적 내기</button>
+                        </div>
                       </li>
                       <li class="top2">
                         <h3>The 2025 EV9</h3>
-                        <img src="" alt="">
+                        <img src="img/be/be_tabs1_toplank2_EV9.png" alt="The 2025 EV9">
                         <h3>89,840,000 원</h3>
                         <div class="detail_ex">
                           <div>
@@ -405,7 +414,7 @@
                       </li>
                       <li class="top3">
                         <h3>The 2025 Niro</h3>
-                        <img src="" alt="">
+                        <img src="img/be/be_tabs1_toplank3_Niro.png" alt="The 2025 Niro">
                         <h3>37,800,000 원</h3>
                         <div class="detail_ex">
                           <div>
@@ -427,15 +436,15 @@
               <div id="be_tabs2" class="be_tabs">
                 <div class="tab_depth">
                   <div class="slides">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                    <img src="img/be/be_tabs1_slides3_Niro.jpg" alt="연비효율 1위 Niro">
+                    <img src="img/be/be_tabs2_slides2_K5.jpg" alt="연비효율 2위 K5">
+                    <img src="img/be/be_tabs2_slides3_K8.jpg" alt="연비효율 3위 K8">
                   </div>
                   <div class="toplanks">
                     <ul>
                       <li class="top1">
                         <h3>니로</h3>
-                        <img src="" alt="">
+                        <img src="img/be/be_tabs2_toplank1_Niro.png" alt="Niro">
                         <h3>31,400,000 원</h3>
                         <div class="detail_ex">
                           <div>
@@ -448,10 +457,14 @@
                           </div>
                         </div>
                         <span>1.6 하이브리드 | 트렌디 2WD DCT</span>
+                        <div class="be_btn">
+                          <button class="btn">자세히 보기</button>
+                          <button class="btn">견적 내기</button>
+                        </div>
                       </li>
                       <li class="top2">
                         <h3>K5</h3>
-                        <img src="" alt="">
+                        <img src="img/be/be_tabs2_toplank2_K5.png" alt="K5">
                         <h3>33,340,000 원</h3>
                         <div class="detail_ex">
                           <div>
@@ -464,10 +477,14 @@
                           </div>
                         </div>
                         <span>2.0 하이브리드 | 프레스티지</span>
+                        <div class="be_btn">
+                          <button class="btn">자세히 보기</button>
+                          <button class="btn">견적 내기</button>
+                        </div>
                       </li>
                       <li class="top3">
                         <h3>K8</h3>
-                        <img src="" alt="">
+                        <img src="img/be/be_tabs2_toplank3_K8.png" alt="k8">
                         <h3>48,330,000 원</h3>
                         <div class="detail_ex">
                           <div>
@@ -480,24 +497,28 @@
                           </div>
                         </div>
                         <span>1.6HEV | 노블레스</span>
+                        <div class="be_btn">
+                          <button class="btn">자세히 보기</button>
+                          <button class="btn">견적 내기</button>
+                        </div>
                       </li>
                     </ul>
                   </div>
                 </div>
-              <p class="body_sub">※ 연비는 도로상태, 운전방법, 차량적재 및 외기온도에 따라 실 주행연비와 차이가 있을 수 있으며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+              <p class="caution">※ 연비는 도로상태, 운전방법, 차량적재 및 외기온도에 따라 실 주행연비와 차이가 있을 수 있으며 차량별 사양 구성은 최다 판매 기준입니다.</p>
               </div>
               <div id="be_tabs3" class="be_tabs">
                 <div class="tab_depth">
                   <div class="slides">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">>
+                    <img src="img/be/be_tabs3_slides1_carnival.jpg" alt="적재공간 1위 carnival">
+                    <img src="img/be/be_tabs1_toplank1_Sorento.png" alt="적재공간 2위 Sorento">
+                    <img src="img/be/be_tabs3_slides3_sportage.jpg" alt="적재공간 3위 Sportage">>
                   </div>
                   <div class="toplanks">
                     <ul>
                       <li class="top1">
                         <h3>카니발</h3>
-                        <img src="" alt="">
+                        <img src="img/be/be_tabs3_toplank1_carnival.png" alt="carnival">
                         <h3>49,450,000 원</h3>
                         <div class="detail_ex">
                           <div>
@@ -510,10 +531,14 @@
                           </div>
                         </div>
                         <span>3.5 가솔린 | 7인승 시그니처</span>
+                        <div class="be_btn">
+                          <button class="btn">자세히 보기</button>
+                          <button class="btn">견적 내기</button>
+                        </div>
                       </li>
                       <li class="top2">
                         <h3>쏘렌토</h3>
-                        <img src="" alt="">
+                        <img src="img/be/be_tabs3_toplank2_Sorento.png" alt="Sorento">
                         <h3>51,120,000 원</h3>
                         <div class="detail_ex">
                           <div>
@@ -529,7 +554,7 @@
                       </li>
                       <li class="top3">
                         <h3>스포티지</h3>
-                        <img src="" alt="">
+                        <img src="img/be/be_tabs3_toplank3_sportage.png" alt="sportage">
                         <h3>40,160,000 원</h3>
                         <div class="detail_ex">
                           <div>
@@ -542,24 +567,28 @@
                           </div>
                         </div>
                         <span>1.6 터보 하이브리드 | 시그니처 2WD</span>
+                        <div class="be_btn">
+                          <button class="btn">자세히 보기</button>
+                          <button class="btn">견적 내기</button>
+                        </div>
                       </li>
                     </ul>
-                    <p class="body_sub">※ 트렁크 용량은 후석 폴딩 등을 통해 적재할 수 있는 최대 용량이며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                    <p class="caution">※ 트렁크 용량은 후석 폴딩 등을 통해 적재할 수 있는 최대 용량이며 차량별 사양 구성은 최다 판매 기준입니다.</p>
                   </div>
                 </div>
               </div>
               <div id="be_tabs4" class="be_tabs">
                 <div class="tab_depth">
                   <div class="slides">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                    <img src="img/be/be_tabs3_slides3_sportage.jpg" alt="안전성 1위 스포티지">
+                    <img src="img/be/be_tabs3_slides1_carnival.jpg" alt="안전성 2위 카니발">
+                    <img src="img/be/be_tabs3_slides4_k9.jpg" alt="안전성 3위 K9">
                   </div>
                   <div class="toplanks">
                     <ul>
                       <li class="top1">
                         <h3>스포티지</h3>
-                        <img src="" alt="">
+                        <img src="img/be/be_tabs3_toplank3_sportage.png" alt="sportage">
                         <h3>44,870,000 원</h3>
                         <div class="detail_ex">
                           <div>
@@ -572,10 +601,14 @@
                           </div>
                         </div>
                         <span>1.6 터보 하이브리드 | 시그니처 그래비티</span>
+                        <div class="be_btn">
+                          <button class="btn">자세히 보기</button>
+                          <button class="btn">견적 내기</button>
+                        </div>
                       </li>
                       <li class="top2">
                         <h3>카니발</h3>
-                        <img src="" alt="">
+                        <img src="img/be/be_tabs3_toplank1_carnival.png" alt="carnival">
                         <h3>44,530,000 원</h3>
                         <div class="detail_ex">
                           <div>
@@ -588,10 +621,14 @@
                           </div>
                         </div>
                         <span>1.6 하이브리드 | 9인승 프레스티지</span>
+                        <div class="be_btn">
+                          <button class="btn">자세히 보기</button>
+                          <button class="btn">견적 내기</button>
+                        </div>
                       </li>
                       <li class="top3">
                         <h3>K9</h3>
-                        <img src="" alt="">
+                        <img src="img/be/be_tabs4_toplank3_K9.png" alt="K9">
                         <h3>66,650,000 원</h3>
                         <div class="detail_ex">
                           <div>
@@ -604,25 +641,22 @@
                           </div>
                         </div>
                         <span>3.8 가솔린 | 플래티넘+베스트컬렉션1 AWD</span>
+                        <div class="be_btn">
+                          <button class="btn">자세히 보기</button>
+                          <button class="btn">견적 내기</button>
+                        </div>
                       </li>
                     </ul>
                   </div>
                 </div>
-                <p class="body_sub">※ 종합 안전 점수는 국토교통부 주관 안전도 평가 결과 기준이며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+                <p class="caution">※ 종합 안전 점수는 국토교통부 주관 안전도 평가 결과 기준이며 차량별 사양 구성은 최다 판매 기준입니다.</p>
               </div>
             </div>
           </div>    
-              <p class="pager">
-                <!-- <a href="">top 1</a>
-                <a href="">top 2</a>
-                <a href="">top 3</a> -->
-      </p>
-      <button class="btn">자세히 보기</button>
-      <button class="btn">견적 내기</button>
-      </div>
-      </div>
-    </section>
-    <!-- //best kia 김유진 -->
+            </div>
+          </div>
+         </section>
+        <!-- //best kia 김유진 -->
     <!-- Members 남성우 -->
     <section class="kia_members container">
       <div class="me_contents">

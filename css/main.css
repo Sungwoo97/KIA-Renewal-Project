@@ -24,39 +24,52 @@
 .be_tab_wrapper{
   display: flex;
 }
-.tab_contents{
-  display: flex;
-}
-.be_tabs_menu{
-  width: 204px;
+.be_tab_wrapper .tabs_menu{
+  display: block;
   margin-right: 24px;
   text-align: center;
   background-color: var(--light_gray);
   font-size: 20px;
   line-height: 48px;
 }
-.be_tabs_menu li a{
+.be_tab_wrapper .tabs_menu li a{
+  width: 204px;
   display: block;
+  transition: 0.3s;
 }
-.be_tabs_menu li.active a{
+.be_tab_wrapper .tabs_menu li.active a{
   line-height: 408px;
   background-color: var(--primary);
   color: var(--white);
 }
-.tab_contents .be_tabs{
+.tabs{
+  position: relative;
+}
+.tabs .be_tabs{
   display: none;
 }
-.tab_contents .be_tabs.active{
+.tabs .be_tabs.active{
   display: block;
 }
-.tab_contents .slides{
+.tabs .slides{
   width: 776px;
   height: 552px;
   position: relative;
+  overflow: hidden;
 }
-.tab_contents .slides img{
+.tabs .slides img{
   height: 552px;
   object-fit: cover;
+}
+.toplanks .pager{
+  line-height: var(--gutter);
+  margin-bottom: 33px;
+  display: flex;
+  gap: 30px;
+}
+.toplanks .pager a.visible{
+  font-weight: bold;
+  color: var(--primary);
 }
 .toplanks .detail_ex{
   display: flex;
@@ -68,6 +81,17 @@
 .toplanks ul li span{
   color: var(--medium_gray);
 }
+
+.be_btn{
+  margin-top: 21px;
+  display: flex;
+  gap: 8px;
+}
+
+.be_btn .btn{
+  width: 154px;
+}
+
 .slick-dots{
   position: absolute;
   display: flex;
@@ -90,19 +114,19 @@
 .slick-dots button:hover{
   opacity: 1;
 }
-.tab_contents .be_tabs li{
+.tabs .be_tabs li{
   display: none;
 }
-.tab_contents .be_tabs li.active{
+.tabs .be_tabs li.active{
   display: block;
 }
-.tab_contents .be_tabs li img{
+.tabs .be_tabs li img{
   width: 316px;
   height: 140px;
   object-fit: cover;
   margin: 48px 0 46px;
 }
-.tab_contents .be_tabs li h3{
+.tabs .be_tabs li h3{
   font-size: 36px;
   line-height: 48px;
   font-weight: bold;
@@ -112,12 +136,14 @@
 .tab_depth{
   display: flex;
   gap: 24px;
-  overflow: hidden;
+  position: relative;
 }
 .caution{
   position: absolute;
   color: var(--medium_gray);
   font-size: var(--body_sub_tt);
+  left: 329px;
+  top: 607px;
 }
 /* MEMBERS */
 .kia_members, .kia_event, .kia_notice{
