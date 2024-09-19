@@ -8,6 +8,7 @@ section.home {
     list-style: none;
 }
 
+
 header {
     z-index: 999;
     position: absolute;
@@ -35,7 +36,7 @@ header .navigation-items li a {
     transition: 0.3s ease;
 }
 
-header  .navigation-items li a:before {
+header .navigation-items li a:before {
     content: '';
     position: absolute;
     background: #fff;
@@ -46,7 +47,7 @@ header  .navigation-items li a:before {
     transition: 0.3s ease;
 }
 
-header  .navigation-items li a:hover:before {
+header .navigation-items li a:hover:before {
     width: 100%;
 }
 
@@ -204,7 +205,7 @@ header  .navigation-items li a:hover:before {
 /*순서 => 마우스를 a태그에 올림 => ul 나옴 => ul li들이 나옴 */
 
 /* a 태그에 마우스 올렸을 때 ul 나타나게 */
-.navigation-items li a:hover > ul {
+.navigation-items li a:hover>ul {
     display: block;
 }
 
@@ -213,7 +214,7 @@ header  .navigation-items li a:hover:before {
     color: #fff;
 }
 
-.navigation-items > li > a > ul > li:hover {
+.navigation-items>li>a>ul>li:hover {
     background-color: rgba(255, 255, 255, 0.1);
     color: #ffcc00;
 }
@@ -289,25 +290,26 @@ header  .navigation-items li a:hover:before {
 
 /* 모달 페이지*/
 #search-modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1000; 
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
 }
+
 .modal-content {
     background-color: #fff;
-    margin: 10% auto; 
+    margin: 10% auto;
     padding: 30px;
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 70%;
     max-width: 600px;
-    position: relative; 
+    position: relative;
 }
 
 .close {
@@ -321,11 +323,13 @@ header  .navigation-items li a:hover:before {
 
 .close:hover,
 .close:focus {
-    color: var(--primary);;
+    color: var(--primary);
+    transform: scale(1.3);
+    transition: all 0.3s;
 }
 
 .modal-content input[type="text"] {
-    width: calc(100% - 20px); 
+    width: calc(100% - 20px);
     padding: 12px;
     margin-top: 10px;
     border: 1px solid #ddd;
@@ -342,7 +346,7 @@ header  .navigation-items li a:hover:before {
 
 .modal-content button {
     background-color: var(--primary);
-    color: #fff; 
+    color: #fff;
     border: none;
     padding: 12px 20px;
     margin-top: 10px;
@@ -353,14 +357,246 @@ header  .navigation-items li a:hover:before {
 }
 
 .modal-content button:hover {
-    transform: scale(1.05); 
+    transform: scale(1.1);
+    transition: all 0.3s;
+
+}
+
+
+/* 스몰페이지 메뉴*/
+#smallpage-menu {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.smallpage-content {
+    z-index: 1001;
+    margin: 5%  auto 10%;
+    width: 70%;
+    height: 80%;
+    position: relative;
+
+}
+
+.smallpage-header {
+    height: 8%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: #ebebeb;
+}
+
+.smallpage-header span{
+    padding: 0 20px;
+}
+
+.smallpage-main {
+    display: block;
+}
+
+.smallpage-mainSection2 {
+    height: 20%;
+    background-color: #c0c1c7;
+}
+
+
+.smallpage-footer {
+    height: 15%;
+    background: var(--primary);
+}
+
+.smallpage-close {
+    color: #333;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.smallpage-close:hover,
+.smallpage-close:focus {
+    color: var(--primary);
+    transform: scale(1.3);
+    transition: all 0.3s;
+}
+
+.smallpage-content button:hover {
+    transform: scale(1.3);
+    transition: all 0.3s;
+}
+
+
+
+
+/* 아코디언 활성화된 상태 */
+.smallpage-main {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.smallpage-accordion {
+    font-size: 18px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-align: left;
+    transition: 0.4s;
+}
+
+.smallpage-accordion:hover {
+    background-color: #ddd;
+
+}
+
+.smallpage-accordion:after {
+    content: '\002B';
+    color: #777;
+    float: right;
+    margin-left: 5px;
+    padding: 0 10px;
+    
+}
+
+.activeOnlySmallPage:after {
+   content: "\2212"; 
+}
+
+.smallpage-panel {
+    display: none;
+    background-color: #fff;
+    overflow: hidden;
+    padding-left: 15px;
+    
+    
+}
+
+.smallpage-panel ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.smallpage-panel ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    color: black;
+    
+}
+
+.smallpage-panel ul li a:hover {
+    background-color: #f3f3f3;
+}
+
+.smallpage-footer{
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.smallpage-footer a {
+    position: relative; /* ::after 가상 요소를 기준으로 위치를 설정 */
+    color: #fff;
+    padding: 0 20px;
+    text-decoration: none;
+    transition: color 0.3s ease; /* 글자 색 전환 애니메이션 */
+}
+
+.smallpage-footer a::after {
+    content: ''; /* 가상 요소를 사용해 하단에 줄 생성 */
+    position: absolute;
+    bottom: -1px; /* 링크 바로 아래에 줄 위치 */
+    left: 20px;
+    height: 1px;
+    background-color: white;
+    width: 0; /* 초기 너비 0으로 설정 (보이지 않음) */
+    transition: all 0.2s ease; /* 너비 변화 애니메이션 */
+}
+
+.smallpage-footer a:hover::after {
+    width: 50%; /* 마우스를 올렸을 때 전체 너비로 확장 */
 }
 
 
 
 
 
+.smallpage-mainSection2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2개의 열 */
+    grid-template-rows: repeat(2, 1fr);    /* 2개의 행 */
+    position: relative; /* 선을 추가하기 위해 relative 설정 */
+    width: 100%;
+    grid-gap: 0; /* 아이템들 간의 간격을 제거 */
+}
+
+.smallpage-mainSection2-parts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.smallpage-mainSection2-parts i {
+    margin-bottom: 5px; /* 아이콘과 텍스트 간의 간격 */
+}
+
+.smallpage-mainSection2-parts a {
+    text-decoration: none;
+    color: black;
+}
+
+.smallpage-mainSection2-parts a:hover {
+    text-decoration: underline;
+}
+
+/* 중앙에 수직선과 수평선 추가 */
+.smallpage-mainSection2::before,
+.smallpage-mainSection2::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+}
+
+/* 수직선 */
+.smallpage-mainSection2::before {
+    width: 0.3px; /* 선의 두께 */
+    height: 100%;
+    left: 50%; /* 중앙 수직선 위치 */
+    top: 0;
+    transform: translateX(-50%);
+}
+
+/* 수평선 */
+.smallpage-mainSection2::after {
+    height: 0.3px; /* 선의 두께 */
+    width: 100%;
+    top: 50%; /* 중앙 수평선 위치 */
+    left: 0;
+    transform: translateY(-50%);
+}
+
 @media (max-width:1400px) {
+
+
     header .navigation-items li a {
         font-size: 1em;
         margin-left: 10px;
@@ -377,11 +613,19 @@ header  .navigation-items li a:hover:before {
 }
 
 
-@media (max-width:880px) {
-    
+@media (max-width:856px) {
+    #smallpage-menu {
+        display: none;
+    }
+
+
+    .kia_logo {
+        width: 80px;
+        height: 80px;
+    }
 
     header {
-        padding: 12px 20px;
+        padding: 8px 18px;
         display: flex;
         justify-content: end;
 
@@ -434,6 +678,7 @@ header  .navigation-items li a:hover:before {
 }
 
 @media (max-width:700px) {
+
     .btn {
         border: none;
         padding: 0px 20px;
@@ -482,4 +727,3 @@ header  .navigation-items li a:hover:before {
 
     }
 }
-
