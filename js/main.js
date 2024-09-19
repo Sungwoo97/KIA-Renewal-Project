@@ -92,17 +92,41 @@ ev_prevBtn.on('click', debounce(()=>{
   moveSlide(currentIdx - 1);
 }, 500)) ;
 
-//best kia 슬라이더 (slick 사용)
-const beSlides = $('.best_kia .tab_contents .slides')
+//로딩 직후 바로 1번탭이 보이도록 강제로 잡아두기
+$('#be_tabs1').addClass('active')
 
-beSlides.slick({
-  dots: true,
-  infinite: true,
-  speed: 500,
-  fade: true,
-  cssEase: 'linear',
-  prevArrow:'none',
-  nextArrow:'none',
-  autoplay:true,
-  autoplaySpeed:10000
+//Best Kia 페이저
+$('.be_tabs').each(function() {
+  var tabs = $(this);
+  var toplankDepth = tabs.find('.toplank_depth');
+  var bePager = tabs.find('.pager');
+  
+  var bepagerHtml = '';
+  toplankDepth.find('li').each(function(index) {
+    bepagerHtml += `<button class="pager_btn" data-index="${index}">TOP ${index + 1}</button>`;
+  });
+  bePager.html(bepagerHtml);
+  
+  bePager.find('.pager_btn').on('click', function() {
+    var index = $(this).data('index');
+    
+    toplankDepth.find('li').removeClass('active');
+    toplankDepth.find('li').eq(index).addClass('active');
+
+    bePager.find('.pager_btn').removeClass('visible');
+    $(this).addClass('visible');
+
+  });
+  bePager.find('.pager_btn').first().click();
+});
+
+//안전성 탭 1등급 설명 모달
+$('.safe_modal_container').hide();
+
+$('.detail_ex button').click(function(){
+  $('.safe_modal_container').fadeIn();
+});
+
+$('.safe_modal_container').click(function(){
+  $(this).fadeOut();
 });
