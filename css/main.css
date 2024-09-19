@@ -743,7 +743,7 @@
 @media (max-width: 1000px){
   
   .kia_notice{
-    margin: 0;
+    margin: 0 auto 220px;
   }
 
   .tabs{
