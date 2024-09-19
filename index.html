@@ -4,82 +4,231 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kia Renewal Project</title>
+  <title>Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/main_header.css" />
 </head>
 
 <body>
-  
+
+  <div id="search-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>통합검색</h2>
+      <input type="text" placeholder="검색어를 입력하세요." />
+      <button type="button">검색</button>
+    </div>
+  </div>
+
+
+
   <header>
-    <div class="navigation">
-      <div class="navigation-items">
-        <a href="#">차량sss</a>
-        <a href="#">구매</a>
-        <a href="#">체험</a>
-        <a href="#">이벤트</a>
-        <a href="#">고객지원</a>
-        <a href="#">Discover Kia</a>
-      </div>
+    <div class="navigation-items">
+      <li>
+        <a href="#">차량
+          <ul>
+            <li>EV & PBV</li>
+            <li>승용</li>
+            <li>RV</li>
+            <li>택시 & 버스 & 상용</li>
+          </ul>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">구매
+          <ul>
+            <li>견적내기</li>
+            <li>이 달의 구매 혜택</li>
+            <li>구매 상담 신청</li>
+            <li>Kia Connect Store</li>
+            <li style="position: relative;">모빌리티 <object data="./img/main_header/right-arrow_white.svg"
+                id="right-arrow_white"></object>
+              <ul id="sub_sub_menus">
+                <li>기아 인증 중고차</li>
+                <li>기아렌터차</li>
+                <li>기아플렉스</li>
+                <li>위블 비즈</li>
+              </ul>
+            </li>
+          </ul>
+        </a>
+      </li>
+      <li>
+        <a href="#">체험
+          <ul>
+            <li>시승신청</li>
+            <li style="position: relative;">판매 네트워크 <object data="./img/main_header/right-arrow_white.svg"></object>
+              <ul id="sub_sub_menus">
+                <li>지점/대리점</li>
+                <li>영업담당</li>
+                <li>전시 차량</li>
+                <li>시승 거점</li>
+                <li>출고 센터</li>
+              </ul>
+            </li>
+            <li style="position: relative;">Kia 체험거점 <object data="./img/main_header/right-arrow_white.svg"></object>
+              <ul id="sub_sub_menus">
+                <li>kia 360</li>
+                <li>플래그쉽 스토어</li>
+                <li>언플러그드 그라운드</li>
+                <li>Driving Experience</li>
+              </ul>
+            </li>
+          </ul>
+        </a>
+      </li>
+      <li>
+        <a href="#">이벤트
+          <ul>
+            <li>진행 중인 이벤트</li>
+            <li>종료된 이벤트</li>
+            <li>당첨자 발표</li>
+          </ul>
+        </a>
+      </li>
+      <li>
+        <a href="#">고객지원
+          <ul>
+            <li style="position: relative;">유지 & 관리 <object data="./img/main_header/right-arrow_white.svg"></object>
+              <ul id="sub_sub_menus">
+                <li>기아멤버스</li>
+                <li>카앤라이프몰</li>
+              </ul>
+            </li>
+            <li style="position: relative;">고객센터 <object data="./img/main_header/right-arrow_white.svg"></object>
+              <ul id="sub_sub_menus">
+                <li>고객센터 안내</li>
+                <li>1:1 문의</li>
+                <li>FAQ</li>
+                <li>칭찬 알림방</li>
+                <li>하자 재발 통보</li>
+              </ul>
+            </li>
+            <li style="position: relative;">구매 가이드 <object data="./img/main_header/right-arrow_white.svg"></object>
+              <ul id="sub_sub_menus">
+                <li>세금</li>
+                <li>등록</li>
+                <li>유의 사항</li>
+                <li>출하 및 탁송정보</li>
+              </ul>
+            </li>
+            <li>공지사항</li>
+          </ul>
+        </a>
+      </li>
+      <li>
+        <a href="#">Discover Kia
+          <ul>
+            <li style="position: relative;">New Kia <object data="./img/main_header/right-arrow_white.svg"></object>
+              <ul id="sub_sub_menus">
+                <li>Our Symbol</li>
+                <li>Our Movement</li>
+                <li>Our Design</li>
+              </ul>
+            </li>
+            <li>뉴스</li>
+            <li>지속가능경영</li>
+            <li>사업장 안내</li>
+            <li>AutoLand 견학</li>
+          </ul>
+        </a>
+      </li>
     </div>
-    <object data="src/img/kia.svg" class="kia_logo"></object>
+
+    <object data="./img/main_header/kia.svg" class="kia_logo"></object>
     <div class="globe-btn"></div>
-    <div class="search-glasses"></div>
-    <div class="menu-btn"></div>
+    <div class="search-glasses" id="searching-index"></div>
+    <div class="menu-btn" id="open-small-menus"></div>
 
 
 
-    <div class="navigation">
-      <div class="navigation-items">
-        <a href="#">KOR</a>
-        <a href="#">통합검색</a>
-        <a href="#">로그인</a>
-      </div>
+
+    <div class="navigation-items">
+      <li>
+        <a href="#">KOR
+          <ul>
+            <li>Korean</li>
+            <li>English</li>
+            <li>Chinese</li>
+            <li>Japanes</li>
+          </ul>
+        </a>
+      </li>
+      <li><a href="#" id="searching-index2">통합검색</a></li>
+      <li><a href="#">로그인</a></li>
     </div>
+
   </header>
 
   <section class="home">
     <video class="video-slide active" src="videos/kia_vid1.mp4" autoplay muted loop></video>
-    <img class="video-slide2" src="img/main_ev6_small.jpg" alt="Main Header small size Image" />
+    <img class="video-slide2" src="img/main_header/main_ev6_small.jpg" alt="Main Header small size Image" />
 
-    <video class="video-slide" src="videos/kia_vid2.mp4" autoplay muted loop></video>
-    <img class="video-slide2" src="img/main_newCarnival_small.jpg" alt="Main Header small size Image" />
-
-
-    <img class="video-slide" src="img/main_carnival.jpg" alt="Main Header Image" />
-    <img class="video-slide2" src="img/main_carnival_small.jpg" alt="Main Header big Image" />
-
-    <img class="video-slide" src="img/main_ev3.jpg" alt="Main Header Image" />
-    <img class="video-slide2" src="img/main_ev3_small.jpg" alt="Main Header big Image" />
-
-    <img class="video-slide" src="img/main_K8.jpg" alt="Main Header Image" />
-    <img class="video-slide2" src="img/main_k8_small.jpg" alt="Main Header big Image" />
-
-    <img class="video-slide" src="img/main_k9.jpg" alt="Main Header Image" />
-    <img class="video-slide2" src="img/main_k9_small.jpg" alt="Main Header big Image" />
+    <video class="video-slide" src="videos/kid_vid3.mp4" autoplay muted loop></video>
+    <img class="video-slide2" src="img/main_header/main_newCarnival_small.jpg" alt="Main Header small size Image" />
 
 
-    <div class="main_header_content active" style="display: none;"></div>
-    <div class="main_header_content" style="display: none;"></div>
+    <img class="video-slide" src="img/main_header/main_carnival.jpg" alt="Main Header Image" />
+    <img class="video-slide2" src="img/main_header/main_carnival_small.jpg" alt="Main Header big Image" />
+
+    <img class="video-slide" src="img/main_header/main_ev3.jpg" alt="Main Header Image" />
+    <img class="video-slide2" src="img/main_header/main_ev3_small.jpg" alt="Main Header big Image" />
+
+    <img class="video-slide" src="img/main_header/main_K8.jpg" alt="Main Header Image" />
+    <img class="video-slide2" src="img/main_header/main_k8_small.jpg" alt="Main Header big Image" />
+
+    <img class="video-slide" src="img/main_header/main_k9.jpg" alt="Main Header Image" />
+    <img class="video-slide2" src="img/main_header/main_k9_small.jpg" alt="Main Header big Image" />
+
+    <img class="video-slide" src="img/main_header/main_last.jpg" alt="Main Header Image" />
+    <img class="video-slide2" src="img/main_header/main_last.jpg" alt="Main Header big Image" />
+
     <div class="main_header_content ">
-      <h1>The New Carnival</h1>
-      <p>자동차 설명</p>
-    </div>
-    <div class="main_header_content">
-      <h1>Ev3</h1>
-      <span>설명</span>
-    </div>
-    <div class="main_header_content">
+      <p>The Priceless</p>
       <h1>The New K8</h1>
-      <span>설명</span>
+      <button class="btn">자세히 보기</button>
+      <button class="btn">견적내기</button>
     </div>
     <div class="main_header_content">
-      <h1>The New K9</h1>
-      <span>설명</span>
+      <p>The Compact One</p>
+      <h1>The New Morning</h1>
+      <button class="btn">자세히 보기</button>
+      <button class="btn">견적내기</button>
     </div>
-
+    <div class="main_header_content ">
+      <p>나만의 스케일대로</p>
+      <h1>Carnival</h1>
+      <h2>Hi Limousine</h2>
+      <button class="btn">자세히 보기</button>
+      <button class="btn">견적내기</button>
+    </div>
+    <div class="main_header_content">
+      <p>My Morning Infra</p>
+      <h1>The Kia New Ev3</h1>
+      <button class="btn">자세히 보기</button>
+      <button class="btn">견적내기</button>
+    </div>
+    <div class="main_header_content">
+      <p>The Priceless</p>
+      <h1>The New K8</h1>
+      <button class="btn">자세히 보기</button>
+      <button class="btn">견적내기</button>
+    </div>
+    <div class="main_header_content">
+      <p>Master that Inspire</p>
+      <h1>The 2024 K9</h1>
+      <button class="btn">자세히 보기</button>
+      <button class="btn">견적내기</button>
+    </div>
+    <div class="main_header_content">
+      <p>스마트한 카 라이프의 시작! 기아 렌터카</p>
+      <h1>기아 렌터카 온라인 홈페이지</h1>
+      <button class="btn">렌터카 견적 내기</button>
+      <button class="btn">바로가기</button>
+    </div>
 
     <!--
     <div class="media-icons">
@@ -88,7 +237,6 @@
       <a href="#"><i class="fab fa-twitter"></i></a>
     </div>
     -->
-
     <div class="slider-navigation">
       <div class="nav-btn active"></div>
       <div class="nav-btn"></div>
@@ -96,10 +244,12 @@
       <div class="nav-btn"></div>
       <div class="nav-btn"></div>
       <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+
     </div>
   </section>
 
-  
+
   <main>
         <!-- best kia 김유진 -->
         <section class="best_kia container">
@@ -423,7 +573,7 @@
             <li><a href=".me_tab_ev_members">Kia EV Members</a></li>
           </ul>
           <div class="tabs">
-            <div class="me_tab_members active" >
+            <div class="me_tab_members active">
               <h3>KIA Members 고객을 위한 혜택</h3>
               <ul class="me_icons">
                 <li>기아멤버스 <br>기본점검</li>
@@ -450,7 +600,7 @@
       </div>
     </section>
     <!-- // Members 남성우 -->
-     <!-- Event 남성우 -->
+    <!-- Event 남성우 -->
     <section class="kia_event container">
       <div class="ev_title">
         <h2 class="title_gutter sec_tt">Kia Event</h2>
@@ -504,14 +654,17 @@
             <img src="img/ev/ev_kanival_sale_event.png" alt="카니발 흥행기념 세일 이벤트">
             <figcaption>
               <h3>더 뉴 카니발 &amp; 스포티지
-                <br>최다 판매 기념 특가 할인 이벤트</h3>
+                <br>최다 판매 기념 특가 할인 이벤트
+              </h3>
               <p>2024-06-24 ~ 2024-09-30</p>
             </figcaption>
           </figure>
         </div>
       </div>
-      <div class="ev_slide_prev"><img  width="50" height="50" src="https://img.icons8.com/ios/50/back--v1.png" alt="back--v1"/></div>
-      <div class="ev_slide_next"><img width="50" height="50" src="https://img.icons8.com/ios/50/forward--v1.png" alt="forward--v1"/></div>
+      <div class="ev_slide_prev"><img width="50" height="50" src="https://img.icons8.com/ios/50/back--v1.png"
+          alt="back--v1" /></div>
+      <div class="ev_slide_next"><img width="50" height="50" src="https://img.icons8.com/ios/50/forward--v1.png"
+          alt="forward--v1" /></div>
     </section>
     <!-- // Event 남성우 -->
     <!-- Section 최은화 -->
@@ -522,62 +675,62 @@
           <p class="sub_title_gutter">기아 소식을 한눈에 확인해 보세요</p>
         </div>
         <div class="container">
-            <ul class="tabs_menu">
-              <li class="active"><a href=".notice">Notice</a></li>
-              <li><a href=".news">News</a></li>
-            </ul>
-            <div class="tabs">
-              <div class="notice active">
-                <figure class="no_img">
-                  <img src="img/fo/fo_notice.png" alt="#">
-                </figure>
-                <div class="no_sizing">
-                  <div class="no_notice">
-                    <h3>공지사항</h3>
-                    <button>더보기</button>
-                  </div>
-                  <ul class="no_ntc">
-                    <li>
-                      <p>개인정보 처리방침 변경 안내 (2024.08.30)</p>
-                      <em>24-07-29</em>
-                    </li>
-                    <li>
-                      <p>기아 전기차 고객 안내 사항 (2024.08.12)</p>
-                      <em>24-07-29</em>
-                    </li>
-                    <li>
-                      <p>개인정보 처리방침 변경 안내 (2024.07.31)</p>
-                      <em>24-07-29</em>
-                    </li>
-                  </ul>
+          <ul class="tabs_menu">
+            <li class="active"><a href=".notice">Notice</a></li>
+            <li><a href=".news">News</a></li>
+          </ul>
+          <div class="tabs">
+            <div class="notice active">
+              <figure class="no_img">
+                <img src="img/fo/fo_notice.png" alt="#">
+              </figure>
+              <div class="no_sizing">
+                <div class="no_notice">
+                  <h3>공지사항</h3>
+                  <button>더보기</button>
                 </div>
-              </div>
-              <div class="news">
-                <figure class="no_img">
-                  <img src="img/fo/fo_news.png" alt="#">
-                </figure>
-                <div class="no_sizing">
-                  <div class="no_news">
-                    <h3>뉴스</h3>
-                    <button>더보기</button>
-                  </div>
-                  <ul class="no_ntc">
-                    <li>
-                      <p>기아, 인도 고객 만족도 1위 달성</p>
-                      <em>24-09-10</em>
-                    </li>
-                    <li>
-                      <p>기아, 전기차 고객 초청 행사</p>
-                      <em>24-09-05</em>
-                    </li>
-                    <li>
-                      <p>기아 초록여행, 장애인 고지대 탐방체험 신설</p>
-                      <em>24-09-04</em>
-                    </li>
-                  </ul>
-                </div>
+                <ul class="no_ntc">
+                  <li>
+                    <p>개인정보 처리방침 변경 안내 (2024.08.30)</p>
+                    <em>24-07-29</em>
+                  </li>
+                  <li>
+                    <p>기아 전기차 고객 안내 사항 (2024.08.12)</p>
+                    <em>24-07-29</em>
+                  </li>
+                  <li>
+                    <p>개인정보 처리방침 변경 안내 (2024.07.31)</p>
+                    <em>24-07-29</em>
+                  </li>
+                </ul>
               </div>
             </div>
+            <div class="news">
+              <figure class="no_img">
+                <img src="img/fo/fo_news.png" alt="#">
+              </figure>
+              <div class="no_sizing">
+                <div class="no_news">
+                  <h3>뉴스</h3>
+                  <button>더보기</button>
+                </div>
+                <ul class="no_ntc">
+                  <li>
+                    <p>기아, 인도 고객 만족도 1위 달성</p>
+                    <em>24-09-10</em>
+                  </li>
+                  <li>
+                    <p>기아, 전기차 고객 초청 행사</p>
+                    <em>24-09-05</em>
+                  </li>
+                  <li>
+                    <p>기아 초록여행, 장애인 고지대 탐방체험 신설</p>
+                    <em>24-09-04</em>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -653,13 +806,14 @@
     <p>© Kia Corp. All rights reserved</p>
     <!-- // Footer 최은화 -->
   </footer>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/common.js"></script>
   <script src="js/main.js"></script>
   <script type="text/javascript" src="js/main_header.js"></script>
 
-  
+
 </body>
 
 </html>
