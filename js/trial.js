@@ -23,6 +23,9 @@ $('.ex_modalContainer').hide();
 $('.testDrive').click(function(){
   $('.ex_modalContainer').fadeIn();
 });
+$('.modal button').click(function(){
+  $('.ex_modalContainer').fadeOut();
+})
 
 /* experience Slide */
 let ev_slideHTML = ex_slideContainer.html();
@@ -387,7 +390,6 @@ function makeMap(){
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
     map.panTo(moveLatLon);            
   }  
-    
 }
 
 //검색된 데이터를 받아오는 함수
