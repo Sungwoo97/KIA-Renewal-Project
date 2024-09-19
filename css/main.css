@@ -570,11 +570,10 @@
   }
   .me_tab_ev_members:after{
     bottom: 100%;
-  
     margin-left: 0;
   }
 }
-@media (max-width:834) {
+@media (max-width:834px) {
   .me_tab_members:after{
     background-size: 100%;
     background-position: center center;
@@ -667,6 +666,11 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+.ev_slide_container figcaption:hover h3{
+  text-decoration: underline;
+}
+
 .ev_slide_container figcaption h3{
   font-size: var(--section_tt);
   line-height: 29px;
@@ -699,7 +703,7 @@
   }
   
 }
-@media (max-width:768px) {
+@media (max-width:834px) {
   .ev_slide_wrapper{
     width: 400px;
   }
