@@ -161,6 +161,38 @@ header .navigation .navigation-items a:hover:before {
   cursor: pointer;
 }
 
+.ex_modalContainer{
+  position: fixed;
+  left: 0;right: 0;top: 0;bottom: 0;
+  background:rgba(0,0,0,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+/*   visibility:hidden;
+  opacity:0;
+  transition:opacity 0.3s; */
+}
+.ex_modalContainer fieldset{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ex_modalContainer legend{
+  font-size: var(--section_tt);
+  font-weight: 500;
+  text-align: center;
+}
+
+.modal{
+  background: #fff;
+  width: 400px;
+  padding:20px;
+  border-radius:10px;
+
+}
+
+
+
 /* SALES NETWORKS */
 .ex_tab_salesNetwork{
   display: flex;
@@ -285,13 +317,13 @@ header .navigation .navigation-items a:hover:before {
   font-size: 36px;
   font-weight: 500;
   margin: 48px 0 24px;
-  display: none;
+  opacity: 0;
   transition: .3s;
 }
 
 .ex_slide_container p{
   font-weight: 300; 
-  display: none;
+  opacity: 0;
   transition: .3s;
 }
 
@@ -304,7 +336,7 @@ header .navigation .navigation-items a:hover:before {
 }
 
 .ex_slide_container .active h4, .ex_slide_container .active p{
-  display: block;
+  animation: activeText .3s .5s forwards;
 }
 
 .ex_slide_prev,.ex_slide_next{
@@ -326,3 +358,12 @@ header .navigation .navigation-items a:hover:before {
 .ex_slide_next{
   right: 0;
 } 
+
+@keyframes activeText{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
