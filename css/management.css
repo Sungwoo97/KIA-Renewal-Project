@@ -1,57 +1,28 @@
-/* Header */
+/* Keyframes */
 
-header {
-	z-index: 999;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	transition: 0.5s ease;
-  
-  height: 80px;
-  background: var(--white);
-  opacity: 70%;
+@keyframes fadeInUp{
+  from{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-header .brand {
-	color: #fff;
-	font-size: 1.5em;
-	font-weight: 700;
-	text-transform: uppercase;
-	text-decoration: none;
-}
 
-header .navigation {
-	position: relative;
-	padding: 30px 50px;
-}
+@keyframes fadeInLeft{
+  from{
+    opacity: 0;
+    transform: translateX(-50px);
+  }
 
-header .navigation .navigation-items a {
-	position: relative;
-	color: #000;
-	font-size: 1.25em;
-	font-weight: 700;
-	text-decoration: none;
-	margin-left: 30px;
-	transition: 0.3s ease;
-}
-
-header .navigation .navigation-items a:before {
-	content: '';
-	position: absolute;
-	background: #fff;
-	width: 0;
-	height: 2px;
-	bottom: 0;
-	left: 0;
-	transition: 0.3s ease;
-}
-
-header .navigation .navigation-items a:hover:before {
-	width: 100%;
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Main */
@@ -76,7 +47,7 @@ header .navigation .navigation-items a:hover:before {
 .maintitle img{
   position: absolute;
   width: 100%;
-  height: 90%;
+  /* height: 90%; */
 }
 
 .maintitle .text{
@@ -108,24 +79,14 @@ header .navigation .navigation-items a:hover:before {
 
 .maintitle .text h3{
   font-size: 36px;
+  opacity: 0;
   animation: fadeInUp 0.6s ease-in-out forwards;
 }
 
 .maintitle .text h2{
   font-size: 60px;
+  opacity: 0;
   animation: fadeInUp 0.6s ease-in-out 0.5s forwards;
-}
-
-@keyframes fadeInUp{
-  from{
-    opacity: 0;
-    transform: translateY(100px);
-  }
-
-  to{
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 
@@ -147,6 +108,22 @@ header .navigation .navigation-items a:hover:before {
   margin-top: 7px;
 }
 
+.subtitle .sub.active h3,
+.subtitle .sub.active p{
+  top: 0;
+  opacity: 1;
+}
+
+.subtitle .sub h3{
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-in-out forwards;
+}
+
+.subtitle .sub p{
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-in-out 0.5s forwards;
+}
+
 .subimg{
   position: relative;
   height: 620px;
@@ -159,6 +136,19 @@ header .navigation .navigation-items a:hover:before {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.subimg img{
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.subimg img.active{
+  opacity: 1;
+}
+
+.subimg svg path{
+  stroke-dashoffset: 1000;
 }
 
 /* --------------------------------------------------------------- */
@@ -208,36 +198,29 @@ header .navigation .navigation-items a:hover:before {
   font-weight: 900;
 }
 
-.digit {
+.icontab ul li{
   opacity: 0;
-  -webkit-transform: translateY(40px);
-     -moz-transform: translateY(40px);
-      -ms-transform: translateY(40px);
-       -o-transform: translateY(40px);
-          transform: translateY(40px);
-  -webkit-transition: all 0.6s ease-out;
-     -moz-transition: all 0.6s ease-out;
-      -ms-transition: all 0.6s ease-out;
-       -o-transition: all 0.6s ease-out;
-          transition: all 0.6s ease-out;
+  animation: fadeInUp 0.5s ease-in-out forwards;
 }
-.digit.visible {
+
+.icontab ul.active li:nth-child(1){
+  top: 0;
   opacity: 1;
-  -webkit-transform: none;
-     -moz-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
+  animation-delay: 0s;
 }
-/* .digit:nth-child(2) {
-  margin-top: 50px;
+
+.icontab ul.active li:nth-child(2){
+  top: 0;
+  opacity: 1;
+  animation-delay: 0.3s;
 }
-.digit:nth-child(3) {
-  margin-top: 100px;
+
+.icontab ul.active li:nth-child(3){
+  top: 0;
+  opacity: 1;
+  animation-delay: 0.6s;
 }
-.digit:nth-child(4) {
-  margin-top: 150px;
-} */
+
 
 /* --------------------- Section1 ------------------------ */
 
@@ -263,6 +246,22 @@ section .banner h3{
   margin-top: 10px;
 }
 
+section .banner p.active,
+section .banner h3.active{
+  top: 0;
+  opacity: 1;
+}
+
+section .banner p{
+  opacity: 0;
+  animation: fadeInLeft 0.5s ease-in-out forwards;
+}
+
+section .banner h3{
+  opacity: 0;
+  animation: fadeInLeft 0.5s ease-in-out 0.5s forwards;
+}
+
 section .expanation{
   position: relative;
   left: 15%;
@@ -279,6 +278,22 @@ section .expanation p{
   font-size: var(--body_tt);
   color: #6E6E6E;
   margin-top: 10px;
+}
+
+section .expanation h3.active,
+section .expanation p.active{
+  top: 0;
+  opacity: 1;
+}
+
+section .expanation h3{
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-in-out forwards;
+}
+
+section .expanation p{
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-in-out 0.5s forwards;
 }
 
 section .diagram{
@@ -338,6 +353,7 @@ section .diagram ul .plus1{
 section .diagram ul .plus2{
   transform: translate(500px, 65px);
 }
+
 
 
 
