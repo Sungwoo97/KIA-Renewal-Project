@@ -462,8 +462,6 @@
 .me_icons li:after, .me_ev_icons li:after{
   content: '';
   background-repeat: no-repeat;
-  
-
   position: absolute;
   top:0;
   left: 50%;
@@ -582,7 +580,7 @@
     height: 300px;
   }
   .me_tab_ev_members:after{
-    background-size: 100%;
+    background-size: 80%;
     background-position: center center;
     width: 100%;
     height: 300px;
@@ -689,7 +687,9 @@
   color: var(--medium_gray);
   cursor: pointer;
 }
-
+.kia_event > div{
+  position: relative;
+}
 .ev_slide_prev {
   left: 0;
 }
@@ -702,11 +702,27 @@
   .ev_slide_wrapper{
     width: 800px;
   }
+  .kia_event > div{
+    margin: 0 30px;
+  }
   
+}
+@media (max-width:980px){
+  .kia_event > div{
+    margin: 0;
+  }
 }
 @media (max-width:834px) {
   .ev_slide_wrapper{
     width: 400px;
+  }
+  .kia_event > div{
+    margin: 0 50px;
+  }
+}
+@media (max-width:700px){
+  .kia_event > div{
+    margin: 0;
   }
 }
 
