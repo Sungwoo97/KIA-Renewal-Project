@@ -92,6 +92,20 @@ ev_prevBtn.on('click', debounce(()=>{
   moveSlide(currentIdx - 1);
 }, 500)) ;
 
+let timer;
+function autoSlide(){
+  timer = setInterval(()=>{
+    moveSlide(currentIdx+1);
+  },4000)
+}
+
+ev_slideContainer.hover(function(){
+  clearInterval(timer);
+  },function(){
+    autoSlide();
+  }
+);
+autoSlide();
 //로딩 직후 바로 1번탭이 보이도록 강제로 잡아두기
 $('#be_tabs1').addClass('active')
 

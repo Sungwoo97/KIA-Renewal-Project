@@ -1,10 +1,8 @@
 const tabMenu = $('.tabs_menu li');
 
-
 function tabControl(menu){
   menu.click(function(e){
     e.preventDefault();
-    console.log($(this).closest('div'));
     $(this).parent().find('li').removeClass('active');
     $(this).addClass('active');
     $(this).parent().parent('div').find('.tabs > div').removeClass('active');
