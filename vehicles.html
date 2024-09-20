@@ -201,7 +201,6 @@
 
 
 
-
 <footer>
   <!-- Footer 최은화 -->
   <h1 class="fo_logo">
@@ -273,6 +272,25 @@
   <!-- // Footer 최은화 -->
 </footer>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script>
+  
+  //차량 fixed util
+  
+  $(window).scroll(function() {
+    let documentHeight = $(document).height();
+    let scrollTop = $(window).scrollTop();
+    let windowHeight = $(window).height();
+    
+    let hidePosition = documentHeight - windowHeight - 530;
+    console.log(hidePosition)
+    if (scrollTop >= hidePosition) {
+        $('.ve_tab_wrapper .util').fadeOut(); // 목록을 숨김
+    } else {
+        $('.ve_tab_wrapper .util').fadeIn(); // 목록을 보임
+    }
+  });
+
+  </script>
   <script src="js/common.js"></script>
 </body>
 </html>
