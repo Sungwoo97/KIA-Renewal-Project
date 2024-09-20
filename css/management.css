@@ -56,6 +56,18 @@ header .navigation .navigation-items a:hover:before {
 
 /* Main */
 
+[data-trigger]{
+  opacity: 0;
+  position: relative;
+  top: 50px;
+  transition: 0.5s;
+  }
+  
+[data-trigger].active{
+  opacity: 1;
+  top: 0;
+}
+
 .maintitle{
   width: 100vw;
   height: 100vh;
@@ -123,32 +135,16 @@ header .navigation .navigation-items a:hover:before {
   text-align: center;
 }
 
-.subtitle .sub h3,
-.subtitle .sub p{
-  position: relative;
-  opacity: 0;
-  transition: 0.5s;
-}
-
-.subtitle .sub.active h3,
-.subtitle .sub.active p,
-.subimg img{
-  top: 0;
-  opacity: 1;
-}
-
 .subtitle .sub h3{
   font-size: 36px;
   line-height: 48px;
   font-weight: 700;
-  animation: fadeInUp 0.6s ease-in-out forwards;
 }
 
 .subtitle .sub p{
   font-size: 20px;
   line-height: var(--gutter);
   margin-top: 7px;
-  animation: fadeInUp 0.6s ease-in-out 0.5s forwards;
 }
 
 .subimg{
@@ -163,26 +159,6 @@ header .navigation .navigation-items a:hover:before {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
-.subimg img{
-  opacity: 0;
-  transition: 0.5;
-  animation: fadeIn 0.6s ease-in-out forwards;
-}
-
-.subimg.sub.active img{
-  opacity: 1;
-}
-
-@keyframes fadeIn{
-  from{
-    opacity: 0;
-  }
-
-  to{
-    opacity: 1;
-  }
 }
 
 /* --------------------------------------------------------------- */
@@ -232,6 +208,37 @@ header .navigation .navigation-items a:hover:before {
   font-weight: 900;
 }
 
+.digit {
+  opacity: 0;
+  -webkit-transform: translateY(40px);
+     -moz-transform: translateY(40px);
+      -ms-transform: translateY(40px);
+       -o-transform: translateY(40px);
+          transform: translateY(40px);
+  -webkit-transition: all 0.6s ease-out;
+     -moz-transition: all 0.6s ease-out;
+      -ms-transition: all 0.6s ease-out;
+       -o-transition: all 0.6s ease-out;
+          transition: all 0.6s ease-out;
+}
+.digit.visible {
+  opacity: 1;
+  -webkit-transform: none;
+     -moz-transform: none;
+      -ms-transform: none;
+       -o-transform: none;
+          transform: none;
+}
+/* .digit:nth-child(2) {
+  margin-top: 50px;
+}
+.digit:nth-child(3) {
+  margin-top: 100px;
+}
+.digit:nth-child(4) {
+  margin-top: 150px;
+} */
+
 /* --------------------- Section1 ------------------------ */
 
 section .banner{
@@ -276,7 +283,7 @@ section .expanation p{
 
 section .diagram{
   width: 100%;
-  height: 1100px;
+  height: 700px;
   position: relative;
 }
 

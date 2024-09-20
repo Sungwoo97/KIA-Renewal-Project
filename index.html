@@ -4,6 +4,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
   <title>기아 - movement that inspires</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/common.css">
@@ -356,13 +373,25 @@
           </div>
           <div class="be_tab_wrapper">
             <ul class="tabs_menu be_tabs_menu">
-              <li class="active"><a href="#be_tabs1">최근 출시</a></li>
-              <li><a href="#be_tabs2">연비 효율</a></li>
-              <li><a href="#be_tabs3">적재공간</a></li>
-              <li><a href="#be_tabs4">안전성</a></li>
+              <li class="active">
+                <a href="#be_tabs1">최근 출시</a>
+                <p class="caution">※ 차량의 출시일 기준이며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+              </li>
+              <li>
+                <a href="#be_tabs2">연비 효율</a>
+                <p class="caution">※ 연비는 도로상태, 운전방법, 차량적재 및 외기온도에 따라 실 주행연비와 차이가 있을 수 있으며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+              </li>
+              <li>
+                <a href="#be_tabs3">적재공간</a>
+                <p class="caution">※ 트렁크 용량은 후석 폴딩 등을 통해 적재할 수 있는 최대 용량이며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+              </li>
+              <li>
+                <a href="#be_tabs4">안전성</a>
+                <p class="caution">※ 종합 안전 점수는 국토교통부 주관 안전도 평가 결과 기준이며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+              </li>
             </ul>
             <div class="tabs">
-              <div id="be_tabs1" class="be_tabs">
+              <div id="be_tabs1" class="be_tabs active">
                 <div class="tab_depth">
                   <div class="slides">
                     <img src="img/be/be_tabs1_slides1_Sorento.jpg" alt="최근 출시 1위 Sorento">
@@ -371,15 +400,14 @@
                   </div>
                   <div class="toplanks">
                     <p class="pager">
-                      <a href="#" class="visible">top 1</a>
-                      <a href="#">top 2</a>
-                      <a href="#">top 3</a>
                     </p>
-                    <ul>
+                    <ul class="toplank_depth">
                       <li class="top1 active">
-                        <h3>The 2025 Sorento</h3>
-                        <img src="img/be/be_tabs1_toplank1_Sorento.png" alt="The 2025 Sorento">
-                        <h3>51,250,000 원</h3>
+                        <div>
+                          <h3>The 2025 Sorento</h3>
+                          <img src="img/be/be_tabs1_toplank1_Sorento.png" alt="The 2025 Sorento">
+                          <h3>51,250,000 원</h3>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>출시일</p>
@@ -397,9 +425,11 @@
                         </div>
                       </li>
                       <li class="top2">
-                        <h3>The 2025 EV9</h3>
-                        <img src="img/be/be_tabs1_toplank2_EV9.png" alt="The 2025 EV9">
-                        <h3>89,840,000 원</h3>
+                        <div>
+                          <h3>The 2025 EV9</h3>
+                          <img src="img/be/be_tabs1_toplank2_EV9.png" alt="The 2025 EV9">
+                          <h3>89,840,000 원</h3>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>출시일</p>
@@ -411,11 +441,17 @@
                           </div>
                         </div>
                         <span>EV전기차 | 어스 AWD</span>
+                        <div class="be_btn">
+                          <button class="btn">자세히 보기</button>
+                          <button class="btn">견적 내기</button>
+                        </div>
                       </li>
                       <li class="top3">
-                        <h3>The 2025 Niro</h3>
-                        <img src="img/be/be_tabs1_toplank3_Niro.png" alt="The 2025 Niro">
-                        <h3>37,800,000 원</h3>
+                        <div>
+                          <h3>The 2025 Niro</h3>
+                          <img src="img/be/be_tabs1_toplank3_Niro.png" alt="The 2025 Niro">
+                          <h3>37,800,000 원</h3>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>출시일</p>
@@ -427,9 +463,12 @@
                           </div>
                         </div>
                         <span>1.6 하이브리드 | 시그니처 ABP엣지팩</span>
+                        <div class="be_btn">
+                          <button class="btn">자세히 보기</button>
+                          <button class="btn">견적 내기</button>
+                        </div>
                       </li>
                     </ul>
-                    <p class="caution">※ 차량의 출시일 기준이며 차량별 사양 구성은 최다 판매 기준입니다.</p>
                   </div>
                 </div>
               </div>
@@ -441,11 +480,15 @@
                     <img src="img/be/be_tabs2_slides3_K8.jpg" alt="연비효율 3위 K8">
                   </div>
                   <div class="toplanks">
-                    <ul>
-                      <li class="top1">
-                        <h3>니로</h3>
-                        <img src="img/be/be_tabs2_toplank1_Niro.png" alt="Niro">
-                        <h3>31,400,000 원</h3>
+                    <p class="pager">
+                    </p>
+                    <ul class="toplank_depth">
+                      <li class="top1 active">
+                        <div>
+                          <h3>니로</h3>
+                          <img src="img/be/be_tabs2_toplank1_Niro.png" alt="Niro">
+                          <h3>31,400,000 원</h3>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>복합 연비</p>
@@ -463,9 +506,11 @@
                         </div>
                       </li>
                       <li class="top2">
-                        <h3>K5</h3>
-                        <img src="img/be/be_tabs2_toplank2_K5.png" alt="K5">
-                        <h3>33,340,000 원</h3>
+                        <div>
+                          <h3>K5</h3>
+                          <img src="img/be/be_tabs2_toplank2_K5.png" alt="K5">
+                          <h3>33,340,000 원</h3>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>복합 연비</p>
@@ -483,9 +528,11 @@
                         </div>
                       </li>
                       <li class="top3">
-                        <h3>K8</h3>
-                        <img src="img/be/be_tabs2_toplank3_K8.png" alt="k8">
-                        <h3>48,330,000 원</h3>
+                        <div>
+                          <h3>K8</h3>
+                          <img src="img/be/be_tabs2_toplank3_K8.png" alt="k8">
+                          <h3>48,330,000 원</h3>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>복합 연비</p>
@@ -505,21 +552,24 @@
                     </ul>
                   </div>
                 </div>
-              <p class="caution">※ 연비는 도로상태, 운전방법, 차량적재 및 외기온도에 따라 실 주행연비와 차이가 있을 수 있으며 차량별 사양 구성은 최다 판매 기준입니다.</p>
               </div>
               <div id="be_tabs3" class="be_tabs">
                 <div class="tab_depth">
                   <div class="slides">
                     <img src="img/be/be_tabs3_slides1_carnival.jpg" alt="적재공간 1위 carnival">
-                    <img src="img/be/be_tabs1_toplank1_Sorento.png" alt="적재공간 2위 Sorento">
+                    <img src="img/be/be_tabs1_slides1_Sorento.jpg" alt="적재공간 2위 Sorento">
                     <img src="img/be/be_tabs3_slides3_sportage.jpg" alt="적재공간 3위 Sportage">>
                   </div>
                   <div class="toplanks">
-                    <ul>
-                      <li class="top1">
-                        <h3>카니발</h3>
-                        <img src="img/be/be_tabs3_toplank1_carnival.png" alt="carnival">
-                        <h3>49,450,000 원</h3>
+                    <p class="pager">
+                    </p>
+                    <ul class="toplank_depth">
+                      <li class="top1 active">
+                        <div>
+                          <h3>카니발</h3>
+                          <img src="img/be/be_tabs3_toplank1_carnival.png" alt="carnival">
+                          <h3>49,450,000 원</h3>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>트렁크 용량</p>
@@ -537,9 +587,11 @@
                         </div>
                       </li>
                       <li class="top2">
-                        <h3>쏘렌토</h3>
-                        <img src="img/be/be_tabs3_toplank2_Sorento.png" alt="Sorento">
-                        <h3>51,120,000 원</h3>
+                        <div>
+                          <h3>쏘렌토</h3>
+                          <img src="img/be/be_tabs3_toplank2_Sorento.png" alt="Sorento">
+                          <h3>51,120,000 원</h3>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>트렁크 용량</p>
@@ -551,11 +603,17 @@
                           </div>
                         </div>
                         <span>1.6 HEV | 6인승 시그니처 2WD</span>
+                        <div class="be_btn">
+                          <button class="btn">자세히 보기</button>
+                          <button class="btn">견적 내기</button>
+                        </div>
                       </li>
                       <li class="top3">
-                        <h3>스포티지</h3>
-                        <img src="img/be/be_tabs3_toplank3_sportage.png" alt="sportage">
-                        <h3>40,160,000 원</h3>
+                        <div>
+                          <h3>스포티지</h3>
+                          <img src="img/be/be_tabs3_toplank3_sportage.png" alt="sportage">
+                          <h3>40,160,000 원</h3>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>트렁크 용량</p>
@@ -573,7 +631,6 @@
                         </div>
                       </li>
                     </ul>
-                    <p class="caution">※ 트렁크 용량은 후석 폴딩 등을 통해 적재할 수 있는 최대 용량이며 차량별 사양 구성은 최다 판매 기준입니다.</p>
                   </div>
                 </div>
               </div>
@@ -585,11 +642,15 @@
                     <img src="img/be/be_tabs3_slides4_k9.jpg" alt="안전성 3위 K9">
                   </div>
                   <div class="toplanks">
-                    <ul>
-                      <li class="top1">
-                        <h3>스포티지</h3>
-                        <img src="img/be/be_tabs3_toplank3_sportage.png" alt="sportage">
-                        <h3>44,870,000 원</h3>
+                    <p class="pager">
+                    </p>
+                    <ul class="toplank_depth">
+                      <li class="top1 active">
+                        <div>
+                          <h3>스포티지</h3>
+                          <img src="img/be/be_tabs3_toplank3_sportage.png" alt="sportage">
+                          <h3>44,870,000 원</h3>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>종합 안전 등급</p>
@@ -607,9 +668,11 @@
                         </div>
                       </li>
                       <li class="top2">
-                        <h3>카니발</h3>
-                        <img src="img/be/be_tabs3_toplank1_carnival.png" alt="carnival">
-                        <h3>44,530,000 원</h3>
+                        <div>
+                          <h3>카니발</h3>
+                          <img src="img/be/be_tabs3_toplank1_carnival.png" alt="carnival">
+                          <h3>44,530,000 원</h3>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>종합 안전 등급</p>
@@ -627,9 +690,11 @@
                         </div>
                       </li>
                       <li class="top3">
-                        <h3>K9</h3>
-                        <img src="img/be/be_tabs4_toplank3_K9.png" alt="K9">
-                        <h3>66,650,000 원</h3>
+                        <div>
+                          <h3>K9</h3>
+                          <img src="img/be/be_tabs4_toplank3_K9.png" alt="K9">
+                          <h3>66,650,000 원</h3>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>종합 안전 등급</p>
@@ -646,10 +711,19 @@
                           <button class="btn">견적 내기</button>
                         </div>
                       </li>
+                      <div class="safe_modal_container">
+                        <div class="safe_modal">
+                          <h3>신차 안전도 평가 안내</h3>
+                          <p>본 신차안전도 평가결과는 국토교통부 주관 안전도 평가 후 발표된 자료입니다.<br>(교통안전공단 자세한 내용 www.kncap.org 참조)</p>
+                          <p>안전도 종합등급 안전도평가에서 실시하고 있는 정면충돌, 측면충돌, 보행자 등 22개 항목의 평가 결과를 종합하여 평가 대상 차량의 안전도를 등급(1~5등급)과 점수(100점 만점)로 소비자들에게 제공합니다.
+                          </p>
+                          <p>1등급일수록 가장 안전한 차량입니다.</p>
+                          <p>매년 자동차 판매수가 많거나 판매가 급증 추세인 차 그리고 과거 평가를 하지 않은 모델 중에서 평가를 실시하며, 평가에 사용된 차량의 에어백 등의 안전장비는 <br>실제 구입하시는 차량과 다를 수 있으므로 확인 하시길 바랍니다.</p>
+                        </div>
+                      </div>
                     </ul>
                   </div>
                 </div>
-                <p class="caution">※ 종합 안전 점수는 국토교통부 주관 안전도 평가 결과 기준이며 차량별 사양 구성은 최다 판매 기준입니다.</p>
               </div>
             </div>
           </div>    
@@ -699,69 +773,71 @@
     <!-- // Members 남성우 -->
     <!-- Event 남성우 -->
     <section class="kia_event container">
-      <div class="ev_title">
-        <h2 class="title_gutter sec_tt">Kia Event</h2>
-        <p class="sub_title_gutter sec_desc">기아의 다양한 이벤트를 만나 보세요.</p>
-      </div>
-      <div class="ev_slide_wrapper">
-        <div class="ev_slide_container">
-          <figure>
-            <img src="img/ev/ev_sep_newcar.png" alt="9월 신차 이벤트">
-            <figcaption>
-              <h3>9월 기아 구매 혜택</h3>
-              <p>2024-09-06 ~ 2024-09-30</p>
-            </figcaption>
-          </figure>
-          <figure>
-            <img src="img/ev/ev_camp_day.png" alt="기아 캠프데이 이벤트">
-            <figcaption>
-              <h3>기아멤버스 EV캠프데이</h3>
-              <p>2024-09-05 ~ 2024-09-19</p>
-            </figcaption>
-          </figure>
-          <figure>
-            <img src="img/ev/ev_ev3_open_event.png" alt="EV3 오픈 이벤트">
-            <figcaption>
-              <h3>EV3 신차 런칭 기념 <br>보증연장상품 특가 할인</h3>
-              <p>2024-07-08 ~ 2024-09-30</p>
-            </figcaption>
-          </figure>
-          <figure>
-            <img src="img/ev/ev_ev_safetycare.png" alt="EV 세이프티케어">
-            <figcaption>
-              <h3>사고 걱정 Zero! <br>전손 사고 시 신차 구매 경제적 부담 Zero!</h3>
-              <p>2024-07-01 ~ 2025-06-30</p>
-            </figcaption>
-          </figure>
-          <figure>
-            <img src="img/ev/ev_k-stylecare.png" alt="K-스타일케어 이벤트">
-            <figcaption>
-              <h3>언제나 신차처럼 케어해드립니다</h3>
-              <p>2024-07-01 ~ 2025-06-30</p>
-            </figcaption>
-          </figure>
-          <figure>
-            <img src="img/ev/ev_bongo_eventjpg.jpg" alt="기아 봉고 이벤트">
-            <figcaption>
-              <h3>봉고 9월 구매 혜택</h3>
-              <p>2024-09-01 ~ 2024-09-30</p>
-            </figcaption>
-          </figure>
-          <figure>
-            <img src="img/ev/ev_kanival_sale_event.png" alt="카니발 흥행기념 세일 이벤트">
-            <figcaption>
-              <h3>더 뉴 카니발 &amp; 스포티지
-                <br>최다 판매 기념 특가 할인 이벤트
-              </h3>
-              <p>2024-06-24 ~ 2024-09-30</p>
-            </figcaption>
-          </figure>
+      <div>
+        <div class="ev_title">
+          <h2 class="title_gutter sec_tt">Kia Event</h2>
+          <p class="sub_title_gutter sec_desc">기아의 다양한 이벤트를 만나 보세요.</p>
         </div>
+        <div class="ev_slide_wrapper">
+          <div class="ev_slide_container">
+            <figure>
+              <img src="img/ev/ev_sep_newcar.png" alt="9월 신차 이벤트">
+              <figcaption>
+                <h3>9월 기아 구매 혜택</h3>
+                <p>2024-09-06 ~ 2024-09-30</p>
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="img/ev/ev_camp_day.png" alt="기아 캠프데이 이벤트">
+              <figcaption>
+                <h3>기아멤버스 EV캠프데이</h3>
+                <p>2024-09-05 ~ 2024-09-19</p>
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="img/ev/ev_ev3_open_event.png" alt="EV3 오픈 이벤트">
+              <figcaption>
+                <h3>EV3 신차 런칭 기념 <br>보증연장상품 특가 할인</h3>
+                <p>2024-07-08 ~ 2024-09-30</p>
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="img/ev/ev_ev_safetycare.png" alt="EV 세이프티케어">
+              <figcaption>
+                <h3>사고 걱정 Zero! <br>전손 사고 시 신차 구매 경제적 부담 Zero!</h3>
+                <p>2024-07-01 ~ 2025-06-30</p>
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="img/ev/ev_k-stylecare.png" alt="K-스타일케어 이벤트">
+              <figcaption>
+                <h3>언제나 신차처럼 케어해드립니다</h3>
+                <p>2024-07-01 ~ 2025-06-30</p>
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="img/ev/ev_bongo_eventjpg.jpg" alt="기아 봉고 이벤트">
+              <figcaption>
+                <h3>봉고 9월 구매 혜택</h3>
+                <p>2024-09-01 ~ 2024-09-30</p>
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="img/ev/ev_kanival_sale_event.png" alt="카니발 흥행기념 세일 이벤트">
+              <figcaption>
+                <h3>더 뉴 카니발 &amp; 스포티지
+                  <br>최다 판매 기념 특가 할인 이벤트
+                </h3>
+                <p>2024-06-24 ~ 2024-09-30</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="ev_slide_prev"><img width="50" height="50" src="https://img.icons8.com/ios/50/back--v1.png"
+            alt="back--v1" /></div>
+        <div class="ev_slide_next"><img width="50" height="50" src="https://img.icons8.com/ios/50/forward--v1.png"
+            alt="forward--v1" /></div>
       </div>
-      <div class="ev_slide_prev"><img width="50" height="50" src="https://img.icons8.com/ios/50/back--v1.png"
-          alt="back--v1" /></div>
-      <div class="ev_slide_next"><img width="50" height="50" src="https://img.icons8.com/ios/50/forward--v1.png"
-          alt="forward--v1" /></div>
     </section>
     <!-- // Event 남성우 -->
     <!-- Section 최은화 -->
@@ -906,6 +982,7 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/slick.js"></script>
   <script src="js/common.js"></script>
   <script src="js/main.js"></script>
   <script type="text/javascript" src="js/main_header.js"></script>
