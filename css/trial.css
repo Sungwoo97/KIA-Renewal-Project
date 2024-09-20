@@ -194,12 +194,28 @@ header .navigation .navigation-items a:hover:before {
   display: block;
 }
 
-#username, #userdate, .ex_modalContainer button{
+#username, #userdate, .ex_modalContainer .modal_control, #modal_text{
   width: 100%;
   box-sizing: border-box;
 }
+#modal_text{
+  height: 126px;
+  overflow-x: hidden;
+  background: #f6f6f6;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 18px;
+}
 
-.ex_modalContainer button{
+#modal_text strong{
+  font-weight: 700;
+}
+
+.modal_control button{
+  width: 49%;
+}
+
+.ex_modalContainer .modal_control{
   margin-top: 12px;
 }
 
@@ -320,6 +336,7 @@ header .navigation .navigation-items a:hover:before {
 .ex_tab_salesNetwork .tabs ul li{
   display: flex;
   justify-content: space-between;
+  align-items: end;
   padding: 5px;
   cursor: pointer;
   background: rgba(235,235,235,.2);
@@ -339,13 +356,18 @@ header .navigation .navigation-items a:hover:before {
   font-size: var(--section_tt);
 }
 
-.ex_tab_salesNetwork .tabs ul li > p{
+.ex_tab_salesNetwork .tabs ul li > button{
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: center;
   font-size: 24px;
-  font-weight: 700;
-  gap: 12px;
+  padding: 0 5px;
+  height: 36px;
+  border: none;
+  background: rgba(235,235,235,.2);
+}
+.ex_tab_salesNetwork .tabs ul li > button:hover{
+  background: var(--primary);
 }
 
 @media (max-width:1344px){

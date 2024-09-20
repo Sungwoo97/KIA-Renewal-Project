@@ -1,5 +1,6 @@
 const tabMenu = $('.tabs_menu li');
 
+// 탭을 재사용할 수 있도록 리팩토링
 function tabControl(menu){
   menu.click(function(e){
     e.preventDefault();

@@ -19,7 +19,7 @@ $('.ex_modalContainer').hide();
 $('.testDrive').click(function(){
   $('.ex_modalContainer').fadeIn();
 });
-$('.modal button').click(function(){
+$('.modal .cancel').click(function(){
   $('.ex_modalContainer').fadeOut();
 })
 
@@ -301,7 +301,7 @@ function makeMap(){
       }
                    
         itemStr += '  <p class="tel">' + places.phone  + '</p>' +
-                  '</div>' +  '<p> <i class="fa-solid fa-user-tie"></i>상담 신청</p>';             
+                  '</div>' +  '<button class="btn"> <i class="fa-solid fa-user-tie"></i>상담 신청</button>';             
   
       el.innerHTML = itemStr;
       el.className = 'item';
@@ -405,7 +405,8 @@ function makeMap(){
 }
 
 //검색된 데이터를 받아오는 함수
-$('.maps_search').change(function(){
+$('.maps_search').change(function(e){
+  e.preventDefault();
   $('.ex_salesNetwork_list .active .placesList .item').removeClass('hidden');
   let keywords = $(this).val();
   let filteredArr = placeData.filter(placefilter => placefilter.name.includes(keywords));
