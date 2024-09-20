@@ -205,6 +205,7 @@
 
   .be_tab_wrapper .tabs_menu li a{
     width: 102px;
+    font-size: 16px;
   }
   .be_tab_wrapper .tabs .slides{
     width: 700px;
@@ -216,7 +217,7 @@
   }
   .be_tab_wrapper .tabs_menu li a{
     width: 88px;
-    font-size: 16px;
+    
   }
   .be_tab_wrapper .tabs .slides{
     width: 339px;
