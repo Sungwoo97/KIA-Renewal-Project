@@ -680,7 +680,6 @@ header .navigation-items li a:hover:before {
 @media (max-width:700px) {
 
     .btn {
-        border: none;
         padding: 0px 20px;
     }
 
