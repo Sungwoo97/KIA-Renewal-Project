@@ -64,10 +64,13 @@ header .navigation .navigation-items a:hover:before {
   overflow: hidden;
 }
 
+.tabs{
+	margin: 98px auto 0;
+}
 /* 탭 구분 선 */
 .ve_tab_wrapper hr{
   position: absolute;
-  top: 135px;
+  top: 133px;
   left: 0;
   right: 0;
 }
@@ -75,6 +78,7 @@ header .navigation .navigation-items a:hover:before {
 .ve_tab_wrapper .tabs_menu li{
   background: var(--white);
   border-bottom: 5px solid transparent;
+	width: 200px;
 }
 
 .ve_tab_wrapper .tabs_menu li.active{
@@ -82,7 +86,7 @@ header .navigation .navigation-items a:hover:before {
 }
 
 .ve_tab_wrapper .tabs_menu li a{
-  font-size: 29px;
+  font-size: 24px;
   font-weight: 500;
 }
 
@@ -90,11 +94,17 @@ header .navigation .navigation-items a:hover:before {
   font-weight: 700;
   color: var(--black);
 }
+.ve_tab_wrapper .tabs_menu li a span{
+	color: var(--medium_gray);
+	font-size: 16px;
+}
 
 /* List */
 
 .category_list{
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 .category_item{
 	position: relative;
@@ -115,6 +125,7 @@ header .navigation .navigation-items a:hover:before {
 .item_box p{
 	font: var(--gutter);
 	line-height: var(--gutter);
+	color:var(--medium_gray)
 }
 .item_hover{
 position: relative;
