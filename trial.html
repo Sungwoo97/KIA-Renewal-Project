@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>기아 - 체험 페이지</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/trial.css">
 </head>
@@ -183,14 +186,40 @@
         <fieldset>
           <legend>시승신청</legend>
           <form action="">
-            <label for="useragree"></label>
-            <input type="checkbox" id="useragree">서비스 이용 동의
-            <label for="usermodel"></label>
-            <input type="">
-            <label for="username">성함</label>
-            <input type="text" id="username">
-            <label for="usernumber">전화번호</label>
-            <input type="text" id="usernumber">
+            <div class="fields">
+              <label for="useragree">서비스 이용 동의</label>
+              <input type="checkbox" id="useragree">
+            </div>
+            <div class="fields">
+              <label for="usermodel">시승모델</label>
+              <select name="" id="usermodel">
+                <optgroup label="EV">
+                  <option value="EV3">EV3</option>
+                  <option value="EV6">EV6</option>
+                  <option value="EV9">EV9</option>
+                  <option value="봉고1톤">봉고1톤</option>
+                </optgroup>
+                <optgroup label="승용">
+                  <option value="K5">K5</option>
+                  <option value="K5 하이브리드">K5 하이브리드</option>
+                </optgroup>
+                <optgroup label="RV">
+                  <option value="카니발 하이브리드">카니발 하이브리드</option>
+                  <option value="쏘렌토 하이브리드">쏘렌토 하이브리드</option>
+                  <option value="스포티지 하이브리드">스포티지 하이브리드</option>
+                  <option value="니로 하이브리드">니로 하이브리드</option>
+                  <option value="셀토스">셀토스</option>
+                </optgroup>
+              </select>
+            </div>
+           <div class="fields">
+             <label for="userdate">시승일정</label>
+             <input type="text" id="userdate">
+           </div>
+            <div class="fields">
+              <label for="username">시승자</label>
+              <input type="text" id="username">
+            </div>
             <button type="submit" class="btn">확인</button>
           </form>
         </fieldset>
@@ -201,6 +230,8 @@
 
   </footer>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
   <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=69c6c45b28abc32737e63a1c342245bc&libraries=services"></script>
   <!-- <script src="js/common.js"></script> -->
   <script src="js/trial.js"></script>

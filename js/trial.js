@@ -27,6 +27,14 @@ $('.modal button').click(function(){
   $('.ex_modalContainer').fadeOut();
 })
 
+/* TestDrive Form */
+$('#usermodel').selectmenu();
+$( "#useragree" ).checkboxradio();
+$( "#userdate" ).datepicker();
+
+$('#maps_spot').addClass('active');
+
+
 /* experience Slide */
 let ev_slideHTML = ex_slideContainer.html();
 let ev_clonedSlidesHTML = ev_slideHTML.replace(/<li>/g, '<li class="clone">');
@@ -38,14 +46,23 @@ const ev_allSlides = ex_slideContainer.find('li');
 setLayout();
 // 너비를 설정해주는 함수
 function setLayout(){
-  let ev_originWidth = (ex_slideWidth * ex_slideCount) + (ex_slideGap * ex_slideCount);
-  let ev_maxWidth = (ex_slideWidth * ev_allslideCount) + (ex_slideGap * (ev_allslideCount - 1));
-  ex_slideContainer.css({width: ev_maxWidth + 'px'});
-  ex_slideContainer.css({ transform: `translateX(-${ev_originWidth}px)` });
+  let ex_originWidth = (ex_slideWidth * ex_slideCount) + (ex_slideGap * ex_slideCount);
+  let ex_maxWidth = (ex_slideWidth * ev_allslideCount) + (ex_slideGap * (ev_allslideCount - 1));
+  ex_slideContainer.css({width: ex_maxWidth + 'px'});
+  if($(window).width() > 1260){
+    ex_slideContainer.css({ transform: `translateX(-${ex_originWidth}px)` });
+     ex_maxSlides = 3;
+     ex_slideWidth = 400;
+  }else{
+   ex_slideContainer.css({transform : 'translateX(-2832px)'});
+    ex_maxSlides = 1;
+    ex_slideWidth = 400;
+  }
 }
 
 //윈도우 사이즈가 변경될 때도 너비를 재설정
 $(window).resize(function(){
+  
   setLayout();
 });
 
@@ -123,8 +140,9 @@ function updateSlideImages() {
     }
   });
 }
-
+console.log(ex_tabSalesNetwork.find('.tabs_menu > li'));
 /* Sales Network Tab */
+let excuted = false;
 ex_tabMenu.click(function(e){
   e.preventDefault();
   $(this).parent().find('li').removeClass('active');
@@ -132,10 +150,20 @@ ex_tabMenu.click(function(e){
   $(this).parent().parent('div').find('.tabs > div').removeClass('active');
   let target = $(this).find('a').attr('href');
   $(target).addClass('active');
-  if(ex_tabSalesNetwork.hasClass('active')){    
+  if(ex_tabSalesNetwork.hasClass('active')){  
+    if(!excuted) {
+      ex_tabSalesNetwork.find('.tabs_menu > li').removeClass('active');
+      ex_tabSalesNetwork.find('.tabs_menu > li:nth-child(1)').addClass('active');
+      ex_tabSalesNetwork.find('.tabs > div').removeClass('active');
+      let target = ex_tabSalesNetwork.find('.tabs_menu > li:nth-child(1)').find('a').attr('href');
+      $(target).addClass('active'); 
+    }
     searchCenter = $('.ex_salesNetwork_list .tabs > div.active').attr('data-tab');
     searchName = $('.ex_salesNetwork_list .tabs > div.active').attr('data-name');
+    excuted= true;
     makeMap();
+  }else{
+    excuted = false;
   }
 });
 
@@ -167,7 +195,7 @@ function makeMap(){
   // 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다
   var infowindow = new kakao.maps.InfoWindow({zIndex:1});
   
-  var level = map.getLevel();
+  //var level = map.getLevel();
   
   //사용자 속성에 미리 검색할 키워드를 입력
   
@@ -246,9 +274,10 @@ function makeMap(){
           // 해당 장소에 인포윈도우에 장소명을 표시합니다
           // mouseout 했을 때는 인포윈도우를 닫습니다
           (function(marker, title) {
-              // kakao.maps.event.addListener(marker, 'mouseover', function() {
-              //      (marker, title);
-              // });
+              kakao.maps.event.addListener(marker, 'click', function() {
+                let targetPos = marker.getPosition();
+                setCenter(Number(targetPos.Ma),Number(targetPos.La));
+              });
   
               // kakao.maps.event.addListener(marker, 'mouseout', function() {
               //     infowindow.close();
@@ -390,6 +419,13 @@ function makeMap(){
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
     map.panTo(moveLatLon);            
   }  
+  function setCenter(lat, lng) {            
+    // 이동할 위도 경도 위치를 생성합니다 
+    var moveLatLon = new kakao.maps.LatLng(lat,lng);
+    map.setLevel(4);
+    // 지도 중심을 이동 시킵니다
+    map.setCenter(moveLatLon);
+}
 }
 
 //검색된 데이터를 받아오는 함수
@@ -399,4 +435,7 @@ $('.maps_search').change(function(){
   let filteredArr = placeData.filter(placefilter => placefilter.name.includes(keywords));
   $('.ex_salesNetwork_list .active .placesList .item').addClass('hidden');
   $(this).closest('div').find('li').eq(filteredArr[0].id).removeClass('hidden');
+  if(keywords === ''){
+    $('.ex_salesNetwork_list .active .placesList .item').removeClass('hidden');
+  }
 });
