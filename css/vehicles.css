@@ -7,7 +7,7 @@ header {
 	left: 0;
 	width: 100%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: start;
 	align-items: center;
 	transition: 0.5s ease;
 }
@@ -65,6 +65,7 @@ header .navigation .navigation-items a:hover:before {
 }
 
 .tabs{
+	position: relative;
 	margin: 98px auto 0;
 }
 /* 탭 구분 선 */
@@ -104,7 +105,7 @@ header .navigation .navigation-items a:hover:before {
 .category_list{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	gap: 94px;
 }
 .category_item{
 	position: relative;
@@ -173,3 +174,22 @@ transform: translate(-50%, -50%);
 	.item_hover .category_link a:hover{
 		opacity: 1;
 	}
+
+
+/* util_fixed */ 
+.util{
+	position: fixed;
+	bottom:51px;
+	display: flex;
+	justify-content: space-between;
+	background-color: rgba(5, 20, 31, 0.9);
+	padding: 0 90px;
+	max-width: 1344px;
+	width:100%;
+	box-sizing: border-box;
+}
+.util a{
+	color: var(--white);
+	font-size: 20px;
+	line-height: 90px;
+}
