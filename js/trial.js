@@ -13,10 +13,6 @@ const ex_tabSalesNetwork = $('.ex_tab_salesNetwork');
 const ex_tabContent = $('.ex_tab_salesNetwork .tabs > div');
 let placeData = [];
 
-// ex_tabSalesNetwork.css({visibility : 'hidden'});
-// $('.ex_tab_wrapper li:nth-child(2)').click(function(){
-//   ex_tabSalesNetwork.css({visibility : 'visible'});
-// });
 
 /* TestDrive Modal */
 $('.ex_modalContainer').hide();
@@ -27,13 +23,10 @@ $('.modal button').click(function(){
   $('.ex_modalContainer').fadeOut();
 })
 
-/* TestDrive Form */
+/* TestDrive Modal Form */
 $('#usermodel').selectmenu();
 $( "#useragree" ).checkboxradio();
 $( "#userdate" ).datepicker();
-
-$('#maps_spot').addClass('active');
-
 
 /* experience Slide */
 let ev_slideHTML = ex_slideContainer.html();
@@ -45,6 +38,7 @@ const ev_allSlides = ex_slideContainer.find('li');
 
 setLayout();
 // 너비를 설정해주는 함수
+// 반응형 추가, 너비가 1260 이하일때 슬라이드가 하나만 보이도록
 function setLayout(){
   let ex_originWidth = (ex_slideWidth * ex_slideCount) + (ex_slideGap * ex_slideCount);
   let ex_maxWidth = (ex_slideWidth * ev_allslideCount) + (ex_slideGap * (ev_allslideCount - 1));
@@ -54,7 +48,7 @@ function setLayout(){
      ex_maxSlides = 3;
      ex_slideWidth = 400;
   }else{
-   ex_slideContainer.css({transform : 'translateX(-2832px)'});
+   ex_slideContainer.css({transform : `translateX(-${ex_originWidth+ex_slideWidth + ex_slideGap}px)`});
     ex_maxSlides = 1;
     ex_slideWidth = 400;
   }
@@ -62,7 +56,6 @@ function setLayout(){
 
 //윈도우 사이즈가 변경될 때도 너비를 재설정
 $(window).resize(function(){
-  
   setLayout();
 });
 
@@ -76,7 +69,6 @@ function moveSlide(num){
   let nextSlide = (currentIdx+1)+ex_slideCount;
   ev_allSlides.removeClass('active');
   ev_allSlides.eq(nextSlide).addClass('active');
-
 
   updateSlideImages();
   
@@ -140,7 +132,7 @@ function updateSlideImages() {
     }
   });
 }
-console.log(ex_tabSalesNetwork.find('.tabs_menu > li'));
+
 /* Sales Network Tab */
 let excuted = false;
 ex_tabMenu.click(function(e){
@@ -150,6 +142,8 @@ ex_tabMenu.click(function(e){
   $(this).parent().parent('div').find('.tabs > div').removeClass('active');
   let target = $(this).find('a').attr('href');
   $(target).addClass('active');
+  // 판매 네트워크 탭이 active라면 강제로 지점 찾기에 active, 
+  // 이후 한번만 작동할 수 있도록 excuted 변수로 컨트롤
   if(ex_tabSalesNetwork.hasClass('active')){  
     if(!excuted) {
       ex_tabSalesNetwork.find('.tabs_menu > li').removeClass('active');
@@ -158,6 +152,7 @@ ex_tabMenu.click(function(e){
       let target = ex_tabSalesNetwork.find('.tabs_menu > li:nth-child(1)').find('a').attr('href');
       $(target).addClass('active'); 
     }
+    //active 된 탭의 사용자 속성을 search Keywords로 넘기는 변수
     searchCenter = $('.ex_salesNetwork_list .tabs > div.active').attr('data-tab');
     searchName = $('.ex_salesNetwork_list .tabs > div.active').attr('data-name');
     excuted= true;
@@ -169,10 +164,9 @@ ex_tabMenu.click(function(e){
 
 
 /* Map.js */
-
+// 판매 네트워크에 active가 있을 때 맵을 화면에 그림 (미리 작동 시 오류)
 if(ex_tabSalesNetwork.hasClass('active')){
   makeMap();
-  
 }
 function makeMap(){
 
@@ -185,28 +179,19 @@ function makeMap(){
         };  
         // 지도를 생성합니다    
         var map = new kakao.maps.Map(mapContainer, mapOption); 
-  
-  
-  
-  
+
   // 장소 검색 객체를 생성합니다
   var ps = new kakao.maps.services.Places();  
   
   // 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다
   var infowindow = new kakao.maps.InfoWindow({zIndex:1});
   
-  //var level = map.getLevel();
-  
-  //사용자 속성에 미리 검색할 키워드를 입력
-  
-  
   // 키워드로 장소를 검색합니다
   searchPlaces(searchCenter);
   
   // 키워드 검색을 요청하는 함수입니다
   function searchPlaces(center) {
-  
-      //var keyword = document.getElementById('maps_search').getAttribute('data-val');
+
       var keyword = center;
   
       if (!keyword.replace(/^\s+|\s+$/g, '')) {
@@ -219,9 +204,8 @@ function makeMap(){
   }
   
   // 장소검색이 완료됐을 때 호출되는 콜백함수 입니다
-  function placesSearchCB(data, status, pagination,result) {
+  function placesSearchCB(data, status, pagination ) {
       if (status === kakao.maps.services.Status.OK) {
-        
         
           // 정상적으로 검색이 완료됐으면
           // 검색 목록과 마커를 표출합니다
@@ -259,6 +243,7 @@ function makeMap(){
       removeMarker();
       
       for ( var i=0; i<places.length; i++ ) {
+        // 데이터를 검색할 수 있도록 배열에 담음
         placeData.push({
           id: [i],
           name:places[i].place_name});
@@ -274,23 +259,13 @@ function makeMap(){
           // 해당 장소에 인포윈도우에 장소명을 표시합니다
           // mouseout 했을 때는 인포윈도우를 닫습니다
           (function(marker, title) {
+            //마커를 클릭 했을 때 마커의 위치로 이동
               kakao.maps.event.addListener(marker, 'click', function() {
                 let targetPos = marker.getPosition();
                 setCenter(Number(targetPos.Ma),Number(targetPos.La));
               });
-  
-              // kakao.maps.event.addListener(marker, 'mouseout', function() {
-              //     infowindow.close();
-              // });
-  
-              // itemEl.onmouseover =  function () {
-              //     displayInfowindow(marker, title);
-              // };
-  
-              // itemEl.onmouseout =  function () {
-              //     infowindow.close();
-              // };
-  
+
+              // 목록을 클릭했을때 해당하는 위치로 이동
               itemEl.onclick =  function () {
                 let targetPos = marker.getPosition();
                 map.setLevel(8);
@@ -410,15 +385,16 @@ function makeMap(){
           el.removeChild (el.lastChild);
       }
   }
+  // 중심점으로 부드럽게 이동 시키는 함수
   function panTo(lat, lng) {
     // 이동할 위도 경도 위치를 생성합니다 
-    console.log(lat, lng);
     map.setLevel(4);
     var moveLatLon = new kakao.maps.LatLng(lat, lng);
     // 지도 중심을 부드럽게 이동시킵니다
     // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
     map.panTo(moveLatLon);            
   }  
+  // 중심점으로 이동시키는 함수
   function setCenter(lat, lng) {            
     // 이동할 위도 경도 위치를 생성합니다 
     var moveLatLon = new kakao.maps.LatLng(lat,lng);
@@ -433,8 +409,10 @@ $('.maps_search').change(function(){
   $('.ex_salesNetwork_list .active .placesList .item').removeClass('hidden');
   let keywords = $(this).val();
   let filteredArr = placeData.filter(placefilter => placefilter.name.includes(keywords));
+  // 모든 객체에 hidden을 추가하고 keywords와 일치하는 객체에 hidden을 지운다
   $('.ex_salesNetwork_list .active .placesList .item').addClass('hidden');
   $(this).closest('div').find('li').eq(filteredArr[0].id).removeClass('hidden');
+  // 키워드가 없다면 다시 hidden을 지운다
   if(keywords === ''){
     $('.ex_salesNetwork_list .active .placesList .item').removeClass('hidden');
   }
