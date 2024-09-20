@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/subpage_header.css" />
-    <link rel="stylesheet" href="css/subpage_contain&supplyNotab.css" />
+    <link rel="stylesheet" href="css/maintain_supply.css" />
 
 
 </head>
@@ -277,40 +277,40 @@
     <!-- 여기서부터 서브페이지(유지,관리) 시작 -->
     <main>
         <div class="containering">
-            <div class="box">유지&관리</div>
+            <div class="box"><p>유지&관리</p></div>
             <div class="box"><a href="#">기아멤버스</a></div>
             <div class="box"><a href="#">카앤라이프몰</a></div>
         </div>
 
 
-        <div class="noname">
+        <div class="memberBox">
             <h2>기아 멤버스</h2>
             <p>차량 구매부터 유지/관리는 물론,
                 더 즐거운 자동차 생활을 위한 기아만의 멤버십 프로그램입니다.</p>
-            <button><a href="#">기아 멤버스 바로가기</a></button>
+            <button class="btn"><a href="#">기아 멤버스 바로가기</a></button>
         </div>
 
-        <div class="noname2">
-            <div class="imageNavigation">
+        <div class="memberBox2">
+            <div class="imageNavigation" data-target="memberPoint">
                 <img src="img/ma&su/cardPoint.jpg" alt="기아 멤버스 포인트" class="image" />
                 <p>기아 멤버스 포인트 바로 가기</p>
             </div>
-            <div class="imageNavigation">
+            <div class="imageNavigation" data-target="memberPoint2">
                 <img src="img/ma&su/carFix.jpg" alt="차량 유지 관리" class="image" />
                 <p>차량 유지 관리 바로 가기</p>
             </div>
-            <div class="imageNavigation">
+            <div class="imageNavigation" data-target="memberPoint3">
                 <img src="img/ma&su/smartLife.jpg" alt="스마트 카 라이프" class="image" />
                 <p>스마트 카 라이프 바로 가기</p>
             </div>
         </div>
 
         
-        <div class="membersPoint">
+        <div class="membersPoint" id="memberPoint">
             <img src="img/ma&su/kia_members_img01_re.jpg" alt="기아멤버스카드">
             <div class="accordion">
                 <div class="accordion-item">
-                    <button class="accordion-button">기아멤버스 포인트</button>
+                    <button class="accordion-button">기아멤버스 포인트<span class="icon">-</span></button>
                     <div class="accordion-content open">
                         <p>기아멤버스 포인트는 기아멤버스 회원을 대상으로 기아 주식회사와 포인트 서비스 계약을 체결한 가맹점에서 물품 구매, 또는 서비스 이용 시 기아멤버스 카드 또는 제휴
                             카드를 통해 포인트를 적립하고, 사용할 수 있는 제도입니다.</p>
@@ -318,7 +318,7 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">멤버십 카드</button>
+                    <button class="accordion-button">멤버십 카드<span class="icon">+</span></button>
                     <div class="accordion-content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque porro laborum iste reiciendis,
                             itaque tempora omnis magni ducimus nisi, eos quisquam doloremque tenetur, deserunt
@@ -327,7 +327,7 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">멤버십 적립/사용</button>
+                    <button class="accordion-button">멤버십 적립/사용<span class="icon">+</span></button>
                     <div class="accordion-content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque porro laborum iste reiciendis,
                             itaque tempora omnis magni ducimus nisi, eos quisquam doloremque tenetur, deserunt
@@ -336,7 +336,7 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">카앤라이프몰</button>
+                    <button class="accordion-button">카앤라이프몰<span class="icon">+</span></button>
                     <div class="accordion-content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque porro laborum iste reiciendis,
                             itaque tempora omnis magni ducimus nisi, eos quisquam doloremque tenetur, deserunt
@@ -345,7 +345,7 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">카케어 프로그램</button>
+                    <button class="accordion-button">카케어 프로그램<span class="icon">+</span></button>
                     <div class="accordion-content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque porro laborum iste reiciendis,
                             itaque tempora omnis magni ducimus nisi, eos quisquam doloremque tenetur, deserunt
@@ -354,7 +354,7 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">라이프케어 프로그램</button>
+                    <button class="accordion-button">라이프케어 프로그램<span class="icon">+</span></button>
                     <div class="accordion-content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque porro laborum iste reiciendis,
                             itaque tempora omnis magni ducimus nisi, eos quisquam doloremque tenetur, deserunt
@@ -365,11 +365,11 @@
             </div>
         </div>
 
-        <div class="membersPoint2">
+        <div class="membersPoint2" id="memberPoint2">
             <img src="img/ma&su/kia_members_img02.jpg" alt="기아멤버스카드">
             <div class="accordion">
                 <div class="accordion-item">
-                    <button class="accordion-button">차량케어 서비스</button>
+                    <button class="accordion-button">차량케어 서비스<span class="icon">-</span></button>
                     <div class="accordion-content open">
                         <p>기아멤버스 포인트는 기아멤버스 회원을 대상으로 기아 주식회사와 포인트 서비스 계약을 체결한 가맹점에서 물품 구매, 또는 서비스 이용 시 기아멤버스 카드 또는 제휴
                             카드를 통해 포인트를 적립하고, 사용할 수 있는 제도입니다.</p>
@@ -377,7 +377,7 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">차량사양 조회</button>
+                    <button class="accordion-button">차량사양 조회<span class="icon">+</span></button>
                     <div class="accordion-content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque porro laborum iste reiciendis,
                             itaque tempora omnis magni ducimus nisi, eos quisquam doloremque tenetur, deserunt
@@ -386,7 +386,7 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">보증수리</button>
+                    <button class="accordion-button">보증수리<span class="icon">+</span></button>
                     <div class="accordion-content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque porro laborum iste reiciendis,
                             itaque tempora omnis magni ducimus nisi, eos quisquam doloremque tenetur, deserunt
@@ -395,7 +395,7 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">프리케어</button>
+                    <button class="accordion-button">프리케어<span class="icon">+</span></button>
                     <div class="accordion-content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque porro laborum iste reiciendis,
                             itaque tempora omnis magni ducimus nisi, eos quisquam doloremque tenetur, deserunt
@@ -404,7 +404,7 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">AUTO Q 검색/예약</button>
+                    <button class="accordion-button">AUTO Q 검색/예약<span class="icon">+</span></button>
                     <div class="accordion-content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque porro laborum iste reiciendis,
                             itaque tempora omnis magni ducimus nisi, eos quisquam doloremque tenetur, deserunt
@@ -413,7 +413,7 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">긴급출동/무상견인</button>
+                    <button class="accordion-button">긴급출동/무상견인<span class="icon">+</span></button>
                     <div class="accordion-content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque porro laborum iste reiciendis,
                             itaque tempora omnis magni ducimus nisi, eos quisquam doloremque tenetur, deserunt
@@ -424,18 +424,18 @@
             </div>
         </div>
 
-        <div class="membersPoint">
+        <div class="membersPoint3" id="memberPoint3">
             <img src="img/ma&su/kia_members_img03.jpg" alt="기아멤버스카드">
             <div class="accordion">
                 <div class="accordion-item">
-                    <button class="accordion-button">스마트 카 라이프</button>
+                    <button class="accordion-button">스마트 카 라이프<span class="icon">-</span></button>
                     <div class="accordion-content open">
                         <p>Kia Digital Key는 NFC 안테나가 장착된 스마트폰 또는 카드키로 차량의 도어를 열고 시동을 걸 수 있는 새로운 서비스 입니다.</p>
                         <a href="#">바로가기</a>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">Kia CarPay</button>
+                    <button class="accordion-button">Kia CarPay<span class="icon">+</span></button>
                     <div class="accordion-content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque porro laborum iste reiciendis,
                             itaque tempora omnis magni ducimus nisi, eos quisquam doloremque tenetur, deserunt
@@ -444,7 +444,7 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">Kia Digital Key</button>
+                    <button class="accordion-button">Kia Digital Key<span class="icon">+</span></button>
                     <div class="accordion-content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque porro laborum iste reiciendis,
                             itaque tempora omnis magni ducimus nisi, eos quisquam doloremque tenetur, deserunt
@@ -453,7 +453,7 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">kia Connect</button>
+                    <button class="accordion-button">kia Connect<span class="icon">+</span></button>
                     <div class="accordion-content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque porro laborum iste reiciendis,
                             itaque tempora omnis magni ducimus nisi, eos quisquam doloremque tenetur, deserunt
@@ -462,7 +462,7 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">스마트기기 연계 서비스</button>
+                    <button class="accordion-button">스마트기기 연계 서비스<span class="icon">+</span></button>
                     <div class="accordion-content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque porro laborum iste reiciendis,
                             itaque tempora omnis magni ducimus nisi, eos quisquam doloremque tenetur, deserunt
@@ -471,7 +471,7 @@
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <button class="accordion-button">네비게이션/빌드인캡 업데이트</button>
+                    <button class="accordion-button">네비게이션/빌드인캡 업데이트<span class="icon">+</span></button>
                     <div class="accordion-content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque porro laborum iste reiciendis,
                             itaque tempora omnis magni ducimus nisi, eos quisquam doloremque tenetur, deserunt
@@ -481,6 +481,7 @@
                 </div>
             </div>
         </div>
+        <button id="backToTop" style="display: none;">▲</button>
 
         <hr class="divider">
         <h1>포인트로 누리는 자동차 라이프</h1>
