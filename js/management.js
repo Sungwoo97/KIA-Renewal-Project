@@ -20,59 +20,31 @@ trigger.add('[data-trigger]');
 
 /* Subtitle */
 
-let target = $('.subimg img');
-let bSvg = $('.subimg svg');
+$(document).ready(function() {
+  $(window).on('scroll', function() {
+      var triggerPoint = $(window).height() - 400;
 
-$(window).scroll(function (){
-  let sct = $(this).scrollTop();
-
-  target.each(function(){
-    if($(this).offset().top - 400 <= sct){
-      $(this).addClass('active');
-    }
+      $('.subtitle .sub h3, .subimg img, .subimg svg, .icontab ul li, section .banner p, section .banner h3, section .expanation h3, section .diagram svg, section .diagram ul li').each(function() {
+          if ($(this).offset().top < $(window).scrollTop() + triggerPoint) {
+              $(this).addClass('active');
+          }
+      });
   });
-
 });
-
-$(window).scroll(function (){
-  let sct = $(this).scrollTop();
-
-  bSvg.each(function(){
-    if($(this).offset().top - 400 <= sct){
-      $(this).addClass('active');
-    }
-  });
-
-});
-
-
-
-function pathPrepare ($el) {
-  var lineLength = $el[0].getTotalLength();
-  $el.css("stroke-dasharray", lineLength);
-  $el.css("stroke-dashoffset", lineLength);
-}
-
-var $bSvg = $("path#bSvg");
-
-// prepare SVG
-pathPrepare($bSvg);
-
-// init controller
-var controller = new ScrollMagic.Controller();
-
-// build tween
-var tween = new TimelineMax()
-  .add(TweenMax.to($bSvg, 1, {stroke: "#05141F", strokeDashoffset: 0, ease:Linear.easeNone}))
-
-// build scene
-var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 700, tweenChanges: true})
-  .setTween(tween)
-  .addIndicators() // add indicators (requires plugin)
-  .addTo(controller);
-
 
 /* Icontab */
+
+$(document).ready(function() {
+  $(window).on('scroll', function() {
+      var triggerPoint = $(window).height() - 500;
+
+      $('.subtitle .sub div, .icontab ul li, section .expanation p').each(function() {
+        if ($(this).offset().top < $(window).scrollTop() + triggerPoint) {
+            $(this).addClass('active');
+        }
+    });
+  });
+});
 
 
 /* Section */
