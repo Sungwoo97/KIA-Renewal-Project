@@ -25,6 +25,16 @@
   }
 }
 
+@keyframes fadeIn{
+  from{
+    opacity: 0.5;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
 /* Main */
 
 [data-trigger]{
@@ -108,21 +118,23 @@
   margin-top: 7px;
 }
 
-.subtitle .sub.active h3,
-.subtitle .sub.active p{
-  top: 0;
-  opacity: 1;
+.subtitle .sub h3,
+.subtitle .sub div {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s ease-in-out;
 }
 
-.subtitle .sub h3{
-  opacity: 0;
-  animation: fadeInUp 0.5s ease-in-out forwards;
+.subtitle .sub h3.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.subtitle .sub p{
-  opacity: 0;
-  animation: fadeInUp 0.5s ease-in-out 0.5s forwards;
+.subtitle .sub div.active {
+    opacity: 1;
+    transform: translateY(0);
 }
+
 
 .subimg{
   position: relative;
@@ -147,9 +159,25 @@
   opacity: 1;
 }
 
-.subimg svg path{
-  stroke-dashoffset: 1000;
+.subimg svg {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
+
+.subimg svg.active {
+  opacity: 1;
+}
+
+.subimg svg path {
+  stroke-dasharray: 5400;
+  stroke-dashoffset: 5500;
+  transition: stroke-dashoffset 2s ease-in-out;
+}
+
+.subimg svg.active path {
+  stroke-dashoffset: 0;
+}
+
 
 /* --------------------------------------------------------------- */
 
@@ -198,68 +226,82 @@
   font-weight: 900;
 }
 
-.icontab ul li{
-  opacity: 0;
-  animation: fadeInUp 0.5s ease-in-out forwards;
+
+.icontab ul li {
+  opacity: 0; /* 초기 상태를 0으로 설정 */
+  transition: opacity 0.3s ease-in-out; /* opacity 변화에 트랜지션 적용 */
 }
 
-.icontab ul.active li:nth-child(1){
-  top: 0;
-  opacity: 1;
-  animation-delay: 0s;
+.icontab ul li.active {
+  opacity: 1; /* active 클래스가 추가될 때 opacity를 1로 설정 */
 }
 
-.icontab ul.active li:nth-child(2){
-  top: 0;
-  opacity: 1;
-  animation-delay: 0.3s;
+/* 각각의 항목에 딜레이 추가 */
+.icontab ul li:nth-child(1).active {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.5s;
 }
 
-.icontab ul.active li:nth-child(3){
-  top: 0;
-  opacity: 1;
-  animation-delay: 0.6s;
+.icontab ul li:nth-child(2).active {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 1s;
 }
+
+.icontab ul li:nth-child(3).active {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+
 
 
 /* --------------------- Section1 ------------------------ */
 
-section .banner{
+
+section .banner {
   height: 213px;
   background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(255, 255, 255, .1));
 }
 
 section .banner p,
-section .banner h3{
+section .banner h3 {
   font-size: var(--section_tt);
   color: var(--white);
   line-height: var(--gutter);
   position: relative;
+  transform: translateX(0);
   top: calc(50% - 15px);
-  left: 15%;
-  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
 }
 
-section .banner h3{
+section .banner h3 {
   font-size: 36px;
   font-weight: 700;
   margin-top: 10px;
 }
 
 section .banner p.active,
-section .banner h3.active{
-  top: 0;
+section .banner h3.active {
   opacity: 1;
+  transform: translateX(15%);
 }
 
-section .banner p{
-  opacity: 0;
-  animation: fadeInLeft 0.5s ease-in-out forwards;
+section .expanation {
+  position: relative;
+  left: 15%;
+  top: 100px;  
 }
 
-section .banner h3{
-  opacity: 0;
-  animation: fadeInLeft 0.5s ease-in-out 0.5s forwards;
+section .expanation h3 {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 42px;
+}
+
+section .expanation p {
+  font-size: var(--body_tt);
+  color: #6E6E6E;
+  margin-top: 10px;
 }
 
 section .expanation{
@@ -282,18 +324,15 @@ section .expanation p{
 
 section .expanation h3.active,
 section .expanation p.active{
-  top: 0;
+  transform: translateY(0);
   opacity: 1;
 }
 
-section .expanation h3{
-  opacity: 0;
-  animation: fadeInUp 0.5s ease-in-out forwards;
-}
-
+section .expanation h3,
 section .expanation p{
+  transform: translateY(50px);
   opacity: 0;
-  animation: fadeInUp 0.5s ease-in-out 0.5s forwards;
+  transition:  opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
 }
 
 section .diagram{
@@ -340,6 +379,16 @@ section .diagram ul .plus2{
   flex-direction: column;
 }
 
+section .diagram svg path {
+  stroke-dasharray: 2400;
+  stroke-dashoffset: 2500;
+  transition: stroke-dashoffset 2s ease-in-out;
+}
+
+section .diagram svg.active path {
+  stroke-dashoffset: 0;
+}
+
 section .diagram ul .ellipse{
   left: -350px;
   top: 85px;
@@ -354,6 +403,27 @@ section .diagram ul .plus2{
   transform: translate(500px, 65px);
 }
 
+section .diagram ul li {
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+}
+
+section .diagram ul li.active{
+  opacity: 1;
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+section .diagram ul li.active li:first-child {
+  animation-delay: 0.5s;
+}
+
+section .diagram ul li.active li:nth-child(2) {
+  animation-delay: 2s;
+}
+
+section .diagram ul li.active li:nth-child(3) {
+  animation-delay: 1.5s;
+}
 
 
 
