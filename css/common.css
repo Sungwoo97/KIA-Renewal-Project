@@ -48,6 +48,10 @@
     margin-bottom: calc(var(--gutter) * 3);
 }
 
+.section_mg{
+	margin: 0 auto 220px;
+}
+
 /* Tabs_menu */
 
 .sec_tt {
@@ -93,7 +97,6 @@
     display: flex;
 }
 
-
 /* // Tabs_menu */
 
 .btn {
@@ -125,23 +128,4 @@ body {
   .container{
     width: 100%;
   }
-}
-
-@media (max-width: 834px){
-	.container{
-		width: 710px;
-	}
-}
-
-/* RESPONSIVE */
-@media (max-width:1344px) {
-  .container{
-    width: 100%;
-  }
-}
-
-@media (max-width: 834px){
-	.container{
-		width: 710px;
-	}
 }
