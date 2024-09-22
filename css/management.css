@@ -70,6 +70,7 @@
   transform: translate(-50%, -50%);
   text-align: center;
   color: var(--white);
+  transition: 0.3s;
 }
 
 .maintitle .text h3,
@@ -98,6 +99,13 @@
   opacity: 0;
   animation: fadeInUp 0.6s ease-in-out 0.5s forwards;
 }
+
+/* @media (max-width: 1700px){
+
+  .maintitle .text{
+    top: 30% !important;
+  }
+} */
 
 
 /* --------------------------------------------------------------- */
@@ -228,12 +236,12 @@
 
 
 .icontab ul li {
-  opacity: 0; /* 초기 상태를 0으로 설정 */
-  transition: opacity 0.3s ease-in-out; /* opacity 변화에 트랜지션 적용 */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .icontab ul li.active {
-  opacity: 1; /* active 클래스가 추가될 때 opacity를 1로 설정 */
+  opacity: 1;
 }
 
 /* 각각의 항목에 딜레이 추가 */
@@ -269,7 +277,7 @@ section .banner h3 {
   line-height: var(--gutter);
   position: relative;
   transform: translateX(0);
-  top: calc(50% - 15px);
+  top: calc(50% - 20px);
   opacity: 0;
   transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
 }

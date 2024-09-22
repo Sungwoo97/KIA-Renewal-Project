@@ -21,6 +21,18 @@ trigger.add('[data-trigger]');
 /* Subtitle */
 
 $(document).ready(function() {
+  $('.icontab li').on('click', function() {
+    var sectionId = $(this).data('target');
+
+    if (sectionId) {
+      $('html, body').animate({
+        scrollTop: $('#' + sectionId).offset().top
+      }, 500);
+    }
+  });
+});
+
+$(document).ready(function() {
   $(window).on('scroll', function() {
       var triggerPoint = $(window).height() - 400;
 
