@@ -221,8 +221,7 @@
   transition: 0.3s;
 }
 .slick-dots button:hover,
-.slick-dots li.slick-active button
-{
+.slick-dots li.slick-active button{
   opacity: 1;
 }
 .tabs .be_tabs .toplank_depth li{
@@ -323,9 +322,6 @@
   }
 }
 @media (max-width:834px){
-  .be_tab_wrapper, .tab_depth{
-    gap:34px;
-  }
   .be_tab_wrapper .tabs_menu li a{
     width: 88px;
     
@@ -357,6 +353,7 @@
   }
   .be_btn{
     gap:15px;
+    margin-top: 15px;
   }
   .be_btn .btn{
     width: 285px;
@@ -416,6 +413,7 @@
     height: 475px;
   }
   .be_tab_wrapper .tabs .slides img{
+    width: 483px !important;
     height: 475px;
     position: relative;
   }
@@ -434,7 +432,8 @@
     flex-direction: column-reverse;
   }
   .toplanks .pager{
-    display: none;
+    margin-left: 20px;
+    margin-bottom: 15px;
   }
   .toplank_depth li{
     display: flex;
@@ -448,7 +447,9 @@
     line-height: 48px;
   }
   .toplank_depth li span {
-    margin-left: 20px;
+    text-align: end;
+    margin-right: 20px;
+    margin-bottom: 10px;
     font-size: var(--body_tt);
     line-height: var(--body_tt);
 }
@@ -457,15 +458,19 @@
   .toplank_depth .be_btn{
     display: none;
 }
-/* .slick-list .slick-track img:nth-child(1):before{
+/* .slick-track:nth-child(1)::before{
+  z-index: 1000;
   position: absolute;
   content: 'Top 1';
   width: 84px;
   height: 37px;
-  left: 0px;
-  top: 0px;
+  left: 30px;
+  top: 30px;
   background-color: var(--primary);
+  color:var(--white);
+  text-align: center;
 } */
+
 /* .slick-dots li:nth-child(1) button:before{
   position: absolute;
   content: 'Top 1';
