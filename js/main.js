@@ -151,3 +151,44 @@ tabMenu.on('click',function(){
   let target = $(this).find('a').attr('href');
   $(target).find('.slides').slick('slickGoTo', 0);
 })
+
+
+  const modal = $('.main_modal');
+  const check = $('#modal_check');
+  const button = $('.modal_control .btn');
+
+  button.click(function(){
+    if(check.is(':checked')){
+      setCookie('portfolio', 'Kia Renewal', 1);
+    }else{
+      delCookie('portfolio','Kia Renewal');
+    }
+    modal.fadeOut();
+  });
+
+  function setCookie(name, val, due){
+    let date = new Date();
+    date.setDate(date.getDate() + due);
+
+    let myCookie = `${name}=${val};expires=`+date.toUTCString();
+    document.cookie = myCookie;
+  }
+
+  function delCookie(name, val){
+    let date = new Date();
+    date.setDate(date.getDate() - 1);
+
+    let myCookie =`${name}=${val};expires=`+date.toUTCString();
+    document.cookie = myCookie;
+  }
+
+
+  function checkCookie(name, val){
+    let checkCookies = `${name}=${val}`
+    if(document.cookie.indexOf(checkCookies) === -1){
+      modal.fadeIn();
+    }else{
+      modal.hide();
+    }
+  }
+  checkCookie('portfolio','Kia Renewal');

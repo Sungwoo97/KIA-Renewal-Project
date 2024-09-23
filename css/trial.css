@@ -1,53 +1,4 @@
-/* HEADER */
-header {
-	z-index: 999;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	transition: 0.5s ease;
-}
 
-header .brand {
-	color: #fff;
-	font-size: 1.5em;
-	font-weight: 700;
-	text-transform: uppercase;
-	text-decoration: none;
-}
-
-header .navigation {
-	position: relative;
-	padding: 30px 50px;
-}
-
-header .navigation .navigation-items a {
-	position: relative;
-	color: #000;
-	font-size: 1.25em;
-	font-weight: 700;
-	text-decoration: none;
-	margin-left: 30px;
-	transition: 0.3s ease;
-}
-
-header .navigation .navigation-items a:before {
-	content: '';
-	position: absolute;
-	background: #fff;
-	width: 0;
-	height: 2px;
-	bottom: 0;
-	left: 0;
-	transition: 0.3s ease;
-}
-
-header .navigation .navigation-items a:hover:before {
-	width: 100%;
-} 
 
 /* Test Drive */
 .ex_tab_wrapper{
@@ -88,6 +39,15 @@ header .navigation .navigation-items a:hover:before {
 .ex_tab_wrapper .tabs_menu li.active a{
   font-weight: 700;
   color: var(--black);
+}
+
+@media (max-width:834px) {
+  .ex_tab_wrapper .tabs_menu li a{
+    font-size: 20px;
+  }
+  .ex_tab_wrapper .tabs_menu li{  
+    padding: 2px 0;
+  }
 }
 
 .ex_tab_wrapper .tabs > div{
@@ -185,7 +145,7 @@ header .navigation .navigation-items a:hover:before {
 
 .modal{
   background: #fff;
-  width: 350px;
+  width: 500px;
   padding:20px;
   border-radius:10px;
 }
@@ -242,6 +202,9 @@ header .navigation .navigation-items a:hover:before {
   .ex_non_member{
     margin: 48px 125px;
   }
+  .modal{
+    width: 350px;
+  }
 }
 
 @media (max-width:700px){
@@ -269,6 +232,7 @@ header .navigation .navigation-items a:hover:before {
     margin: 48px 0px;
   }
 }
+
 
 /* SALES NETWORKS */
 .ex_tab_salesNetwork{
@@ -302,7 +266,7 @@ header .navigation .navigation-items a:hover:before {
 
 .tabs form{
   display: flex;
-  margin-right: 20px;
+
 }
 
 .tabs form input{
@@ -320,6 +284,10 @@ header .navigation .navigation-items a:hover:before {
 .ex_tab_salesNetwork .tabs .map_wrap{
   overflow-x: hidden;
   height: 845px;
+}
+
+.menu_wrap{
+  position: relative;
 }
 
 .pagination{
@@ -385,6 +353,11 @@ header .navigation .navigation-items a:hover:before {
     height: 500px;
   }
 }
+@media (max-width:834px) {
+  .ex_tab_salesNetwork .tabs_menu li a{
+    font-size: 16px;
+  }
+}
 
 /* EX_POINT */
 .ex_tab_experience > h3{
@@ -432,10 +405,33 @@ header .navigation .navigation-items a:hover:before {
 
 .ex_slide_container li{
   width: 400px;
+  
+}
+.ex_slide_container li img{
+  width: 100%;
+}
+.ex_slide_container li > div{
+  width: 100%;
+  position: relative;
 }
 
-.ex_slide_container img{
-  width: 100%;
+.ex_slide_container div:after{
+  content: '자세히 보기';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+  z-index: 10;
+}
+
+.ex_slide_container div:hover:after{
+  color:var(--white);
+  background: rgba(0 ,20 ,31,0.5);
 }
 
 .ex_slide_container .active h4, .ex_slide_container .active p{
@@ -482,3 +478,212 @@ header .navigation .navigation-items a:hover:before {
     opacity: 1;
   }
 }
+
+/* Footer 최은화 */
+footer{
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  background: var(--primary);
+  font-weight: 100;
+  line-height: 16px;
+}
+
+footer,
+footer a{
+  color: var(--white);
+  text-wrap: nowrap;
+}
+
+footer a:hover{
+  font-weight: 300;
+}
+
+footer .fo_prize{
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 20px 0;
+}
+
+footer .fo_prize li{
+  display: flex;
+  gap: 10px;
+  text-wrap: nowrap;
+  align-items: center;
+  font-size: 12px;
+}
+
+footer .fo_prize li img{
+  width: 88px;
+  height: 50px;
+}
+
+footer .fo_smallmenu,
+footer .no_guide{
+  display: flex;
+  gap: 50px;
+  transition: 0.3s;
+}
+  
+footer .no_guide .fo_top{
+  display: flex;
+  gap: 50px;
+  transition: 0.3s;
+}
+
+footer .no_guide .fo_bottom{
+  display: flex;
+  gap: 50px;
+  transition: 0.3s;
+}
+
+footer .no_sns{
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+footer .no_sns li i{
+  color: var(--white);
+  opacity: 50%;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+footer .no_sns li i:hover{
+  opacity: 100%;
+}
+
+footer > p:after{
+  content: '';
+  background: var(--medium_gray);
+  /* width: 1224px; */
+  width: 1400px;
+  height: 1px;
+  position: absolute;
+  right: 50%;
+  transform: translate(50%, -25px);
+  transition: 0.3s;
+}
+
+@media (max-width: 1200px){
+
+  footer .fo_prize{
+    width: 1200px;
+    gap: 50px;
+    justify-content: center;
+  }
+
+  footer .fo_prize li{
+    flex-direction: column;
+  }
+
+  footer > p:after{
+    width: 800px;
+  }
+}
+
+@media (max-width: 834px){
+
+  footer .fo_prize{
+    width: 100%;
+  }
+
+  footer .fo_prize p,
+  footer .fo_prize h4{
+    display: none;
+  }
+
+  footer .no_guide{
+    gap: 35px;
+    align-items: center;
+    object-fit: cover;
+  }
+  
+  footer .no_guide .fo_top{
+    display: flex;
+    gap: 35px;
+  }
+  
+  footer .no_guide .fo_bottom{
+    display: flex;
+    gap: 35px;
+  }
+
+  footer .fo_smallmenu a,
+  footer .no_guide a{
+    font-size: var(--body_tt);
+    text-wrap: nowrap;
+  }
+
+  footer > p:after{
+    width: 600px;
+  }
+
+}
+
+@media (max-width: 660px){
+
+  footer{
+    gap: 25px;
+  }
+
+  footer .fo_prize li img{
+   width: 68px;
+   height: 40px; 
+  }
+
+  footer .fo_smallmenu{
+    gap: 25px;
+  }
+
+  footer .no_guide{
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  footer .no_guide .fo_top{
+    gap: 30px;
+  }
+  
+  footer .no_guide .fo_bottom{
+    gap: 30px;
+  }
+
+  footer > p:after{
+    width: 500px;
+  }
+  
+}
+
+@media (max-width: 480px){
+  footer .fo_smallmenu{
+    gap: 15px;
+  }
+
+  footer .no_guide{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  footer .no_guide .fo_top{
+    gap: 30px;
+  }
+  
+  footer .no_guide .fo_bottom{
+    gap: 30px;
+  }
+
+  footer > p:after{
+    width: 400px;
+  }
+}
+
+/* // Footer 최은화 
