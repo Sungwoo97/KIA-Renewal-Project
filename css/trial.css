@@ -432,10 +432,37 @@ header .navigation .navigation-items a:hover:before {
 
 .ex_slide_container li{
   width: 400px;
+  
+}
+.ex_slide_container li img{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+}
+.ex_slide_container li > div{
+  width: 100%;
+  position: relative;
+}
+.ex_slide_container div:after{
+  content: '자세히 보기';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:var(--white);
+  background: var(--primary);
+  opacity: 0;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+  z-index: 10;
 }
 
-.ex_slide_container img{
-  width: 100%;
+.ex_slide_container div:hover:after{
+
+  opacity: .5;
 }
 
 .ex_slide_container .active h4, .ex_slide_container .active p{
