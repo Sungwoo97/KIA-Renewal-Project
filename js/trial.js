@@ -43,7 +43,7 @@ function setLayout(){
   let ex_originWidth = (ex_slideWidth * ex_slideCount) + (ex_slideGap * ex_slideCount);
   let ex_maxWidth = (ex_slideWidth * ev_allslideCount) + (ex_slideGap * (ev_allslideCount - 1));
   ex_slideContainer.css({width: ex_maxWidth + 'px'});
-  if($(window).width() > 1260){
+  if($(window).width() > 1200){
     ex_slideContainer.css({ transform: `translateX(-${ex_originWidth}px)` });
      ex_maxSlides = 3;
      ex_slideWidth = 400;
