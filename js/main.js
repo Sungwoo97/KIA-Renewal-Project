@@ -145,7 +145,15 @@ $('.safe_modal_container').click(function(){
   $(this).fadeOut();
 });
 
+//slick 슬라이더 로딩
 
+tabMenu.on('click',function(){
+  let target = $(this).find('a').attr('href');
+  $(target).find('.slides').slick('slickGoTo', 0);
+})
+
+//mainpage 구직용 홈페이지 안내 모달
+//쿠키 생성 함수
   const modal = $('.main_modal');
   const check = $('#modal_check');
   const button = $('.modal_control .btn');

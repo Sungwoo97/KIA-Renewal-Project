@@ -12,3 +12,7 @@ beSlides.slick({
   autoplay:true,
   autoplaySpeed:10000,
 });
+
+$(window).on('resize', function() {
+  beSlides.slick('setPosition');
+});

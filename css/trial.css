@@ -410,12 +410,13 @@
 .ex_slide_container li img{
   width: 100%;
 }
-.ex_slide_container li > div{
+.ex_slide_container li > a{
+  display: block;
   width: 100%;
   position: relative;
 }
 
-.ex_slide_container div:after{
+.ex_slide_container a:after{
   content: '자세히 보기';
   display: flex;
   justify-content: center;
@@ -429,7 +430,7 @@
   z-index: 10;
 }
 
-.ex_slide_container div:hover:after{
+.ex_slide_container a:hover:after{
   color:var(--white);
   background: rgba(0 ,20 ,31,0.5);
 }
