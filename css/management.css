@@ -35,6 +35,7 @@
   }
 }
 
+
 /* Main */
 
 [data-trigger]{
@@ -101,6 +102,19 @@
   font-size: 60px;
   opacity: 0;
   animation: fadeInUp 0.6s ease-in-out 0.5s forwards;
+}
+
+@media (max-width: 430px){
+
+  .maintitle .text h3{
+    font-size: 24px;
+  }
+
+  .maintitle .text h2{
+    font-size: 48px;
+    line-height: 54px;
+    text-wrap: wrap;
+  }
 }
 
 
@@ -206,6 +220,45 @@
   .subimg svg{
     transform: translate(-50%, -50%) scale(0.7);
   }
+  
+}
+
+@media (max-width: 1024px){
+  .subimg img,
+  .subimg svg{
+    transform: translate(-50%, -50%) scale(0.55);
+  }
+}
+
+@media (max-width: 430px){
+
+  .subtitle .sub h3{
+    font-size: 28px;
+    line-height: 34px;
+    margin: 100px 15px auto 15px;
+  }
+
+  .subtitle .sub div{
+    text-align: center;
+    margin: 10px 20px;
+  }
+  
+  .subtitle .sub p{
+    font-size: 16px;
+    text-wrap: wrap;
+    display: inline;
+  }
+
+  .subimg{
+    position: relative;
+    height: 200px;
+    margin-top: 70px;
+  }
+
+  .subimg img,
+  .subimg svg{
+    transform: translate(-50%, -50%) scale(0.2);
+  }
 
 }
 
@@ -303,9 +356,43 @@
 
 }
 
+@media (max-width: 430px){
+  
+  .icontab{
+    margin-top: 200px;
+  }
+
+  .icontab ul{
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .icontab ul li{
+    height: 250px;
+    border: none;
+  }
+
+  .icontab ul li i{
+    font-size: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .icontab ul li p{
+    font-size: 18px;
+    margin-bottom: -10px;
+  }
+  
+  .icontab ul li h3{
+    font-size: 28px;
+  }
+
+}
+
 
 
 /* --------------------- Section1 ------------------------ */
+
+
 
 
 section .banner {
@@ -392,11 +479,15 @@ section .diagram{
   position: relative;
 }
 
-section .diagram svg{
+section .diagram .desktop{
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+section .diagram .mobile{
+  display: none;
 }
 
 section .diagram ul{
@@ -431,13 +522,13 @@ section .diagram ul .plus2{
   flex-direction: column;
 }
 
-section .diagram svg path {
+section .diagram .desktop path {
   stroke-dasharray: 2400;
   stroke-dashoffset: 2500;
   transition: stroke-dashoffset 2s ease-in-out;
 }
 
-section .diagram.active svg path {
+section .diagram.active .desktop path {
   stroke-dashoffset: 0;
 }
 
@@ -576,6 +667,77 @@ section .diagram.active ul li:nth-child(3) {
     line-height: 18px;
     margin-top: 0;
   }
+
+}
+
+@media (max-width: 430px){
+  
+  section .banner{
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    text-align: center;
+    background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(255, 255, 255, .1));
+  }
+  
+  section .banner .img1,
+  section .banner .img2, 
+  section .banner .img3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  }
+
+  section .banner p.active{
+    font-size: 18px;
+    transform: none;
+  }
+  
+  section .banner h3.active{
+    font-size: 30px;
+    transform: none;
+  }
+  
+  section .expanation{
+    width: 300px;
+    left: 10%;
+  }
+  
+  section .expanation h3{
+    font-size: 28px;
+    line-height: 38px;
+    display: inline;
+  }
+
+  section .expanation p{
+    font-size: 14px;
+  }
+
+  section .diagram .mobile{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  section .diagram .mobile path {
+    stroke-dasharray: 900;
+    stroke-dashoffset: 1000;
+    transition: stroke-dashoffset 2s ease-in-out;
+}
+
+  section .diagram .mobile path.active {
+    stroke-dashoffset: 0;
+}
+
+
+  section .diagram .desktop{
+    display: none;
+  }
+
+  
 
 }
 
