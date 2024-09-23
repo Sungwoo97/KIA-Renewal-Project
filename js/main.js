@@ -144,3 +144,10 @@ $('.detail_ex button').click(function(){
 $('.safe_modal_container').click(function(){
   $(this).fadeOut();
 });
+
+//slick 슬라이더 로딩
+
+tabMenu.on('click',function(){
+  let target = $(this).find('a').attr('href');
+  $(target).find('.slides').slick('slickGoTo', 0);
+})

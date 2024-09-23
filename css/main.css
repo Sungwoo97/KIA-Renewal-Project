@@ -126,8 +126,7 @@
   transition: 0.3s;
 }
 .slick-dots button:hover,
-.slick-dots li.slick-active button
-{
+.slick-dots li.slick-active button{
   opacity: 1;
 }
 .tabs .be_tabs .toplank_depth li{
@@ -228,9 +227,6 @@
   }
 }
 @media (max-width:834px){
-  .be_tab_wrapper, .tab_depth{
-    gap:34px;
-  }
   .be_tab_wrapper .tabs_menu li a{
     width: 88px;
     
@@ -363,7 +359,8 @@
   .toplank_depth .be_btn{
     display: none;
 }
-/* .slick-list .slick-track img:nth-child(1):before{
+.slick-list .slick-track:nth-child(1):before{
+  z-index: 100;
   position: absolute;
   content: 'Top 1';
   width: 84px;
@@ -371,7 +368,7 @@
   left: 0px;
   top: 0px;
   background-color: var(--primary);
-} */
+}
 /* .slick-dots li:nth-child(1) button:before{
   position: absolute;
   content: 'Top 1';
