@@ -153,6 +153,7 @@ tabMenu.on('click',function(){
 })
 
 //mainpage 구직용 홈페이지 안내 모달
+//쿠키 생성 함수
   const modal = $('.main_modal');
   const check = $('#modal_check');
   const button = $('.modal_control .btn');
