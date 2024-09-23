@@ -910,12 +910,9 @@
   left: 24%;
   top: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  visibility: hidden;
+  background: rgba(0, 0, 0, .5);
+  display: none;
+  transition: 0.5s;
 }
 
 .tabs .notice figure div p,
@@ -924,11 +921,16 @@
   font-weight: 700;
   color: var(--white);
   transition: 0.3s;
+  margin-top: 32%;
+  margin-bottom: 10px;
 }
 
 .tabs .notice figure:hover div,
 .tabs .news figure:hover div{
-  visibility: visible;
+  width: 550px;
+  height: 450px;
+  text-align: center;
+  display: block;
 }
 
 
@@ -1011,6 +1013,11 @@
 
   .tabs .no_notice{
     gap: 220px;
+  }
+  
+  .tabs .notice figure:hover div,
+  .tabs .news figure:hover div{
+    display: none;
   }
   
   .tabs .no_img{
