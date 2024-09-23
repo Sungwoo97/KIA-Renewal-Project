@@ -145,7 +145,7 @@ $('.safe_modal_container').click(function(){
   $(this).fadeOut();
 });
 
-
+//쿠키 생성 함수
   const modal = $('.main_modal');
   const check = $('#modal_check');
   const button = $('.modal_control .btn');
