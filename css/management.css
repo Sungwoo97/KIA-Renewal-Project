@@ -1,57 +1,38 @@
-/* Header */
+/* Keyframes */
 
-header {
-	z-index: 999;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	transition: 0.5s ease;
-  
-  height: 80px;
-  background: var(--white);
-  opacity: 70%;
+@keyframes fadeInUp{
+  from{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-header .brand {
-	color: #fff;
-	font-size: 1.5em;
-	font-weight: 700;
-	text-transform: uppercase;
-	text-decoration: none;
+
+@keyframes fadeInLeft{
+  from{
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-header .navigation {
-	position: relative;
-	padding: 30px 50px;
-}
+@keyframes fadeIn{
+  from{
+    opacity: 0.5;
+  }
 
-header .navigation .navigation-items a {
-	position: relative;
-	color: #000;
-	font-size: 1.25em;
-	font-weight: 700;
-	text-decoration: none;
-	margin-left: 30px;
-	transition: 0.3s ease;
-}
-
-header .navigation .navigation-items a:before {
-	content: '';
-	position: absolute;
-	background: #fff;
-	width: 0;
-	height: 2px;
-	bottom: 0;
-	left: 0;
-	transition: 0.3s ease;
-}
-
-header .navigation .navigation-items a:hover:before {
-	width: 100%;
+  to{
+    opacity: 1;
+  }
 }
 
 /* Main */
@@ -76,7 +57,7 @@ header .navigation .navigation-items a:hover:before {
 .maintitle img{
   position: absolute;
   width: 100%;
-  height: 90%;
+  /* height: 90%; */
 }
 
 .maintitle .text{
@@ -89,6 +70,7 @@ header .navigation .navigation-items a:hover:before {
   transform: translate(-50%, -50%);
   text-align: center;
   color: var(--white);
+  transition: 0.3s;
 }
 
 .maintitle .text h3,
@@ -108,25 +90,22 @@ header .navigation .navigation-items a:hover:before {
 
 .maintitle .text h3{
   font-size: 36px;
+  opacity: 0;
   animation: fadeInUp 0.6s ease-in-out forwards;
 }
 
 .maintitle .text h2{
   font-size: 60px;
+  opacity: 0;
   animation: fadeInUp 0.6s ease-in-out 0.5s forwards;
 }
 
-@keyframes fadeInUp{
-  from{
-    opacity: 0;
-    transform: translateY(100px);
-  }
+/* @media (max-width: 1700px){
 
-  to{
-    opacity: 1;
-    transform: translateY(0);
+  .maintitle .text{
+    top: 30% !important;
   }
-}
+} */
 
 
 /* --------------------------------------------------------------- */
@@ -147,6 +126,24 @@ header .navigation .navigation-items a:hover:before {
   margin-top: 7px;
 }
 
+.subtitle .sub h3,
+.subtitle .sub div {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s ease-in-out;
+}
+
+.subtitle .sub h3.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.subtitle .sub div.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 .subimg{
   position: relative;
   height: 620px;
@@ -160,6 +157,35 @@ header .navigation .navigation-items a:hover:before {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+.subimg img{
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.subimg img.active{
+  opacity: 1;
+}
+
+.subimg svg {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.subimg svg.active {
+  opacity: 1;
+}
+
+.subimg svg path {
+  stroke-dasharray: 5400;
+  stroke-dashoffset: 5500;
+  transition: stroke-dashoffset 2s ease-in-out;
+}
+
+.subimg svg.active path {
+  stroke-dashoffset: 0;
+}
+
 
 /* --------------------------------------------------------------- */
 
@@ -208,58 +234,81 @@ header .navigation .navigation-items a:hover:before {
   font-weight: 900;
 }
 
-.digit {
+
+.icontab ul li {
   opacity: 0;
-  -webkit-transform: translateY(40px);
-     -moz-transform: translateY(40px);
-      -ms-transform: translateY(40px);
-       -o-transform: translateY(40px);
-          transform: translateY(40px);
-  -webkit-transition: all 0.6s ease-out;
-     -moz-transition: all 0.6s ease-out;
-      -ms-transition: all 0.6s ease-out;
-       -o-transition: all 0.6s ease-out;
-          transition: all 0.6s ease-out;
+  transition: opacity 0.3s ease-in-out;
 }
-.digit.visible {
+
+.icontab ul li.active {
   opacity: 1;
-  -webkit-transform: none;
-     -moz-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
 }
-/* .digit:nth-child(2) {
-  margin-top: 50px;
+
+/* 각각의 항목에 딜레이 추가 */
+.icontab ul li:nth-child(1).active {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.5s;
 }
-.digit:nth-child(3) {
-  margin-top: 100px;
+
+.icontab ul li:nth-child(2).active {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 1s;
 }
-.digit:nth-child(4) {
-  margin-top: 150px;
-} */
+
+.icontab ul li:nth-child(3).active {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+
+
 
 /* --------------------- Section1 ------------------------ */
 
-section .banner{
+
+section .banner {
   height: 213px;
   background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(255, 255, 255, .1));
 }
 
 section .banner p,
-section .banner h3{
+section .banner h3 {
   font-size: var(--section_tt);
   color: var(--white);
   line-height: var(--gutter);
   position: relative;
-  top: calc(50% - 15px);
-  left: 15%;
-  transform: translateY(-50%);
+  transform: translateX(0);
+  top: calc(50% - 20px);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
 }
 
-section .banner h3{
+section .banner h3 {
   font-size: 36px;
   font-weight: 700;
+  margin-top: 10px;
+}
+
+section .banner p.active,
+section .banner h3.active {
+  opacity: 1;
+  transform: translateX(15%);
+}
+
+section .expanation {
+  position: relative;
+  left: 15%;
+  top: 100px;  
+}
+
+section .expanation h3 {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 42px;
+}
+
+section .expanation p {
+  font-size: var(--body_tt);
+  color: #6E6E6E;
   margin-top: 10px;
 }
 
@@ -279,6 +328,19 @@ section .expanation p{
   font-size: var(--body_tt);
   color: #6E6E6E;
   margin-top: 10px;
+}
+
+section .expanation h3.active,
+section .expanation p.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+section .expanation h3,
+section .expanation p{
+  transform: translateY(50px);
+  opacity: 0;
+  transition:  opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
 }
 
 section .diagram{
@@ -325,6 +387,16 @@ section .diagram ul .plus2{
   flex-direction: column;
 }
 
+section .diagram svg path {
+  stroke-dasharray: 2400;
+  stroke-dashoffset: 2500;
+  transition: stroke-dashoffset 2s ease-in-out;
+}
+
+section .diagram svg.active path {
+  stroke-dashoffset: 0;
+}
+
 section .diagram ul .ellipse{
   left: -350px;
   top: 85px;
@@ -337,6 +409,28 @@ section .diagram ul .plus1{
 
 section .diagram ul .plus2{
   transform: translate(500px, 65px);
+}
+
+section .diagram ul li {
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+}
+
+section .diagram ul li.active{
+  opacity: 1;
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+section .diagram ul li.active li:first-child {
+  animation-delay: 0.5s;
+}
+
+section .diagram ul li.active li:nth-child(2) {
+  animation-delay: 2s;
+}
+
+section .diagram ul li.active li:nth-child(3) {
+  animation-delay: 1.5s;
 }
 
 
