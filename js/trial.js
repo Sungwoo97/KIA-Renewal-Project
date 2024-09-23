@@ -418,3 +418,4 @@ $('.maps_search').change(function(e){
     $('.ex_salesNetwork_list .active .placesList .item').removeClass('hidden');
   }
 });
+

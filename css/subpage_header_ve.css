@@ -437,7 +437,7 @@ header .navigation-items li a:hover:before {
 
 .smallpage-panel {
     display: none;
-    background-color: #000;
+    background-color: #fff;
     overflow: hidden;
     padding-left: 15px;
 
@@ -475,7 +475,7 @@ header .navigation-items li a:hover:before {
 .smallpage-footer a {
     position: relative;
     /* ::after 가상 요소를 기준으로 위치를 설정 */
-    color: #000;
+    color: #fff;
     padding: 0 20px;
     text-decoration: none;
     transition: color 0.3s ease;

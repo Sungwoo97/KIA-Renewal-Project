@@ -7,32 +7,252 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/subpage_header_ve.css" />
   <link rel="stylesheet" href="css/trial.css">
 </head>
 <body>
-  <header>
-    <div class="navigation">
-      <div class="navigation-items">
-        <a href="#">차량</a>
-        <a href="#">구매</a>
-        <a href="#">체험</a>
-        <a href="#">이벤트</a>
-        <a href="#">고객지원</a>
-        <a href="#">Discover Kia</a>
-      </div>
+  <div id="search-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>통합검색</h2>
+        <input type="text" placeholder="검색어를 입력하세요." />
+        <button type="button">검색</button>
     </div>
-    <object data="src/img/kia.svg" class="kia_logo"></object>
+</div>
+
+<div id="smallpage-menu">
+    <div class="smallpage-content">
+        <div class="smallpage-header">
+            <span class="smallpage-close">&times;</span>
+        </div>
+        <div class="smallpage-main">
+            <div class="smallpage-mainSection1">
+                <ul>
+                    <li class="smallpage-accordion">차량</li>
+                    <div class="smallpage-panel">
+                        <ul>
+                            <li><a href="">EV & PBV</a></li>
+                            <li><a href="">승용</a></li>
+                            <li><a href="">RV</a></li>
+                            <li><a href="">택시 & 버스 & 승용</a></li>
+                        </ul>
+                    </div>
+                    <li class="smallpage-accordion">구매</li>
+                    <div class="smallpage-panel">
+                        <ul>
+                            <li><a href="#">견적내기</a></li>
+                            <li><a href="">이 달의 구매혜택</a></li>
+                            <li><a href="">구매 상담 신청</a></li>
+                            <li><a href="">Kia Connect Store</a></li>
+                            <li><a href="">모빌리티</a></li>
+
+                        </ul>
+                    </div>
+
+                    <li class="smallpage-accordion">체험</li>
+                    <div class="smallpage-panel">
+                        <ul>
+                            <li><a href="">시승신청</a></li>
+                            <li><a href="">판매 네트워크</a></li>
+                            <li><a href="">Kia 체험 거점</a></li>
+
+                        </ul>
+                    </div>
+
+                    <li class="smallpage-accordion">이벤트</li>
+                    <div class="smallpage-panel">
+                        <ul>
+                            <li><a href="">진행 중인 이벤트</a></li>
+                            <li><a href="">종료된 이벤트</a></li>
+                            <li><a href="">당첨자 발표</a></li>
+                        </ul>
+                    </div>
+
+                    <li class="smallpage-accordion">고객지원</li>
+                    <div class="smallpage-panel">
+                        <ul>
+                            <li><a href="">유지 & 관리</a></li>
+                            <li><a href="">고객센터</a></li>
+                            <li><a href="">구매 가이드</a></li>
+                            <li><a href="">공지사항</a></li>
+
+                        </ul>
+                    </div>
+                    <li class="smallpage-accordion">Discover Kia</li>
+                    <div class="smallpage-panel">
+                        <ul>
+                            <li><a href="">New Kia</a></li>
+                            <li><a href="">뉴스</a></li>
+                            <li><a href="">지속가능영영</a></li>
+                            <li><a href="">사업장 안내</a></li>
+                            <li><a href="">AutoLand 견학</a></li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="smallpage-mainSection2">
+            <div class="smallpage-mainSection2-parts">
+                <i class="fa-solid fa-car"></i><a href="">견적 내기</a>
+            </div>
+            <div class="smallpage-mainSection2-parts">
+                <i class="fa-solid fa-calculator"></i><a href="">카탈로그/가격표</a>
+            </div>
+            <div class="smallpage-mainSection2-parts">
+                <i class="fa-solid fa-blender-phone"></i><a href="">시승 신청</a>
+            </div>
+            <div class="smallpage-mainSection2-parts">
+                <i class="fa-solid fa-gift"></i><a href="">이 달의 구매 혜택</a>
+            </div>
+        </div>
+        <div class="smallpage-footer">
+            <a href="">회원가입</a>
+            <span>|</span>
+            <a href="">로그인</a>
+        </div>
+    </div>
+</div>
+
+<header>
+    <div class="navigation-items">
+        <li>
+            <a href="#">차량
+                <ul>
+                    <li>EV & PBV</li>
+                    <li>승용</li>
+                    <li>RV</li>
+                    <li>택시 & 버스 & 상용</li>
+                </ul>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">구매
+                <ul>
+                    <li>견적내기</li>
+                    <li>이 달의 구매 혜택</li>
+                    <li>구매 상담 신청</li>
+                    <li>Kia Connect Store</li>
+                    <li style="position: relative;">모빌리티 <object data="./img/main_header/right-arrow_white.svg"
+                            id="right-arrow_white"></object>
+                        <ul id="sub_sub_menus">
+                            <li>기아 인증 중고차</li>
+                            <li>기아렌터차</li>
+                            <li>기아플렉스</li>
+                            <li>위블 비즈</li>
+                        </ul>
+                    </li>
+                </ul>
+            </a>
+        </li>
+        <li>
+            <a href="#">체험
+                <ul>
+                    <li>시승신청</li>
+                    <li style="position: relative;">판매 네트워크 <object
+                            data="./img/main_header/right-arrow_white.svg"></object>
+                        <ul id="sub_sub_menus">
+                            <li>지점/대리점</li>
+                            <li>영업담당</li>
+                            <li>전시 차량</li>
+                            <li>시승 거점</li>
+                            <li>출고 센터</li>
+                        </ul>
+                    </li>
+                    <li style="position: relative;">Kia 체험거점 <object
+                            data="./img/main_header/right-arrow_white.svg"></object>
+                        <ul id="sub_sub_menus">
+                            <li>kia 360</li>
+                            <li>플래그쉽 스토어</li>
+                            <li>언플러그드 그라운드</li>
+                            <li>Driving Experience</li>
+                        </ul>
+                    </li>
+                </ul>
+            </a>
+        </li>
+        <li>
+            <a href="#">이벤트
+                <ul>
+                    <li>진행 중인 이벤트</li>
+                    <li>종료된 이벤트</li>
+                    <li>당첨자 발표</li>
+                </ul>
+            </a>
+        </li>
+        <li>
+            <a href="#">고객지원
+                <ul>
+                    <li style="position: relative;">유지 & 관리 <object
+                            data="./img/main_header/right-arrow_white.svg"></object>
+                        <ul id="sub_sub_menus">
+                            <li>기아멤버스</li>
+                            <li>카앤라이프몰</li>
+                        </ul>
+                    </li>
+                    <li style="position: relative;">고객센터 <object
+                            data="./img/main_header/right-arrow_white.svg"></object>
+                        <ul id="sub_sub_menus">
+                            <li>고객센터 안내</li>
+                            <li>1:1 문의</li>
+                            <li>FAQ</li>
+                            <li>칭찬 알림방</li>
+                            <li>하자 재발 통보</li>
+                        </ul>
+                    </li>
+                    <li style="position: relative;">구매 가이드 <object
+                            data="./img/main_header/right-arrow_white.svg"></object>
+                        <ul id="sub_sub_menus">
+                            <li>세금</li>
+                            <li>등록</li>
+                            <li>유의 사항</li>
+                            <li>출하 및 탁송정보</li>
+                        </ul>
+                    </li>
+                    <li>공지사항</li>
+                </ul>
+            </a>
+        </li>
+        <li>
+            <a href="#">Discover Kia
+                <ul>
+                    <li style="position: relative;">New Kia <object
+                            data="./img/main_header/right-arrow_white.svg"></object>
+                        <ul id="sub_sub_menus">
+                            <li>Our Symbol</li>
+                            <li>Our Movement</li>
+                            <li>Our Design</li>
+                        </ul>
+                    </li>
+                    <li>뉴스</li>
+                    <li>지속가능경영</li>
+                    <li>사업장 안내</li>
+                    <li>AutoLand 견학</li>
+                </ul>
+            </a>
+        </li>
+    </div>
+
+    <object data="./img/main_header/kia.svg" class="kia_logo"></object>
     <div class="globe-btn"></div>
-    <div class="search-glasses"></div>
-    <div class="menu-btn"></div>
-    <div class="navigation">
-      <div class="navigation-items">
-        <a href="#">KOR</a>
-        <a href="#">통합검색</a>
-        <a href="#">로그인</a>
-      </div>
+    <div class="search-glasses" id="searching-index"></div>
+    <div class="menu-btn" id="open-small-menus"></div>
+
+    <div class="navigation-items">
+        <li>
+            <a href="#">KOR
+                <ul>
+                    <li>Korean</li>
+                    <li>English</li>
+                    <li>Chinese</li>
+                    <li>Japanes</li>
+                </ul>
+            </a>
+        </li>
+        <li><a href="#" id="searching-index2">통합검색</a></li>
+        <li><a href="#">로그인</a></li>
     </div>
-  </header>
+</header>
   <main>
     <div class="ex_tab_wrapper ">
       <ul class="tabs_menu container ">
@@ -260,6 +480,7 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
   <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=69c6c45b28abc32737e63a1c342245bc&libraries=services"></script>
+  <script src="js/header.js"></script>
   <script src="js/trial.js"></script>
 </body>
 </html>
