@@ -262,6 +262,7 @@
   }
   .be_btn{
     gap:15px;
+    margin-top: 15px;
   }
   .be_btn .btn{
     width: 285px;
