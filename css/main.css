@@ -415,7 +415,8 @@
     flex-direction: column-reverse;
   }
   .toplanks .pager{
-    display: none;
+    margin-left: 20px;
+    margin-bottom: 15px;
   }
   .toplank_depth li{
     display: flex;
@@ -429,7 +430,9 @@
     line-height: 48px;
   }
   .toplank_depth li span {
-    margin-left: 20px;
+    text-align: end;
+    margin-right: 20px;
+    margin-bottom: 10px;
     font-size: var(--body_tt);
     line-height: var(--body_tt);
 }
@@ -438,16 +441,19 @@
   .toplank_depth .be_btn{
     display: none;
 }
-.slick-list .slick-track:nth-child(1):before{
-  z-index: 100;
+/* .slick-track:nth-child(1)::before{
+  z-index: 1000;
   position: absolute;
   content: 'Top 1';
   width: 84px;
   height: 37px;
-  left: 0px;
-  top: 0px;
+  left: 30px;
+  top: 30px;
   background-color: var(--primary);
-}
+  color:var(--white);
+  text-align: center;
+} */
+
 /* .slick-dots li:nth-child(1) button:before{
   position: absolute;
   content: 'Top 1';

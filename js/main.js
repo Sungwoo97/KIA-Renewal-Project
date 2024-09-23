@@ -152,7 +152,7 @@ tabMenu.on('click',function(){
   $(target).find('.slides').slick('slickGoTo', 0);
 })
 
-
+//mainpage 구직용 홈페이지 안내 모달
   const modal = $('.main_modal');
   const check = $('#modal_check');
   const button = $('.modal_control .btn');
