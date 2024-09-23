@@ -36,7 +36,7 @@ $(document).ready(function() {
   $(window).on('scroll', function() {
       var triggerPoint = $(window).height() - 400;
 
-      $('.subtitle .sub h3, .subimg img, .subimg svg, .icontab ul li, section .banner p, section .banner h3, section .expanation h3, section .diagram svg, section .diagram ul li').each(function() {
+      $('.subtitle .sub h3, .subimg img, .subimg svg, .icontab ul li, section .banner p, section .banner h3, section .expanation h3, section .diagram').each(function() {
           if ($(this).offset().top < $(window).scrollTop() + triggerPoint) {
               $(this).addClass('active');
           }
