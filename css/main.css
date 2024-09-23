@@ -1,3 +1,82 @@
+/* MODAL */
+.main_modal{
+  position: fixed;
+  left: 5%;top: 15%;
+  background:rgba(0,0,0,.5);
+  display: flex;
+  z-index: 1000;
+  justify-content: start;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.main_modal_container{
+  width: 500px;
+  background: var(--white);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.main_modal img{
+  width: 200px;
+  height: 80px;
+  color: #fff;
+  object-fit: cover
+}
+
+.main_modal_container > * {
+  padding: 10px
+}
+
+.main_modal h2{
+  font-size: var(--sub_tt);
+  line-height: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.modal_header{
+  font-size: 20px;
+  line-height: 29px;
+}
+
+.modal_header:after{
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 0;
+  right: 0;
+  background: var(--primary);
+  border-radius: 0 5px 0 0;
+}
+
+.main_modal div:first-child{
+  border: none;
+}
+
+.main_modal div{
+  padding: 20px 20px;
+  border-top: 1px solid var(--primary);
+}
+
+.main_modal em{
+  font-weight: 700;
+}
+
+.modal_control {
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width:834px){
+  .main_modal_container{
+    width: 350px;
+  }
+}
+
 /* BEST KIA */
 
 .best_kia{
@@ -700,12 +779,13 @@
   position: relative;
 }
 
-.ev_slide_container figure > div{
+.ev_slide_container figure > a{
+  display: block;
   width: 100%;
   position: relative;
 }
 
-.ev_slide_container div:after{
+.ev_slide_container a:after{
   content: '자세히 보기';
   display: flex;
   justify-content: center;
@@ -718,7 +798,7 @@
   bottom: 8px;
 }
 
-.ev_slide_container div:hover:after{
+.ev_slide_container figure:hover > a:after{
   color:var(--white);
   background: rgba(0, 20, 31, 0.5);
 }
@@ -735,7 +815,7 @@
   justify-content: space-between;
 }
 
-.ev_slide_container figcaption:hover h3{
+.ev_slide_container figure:hover h3{
   text-decoration: underline;
 }
 

@@ -145,7 +145,7 @@
 
 .modal{
   background: #fff;
-  width: 350px;
+  width: 500px;
   padding:20px;
   border-radius:10px;
 }
@@ -201,6 +201,9 @@
 @media (max-width:800px){
   .ex_non_member{
     margin: 48px 125px;
+  }
+  .modal{
+    width: 350px;
   }
 }
 

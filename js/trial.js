@@ -419,3 +419,9 @@ $('.maps_search').change(function(e){
   }
 });
 
+
+$('.ex_salesNetwork_wrapper [type="submit"]').click(function(e){
+  e.preventDefault();
+})
+
+
