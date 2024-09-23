@@ -397,6 +397,7 @@
     height: 475px;
   }
   .be_tab_wrapper .tabs .slides img{
+    width: 483px !important;
     height: 475px;
     position: relative;
   }
