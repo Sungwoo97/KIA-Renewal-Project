@@ -1041,15 +1041,16 @@
   font-weight: 700;
 }
 
-.tabs .no_notice button,
-.tabs .no_news button{
+.tabs .no_notice a,
+.tabs .no_news a{
   height: 32px;
   border: 1px solid var(--primary);
   background: var(--white);
+  padding: 10px 45px;
 }
 
-.tabs .no_notice button:hover,
-.tabs .no_news button:hover{
+.tabs .no_notice a:hover,
+.tabs .no_news a:hover{
   height: 32px;
   color: var(--white);
   background: var(--primary);
@@ -1431,6 +1432,10 @@ footer > p:after{
 @media (max-width: 480px){
   footer .fo_smallmenu{
     gap: 15px;
+  }
+
+  footer .fo_prize{
+    display: none;
   }
 
   footer .no_guide{
