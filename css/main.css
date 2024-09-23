@@ -1,3 +1,82 @@
+/* MODAL */
+.main_modal{
+  position: fixed;
+  left: 5%;top: 15%;
+  background:rgba(0,0,0,.5);
+  display: flex;
+  z-index: 1000;
+  justify-content: start;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.main_modal_container{
+  width: 500px;
+  background: var(--white);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.main_modal img{
+  width: 200px;
+  height: 80px;
+  color: #fff;
+  object-fit: cover
+}
+
+.main_modal_container > * {
+  padding: 10px
+}
+
+.main_modal h2{
+  font-size: var(--sub_tt);
+  line-height: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.modal_header{
+  font-size: 20px;
+  line-height: 29px;
+}
+
+.modal_header:after{
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 0;
+  right: 0;
+  background: var(--primary);
+  border-radius: 0 5px 0 0;
+}
+
+.main_modal div:first-child{
+  border: none;
+}
+
+.main_modal div{
+  padding: 20px 20px;
+  border-top: 1px solid var(--primary);
+}
+
+.main_modal em{
+  font-weight: 700;
+}
+
+.modal_control {
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width:834px){
+  .main_modal_container{
+    width: 350px;
+  }
+}
+
 /* BEST KIA */
 
 .best_kia{
@@ -22,6 +101,7 @@
   display: flex;
   gap:24px;
   position: relative;
+  justify-content: center;
 }
 .be_tab_wrapper .tabs_menu{
   display: block;
@@ -32,6 +112,7 @@
 }
 .tabs_menu li{
   width: 100%;
+  transition: 0.3s;
 }
 .be_tab_wrapper .tabs_menu li a{
   width: 204px;
@@ -59,6 +140,7 @@
   height: 552px;
   position: relative;
   overflow: hidden;
+  transition: 0.3s;
 }
 .be_tab_wrapper .tabs .slides img{
   height: 552px;
@@ -122,7 +204,9 @@
   opacity: 0.4;
   transition: 0.3s;
 }
-.slick-dots button:hover{
+.slick-dots button:hover,
+.slick-dots li.slick-active button
+{
   opacity: 1;
 }
 .tabs .be_tabs .toplank_depth li{
@@ -205,9 +289,21 @@
 
   .be_tab_wrapper .tabs_menu li a{
     width: 102px;
+    font-size: 16px;
   }
   .be_tab_wrapper .tabs .slides{
     width: 700px;
+  }
+}
+@media (max-width:1200px) {
+  .be_tab_wrapper .tabs .slides{
+    width: 333px;
+  }
+  .slick-dots{
+    gap:12px;
+  }
+  .slick-dots button{
+    width: 42px;
   }
 }
 @media (max-width:834px){
@@ -216,7 +312,7 @@
   }
   .be_tab_wrapper .tabs_menu li a{
     width: 88px;
-    font-size: 16px;
+    
   }
   .be_tab_wrapper .tabs .slides{
     width: 339px;
@@ -224,12 +320,6 @@
   }
   .be_tab_wrapper .tabs .slides img {
     height: 480px;
-  }
-  .slick-dots{
-    gap:12px;
-  }
-  .slick-dots button{
-    width: 42px;
   }
   .toplank_depth{
     width: 213px;
@@ -278,15 +368,18 @@
   }
   .be_tab_wrapper .be_tabs_menu{
     display: flex;
-    width: 625px;
+    width: 100%;
     justify-content: start;
   }
   .be_tab_wrapper .be_tabs_menu li{
     flex-grow: 1;
   }
   .be_tab_wrapper .be_tabs_menu li.active a{
-    width: 250px;
+    width: 100%;
     line-height: 48px;
+  }
+  .be_tab_wrapper .be_tabs_menu li a{
+    width: 100%;
   }
   .toplanks .toplank_depth li{
     display: flex;
@@ -294,16 +387,25 @@
   }
   .be_btn{
     position: absolute;
-    width: 625px;
-    top:calc(100% + 10px);
-    left: 0;
-    margin: 0 10px;
+    width: 100%;
+    top:97%;
   }
   .caution{
     top: calc(100% + 140px);
   }
 }
-@media (max-width:480px){
+@media (max-width:500px){
+  .be_tab_wrapper .tabs .slides{
+    width: 100%;
+    height: 475px;
+  }
+  .be_tab_wrapper .tabs .slides img{
+    height: 475px;
+    position: relative;
+  }
+  .be_tab_wrapper .be_tabs_menu li.active{
+    width: 200%;
+  }
   .be_tab_wrapper{
     flex-direction: column;
   }
@@ -314,22 +416,6 @@
   .tab_depth{
     display: flex;
     flex-direction: column-reverse;
-  }
-  .be_tab_wrapper .be_tabs_menu{
-    display: flex;
-    width: 480px;
-    justify-content: start;
-  }
-  .be_tab_wrapper .be_tabs_menu li.active a{
-    width: 203px;
-  }
-  .be_tab_wrapper .tabs .slides{
-    width: 480px;
-    height: 475px;
-  }
-  .be_tab_wrapper .tabs .slides img{
-    height: 475px;
-    position: relative;
   }
   .toplanks .pager{
     display: none;
@@ -355,24 +441,29 @@
   .toplank_depth .be_btn{
     display: none;
 }
-/* .tab_depth .slides.active img:after{
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: rgba( 0 ,0 ,0, .3);
-} */
-.tab_depth .slides img:nth-child(1):before{
+/* .slick-list .slick-track img:nth-child(1):before{
   position: absolute;
   content: 'Top 1';
-  left: 30px;
-  top: 30px;
-  right: 316px;
-  bottom: 358px;
+  width: 84px;
+  height: 37px;
+  left: 0px;
+  top: 0px;
   background-color: var(--primary);
+} */
+/* .slick-dots li:nth-child(1) button:before{
+  position: absolute;
+  content: 'Top 1';
+  width: 84px;
+  height: 37px;
+  left: 0px;
+  top: 0px;
+  background-color: var(--primary);
+} */
+  .caution{
+    top:110%;
+  }
 }
-}
+
 /* MEMBERS */
 .kia_members, .kia_event, .kia_notice{
   margin: 0 auto 220px;
@@ -685,6 +776,31 @@
   width: 400px;
   height: 385px;
   box-shadow: 0 0 3px rgba( 0 ,0 ,0, .1);
+  position: relative;
+}
+
+.ev_slide_container figure > a{
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.ev_slide_container a:after{
+  content: '자세히 보기';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+}
+
+.ev_slide_container figure:hover > a:after{
+  color:var(--white);
+  background: rgba(0, 20, 31, 0.5);
 }
 
 .ev_slide_container figure img{
@@ -699,7 +815,7 @@
   justify-content: space-between;
 }
 
-.ev_slide_container figcaption:hover h3{
+.ev_slide_container figure:hover h3{
   text-decoration: underline;
 }
 
@@ -1335,4 +1451,4 @@ footer > p:after{
   }
 }
 
-/* // Footer 최은화 */
+/* // Footer 최은화 
