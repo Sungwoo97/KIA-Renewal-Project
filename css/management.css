@@ -342,6 +342,10 @@
 
 @media (max-width: 1050px){
 
+  .icontab{
+    margin-top: 100px;
+  }
+
   .icontab ul li{
     gap: 20px;
   }
@@ -364,7 +368,8 @@
 @media (max-width: 550px){
   
   .icontab{
-    margin-top: 200px;
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
 
   .icontab ul{
@@ -754,7 +759,7 @@ section .diagram.active ul li:nth-child(3) {
 
   section .diagram .mobile path {
     stroke-dasharray: 1200;
-    stroke-dashoffset: 1000;
+    stroke-dashoffset: 1200;
     transition: stroke-dashoffset 2s ease-in-out;
   }
 
@@ -779,9 +784,9 @@ section .diagram.active ul li:nth-child(3) {
     transform: translate(-130px, 400px);
   }
 
-  section .diagram.active ul li:first-child span,
-  section .diagram.active ul li:first-child  p{
-    transform: translate(20px, -10px);
+  section .diagram.active ul li:last-child span,
+  section .diagram.active ul li:last-child p{
+    transform: translate(60px, -20px);
   }
 
   section .diagram.active ul li span,
@@ -906,7 +911,7 @@ footer > p:after{
 @media (max-width: 1200px){
 
   footer .fo_prize{
-    width: 1200px;
+    width: 100%;
     gap: 50px;
     justify-content: center;
   }
