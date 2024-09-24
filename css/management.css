@@ -257,7 +257,7 @@
 
   .subimg img,
   .subimg svg{
-    transform: translate(-50%, -50%) scale(0.2);
+    transform: translate(-50%, -50%) scale(0.3);
   }
 
 }
@@ -747,11 +747,11 @@ section .diagram.active ul li:nth-child(3) {
   }
   
   section .diagram.active ul li:nth-child(2){
-    transform: translate(-210px, 150px);
+    transform: translate(-215px, 130px);
   }
   
   section .diagram.active ul li:nth-child(3){
-    transform: translate(-190px, 230px);
+    transform: translate(-140px, 400px);
   }
 
   section .diagram.active ul li span
