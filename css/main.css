@@ -78,6 +78,23 @@
   font-size: 20px;
 }
 
+.modal_info .info_link img{
+  width: 18px;
+  height: 18px;
+  object-fit: cover;
+  margin-bottom: 1px;
+}
+
+.modal_info .info_link .github{
+  filter: invert(1);
+}
+
+.modal_info .info_link{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .main_modal a{
   text-decoration: underline;
 }
