@@ -338,7 +338,7 @@
 @media (max-width: 1050px){
 
   .icontab ul li{
-    gap: 10px;
+    gap: 20px;
   }
 
   .icontab ul li i{
@@ -364,6 +364,7 @@
 
   .icontab ul{
     flex-direction: column;
+    align-items: center;
     gap: 0;
   }
 
@@ -393,6 +394,9 @@
 /* --------------------- Section1 ------------------------ */
 
 
+section{
+  overflow: hidden;
+}
 
 
 section .banner {
@@ -701,8 +705,9 @@ section .diagram.active ul li:nth-child(3) {
   }
 
   section{
-    height: 1180px;
-    margin-bottom: 420px;
+    height: 1600px;
+    /* margin-bottom: 420px; */
+    overflow: hidden;
   }
 
   section:last-child{
@@ -742,22 +747,27 @@ section .diagram.active ul li:nth-child(3) {
     stroke-dashoffset: 0;
   }
 
+  section .diagram.active ul li{
+    position: relative;
+  }
+  
+
   section .diagram.active ul li:first-child{
-    transform: translate(310px, -220px);
+    transform: translate(310px, -0px);
   }
   
   section .diagram.active ul li:nth-child(2){
-    transform: translate(-215px, 130px);
+    transform: translate(-215px, 170px);
   }
   
   section .diagram.active ul li:nth-child(3){
-    transform: translate(-140px, 400px);
+    transform: translate(-140px, 330px);
   }
 
   section .diagram.active ul li span
   section .diagram.active ul li p{
-    position: absolute;
-    left: 20px;
+    position: absolute; 
+    left: -30px;
   }
 
 
@@ -776,7 +786,7 @@ footer{
   left: 0;
   right: 0;
   bottom: 0;
-  margin-top: 220px;
+  /* margin-top: 220px; */
   padding: 50px;
   display: flex;
   flex-direction: column;
