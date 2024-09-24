@@ -190,4 +190,11 @@ window.addEventListener("scroll", function() {
   } else {
       header.classList.remove("scrolled");
   }
+
+  var mediaIcons = document.querySelector('.media-icons');
+    if (window.scrollY > 100) {
+        mediaIcons.classList.add('hidden');
+    } else {
+        mediaIcons.classList.remove('hidden');
+    }
 });
