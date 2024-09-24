@@ -139,12 +139,13 @@ body {
 	right: 48px;
 	line-height:48px;
 	text-align:center; 	
-  border-radius: 3px;
+    border-radius: 3px;
 	background-color:var(--dark_gray);
 	color:#fff;
-  opacity: 0;
-  pointer-events: none;
-  transition:.4s;
+    opacity: 0;
+    pointer-events: none;
+    transition:.4s;
+    z-index: 2000;
 }
 #go-top.active{
   opacity: 1;
