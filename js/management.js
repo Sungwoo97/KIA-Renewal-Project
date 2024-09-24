@@ -1,10 +1,13 @@
+$('.parallax-window').parallax({
+  naturalWidth: 100
+});
 
 const trigger = new ScrollTrigger.default({
   trigger: {
     // once: true,
     offset: {
       viewport: {
-        y: 0.1
+        y: 0.05
       }
     },
     toggle: {
@@ -20,36 +23,56 @@ trigger.add('[data-trigger]');
 
 /* Subtitle */
 
-function pathPrepare ($el) {
-  var lineLength = $el[0].getTotalLength();
-  $el.css("stroke-dasharray", lineLength);
-  $el.css("stroke-dashoffset", lineLength);
-}
+$(document).ready(function() {
+  $('.icontab li').on('click', function() {
+    var sectionId = $(this).data('target');
 
-var $bSvg = $("path#bSvg");
+    if (sectionId) {
+      $('html, body').animate({
+        scrollTop: $('#' + sectionId).offset().top
+      }, 500);
+    }
+  });
+});
 
-// prepare SVG
-pathPrepare($bSvg);
+$(document).ready(function() {
+  $(window).on('scroll', function() {
+      var triggerPoint = $(window).height() - 300;
 
-// init controller
-var controller = new ScrollMagic.Controller();
+      $('.subtitle .sub h3, .subimg img, .subimg svg, .icontab ul li, section .banner p, section .banner h3, section .expanation h3, section .diagram').each(function() {
+          if ($(this).offset().top < $(window).scrollTop() + triggerPoint) {
+              $(this).addClass('active');
 
-// build tween
-var tween = new TimelineMax()
-  .add(TweenMax.to($bSvg, 1, {stroke: "#05141F", strokeDashoffset: 0, ease:Linear.easeNone}))
+              if ($(this).hasClass('diagram')) {
+                  console.log("Diagram activated"); // 로그 추가
+                  $(this).find('.mobile path').addClass('active');
+              }
+          }
+      });
+  });
+});
 
-// build scene
-var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 1000, tweenChanges: true})
-  .setTween(tween)
-  .addIndicators() // add indicators (requires plugin)
-  .addTo(controller);
+
+/* Icontab */
+
+$(document).ready(function() {
+  $(window).on('scroll', function() {
+      var triggerPoint = $(window).height() - 500;
+
+      $('.subtitle .sub div, .icontab ul li, section .expanation p').each(function() {
+        if ($(this).offset().top < $(window).scrollTop() + triggerPoint) {
+            $(this).addClass('active');
+        }
+    });
+  });
+});
 
 
 /* Section */
 
 $('section .img1').parallax({
   imageSrc: 'img/ma/section_img1.png',
-  speed: 0.5
+  speed: 0.5,
 });
 
 $('section .img2').parallax({
