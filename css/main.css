@@ -484,28 +484,6 @@
   .toplank_depth .be_btn{
     display: none;
 }
-/* .slick-track:nth-child(1)::before{
-  z-index: 1000;
-  position: absolute;
-  content: 'Top 1';
-  width: 84px;
-  height: 37px;
-  left: 30px;
-  top: 30px;
-  background-color: var(--primary);
-  color:var(--white);
-  text-align: center;
-} */
-
-/* .slick-dots li:nth-child(1) button:before{
-  position: absolute;
-  content: 'Top 1';
-  width: 84px;
-  height: 37px;
-  left: 0px;
-  top: 0px;
-  background-color: var(--primary);
-} */
   .caution{
     top:110%;
   }
