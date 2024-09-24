@@ -280,7 +280,7 @@ header.scrolled {
 
 /* -------------------------서브 서브 메뉴----------------------------*/
 
-.sub_sub_menus {
+.navigation-items .sub_sub_menus {
     display: none;
     position: absolute;
     top: 0;
