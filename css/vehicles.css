@@ -221,17 +221,22 @@ transform: translate(-50%, -50%);
 	}
 }
 @media (max-width:530px){
-	.util{
+	.util {
+		display: grid;
 		width: 100%;
-		bottom:0;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(1, auto);
+		bottom: 0;
+		align-items: center;
 	}
-
+	.util_list {
+		text-align: center;
+	}
+	.util_list.single {
+		grid-row: span 2;
+	}
 }
 @media (max-width:430px){
-	.util{
-		padding: 10px;
-		gap: 8px;
-	}
 	.category_list{
 		gap:21px;
 	}
@@ -271,4 +276,212 @@ transform: translate(-50%, -50%);
 		color: var(--medium_gray);
 		font-size: 3px;
 	}
+}
+
+/* Footer 최은화 */
+footer{
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 220px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  background: var(--primary);
+  font-weight: 100;
+  line-height: 16px;
+}
+
+footer,
+footer a{
+  color: var(--white);
+  text-wrap: nowrap;
+}
+
+footer a:hover{
+  font-weight: 300;
+}
+
+footer .fo_prize{
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 20px 0;
+}
+
+footer .fo_prize li{
+  display: flex;
+  gap: 10px;
+  text-wrap: nowrap;
+  align-items: center;
+  font-size: 12px;
+}
+
+footer .fo_prize li img{
+  width: 88px;
+  height: 50px;
+}
+
+footer .fo_smallmenu,
+footer .no_guide{
+  display: flex;
+  gap: 50px;
+  transition: 0.3s;
+}
+  
+footer .no_guide .fo_top{
+  display: flex;
+  gap: 50px;
+  transition: 0.3s;
+}
+
+footer .no_guide .fo_bottom{
+  display: flex;
+  gap: 50px;
+  transition: 0.3s;
+}
+
+footer .no_sns{
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+footer .no_sns li i{
+  color: var(--white);
+  opacity: 50%;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+footer .no_sns li i:hover{
+  opacity: 100%;
+}
+
+footer > p:after{
+  content: '';
+  background: var(--medium_gray);
+  /* width: 1224px; */
+  width: 1400px;
+  height: 1px;
+  position: absolute;
+  right: 50%;
+  transform: translate(50%, -25px);
+  transition: 0.3s;
+}
+
+@media (max-width: 1200px){
+
+  footer .fo_prize{
+    width: 1200px;
+    gap: 50px;
+    justify-content: center;
+  }
+
+  footer .fo_prize li{
+    flex-direction: column;
+  }
+
+  footer > p:after{
+    width: 800px;
+  }
+}
+
+@media (max-width: 834px){
+
+  footer .fo_prize{
+    width: 100%;
+  }
+
+  footer .fo_prize p,
+  footer .fo_prize h4{
+    display: none;
+  }
+
+  footer .no_guide{
+    gap: 35px;
+    align-items: center;
+    object-fit: cover;
+  }
+  
+  footer .no_guide .fo_top{
+    display: flex;
+    gap: 35px;
+  }
+  
+  footer .no_guide .fo_bottom{
+    display: flex;
+    gap: 35px;
+  }
+
+  footer .fo_smallmenu a,
+  footer .no_guide a{
+    font-size: var(--body_tt);
+    text-wrap: nowrap;
+  }
+
+  footer > p:after{
+    width: 600px;
+  }
+
+}
+
+@media (max-width: 660px){
+
+  footer{
+    gap: 25px;
+  }
+
+  footer .fo_prize li img{
+   width: 68px;
+   height: 40px; 
+  }
+
+  footer .fo_smallmenu{
+    gap: 25px;
+  }
+
+  footer .no_guide{
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  footer .no_guide .fo_top{
+    gap: 30px;
+  }
+  
+  footer .no_guide .fo_bottom{
+    gap: 30px;
+  }
+
+  footer > p:after{
+    width: 500px;
+  }
+  
+}
+
+@media (max-width: 480px){
+  footer .fo_smallmenu{
+    gap: 15px;
+  }
+
+  footer .no_guide{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  footer .no_guide .fo_top{
+    gap: 30px;
+  }
+  
+  footer .no_guide .fo_bottom{
+    gap: 30px;
+  }
+
+  footer > p:after{
+    width: 400px;
+  }
 }

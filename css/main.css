@@ -261,7 +261,8 @@
   object-fit: cover;
   margin: 48px 0 46px;
 }
-.tabs .be_tabs li h3{
+.tabs .be_tabs li h3,
+.tabs .be_tabs li div a{
   font-size: 36px;
   line-height: 48px;
   font-weight: bold;
@@ -1500,5 +1501,3 @@ footer > p:after{
     width: 400px;
   }
 }
-
-/* // Footer 최은화 
