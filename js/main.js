@@ -187,9 +187,7 @@ tabMenu.on('click',function(){
   function checkCookie(name, val){
     let checkCookies = `${name}=${val}`
     if(document.cookie.indexOf(checkCookies) === -1){
-      modal.fadeIn();
-    }else{
-      modal.hide();
+      modal.removeClass('hidden');
     }
   }
   checkCookie('portfolio','Kia Renewal');
