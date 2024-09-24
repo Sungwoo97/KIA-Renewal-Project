@@ -484,28 +484,6 @@
   .toplank_depth .be_btn{
     display: none;
 }
-/* .slick-track:nth-child(1)::before{
-  z-index: 1000;
-  position: absolute;
-  content: 'Top 1';
-  width: 84px;
-  height: 37px;
-  left: 30px;
-  top: 30px;
-  background-color: var(--primary);
-  color:var(--white);
-  text-align: center;
-} */
-
-/* .slick-dots li:nth-child(1) button:before{
-  position: absolute;
-  content: 'Top 1';
-  width: 84px;
-  height: 37px;
-  left: 0px;
-  top: 0px;
-  background-color: var(--primary);
-} */
   .caution{
     top:110%;
   }
@@ -1267,6 +1245,11 @@
 
 @media (max-width: 500px){
   
+  .sub_title_gutter.sec_desc{
+    font-size: 18px;
+    font-weight: 300;
+  }
+
   .tabs .notice,
   .tabs .news{
     margin: auto;
@@ -1295,7 +1278,7 @@ footer{
   left: 0;
   right: 0;
   bottom: 0;
-  margin-top: 220px;
+  /* margin-top: 220px; */
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -1475,9 +1458,9 @@ footer > p:after{
   
 }
 
-@media (max-width: 480px){
+@media (max-width: 550px){
   footer .fo_smallmenu{
-    gap: 15px;
+    gap: 10px;
   }
 
   footer .fo_prize{
@@ -1498,6 +1481,6 @@ footer > p:after{
   }
 
   footer > p:after{
-    width: 400px;
+    width: 300px;
   }
 }

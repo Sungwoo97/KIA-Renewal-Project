@@ -37,7 +37,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $(window).on('scroll', function() {
-      var triggerPoint = $(window).height() - 400;
+      var triggerPoint = $(window).height() - 300;
 
       $('.subtitle .sub h3, .subimg img, .subimg svg, .icontab ul li, section .banner p, section .banner h3, section .expanation h3, section .diagram').each(function() {
           if ($(this).offset().top < $(window).scrollTop() + triggerPoint) {
