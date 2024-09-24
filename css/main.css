@@ -375,7 +375,7 @@
     height: 480px;
   }
   .toplank_depth{
-    width: 213px;
+    width: 100%;
   }
   .tabs #be_tabs1 li img{
     margin: 37px 0 48px;
@@ -770,7 +770,7 @@
     background-position: center center;
     width: 100%;
     height: 208px;
-
+    left: 5%;
   }
   .me_tab_ev_members:after{
     background-size: 100%;
