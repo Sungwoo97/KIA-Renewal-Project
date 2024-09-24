@@ -180,3 +180,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 });
 
+
+    // document.getElementById("kiaLogo").addEventListener("click", function() {
+    //     window.location.href = "index.html";
+    // });

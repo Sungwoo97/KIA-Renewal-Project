@@ -10,7 +10,7 @@ section.home {
 
 
 header {
-    z-index: 999;
+    z-index: 9999;
     position: absolute;
     top: 0;
     left: 0;
@@ -56,15 +56,14 @@ header .navigation-items li a ul li{
 }
 
 
-
-
 .kia_logo {
     fill: white;
     width: 120px;
     height: 120px;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    top:-18%;
+    transform: translateX(-20%);
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
 }
 
@@ -294,7 +293,8 @@ header .navigation-items li a ul li{
     transition: opacity 0.3s ease, visibility 0s, transform 0.3s ease;
 }
 
-
+/* -------------------------------------------------------- */
+/* <li>에 적용된 스타일이 있다면 유지 */
 
 
 
@@ -619,6 +619,10 @@ header .navigation-items li a ul li{
     transform: translateY(-50%);
 }
 
+
+
+
+
 @media (max-width:1400px) {
 
 
@@ -634,6 +638,7 @@ header .navigation-items li a ul li{
     .kia_logo {
         width: 90px;
         height: 90px;
+        top: -5%;
     }
 }
 
@@ -647,6 +652,7 @@ header .navigation-items li a ul li{
     .kia_logo {
         width: 80px;
         height: 80px;
+        top: -5%;
     }
 
     header {
