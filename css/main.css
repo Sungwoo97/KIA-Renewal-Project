@@ -294,7 +294,6 @@
   color:var(--medium_gray);
   font-size: var(--body_sub_tt);
 }
-
 .safe_modal_container{
   z-index: 2000;
   position: fixed;
@@ -325,7 +324,6 @@
 .safe_modal p:last-child{
   margin-bottom: 0;
 }
-
 @media (max-width:1344px){
 
   .be_tab_wrapper .tabs_menu li a{
@@ -382,7 +380,7 @@
     margin-top: 15px;
   }
   .be_btn .btn{
-    width: 285px;
+    width: 281px;
     height: 48px;
   }
   .toplank_depth li span{
