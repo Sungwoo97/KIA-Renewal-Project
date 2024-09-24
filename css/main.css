@@ -1245,6 +1245,11 @@
 
 @media (max-width: 500px){
   
+  .sub_title_gutter.sec_desc{
+    font-size: 18px;
+    font-weight: 300;
+  }
+
   .tabs .notice,
   .tabs .news{
     margin: auto;
