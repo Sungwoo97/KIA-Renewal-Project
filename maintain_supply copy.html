@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/subpage_header.css" />
-    <link rel="stylesheet" href="css/maintain_supply.css" />
+    <link rel="stylesheet" href="css/maintain_supply copy.css" />
 
 
 </head>
@@ -277,7 +277,9 @@
     <!-- 여기서부터 서브페이지(유지,관리) 시작 -->
     <main>
         <div class="containering">
-            <div class="box"><p>유지&관리</p></div>
+            <div class="box">
+                <p>유지&관리</p>
+            </div>
             <div class="box"><a href="#">기아멤버스</a></div>
             <div class="box"><a href="#">카앤라이프몰</a></div>
         </div>
@@ -305,7 +307,7 @@
             </div>
         </div>
 
-        
+
         <div class="membersPoint" id="memberPoint">
             <img src="img/ma&su/kia_members_img01_re.jpg" alt="기아멤버스카드">
             <div class="accordion">
@@ -487,61 +489,90 @@
         <h1>포인트로 누리는 자동차 라이프</h1>
         <h2>멤버스 포인트로 더욱 풍족해지는 나만의 스타일</h2>
 
+        <div class="tab-container">
+            <div class="toolbar" style="display: none;">
+                <div class="search-wrapper">
+                    <input type="search" placeholder="상품검색" />
+                </div>
+            </div>
+            <div class="tab-nav">
+                <ul class="tab-menu">
+                    <li>
+                        <a href="top10" class="tab-active">
+                            <img src="img/ma&su/Menu.svg" alt="Car Icon"
+                                style="width: 45px; height: 45px; margin : auto;" />전체
+                        </a>
+                    </li>
+                    <li>
+                        <a href="자동차">
+                            <img src="img/ma&su/Car.svg" alt="Car Icon"
+                                style="width: 45px; height: 45px; margin : auto;" />
+                            자동차
+                        </a>
+                    </li>
+                    <li>
+                        <a href="라이프">
+                            <img src="img/ma&su/Jumping.svg" alt="Jumping Icon"
+                                style="width: 45px; height: 45px; margin : auto;" /> 라이프
+                        </a>
+                    </li>
+                    <li>
+                        <a href="중고차">
+                            <img src="img/ma&su/Recycle.svg" alt="Jumping Icon"
+                                style="width: 45px; height: 45px; margin : auto;" /> 중고차
+                        </a>
+                    </li>
+                    <li>
+                        <a href="커피&베이커리">
+                            <img src="img/ma&su/Coffee.svg" alt="Jumping Icon"
+                                style="width: 45px; height: 45px; margin : auto;" /> 커피&베이커리
+                        </a>
+                    </li>
+                    <li>
+                        <a href="보험">
+                            <img src="img/ma&su/Car Insurance.svg" alt="Jumping Icon"
+                                style="width: 45px; height: 45px; margin : auto;" /> 보험
+                        </a>
+                    </li>
+                    <li>
+                        <a href="쇼핑">
+                            <img src="img/ma&su/Shopping Cart.svg" alt="Jumping Icon"
+                                style="width: 45px; height: 45px; margin : auto;" /> 쇼핑
+                        </a>
+                    </li>
+                    <li>
+                        <a href="주유&충전">
+                            <img src="img/ma&su/Charging Battery.svg" alt="Jumping Icon"
+                                style="width: 45px; height: 45px; margin : auto;" /> 주유&충전
+                        </a>
+                    </li>
+                    <li>
+                        <a href="외식">
+                            <img src="img/ma&su/food.svg" alt="Jumping Icon"
+                                style="width: 45px; height: 45px; margin : auto;" /> 외식
+                        </a>
+                    </li>
+                </ul>
+                <span class="highlight"></span>
+            </div>
+            <select name="price__selector" id="price__selector" style="display: none;">
+                <option>Top 10</option>
+                <option>낮은 가격순</option>
+                <option>높은 가격순</option>
+            </select>
 
+            <ol class="image-list grid-view"></ol>
+            <button class="load-more-button" style="display: block;">더보기</button>
 
+        </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
     </main>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- <script src="js/common.js"></script> -->
-    <!-- <script src="js/main.js"></script> -->
     <script type="text/javascript" src="js/main_header.js"></script>
-    <script type="text/javascript" src="js/maintain_supply.js"></script>
+    <script type="module" src="./js/maintain_supply copy.js"></script>
 
 
 
