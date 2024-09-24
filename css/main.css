@@ -449,12 +449,13 @@
   }
 }
 @media (max-width:500px){
+  
   .be_tab_wrapper .tabs .slides{
-    width: 100%;
+    width: 100vw;
     height: 475px;
   }
   .be_tab_wrapper .tabs .slides img{
-    width: 483px !important;
+    width: 100vw !important;
     height: 475px;
     position: relative;
   }
@@ -476,9 +477,12 @@
     margin-left: 20px;
     margin-bottom: 15px;
   }
+  .toplank_depth {
+    width: 100%;
+  }
   .toplank_depth li{
     display: flex;
-    width: 480px;
+    width: 100%;
   }
   .tabs .be_tabs li h3{
     margin-right: 20px;
@@ -501,6 +505,7 @@
 }
   .caution{
     top:110%;
+    width: 70%;
   }
 }
 
@@ -765,7 +770,7 @@
     background-position: center center;
     width: 100%;
     height: 208px;
-    left: 5%;
+
   }
   .me_tab_ev_members:after{
     background-size: 100%;
