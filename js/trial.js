@@ -13,6 +13,18 @@ const ex_tabSalesNetwork = $('.ex_tab_salesNetwork');
 const ex_tabContent = $('.ex_tab_salesNetwork .tabs > div');
 let placeData = [];
 
+function debounce(callback, time){
+  let slideTrigger = true;
+  return (e)=>{
+    if(slideTrigger){
+      callback(e);
+      slideTrigger = false;
+      setTimeout(()=>{
+        slideTrigger = true;
+      }, time);
+    } 
+  }
+}
 
 /* TestDrive Modal */
 $('.ex_modalContainer').hide();
@@ -105,8 +117,23 @@ function autoSlide(){
   },4000)
 }
 
+// 버튼을 누르면 슬라이드 이동 함수가 작동
+$('.ex_slide_next').on('click', debounce(()=>{
+  moveSlide(currentIdx + 1);
+} , 500));
+
+$('.ex_slide_prev').on('click', debounce(()=>{
+  moveSlide(currentIdx - 1);
+}, 500)) ;
+
 //마우스 호버시 자동 슬라이드 종료, 마우스가 나가면 자동 슬라이드 재시작
 ex_slideContainer.hover(function(){
+  clearInterval(timer);
+  },function(){
+    autoSlide();
+  }
+);
+$('.ex_slide_control').hover(function(){
   clearInterval(timer);
   },function(){
     autoSlide();
