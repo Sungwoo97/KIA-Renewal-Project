@@ -129,3 +129,24 @@ body {
     width: 100%;
   }
 }
+
+/* BACK TO TOP */
+#go-top {    
+	width: 48px; 
+	height: 48px;   
+	position: fixed; 
+	bottom: 48px; 
+	right: 48px;
+	line-height:48px;
+	text-align:center; 	
+  border-radius: 3px;
+	background-color:var(--dark_gray);
+	color:#fff;
+  opacity: 0;
+  pointer-events: none;
+  transition:.4s;
+}
+#go-top.active{
+  opacity: 1;
+  pointer-events: auto;
+}

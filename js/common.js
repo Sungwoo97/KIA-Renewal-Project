@@ -12,3 +12,21 @@ function tabControl(menu){
   });
 }
 tabControl(tabMenu);
+
+const goTop = $('#go-top');
+
+$(window).scroll(function(){
+  let scrollAmt = $(this).scrollTop();
+  if(scrollAmt > 400){
+    goTop.addClass('active');
+  }else{
+    goTop.removeClass('active');
+  }
+})
+goTop.click(function(e){
+  e.preventDefault();
+    window.scrollTo({
+  left: 0,
+  top: 0,
+  behavior:'smooth'});
+})
