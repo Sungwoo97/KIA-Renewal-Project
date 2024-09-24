@@ -76,7 +76,7 @@
     width: 350px;
     height: 300px;
     background-color: var(--light_gray);
-    padding: 25px;
+    padding: 15px;
     border-radius: 8px;
     text-align: center;
 }
@@ -141,7 +141,7 @@
 .memberBox2 div img {
     width: 350px;
     height: 300px;
-    border-radius: 25%;
+    border-radius: 5%;
     cursor: pointer;
 }
 
@@ -292,6 +292,7 @@
     font-size: 16px;
     z-index: 1000;
     /* 다른 요소 위에 배치 */
+    /* display: none; */
 }
 
 #backToTop:hover {
@@ -308,18 +309,20 @@
         border-radius: 8px;
         text-align: center;
     }
-    
+
     .memberBox2 {
         gap: 35px;
     }
+
     .memberBox2 div img {
         width: 240px;
-        height: 220px;
-        border-radius: 25%;
+        height: 200px;
+        border-radius: 15%;
         cursor: pointer;
     }
 
-    .membersPoint, .membersPoint2,
+    .membersPoint,
+    .membersPoint2,
     .membersPoint3 {
         display: flex;
         width: 824px;
@@ -334,7 +337,182 @@
 
 }
 
-@media (max-width: 855px) {
-    
+@media (max-width: 885px) {
+    .memberBox {
+        margin: 48px auto;
+        width: 250px;
+        height: 220px;
+        background-color: var(--light_gray);
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
 
+        h2 {
+            font-size: 24px;
+            margin-top: 10%;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .btn {
+            color: var(--black);
+            line-height: 28px;
+            padding: 0 25px;
+            font-size: 12px;
+            font-weight: 600;
+            transition: 0.3s;
+            border-width: 1px;
+            border-color: var(--primary);
+        }
+    }
+
+    .memberBox2 {
+        gap: 22px;
+    }
+
+    .memberBox2 div img {
+        width: 170px;
+        height: 170px;
+        border-radius: 15%;
+        cursor: pointer;
+    }
+
+    .memberBox2 p {
+        font-size: 14px;
+        cursor: pointer;
+        font-weight: 1100;
+    }
+
+    .membersPoint,
+    .membersPoint2,
+    .membersPoint3 {
+        display: flex;
+        width: 624px;
+        margin: 0 auto;
+        margin-top: 48px;
+
+        button {
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 13px;
+            letter-spacing: 2px;
+            font-weight: 500;
+            line-height: 16px;
+        }
+
+        a {
+            font-size: 16px;
+        }
+    }
+
+    .accordion {
+        width: 50%;
+        padding-left: 15px;
+    }
+
+    .membersPoint img,
+    .membersPoint3 img {
+        width: 50%;
+        padding-right: 15px;
+        /* height: auto; */
+    }
+
+    .membersPoint2 img {
+        width: 50%;
+        height: auto;
+        padding-left: 15px;
+    }
+
+    .membersPoint2 .accordion {
+        width: 50%;
+        padding: 0px;
+        padding-right: 15px;
+    }
+
+    #backToTop {
+        display: none;
+    }
+
+}
+
+@media (max-width: 666px) {
+    .memberBox {
+        margin: 48px auto;
+        width: 270px;
+        height: 220px;
+        background-color: var(--light_gray);
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+
+        h2 {
+            font-size: 24px;
+            margin-top: 10%;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .btn {
+            color: var(--black);
+            line-height: 28px;
+            padding: 0 25px;
+            font-size: 12px;
+            font-weight: 600;
+            transition: 0.3s;
+            border-width: 1px;
+            border-color: var(--primary);
+        }
+    }
+
+    .memberBox2 {
+        display: none;
+    }
+
+    /* -------------이하부터 수정할 것.------------------ */
+
+
+    .membersPoint,
+    .membersPoint2,
+    .membersPoint3 {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 48px;
+    }
+
+    .membersPoint img,
+    .membersPoint2 img,
+    .membersPoint3 img {
+        width: 100%;
+        padding: 0;
+    }
+
+    .accordion {
+        margin: 0 auto;
+        width: 100%;
+        padding: 0;
+
+    }
+
+    .membersPoint2 .accordion {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .membersPoint,
+    .membersPoint2,
+    .membersPoint3 {
+        p {
+            font-size: 14px;
+            letter-spacing: 1px;
+            font-weight: 500;
+            line-height: 15px;
+        }
+    }
 }

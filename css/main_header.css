@@ -9,19 +9,6 @@ section.home {
 }
 
 
-/* header {
-    z-index: 9999;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 50px;
-    transition: 0.5s ease;
-} */
-
 header {
     z-index: 9999;
     position: fixed; /* 수정: fixed로 변경 */
@@ -643,9 +630,43 @@ header.scrolled {
     transform: translateY(-50%);
 }
 
+/*미디어 아이콘 */
+.media-icons {
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: opacity 0.3s ease; /* 페이드아웃 효과 */
+}
 
+.media-icons a {
+    text-decoration: none; /* 링크 기본 스타일 제거 */
+    color: #fff; /* 아이콘 기본 색상 */
+    background-color: rgba(0, 0, 0, 0.3); /* 반투명한 배경 */
+    padding: 10px;
+    border-radius: 50%; /* 동그란 버튼 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease; /* 호버 시 배경색 전환 */
+}
 
+.media-icons a:hover {
+    background-color: rgba(0, 0, 0, 1); /* 호버 시 배경색 진하게 */
+}
 
+.media-icons i {
+    font-size: 18px; /* 아이콘 크기 */
+    color: #fff; /* 아이콘 색상 */
+}
+
+.media-icons.hidden {
+    opacity: 0;
+    pointer-events: none; /* 클릭 불가능하게 */
+}
 
 @media (max-width:1400px) {
     header {
