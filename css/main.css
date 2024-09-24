@@ -992,6 +992,10 @@
   margin-top: 20px;
 }
 
+.tabs .no_ntc li em{
+  color: #868686;
+}
+
 .tabs .no_ntc li:after{
   content: '';
   background: var(--primary);
@@ -1271,19 +1275,19 @@
   .tabs .news{
     margin: auto;
     height: 30%;
-    gap: 20px;
+    gap: 10px;
   }
   
   .tabs .no_notice{
-    gap: 230px;
+    gap: 200px;
   }
 
   .tabs .no_ntc{
-    width: 400px;
+    width: 370px;
   }
   
   .tabs .no_ntc li:after{
-    width: 400px;
+    width: 370px;
   }
 
 }
