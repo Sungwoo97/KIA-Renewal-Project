@@ -144,3 +144,50 @@ $('.detail_ex button').click(function(){
 $('.safe_modal_container').click(function(){
   $(this).fadeOut();
 });
+
+//slick 슬라이더 로딩
+
+tabMenu.on('click',function(){
+  let target = $(this).find('a').attr('href');
+  $(target).find('.slides').slick('slickGoTo', 0);
+})
+
+//mainpage 구직용 홈페이지 안내 모달
+//쿠키 생성 함수
+  const modal = $('.main_modal');
+  const check = $('#modal_check');
+  const button = $('.modal_control .btn');
+
+  button.click(function(){
+    if(check.is(':checked')){
+      setCookie('portfolio', 'Kia Renewal', 1);
+    }else{
+      delCookie('portfolio','Kia Renewal');
+    }
+    modal.fadeOut();
+  });
+
+  function setCookie(name, val, due){
+    let date = new Date();
+    date.setDate(date.getDate() + due);
+
+    let myCookie = `${name}=${val};expires=`+date.toUTCString();
+    document.cookie = myCookie;
+  }
+
+  function delCookie(name, val){
+    let date = new Date();
+    date.setDate(date.getDate() - 1);
+
+    let myCookie =`${name}=${val};expires=`+date.toUTCString();
+    document.cookie = myCookie;
+  }
+
+
+  function checkCookie(name, val){
+    let checkCookies = `${name}=${val}`
+    if(document.cookie.indexOf(checkCookies) === -1){
+      modal.removeClass('hidden');
+    }
+  }
+  checkCookie('portfolio','Kia Renewal');

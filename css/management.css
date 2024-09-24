@@ -1,58 +1,40 @@
-/* Header */
+/* Keyframes */
 
-header {
-	z-index: 999;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	transition: 0.5s ease;
-  
-  height: 80px;
-  background: var(--white);
-  opacity: 70%;
+@keyframes fadeInUp{
+  from{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-header .brand {
-	color: #fff;
-	font-size: 1.5em;
-	font-weight: 700;
-	text-transform: uppercase;
-	text-decoration: none;
+
+@keyframes fadeInLeft{
+  from{
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-header .navigation {
-	position: relative;
-	padding: 30px 50px;
+@keyframes fadeIn{
+  from{
+    opacity: 0.2;
+  }
+
+  to{
+    opacity: 1;
+  }
 }
 
-header .navigation .navigation-items a {
-	position: relative;
-	color: #000;
-	font-size: 1.25em;
-	font-weight: 700;
-	text-decoration: none;
-	margin-left: 30px;
-	transition: 0.3s ease;
-}
-
-header .navigation .navigation-items a:before {
-	content: '';
-	position: absolute;
-	background: #fff;
-	width: 0;
-	height: 2px;
-	bottom: 0;
-	left: 0;
-	transition: 0.3s ease;
-}
-
-header .navigation .navigation-items a:hover:before {
-	width: 100%;
-}
 
 /* Main */
 
@@ -69,17 +51,19 @@ header .navigation .navigation-items a:hover:before {
 }
 
 .maintitle{
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
 .maintitle img{
   position: absolute;
   width: 100%;
-  height: 90%;
+  height: 95%;
+  object-fit: cover;
 }
 
 .maintitle .text{
+  height: auto;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -89,6 +73,8 @@ header .navigation .navigation-items a:hover:before {
   transform: translate(-50%, -50%);
   text-align: center;
   color: var(--white);
+  transition: 0.3s;
+  text-wrap: nowrap;
 }
 
 .maintitle .text h3,
@@ -108,28 +94,35 @@ header .navigation .navigation-items a:hover:before {
 
 .maintitle .text h3{
   font-size: 36px;
+  opacity: 0;
   animation: fadeInUp 0.6s ease-in-out forwards;
 }
 
 .maintitle .text h2{
   font-size: 60px;
+  opacity: 0;
   animation: fadeInUp 0.6s ease-in-out 0.5s forwards;
 }
 
-@keyframes fadeInUp{
-  from{
-    opacity: 0;
-    transform: translateY(100px);
+@media (max-width: 550px){
+
+  .maintitle .text h3{
+    font-size: 24px;
   }
 
-  to{
-    opacity: 1;
-    transform: translateY(0);
+  .maintitle .text h2{
+    font-size: 48px;
+    line-height: 54px;
+    text-wrap: wrap;
   }
 }
 
 
 /* --------------------------------------------------------------- */
+
+.subtitle{
+  overflow: hidden;
+}
 
 .subtitle .sub{
   text-align: center;
@@ -147,6 +140,24 @@ header .navigation .navigation-items a:hover:before {
   margin-top: 7px;
 }
 
+.subtitle .sub h3,
+.subtitle .sub div {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s ease-in-out;
+}
+
+.subtitle .sub h3.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.subtitle .sub div.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 .subimg{
   position: relative;
   height: 620px;
@@ -161,11 +172,107 @@ header .navigation .navigation-items a:hover:before {
   transform: translate(-50%, -50%);
 }
 
+.subimg img{
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.subimg img.active{
+  opacity: 1;
+}
+
+.subimg svg {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.subimg svg.active {
+  opacity: 1;
+}
+
+.subimg svg path {
+  stroke-dasharray: 5400;
+  stroke-dashoffset: 5500;
+  transition: stroke-dashoffset 2s ease-in-out;
+}
+
+.subimg svg.active path {
+  stroke-dashoffset: 0;
+}
+
+@media (max-width: 1550px){
+
+  .subimg img,
+  .subimg svg{
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+
+}
+
+@media (max-width: 1050px){
+
+  .subtitle .sub h3{
+    font-size: 32px;
+  }
+  
+  .subtitle .sub p{
+    font-size: 18px;
+    margin-top: 5px;
+  }
+
+  .subimg img,
+  .subimg svg{
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+  
+}
+
+@media (max-width: 1024px){
+  .subimg img,
+  .subimg svg{
+    transform: translate(-50%, -50%) scale(0.55);
+  }
+}
+
+@media (max-width: 550px){
+
+  .subtitle .sub h3{
+    font-size: 28px;
+    line-height: 34px;
+    margin: 100px 15px auto 15px;
+  }
+
+  .subtitle .sub div{
+    text-align: center;
+    margin: 10px 20px;
+  }
+  
+  .subtitle .sub p{
+    font-size: 16px;
+    text-wrap: wrap;
+    display: inline;
+  }
+
+  .subimg{
+    position: relative;
+    height: 200px;
+    margin-top: 70px;
+  }
+
+  .subimg img,
+  .subimg svg{
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+
+}
+
+
 /* --------------------------------------------------------------- */
 
 .icontab{
   margin-top: 300px;
   margin-bottom: 300px;
+  overflow: hidden;
 }
 
 .icontab ul{
@@ -208,58 +315,139 @@ header .navigation .navigation-items a:hover:before {
   font-weight: 900;
 }
 
-.digit {
+
+.icontab ul li {
   opacity: 0;
-  -webkit-transform: translateY(40px);
-     -moz-transform: translateY(40px);
-      -ms-transform: translateY(40px);
-       -o-transform: translateY(40px);
-          transform: translateY(40px);
-  -webkit-transition: all 0.6s ease-out;
-     -moz-transition: all 0.6s ease-out;
-      -ms-transition: all 0.6s ease-out;
-       -o-transition: all 0.6s ease-out;
-          transition: all 0.6s ease-out;
+  /* transition: opacity 0.3s ease-in-out; */
 }
-.digit.visible {
+/* 
+.icontab ul li.active {
   opacity: 1;
-  -webkit-transform: none;
-     -moz-transform: none;
-      -ms-transform: none;
-       -o-transform: none;
-          transform: none;
-}
-/* .digit:nth-child(2) {
-  margin-top: 50px;
-}
-.digit:nth-child(3) {
-  margin-top: 100px;
-}
-.digit:nth-child(4) {
-  margin-top: 150px;
 } */
+
+.icontab ul li:nth-child(1).active {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  /* animation-delay: 0.3s; */
+}
+
+.icontab ul li:nth-child(2).active {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+.icontab ul li:nth-child(3).active {
+  animation: fadeInUp 0.3s ease-in-out forwards;
+  animation-delay: 0.6s;
+}
+
+@media (max-width: 1050px){
+
+  .icontab ul li{
+    gap: 20px;
+  }
+
+  .icontab ul li i{
+    font-size: 80px;
+    margin-bottom: 40px;
+  }
+  
+  .icontab ul li p{
+    font-size: 20px;
+  }
+  
+  .icontab ul li h3{
+    font-size: 30px;
+  }
+
+}
+
+@media (max-width: 550px){
+  
+  .icontab{
+    margin-top: 200px;
+  }
+
+  .icontab ul{
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .icontab ul li{
+    height: 250px;
+    border: none;
+  }
+
+  .icontab ul li i{
+    font-size: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .icontab ul li p{
+    font-size: 18px;
+    margin-bottom: -10px;
+  }
+  
+  .icontab ul li h3{
+    font-size: 28px;
+  }
+
+}
+
+
 
 /* --------------------- Section1 ------------------------ */
 
-section .banner{
+
+section{
+  overflow: hidden;
+}
+
+
+section .banner {
   height: 213px;
   background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(255, 255, 255, .1));
 }
 
 section .banner p,
-section .banner h3{
+section .banner h3 {
   font-size: var(--section_tt);
   color: var(--white);
   line-height: var(--gutter);
   position: relative;
-  top: calc(50% - 15px);
-  left: 15%;
-  transform: translateY(-50%);
+  transform: translateX(0);
+  top: calc(50% - 20px);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
 }
 
-section .banner h3{
+section .banner h3 {
   font-size: 36px;
   font-weight: 700;
+  margin-top: 10px;
+}
+
+section .banner p.active,
+section .banner h3.active {
+  opacity: 1;
+  transform: translateX(15%);
+}
+
+section .expanation {
+  position: relative;
+  left: 15%;
+  top: 100px;  
+}
+
+section .expanation h3 {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 42px;
+}
+
+section .expanation p {
+  font-size: var(--body_tt);
+  color: #6E6E6E;
   margin-top: 10px;
 }
 
@@ -281,17 +469,34 @@ section .expanation p{
   margin-top: 10px;
 }
 
+section .expanation h3.active,
+section .expanation p.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+section .expanation h3,
+section .expanation p{
+  transform: translateY(50px);
+  opacity: 0;
+  transition:  opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
 section .diagram{
   width: 100%;
   height: 700px;
   position: relative;
 }
 
-section .diagram svg{
+section .diagram .desktop{
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+section .diagram .mobile{
+  display: none;
 }
 
 section .diagram ul{
@@ -299,6 +504,7 @@ section .diagram ul{
   position: relative;
   left: 50%;
   top: 50%;
+  transform: translateY(-50%);
 }
 
 section .diagram ul li img{
@@ -325,6 +531,16 @@ section .diagram ul .plus2{
   flex-direction: column;
 }
 
+section .diagram .desktop path {
+  stroke-dasharray: 2400;
+  stroke-dashoffset: 2500;
+  transition: stroke-dashoffset 2s ease-in-out;
+}
+
+section .diagram.active .desktop path {
+  stroke-dashoffset: 0;
+}
+
 section .diagram ul .ellipse{
   left: -350px;
   top: 85px;
@@ -339,14 +555,265 @@ section .diagram ul .plus2{
   transform: translate(500px, 65px);
 }
 
+section .diagram ul li {
+  opacity: 0.2;
+  transition: opacity 0.3s ease-in-out;
+}
+
+ /*section .diagram.active ul li{
+  opacity: 1;
+  animation: fadeIn 0.3s ease-in-out forwards; 
+}*/
+
+section .diagram.active ul li:first-child {
+  animation: fadeIn 0.3s ease-in-out forwards;
+  animation-delay: 0.6s;
+}
+
+section .diagram.active ul li:nth-child(2) {
+  animation: fadeIn 0.3s ease-in-out forwards;
+  animation-delay: 1s;
+}
+
+section .diagram.active ul li:nth-child(3) {
+  animation: fadeIn 0.3s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+
+@media (max-width: 1550px){
+
+  section .diagram svg{
+    transform: translate(-50%,-50%) scale(0.8);
+    left: 50%;
+  }
+
+  section .diagram.active ul li:first-child{
+    transform: translate(50px, -50px);
+  }
+  
+  section .diagram.active ul li:nth-child(2){
+    transform: translate(6px, -90px);
+  }
+  
+  section .diagram.active ul li:nth-child(3){
+    transform: translate(370px, 30px);
+  }
+
+  section .diagram.active ul li img{
+    transform: scale(0.8);
+    margin-bottom: 12px;
+  }
+
+  section .diagram.active ul li span{
+    font-size: 22px;
+  }
+
+  section .diagram.active ul li p{
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 0;
+  }
+
+}
+
+@media (max-width: 1050px){
+
+  section .banner p,
+  section .banner h3{
+    transform: translateX(10%);
+  }
+
+  section .banner p.active,
+  section .banner h3.active{
+    transform: translateX(10%);
+  }
+
+  section .banner p{
+    font-size: 22px;
+  }
+
+  section .banner h3{
+    font-size: 32px;
+  }
+
+  section .expanation{
+    left: 10%;
+  }
+
+  section .expanation h3{
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  section .diagram .desktop{
+    transform: translate(-50%,-50%) scale(0.52);
+    left: 50%;
+  }
+
+  section .diagram.active ul li:first-child{
+    transform: translate(120px, -50px);
+  }
+  
+  section .diagram.active ul li:nth-child(2){
+    transform: translate(30px, -90px);
+  }
+  
+  section .diagram.active ul li:nth-child(3){
+    transform: translate(320px, 35px);
+  }
+
+  section .diagram.active ul:first-child li:last-child span,
+  section .diagram.active ul:first-child li:last-child p{
+    transform: translateX(-30px);
+  }
+
+  section .diagram.active ul li:last-child span,
+  section .diagram.active ul li:last-child p{
+    transform: translateX(-60px);
+  }
+
+  section .diagram.active ul li img{
+    transform: scale(0.8);
+    margin-bottom: 12px;
+  }
+
+  section .diagram.active ul li span{
+    font-size: 22px;
+  }
+
+  section .diagram.active ul li p{
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 0;
+  }
+
+}
+
+@media (max-width: 550px){
+  
+  section .banner{
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    text-align: center;
+    background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(255, 255, 255, .1));
+  }
+  
+  section .banner .img1,
+  section .banner .img2, 
+  section .banner .img3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  }
+
+  section .banner p.active{
+    font-size: 18px;
+    transform: none;
+  }
+  
+  section .banner h3.active{
+    font-size: 30px;
+    transform: none;
+  }
+
+  section{
+    height: 1600px;
+    /* margin-bottom: 420px; */
+    overflow: hidden;
+  }
+
+  section:last-child{
+    margin-top: -40px;
+  }
+
+  section .expanation{
+    width: 300px;
+    left: 10%;
+  }
+  
+  section .expanation h3{
+    font-size: 28px;
+    line-height: 38px;
+    display: inline;
+  }
+
+  section .expanation p{
+    font-size: 14px;
+  }
+
+  section .diagram .mobile{
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    display: block;
+  }
+
+  section .diagram .mobile path {
+    stroke-dasharray: 1200;
+    stroke-dashoffset: 1000;
+    transition: stroke-dashoffset 2s ease-in-out;
+  }
+
+  section .diagram .mobile path.active {
+    stroke-dashoffset: 0;
+  }
+
+  section .diagram.active ul li{
+    position: relative;
+  }
+  
+
+  section .diagram.active ul li:first-child{
+    transform: translate(190px, 70px);
+  }
+  
+  section .diagram.active ul li:nth-child(2){
+    transform: translate(-195px, 300px);
+  }
+  
+  section .diagram.active ul li:nth-child(3){
+    transform: translate(-130px, 400px);
+  }
+
+  section .diagram.active ul li:first-child span,
+  section .diagram.active ul li:first-child  p{
+    transform: translate(20px, -10px);
+  }
+
+  section .diagram.active ul li span,
+  section .diagram.active ul li p{
+    transform: translate(65px, -40px);
+  }
+
+  section .diagram.active ul li span{
+    font-size: 20px;
+  }
+
+  section .diagram.active ul li p{
+    font-size: 14px;
+  }
 
 
-/* Footer */
+  section .diagram .desktop{
+    display: none;
+  }
+
+  
+
+}
+
+
+
+/* Footer 최은화 */
 footer{
   left: 0;
   right: 0;
   bottom: 0;
-  margin-top: 220px;
+  /* margin-top: 220px; */
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -447,6 +914,10 @@ footer > p:after{
   footer .fo_prize li{
     flex-direction: column;
   }
+
+  footer > p:after{
+    width: 800px;
+  }
 }
 
 @media (max-width: 834px){
@@ -483,7 +954,7 @@ footer > p:after{
   }
 
   footer > p:after{
-    width: 700px;
+    width: 600px;
   }
 
 }
@@ -522,9 +993,13 @@ footer > p:after{
   
 }
 
-@media (max-width: 480px){
+@media (max-width: 550px){
   footer .fo_smallmenu{
-    gap: 15px;
+    gap: 10px;
+  }
+
+  footer .fo_prize{
+    display: none;
   }
 
   footer .no_guide{
@@ -541,8 +1016,8 @@ footer > p:after{
   }
 
   footer > p:after{
-    width: 400px;
+    width: 300px;
   }
 }
 
-/* // Footer */
+/* // Footer 최은화 

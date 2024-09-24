@@ -3,43 +3,281 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
   <title>차량 - Kia Renewal Project</title>
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/vehicles.css">
 
 </head>
 <body>
-  <header>
-    <div class="navigation">
-      <div class="navigation-items">
-        <a href="#">차량</a>
-        <a href="#">구매</a>
-        <a href="#">체험</a>
-        <a href="#">이벤트</a>
-        <a href="#">고객지원</a>
-        <a href="#">Discover Kia</a>
-      </div>
+
+  <div id="search-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>통합검색</h2>
+        <input type="text" placeholder="검색어를 입력하세요." />
+        <button type="button">검색</button>
     </div>
-    <object data="src/img/kia.svg" class="kia_logo"></object>
+</div>
+
+<div id="smallpage-menu">
+    <div class="smallpage-content">
+        <div class="smallpage-header">
+            <span class="smallpage-close">&times;</span>
+        </div>
+        <div class="smallpage-main">
+            <div class="smallpage-mainSection1">
+                <ul>
+                    <li class="smallpage-accordion">차량</li>
+                    <div class="smallpage-panel">
+                        <ul>
+                            <li><a href="">EV & PBV</a></li>
+                            <li><a href="">승용</a></li>
+                            <li><a href="">RV</a></li>
+                            <li><a href="">택시 & 버스 & 승용</a></li>
+                        </ul>
+                    </div>
+                    <li class="smallpage-accordion">구매</li>
+                    <div class="smallpage-panel">
+                        <ul>
+                            <li><a href="#">견적내기</a></li>
+                            <li><a href="">이 달의 구매혜택</a></li>
+                            <li><a href="">구매 상담 신청</a></li>
+                            <li><a href="">Kia Connect Store</a></li>
+                            <li><a href="">모빌리티</a></li>
+
+                        </ul>
+                    </div>
+
+                    <li class="smallpage-accordion">체험</li>
+                    <div class="smallpage-panel">
+                        <ul>
+                            <li><a href="">시승신청</a></li>
+                            <li><a href="">판매 네트워크</a></li>
+                            <li><a href="">Kia 체험 거점</a></li>
+
+                        </ul>
+                    </div>
+
+                    <li class="smallpage-accordion">이벤트</li>
+                    <div class="smallpage-panel">
+                        <ul>
+                            <li><a href="">진행 중인 이벤트</a></li>
+                            <li><a href="">종료된 이벤트</a></li>
+                            <li><a href="">당첨자 발표</a></li>
+                        </ul>
+                    </div>
+
+                    <li class="smallpage-accordion">고객지원</li>
+                    <div class="smallpage-panel">
+                        <ul>
+                            <li><a href="">유지 & 관리</a></li>
+                            <li><a href="">고객센터</a></li>
+                            <li><a href="">구매 가이드</a></li>
+                            <li><a href="">공지사항</a></li>
+
+                        </ul>
+                    </div>
+                    <li class="smallpage-accordion">Discover Kia</li>
+                    <div class="smallpage-panel">
+                        <ul>
+                            <li><a href="">New Kia</a></li>
+                            <li><a href="">뉴스</a></li>
+                            <li><a href="">지속가능영영</a></li>
+                            <li><a href="">사업장 안내</a></li>
+                            <li><a href="">AutoLand 견학</a></li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="smallpage-mainSection2">
+            <div class="smallpage-mainSection2-parts">
+                <i class="fa-solid fa-car"></i><a href="">견적 내기</a>
+            </div>
+            <div class="smallpage-mainSection2-parts">
+                <i class="fa-solid fa-calculator"></i><a href="">카탈로그/가격표</a>
+            </div>
+            <div class="smallpage-mainSection2-parts">
+                <i class="fa-solid fa-blender-phone"></i><a href="">시승 신청</a>
+            </div>
+            <div class="smallpage-mainSection2-parts">
+                <i class="fa-solid fa-gift"></i><a href="">이 달의 구매 혜택</a>
+            </div>
+        </div>
+        <div class="smallpage-footer">
+            <a href="">회원가입</a>
+            <span>|</span>
+            <a href="">로그인</a>
+        </div>
+    </div>
+</div>
+
+<header>
+    <div class="navigation-items">
+        <li>
+            <a href="#">차량
+                <ul>
+                    <li>EV & PBV</li>
+                    <li>승용</li>
+                    <li>RV</li>
+                    <li>택시 & 버스 & 상용</li>
+                </ul>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">구매
+                <ul>
+                    <li>견적내기</li>
+                    <li>이 달의 구매 혜택</li>
+                    <li>구매 상담 신청</li>
+                    <li>Kia Connect Store</li>
+                    <li style="position: relative;">모빌리티 <object data="./img/main_header/right-arrow_white.svg"
+                            id="right-arrow_white"></object>
+                        <ul id="sub_sub_menus">
+                            <li>기아 인증 중고차</li>
+                            <li>기아렌터차</li>
+                            <li>기아플렉스</li>
+                            <li>위블 비즈</li>
+                        </ul>
+                    </li>
+                </ul>
+            </a>
+        </li>
+        <li>
+            <a href="#">체험
+                <ul>
+                    <li>시승신청</li>
+                    <li style="position: relative;">판매 네트워크 <object
+                            data="./img/main_header/right-arrow_white.svg"></object>
+                        <ul id="sub_sub_menus">
+                            <li>지점/대리점</li>
+                            <li>영업담당</li>
+                            <li>전시 차량</li>
+                            <li>시승 거점</li>
+                            <li>출고 센터</li>
+                        </ul>
+                    </li>
+                    <li style="position: relative;">Kia 체험거점 <object
+                            data="./img/main_header/right-arrow_white.svg"></object>
+                        <ul id="sub_sub_menus">
+                            <li>kia 360</li>
+                            <li>플래그쉽 스토어</li>
+                            <li>언플러그드 그라운드</li>
+                            <li>Driving Experience</li>
+                        </ul>
+                    </li>
+                </ul>
+            </a>
+        </li>
+        <li>
+            <a href="#">이벤트
+                <ul>
+                    <li>진행 중인 이벤트</li>
+                    <li>종료된 이벤트</li>
+                    <li>당첨자 발표</li>
+                </ul>
+            </a>
+        </li>
+        <li>
+            <a href="#">고객지원
+                <ul>
+                    <li style="position: relative;">유지 & 관리 <object
+                            data="./img/main_header/right-arrow_white.svg"></object>
+                        <ul id="sub_sub_menus">
+                            <li>기아멤버스</li>
+                            <li>카앤라이프몰</li>
+                        </ul>
+                    </li>
+                    <li style="position: relative;">고객센터 <object
+                            data="./img/main_header/right-arrow_white.svg"></object>
+                        <ul id="sub_sub_menus">
+                            <li>고객센터 안내</li>
+                            <li>1:1 문의</li>
+                            <li>FAQ</li>
+                            <li>칭찬 알림방</li>
+                            <li>하자 재발 통보</li>
+                        </ul>
+                    </li>
+                    <li style="position: relative;">구매 가이드 <object
+                            data="./img/main_header/right-arrow_white.svg"></object>
+                        <ul id="sub_sub_menus">
+                            <li>세금</li>
+                            <li>등록</li>
+                            <li>유의 사항</li>
+                            <li>출하 및 탁송정보</li>
+                        </ul>
+                    </li>
+                    <li>공지사항</li>
+                </ul>
+            </a>
+        </li>
+        <li>
+            <a href="#">Discover Kia
+                <ul>
+                    <li style="position: relative;">New Kia <object
+                            data="./img/main_header/right-arrow_white.svg"></object>
+                        <ul id="sub_sub_menus">
+                            <li>Our Symbol</li>
+                            <li>Our Movement</li>
+                            <li>Our Design</li>
+                        </ul>
+                    </li>
+                    <li>뉴스</li>
+                    <li>지속가능경영</li>
+                    <li>사업장 안내</li>
+                    <li>AutoLand 견학</li>
+                </ul>
+            </a>
+        </li>
+    </div>
+
+    <object data="./img/main_header/kia.svg" class="kia_logo"></object>
     <div class="globe-btn"></div>
-    <div class="search-glasses"></div>
-    <div class="menu-btn"></div>
-    <div class="navigation">
-      <div class="navigation-items">
-        <a href="#">KOR</a>
-        <a href="#">통합검색</a>
-        <a href="#">로그인</a>
-      </div>
+    <div class="search-glasses" id="searching-index"></div>
+    <div class="menu-btn" id="open-small-menus"></div>
+
+    <div class="navigation-items">
+        <li>
+            <a href="#">KOR
+                <ul>
+                    <li>Korean</li>
+                    <li>English</li>
+                    <li>Chinese</li>
+                    <li>Japanes</li>
+                </ul>
+            </a>
+        </li>
+        <li><a href="#" id="searching-index2">통합검색</a></li>
+        <li><a href="#">로그인</a></li>
     </div>
-  </header>
+</header>
+
 <main>
   <div class="ve_tab_wrapper">
     <ul class="tabs_menu container">
       <li class="active"><a href=".ve_tab_ev">EV & PBV</a></li>
-      <li><a href="">승용</a></li>
-      <li><a href="">RV</a></li>
-      <li><a href="">택시 <span>&</span> 버스 <span>&</span> 상용</a></li>
+      <li><a href=".ve_tab_sedan">승용</a></li>
+      <li><a href=".ve_tab_rv">RV</a></li>
+      <li><a href=".ve_tab_commercial">택시 <span>&</span> 버스 <span>&</span> 상용</a></li>
     </ul>
     <hr>
     <div class="tabs container">
@@ -187,8 +425,286 @@
           </li>
         </ul>
       </div>
+      <div class="ve_tab_sedan">
+        <ul class="category_list">
+          <li class="category_item">
+            <div class="item_box">
+              <img src="img/vehicles/sedan/morning_q_a2g.png" alt="morning 모닝">
+              <a href="">모닝</a>
+              <p>1,325 만원~</p>
+            </div>
+            <div class="item_hover">
+              <a href=""><img src="img/vehicles/sedan/morning_feature.png" alt="morning 모닝 화보"></a>
+              <div class="category_link">
+                <a href="">자세히 보기</a>
+                <a href="">견적내기</a>
+              </div>
+            </div>
+          </li>
+          <li class="category_item">
+            <div class="item_box">
+              <img src="img/vehicles/sedan/ray_q_m9y.png" alt="ray 레이">
+              <a href="">레이</a>
+              <p>1,330 만원~</p>
+            </div>
+            <div class="item_hover">
+              <a href=""><img src="img/vehicles/sedan/ray_q_m9y_feature.png" alt="ray 레이 화보"></a>
+              <div class="category_link">
+                <a href="">자세히 보기</a>
+                <a href="">견적내기</a>
+              </div>
+            </div>
+          </li>
+          <li class="category_item">
+            <div class="item_box">
+              <img src="img/vehicles/sedan/k5_q_c7s.png" alt="k5">
+              <a href="">K5</a>
+              <p>2,784 만원~</p>
+            </div>
+            <div class="item_hover">
+              <a href=""><img src="img/vehicles/sedan/k5_feature.png" alt="k5 화보"></a>
+              <div class="category_link">
+                <a href="">자세히 보기</a>
+                <a href="">견적내기</a>
+              </div>
+            </div>
+          </li>
+          <li class="category_item">
+            <div class="item_box">
+              <img src="img/vehicles/sedan/k8_q_byg.png" alt="k8">
+              <a href="">K8</a>
+              <p>3,736 만원~</p>
+            </div>
+            <div class="item_hover">
+              <a href=""><img src="img/vehicles/sedan/the_new_k8_feature.jpg" alt="k8 화보"></a>
+              <div class="category_link">
+                <a href="">자세히 보기</a>
+                <a href="">견적내기</a>
+              </div>
+            </div>
+          </li>
+          <li class="category_item">
+            <div class="item_box">
+              <img src="img/vehicles/sedan/k9_q_d9b.png" alt="k9">
+              <a href="">K9</a>
+              <p>5,933 만원~</p>
+            </div>
+            <div class="item_hover">
+              <a href=""><img src="img/vehicles/sedan/k9_feature.png" alt="k9 화보"></a>
+              <div class="category_link">
+                <a href="">자세히 보기</a>
+                <a href="">견적내기</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="ve_tab_rv">
+        <ul class="category_list">
+          <li class="category_item">
+            <div class="item_box">
+              <img src="img/vehicles/rv/seltos_q_swp.png" alt="seltos 셀토스">
+              <a href="">셀토스</a>
+              <p>2,147 만원~</p>
+            </div>
+            <div class="item_hover">
+              <a href=""><img src="img/vehicles/rv/seltos_feature.png" alt="seltos 셀토스 화보"></a>
+              <div class="category_link">
+                <a href="">자세히 보기</a>
+                <a href="">견적내기</a>
+              </div>
+            </div>
+          </li>
+          <li class="category_item">
+            <div class="item_box">
+              <img src="img/vehicles/rv/niro-hybrid_q_cge.png" alt="niro 니로">
+              <a href="">니로</a>
+              <p>2,900 만원~</p>
+            </div>
+            <div class="item_hover">
+              <a href=""><img src="img/vehicles/rv/nirohev_feature.png" alt="niro 니로 화보"></a>
+              <div class="category_link">
+                <a href="">자세히 보기</a>
+                <a href="">견적내기</a>
+              </div>
+            </div>
+          </li>
+          <li class="category_item">
+            <div class="item_box">
+              <img src="img/vehicles/rv/sportage_q_swp.png" alt="sportage 스포티지">
+              <a href="">스포티지</a>
+              <p>2,537 만원~</p>
+            </div>
+            <div class="item_hover">
+              <a href=""><img src="img/vehicles/rv/sportage_feature.jpg" alt="sportage 스포티지 화보"></a>
+              <div class="category_link">
+                <a href="">자세히 보기</a>
+                <a href="">견적내기</a>
+              </div>
+            </div>
+          </li>
+          <li class="category_item">
+            <div class="item_box">
+              <img src="img/vehicles/rv/sorento_q_bn4.png" alt="sorento 쏘렌토">
+              <a href="">쏘렌토</a>
+              <p>3,605 만원~</p>
+            </div>
+            <div class="item_hover">
+              <a href=""><img src="img/vehicles/rv/sorento_feature.png" alt="sorento 쏘렌토 화보"></a>
+              <div class="category_link">
+                <a href="">자세히 보기</a>
+                <a href="">견적내기</a>
+              </div>
+            </div>
+          </li>
+          <li class="category_item">
+            <div class="item_box">
+              <img src="img/vehicles/rv/mohave_q_abp.png" alt="mohave 모하비">
+              <a href="">모하비</a>
+              <p>5,054 만원~</p>
+            </div>
+            <div class="item_hover">
+              <a href=""><img src="img/vehicles/rv/mohave_feature.png" alt="mohave 모하비 화보"></a>
+              <div class="category_link">
+                <a href="">자세히 보기</a>
+                <a href="">견적내기</a>
+              </div>
+            </div>
+          </li>
+          <li class="category_item">
+            <div class="item_box">
+              <img src="img/vehicles/rv/carnival_q_isg.png" alt="carnival 카니발">
+              <a href="">카니발</a>
+              <p>3,470 만원~</p>
+            </div>
+            <div class="item_hover">
+              <a href=""><img src="img/vehicles/rv/carnival_feature.png" alt="carnival 카니발 화보"></a>
+              <div class="category_link">
+                <a href="">자세히 보기</a>
+                <a href="">견적내기</a>
+              </div>
+            </div>
+          </li>
+          <li class="category_item">
+            <div class="item_box">
+              <img src="img/vehicles/rv/carnival-hi-limousine_q_abp.png" alt="carnival hi limousine 카니발 하이리무진">
+              <a href="">카니발 하이리무진</a>
+              <p>6,250 만원~</p>
+            </div>
+            <div class="item_hover">
+              <a href=""><img src="img/vehicles/rv/carnival_hi_limousine_feature.png" alt="carnival hi limousine 카니발 하이리무진 화보"></a>
+              <div class="category_link">
+                <a href="">자세히 보기</a>
+                <a href="">견적내기</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="ve_tab_commercial">
+        <ul class="category_list">
+          <li class="category_item">
+            <div class="item_box">
+              <img src="img/vehicles/commercial/k8-taxi_q_swp.png" alt="k8-taxi K8 택시">
+              <a href="">K8 택시</a>
+              <p>3,529 만원~</p>
+            </div>
+            <div class="item_hover">
+              <a href=""><img src="img/vehicles/commercial/the_new_k8_taxi_feature.png" alt="k8-taxi K8 택시 화보"></a>
+              <div class="category_link">
+                <a href="">자세히 보기</a>
+                <a href="">견적내기</a>
+              </div>
+            </div>
+          </li>
+          <li class="category_item">
+            <div class="item_box">
+              <img src="img/vehicles/commercial/bongo3_q_ud.png" alt="bongo3 봉고Ⅲ 트럭">
+              <a href="">봉고Ⅲ 트럭</a>
+              <p>2,025 만원~</p>
+            </div>
+            <div class="item_hover">
+              <a href=""><img src="img/vehicles/commercial/kv_bongo3_contract.png" alt="bongo3 봉고Ⅲ 트럭 화보"></a>
+              <div class="category_link">
+                <a href="">자세히 보기</a>
+                <a href="">견적내기</a>
+              </div>
+            </div>
+          </li>
+          <li class="category_item">
+            <div class="item_box">
+              <img src="img/vehicles/commercial/bongo3-frozen-standard-king_q_ud.png" alt="bongo3-frozen-standard 봉고III 탑차/윙바디/워크스루밴">
+              <a href="">봉고III 탑차/윙바디/워크스루밴</a>
+              <p>2,810 만원~</p>
+            </div>
+            <div class="item_hover">
+              <a href=""><img src="img/vehicles/commercial/bongo3_freezer_heater_feature.png" alt="bongo3-frozen-standard 봉고III 탑차/윙바디/워크스루밴 화보"></a>
+              <div class="category_link">
+                <a href="">자세히 보기</a>
+                <a href="">견적내기</a>
+              </div>
+            </div>
+          </li>
+          <li class="category_item">
+            <div class="item_box">
+              <img src="img/vehicles/commercial/bongo3-dump-1_q_ma.png" alt="bongo3-dump 봉고III 덤프">
+              <a href="">봉고III 덤프</a>
+              <p>2,785 만원~</p>
+            </div>
+            <div class="item_hover">
+              <a href=""><img src="img/vehicles/commercial/bongo3_dump_feature.png" alt="bongo3-dump 봉고III 덤프 화보"></a>
+              <div class="category_link">
+                <a href="">자세히 보기</a>
+                <a href="">견적내기</a>
+              </div>
+            </div>
+          </li>
+          <li class="category_item">
+            <div class="item_box">
+              <img src="img/vehicles/commercial/bongo3-powergate_q_ud.png" alt="bongo3-powergate 봉고III 파워게이트">
+              <a href="">봉고III 파워게이트</a>
+              <p>2,635 만원~</p>
+            </div>
+            <div class="item_hover">
+              <a href=""><img src="img/vehicles/commercial/bongo3_power_feature.png" alt="bongo3-powergate 봉고III 파워게이트 화보"></a>
+              <div class="category_link">
+                <a href="">자세히 보기</a>
+                <a href="">견적내기</a>
+              </div>
+            </div>
+          </li>
+          <li class="category_item">
+            <div class="item_box">
+              <img src="img/vehicles/commercial/bongo3-homelorry-4wd_q_ud.png" alt="bongo3-homelorry 봉고III 홈로리/활어수송차">
+              <a href="">봉고III 홈로리/활어수송차</a>
+              <p>3,995 만원~</p>
+            </div>
+            <div class="item_hover">
+              <a href=""><img src="img/vehicles/commercial/bongo3_home_feature.jpg" alt="bongo3-homelorry 봉고III 홈로리/활어수송차 화보"></a>
+              <div class="category_link">
+                <a href="">자세히 보기</a>
+                <a href="">견적내기</a>
+              </div>
+            </div>
+          </li>
+          <li class="category_item">
+            <div class="item_box">
+              <img src="img/vehicles/commercial/granbird_q.png" alt="granbird 그랜버드">
+              <a href="">그랜버드</a>
+              <p>18,140만원~</p>
+            </div>
+            <div class="item_hover">
+              <a href=""><img src="img/vehicles/commercial/granbird_feature.png" alt="granbird 그랜버드 화보"></a>
+              <div class="category_link">
+                <a href="">자세히 보기</a>
+                <a href="">견적내기</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
       <ul class="util">
-        <li class="util_list"><a href="">Kia EV 가이드</a></li>
+        <li class="util_list single"><a href="">Kia EV 가이드</a></li>
         <li class="util_list"><a href="">상세 모델 검색</a></li>
         <li class="util_list"><a href="">경쟁 모델 비교</a></li>
         <li class="util_list"><a href="">사양 설명서</a></li>
@@ -200,9 +716,7 @@
 </main>
 
 
-
 <footer>
-  <!-- Footer 최은화 -->
   <h1 class="fo_logo">
     <img src="img/fo/fo_logo.png" alt="logo">
   </h1>
@@ -269,13 +783,11 @@
     <li><i class="fa-brands fa-youtube"></i></li>
   </ul>
   <p>© Kia Corp. All rights reserved</p>
-  <!-- // Footer 최은화 -->
+
 </footer>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script>
-  
   //차량 fixed util
-  
   $(window).scroll(function() {
     let documentHeight = $(document).height();
     let scrollTop = $(window).scrollTop();
@@ -289,8 +801,8 @@
         $('.ve_tab_wrapper .util').fadeIn(); // 목록을 보임
     }
   });
-
   </script>
   <script src="js/common.js"></script>
+  <script type="text/javascript" src="js/header.js"></script>
 </body>
 </html>
