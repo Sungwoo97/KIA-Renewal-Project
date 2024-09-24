@@ -292,7 +292,7 @@ function makeMap(){
       var el = document.createElement('li'),
       itemStr = '<span class="markerbg marker_' + (index+1) + ' blind"></span>' +
                   '<div class="info">' +
-                  '   <h5>' + places.place_name + '</h5>';
+                  ' <div class="info_address_icon"><i class="fa-regular fa-address-book"></i>  <div class="info_address"><h5>' + places.place_name + '</h5>';
   
       if (places.road_address_name) {
           itemStr += '    <p>' + places.road_address_name + '</p>' ;
@@ -300,7 +300,7 @@ function makeMap(){
           itemStr += '    <p>' +  places.address_name  + '</p>'; 
       }
                    
-        itemStr += '  <p class="tel">' + places.phone  + '</p>' +
+        itemStr += '  <p class="tel">' + places.phone  + '</p></div></div>' +
                   '</div>' +  '<button class="btn"> <i class="fa-solid fa-user-tie"></i>상담 신청</button>';             
   
       el.innerHTML = itemStr;

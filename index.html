@@ -13,7 +13,7 @@
   <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
   <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -31,12 +31,14 @@
 <body>
 
   <div id="search-modal">
+    <form>
       <div class="modal-content">
-          <span class="close">&times;</span>
-          <h2>통합검색</h2>
-          <input type="text" placeholder="검색어를 입력하세요.">
-          <button type="button">검색</button>
+        <span class="close">&times;</span>
+        <h2>통합검색</h2>
+        <input type="text" placeholder="검색어를 입력하세요." />
+        <button type="button">검색</button>
       </div>
+    </form>
   </div>
 
   <div id="smallpage-menu">
@@ -65,8 +67,8 @@
                               <li><a href="#">Kia Connect Store</a></li>
                               <li><a href="#">모빌리티</a></li>
 
-                          </ul>
-                      </div>
+              </ul>
+            </div>
 
                       <li class="smallpage-accordion">체험</li>
                       <div class="smallpage-panel">
@@ -75,17 +77,17 @@
                               <li><a href="#">판매 네트워크</a></li>
                               <li><a href="#">Kia 체험 거점</a></li>
 
-                          </ul>
-                      </div>
+              </ul>
+            </div>
 
-                      <li class="smallpage-accordion">이벤트</li>
-                      <div class="smallpage-panel">
-                          <ul>
-                              <li><a href="#">진행 중인 이벤트</a></li>
-                              <li><a href="#">종료된 이벤트</a></li>
-                              <li><a href="#">당첨자 발표</a></li>
-                          </ul>
-                      </div>
+            <li class="smallpage-accordion">이벤트</li>
+            <div class="smallpage-panel">
+              <ul>
+                <li><a href="#">진행 중인 이벤트</a></li>
+                <li><a href="#">종료된 이벤트</a></li>
+                <li><a href="#">당첨자 발표</a></li>
+              </ul>
+            </div>
 
                       <li class="smallpage-accordion">고객지원</li>
                       <div class="smallpage-panel">
@@ -253,114 +255,116 @@
           </li>
       </div>
 
-      <object data="./img/main_header/kia.svg" class="kia_logo"></object>
-      <div class="globe-btn"></div>
-      <div class="search-glasses" id="searching-index"></div>
-      <div class="menu-btn" id="open-small-menus"></div>
+    <a href="index.html">
+      <img src="./img/main_header/kia.svg" alt="Kia Logo" class="kia_logo">
+    </a>
+    <div class="globe-btn"></div>
+    <div class="search-glasses" id="searching-index"></div>
+    <div class="menu-btn" id="open-small-menus"></div>
 
 
 
 
-      <div class="navigation-items">
-          <li>
-              <a href="#">KOR
-                  <ul>
-                      <li>Korean</li>
-                      <li>English</li>
-                      <li>Chinese</li>
-                      <li>Japanes</li>
-                  </ul>
-              </a>
-          </li>
-          <li><a href="#" id="searching-index2">통합검색</a></li>
-          <li><a href="#">로그인</a></li>
-      </div>
+    <div class="navigation-items">
+      <li>
+        <a href="#">KOR
+          <ul>
+            <li>Korean</li>
+            <li>English</li>
+            <li>Chinese</li>
+            <li>Japanes</li>
+          </ul>
+        </a>
+      </li>
+      <li><a href="#" id="searching-index2">통합검색</a></li>
+      <li><a href="#">로그인</a></li>
+    </div>
   </header>
 
   <section class="home">
-      <video class="video-slide active" src="videos/kia_vid1.mp4" autoplay muted loop></video>
-      <img class="video-slide2" src="img/main_header/main_ev6_small.jpg" alt="Main Header small size Image" />
+    <video class="video-slide active" src="videos/kia_vid1.mp4" autoplay muted loop></video>
+    <img class="video-slide2" src="img/main_header/main_ev6_small.jpg" alt="Main Header small size Image" />
 
-      <video class="video-slide" src="videos/kid_vid3.mp4" autoplay muted loop></video>
-      <img class="video-slide2" src="img/main_header/main_morning_small.jpg" alt="Main Header small size Image" />
+    <video class="video-slide" src="videos/kid_vid3.mp4" autoplay muted loop></video>
+    <img class="video-slide2" src="img/main_header/main_morning_small.jpg" alt="Main Header small size Image" />
 
 
-      <img class="video-slide" src="img/main_header/main_carnival.jpg" alt="Main Header Image" />
-      <img class="video-slide2" src="img/main_header/main_carnival_small.jpg" alt="Main Header big Image" />
+    <img class="video-slide" src="img/main_header/main_carnival.jpg" alt="Main Header Image" />
+    <img class="video-slide2" src="img/main_header/main_carnival_small.jpg" alt="Main Header big Image" />
 
-      <img class="video-slide" src="img/main_header/main_ev3.jpg" alt="Main Header Image" />
-      <img class="video-slide2" src="img/main_header/main_ev3_small.jpg" alt="Main Header big Image" />
+    <img class="video-slide" src="img/main_header/main_ev3.jpg" alt="Main Header Image" />
+    <img class="video-slide2" src="img/main_header/main_ev3_small.jpg" alt="Main Header big Image" />
 
-      <img class="video-slide" src="img/main_header/main_K8.jpg" alt="Main Header Image" />
-      <img class="video-slide2" src="img/main_header/main_k8_small.jpg" alt="Main Header big Image" />
+    <img class="video-slide" src="img/main_header/main_K8.jpg" alt="Main Header Image" />
+    <img class="video-slide2" src="img/main_header/main_k8_small.jpg" alt="Main Header big Image" />
 
-      <img class="video-slide" src="img/main_header/main_k9.jpg" alt="Main Header Image" />
-      <img class="video-slide2" src="img/main_header/main_k9_small.jpg" alt="Main Header big Image" />
+    <img class="video-slide" src="img/main_header/main_k9.jpg" alt="Main Header Image" />
+    <img class="video-slide2" src="img/main_header/main_k9_small.jpg" alt="Main Header big Image" />
 
-      <img class="video-slide" src="img/main_header/main_last.jpg" alt="Main Header Image" />
-      <img class="video-slide2" src="img/main_header/main_last.jpg" alt="Main Header big Image" />
+    <img class="video-slide" src="img/main_header/main_last.jpg" alt="Main Header Image" />
+    <img class="video-slide2" src="img/main_header/main_last.jpg" alt="Main Header big Image" />
 
-      <div class="main_header_content ">
-          <p>The Priceless</p>
-          <h1>The New K8</h1>
-          <button class="btn">자세히 보기</button>
-          <button class="btn">견적내기</button>
-      </div>
-      <div class="main_header_content">
-          <p>The Compact One</p>
-          <h1>The New Morning</h1>
-          <button class="btn">자세히 보기</button>
-          <button class="btn">견적내기</button>
-      </div>
-      <div class="main_header_content ">
-          <p>나만의 스케일대로</p>
-          <h1>Carnival</h1>
-          <h2>Hi Limousine</h2>
-          <button class="btn">자세히 보기</button>
-          <button class="btn">견적내기</button>
-      </div>
-      <div class="main_header_content">
-          <p>My Morning Infra</p>
-          <h1>The Kia New Ev3</h1>
-          <button class="btn">자세히 보기</button>
-          <button class="btn">견적내기</button>
-      </div>
-      <div class="main_header_content">
-          <p>The Priceless</p>
-          <h1>The New K8</h1>
-          <button class="btn">자세히 보기</button>
-          <button class="btn">견적내기</button>
-      </div>
-      <div class="main_header_content">
-          <p>Master that Inspire</p>
-          <h1>The 2024 K9</h1>
-          <button class="btn">자세히 보기</button>
-          <button class="btn">견적내기</button>
-      </div>
-      <div class="main_header_content">
-          <p>스마트한 카 라이프의 시작! 기아 렌터카</p>
-          <h1>기아 렌터카 온라인 홈페이지</h1>
-          <button class="btn">렌터카 견적 내기</button>
-          <button class="btn">바로가기</button>
-      </div>
+    <div class="main_header_content ">
+      <p>The Priceless</p>
+      <h1>The New K8</h1>
+      <button class="btn">자세히 보기</button>
+      <button class="btn">견적내기</button>
+    </div>
+    <div class="main_header_content">
+      <p>The Compact One</p>
+      <h1>The New Morning</h1>
+      <button class="btn">자세히 보기</button>
+      <button class="btn">견적내기</button>
+    </div>
+    <div class="main_header_content ">
+      <p>나만의 스케일대로</p>
+      <h1>Carnival</h1>
+      <h2>Hi Limousine</h2>
+      <button class="btn">자세히 보기</button>
+      <button class="btn">견적내기</button>
+    </div>
+    <div class="main_header_content">
+      <p>My Morning Infra</p>
+      <h1>The Kia New Ev3</h1>
+      <button class="btn">자세히 보기</button>
+      <button class="btn">견적내기</button>
+    </div>
+    <div class="main_header_content">
+      <p>The Priceless</p>
+      <h1>The New K8</h1>
+      <button class="btn">자세히 보기</button>
+      <button class="btn">견적내기</button>
+    </div>
+    <div class="main_header_content">
+      <p>Master that Inspire</p>
+      <h1>The 2024 K9</h1>
+      <button class="btn">자세히 보기</button>
+      <button class="btn">견적내기</button>
+    </div>
+    <div class="main_header_content">
+      <p>스마트한 카 라이프의 시작! 기아 렌터카</p>
+      <h1>기아 렌터카 온라인 홈페이지</h1>
+      <button class="btn">렌터카 견적 내기</button>
+      <button class="btn">바로가기</button>
+    </div>
 
-      <!--
+    
       <div class="media-icons">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
       </div>
-      -->
-      <div class="slider-navigation">
-          <div class="nav-btn active"></div>
-          <div class="nav-btn"></div>
-          <div class="nav-btn"></div>
-          <div class="nav-btn"></div>
-          <div class="nav-btn"></div>
-          <div class="nav-btn"></div>
-          <div class="nav-btn"></div>
+     
+    <div class="slider-navigation">
+      <div class="nav-btn active"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
 
-      </div>
+    </div>
   </section>
 
 
@@ -369,7 +373,7 @@
         <section class="best_kia container">
           <div class="be_title">
             <h2 class="title_gutter">Best Kia</h2>
-            <p class="sub_title_gutter">기아 유저들이 선택한 분야별 최다 판매 차량</p>
+            <p class="sub_title_gutter sec_desc">기아 유저들이 선택한 분야별 최다 판매 차량</p>
           </div>
           <div class="be_tab_wrapper">
             <ul class="tabs_menu be_tabs_menu">
@@ -403,11 +407,11 @@
                     </p>
                     <ul class="toplank_depth">
                       <li class="top1 active">
-                        <div><a href="#">
+                        <div>
                           <h3>The 2025 Sorento</h3>
                           <img src="img/be/be_tabs1_toplank1_Sorento.png" alt="The 2025 Sorento">
                           <h3>51,250,000 원</h3>
-                        </a></div>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>출시일</p>
@@ -425,11 +429,11 @@
                         </div>
                       </li>
                       <li class="top2">
-                        <div><a href="#">
+                        <div>
                           <h3>The 2025 EV9</h3>
                           <img src="img/be/be_tabs1_toplank2_EV9.png" alt="The 2025 EV9">
                           <h3>89,840,000 원</h3>
-                        </a></div>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>출시일</p>
@@ -447,11 +451,11 @@
                         </div>
                       </li>
                       <li class="top3">
-                        <div><a href="#">
-                            <h3>The 2025 Niro</h3>
-                            <img src="img/be/be_tabs1_toplank3_Niro.png" alt="The 2025 Niro">
-                            <h3>37,800,000 원</h3>
-                          </a></div>
+                        <div>
+                          <h3>The 2025 Niro</h3>
+                          <img src="img/be/be_tabs1_toplank3_Niro.png" alt="The 2025 Niro">
+                          <h3>37,800,000 원</h3>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>출시일</p>
@@ -484,11 +488,11 @@
                     </p>
                     <ul class="toplank_depth">
                       <li class="top1 active">
-                        <div><a href="#">
+                        <div>
                           <h3>니로</h3>
                           <img src="img/be/be_tabs2_toplank1_Niro.png" alt="Niro">
                           <h3>31,400,000 원</h3>
-                        </a></div>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>복합 연비</p>
@@ -506,11 +510,11 @@
                         </div>
                       </li>
                       <li class="top2">
-                        <div><a href="#">
+                        <div>
                           <h3>K5</h3>
                           <img src="img/be/be_tabs2_toplank2_K5.png" alt="K5">
                           <h3>33,340,000 원</h3>
-                        </a></div>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>복합 연비</p>
@@ -528,11 +532,11 @@
                         </div>
                       </li>
                       <li class="top3">
-                        <div><a href="#">
+                        <div>
                           <h3>K8</h3>
                           <img src="img/be/be_tabs2_toplank3_K8.png" alt="k8">
                           <h3>48,330,000 원</h3>
-                        </a></div>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>복합 연비</p>
@@ -565,11 +569,11 @@
                     </p>
                     <ul class="toplank_depth">
                       <li class="top1 active">
-                        <div><a href="#">
+                        <div>
                           <h3>카니발</h3>
                           <img src="img/be/be_tabs3_toplank1_carnival.png" alt="carnival">
                           <h3>49,450,000 원</h3>
-                        </a></div>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>트렁크 용량</p>
@@ -587,11 +591,11 @@
                         </div>
                       </li>
                       <li class="top2">
-                        <div><a href="#">
+                        <div>
                           <h3>쏘렌토</h3>
                           <img src="img/be/be_tabs3_toplank2_Sorento.png" alt="Sorento">
                           <h3>51,120,000 원</h3>
-                        </a></div>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>트렁크 용량</p>
@@ -609,11 +613,11 @@
                         </div>
                       </li>
                       <li class="top3">
-                        <div><a href="#">
+                        <div>
                           <h3>스포티지</h3>
                           <img src="img/be/be_tabs3_toplank3_sportage.png" alt="sportage">
                           <h3>40,160,000 원</h3>
-                        </a></div>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>트렁크 용량</p>
@@ -646,11 +650,11 @@
                     </p>
                     <ul class="toplank_depth">
                       <li class="top1 active">
-                        <div><a href="#">
+                        <div>
                           <h3>스포티지</h3>
                           <img src="img/be/be_tabs3_toplank3_sportage.png" alt="sportage">
                           <h3>44,870,000 원</h3>
-                        </a></div>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>종합 안전 등급</p>
@@ -668,11 +672,11 @@
                         </div>
                       </li>
                       <li class="top2">
-                        <div><a href="#">
+                        <div>
                           <h3>카니발</h3>
                           <img src="img/be/be_tabs3_toplank1_carnival.png" alt="carnival">
                           <h3>44,530,000 원</h3>
-                        </a></div>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>종합 안전 등급</p>
@@ -690,11 +694,11 @@
                         </div>
                       </li>
                       <li class="top3">
-                        <div><a href="#">
+                        <div>
                           <h3>K9</h3>
                           <img src="img/be/be_tabs4_toplank3_K9.png" alt="K9">
                           <h3>66,650,000 원</h3>
-                        </a></div>
+                        </div>
                         <div class="detail_ex">
                           <div>
                             <p>종합 안전 등급</p>
@@ -711,24 +715,22 @@
                           <button class="btn">견적 내기</button>
                         </div>
                       </li>
-                      <div class="safe_modal_container">
-                        <div class="safe_modal">
-                          <h3>신차 안전도 평가 안내</h3>
-                          <p>본 신차안전도 평가결과는 국토교통부 주관 안전도 평가 후 발표된 자료입니다.<br>(교통안전공단 자세한 내용 www.kncap.org 참조)</p>
-                          <p>안전도 종합등급 안전도평가에서 실시하고 있는 정면충돌, 측면충돌, 보행자 등 22개 항목의 평가 결과를 종합하여 평가 대상 차량의 안전도를 등급(1~5등급)과 점수(100점 만점)로 소비자들에게 제공합니다.
-                          </p>
-                          <p>1등급일수록 가장 안전한 차량입니다.</p>
-                          <p>매년 자동차 판매수가 많거나 판매가 급증 추세인 차 그리고 과거 평가를 하지 않은 모델 중에서 평가를 실시하며, 평가에 사용된 차량의 에어백 등의 안전장비는 <br>실제 구입하시는 차량과 다를 수 있으므로 확인 하시길 바랍니다.</p>
-                        </div>
-                      </div>
                     </ul>
+                    <div class="safe_modal_container">
+                      <div class="safe_modal">
+                        <h3>신차 안전도 평가 안내</h3>
+                        <p>본 신차안전도 평가결과는 국토교통부 주관 안전도 평가 후 발표된 자료입니다.<br>(교통안전공단 자세한 내용 www.kncap.org 참조)</p>
+                        <p>안전도 종합등급 안전도평가에서 실시하고 있는 정면충돌, 측면충돌, 보행자 등 22개 항목의 평가 결과를 종합하여 평가 대상 차량의 안전도를 등급(1~5등급)과 점수(100점 만점)로 소비자들에게 제공합니다.
+                        </p>
+                        <p>1등급일수록 가장 안전한 차량입니다.</p>
+                        <p>매년 자동차 판매수가 많거나 판매가 급증 추세인 차 그리고 과거 평가를 하지 않은 모델 중에서 평가를 실시하며, 평가에 사용된 차량의 에어백 등의 안전장비는 <br>실제 구입하시는 차량과 다를 수 있으므로 확인 하시길 바랍니다.</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>    
-            </div>
-          </div>
          </section>
         <!-- //best kia 김유진 -->
     <!-- Members 남성우 -->
@@ -853,16 +855,16 @@
         
         <div class="modal_info">
           <p><em>꽁꽁 얼어붙은 코딩 위로 3조가 걸어다닙니다조</em> : <br>최*화 (팀장), 윤*호, 남*우, 김*진</p>
-          <p><em>제작기간</em> : 2024.08.23 ~ 2024.09.26</p>
-          <p><em>기획서</em>: <a href="https://www.figma.com/design/4geA7YC7F9691KhFU3jCm9/%EA%BD%81%EA%BD%81-%EC%96%BC%EC%96%B4%EB%B6%99%EC%9D%80-%EC%BD%94%EB%94%A9-%EC%9C%84%EB%A1%9C-3%EC%A1%B0%EA%B0%80-%EA%B1%B8%EC%96%B4%EB%8B%A4%EB%8B%99%EB%8B%88%EB%8B%A4?node-id=11-2&t=sH5HC6aYWaUiqHPp-1">피그마</a> <em>버전관리</em>: <a href="https://github.com/eunhwa-a11y/KIA-Renewal-Project">깃허브</a></p>
-          <p><em>개발환경</em> HTML, CSS, JQuery</p>
+          <p><em>제작기간</em> : 2024.08.23 ~ 2024.09.26</p> 
+          <p class="info_link"><em>기획서</em> : <a href="https://www.figma.com/design/4geA7YC7F9691KhFU3jCm9/%EA%BD%81%EA%BD%81-%EC%96%BC%EC%96%B4%EB%B6%99%EC%9D%80-%EC%BD%94%EB%94%A9-%EC%9C%84%EB%A1%9C-3%EC%A1%B0%EA%B0%80-%EA%B1%B8%EC%96%B4%EB%8B%A4%EB%8B%99%EB%8B%88%EB%8B%A4?node-id=11-2&t=sH5HC6aYWaUiqHPp-1" target="_blank">Figma </a><img src="img/me/skill-icons_figma-dark.svg" alt=""> &nbsp; <em>버전관리</em>: <a href="https://github.com/eunhwa-a11y/KIA-Renewal-Project" target="_blank"> GitHub</a><img src="img/me/github-mark-white.svg" alt="버전관리는 Github 링크" class="github"></img></p>
+          <p><em>개발환경</em> : HTML, CSS, JQuery</p>
         </div>
         <div class="modal_work">
           <p><em>기획</em> : 팀원 전체</p>
           <p><em>디자인</em> : 팀원 전체</p>
           <p><em>구현</em> 
             <br> 최*화 : <strong>Section, Footer, <a href="management.html" target="_blank">Sub 지속 가능 경영</a></strong>
-            <br> 윤*호 : 
+            <br> 윤*호 : <strong>Main Header, <a href="maintain_supply.html" target="_blank">Sub 유지 & 관리</a></strong>
             <br> 남*우 : <strong>Members, Event, <a href="trial.html" target="_blank">Sub 체험</a></strong>
             <br> 김*진 : <strong>Best Kia, <a href="vehicles.html" target="_blank">Sub 차량</a></strong>
           </p>
@@ -883,7 +885,7 @@
       <div class="kia_notice container">
         <div class="no_title">
           <h2 class="title_gutter sec_tt">Notice</h2>
-          <p class="sub_title_gutter">기아 소식을 한눈에 확인해 보세요</p>
+          <p class="sub_title_gutter sec_desc">기아 소식을 한눈에 확인해 보세요</p>
         </div>
         <div class="container">
           <ul class="tabs_menu">

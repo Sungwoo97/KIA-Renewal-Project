@@ -180,3 +180,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 });
 
+
+window.addEventListener("scroll", function() {
+  const header = document.querySelector("header");
+  const navigationItems = document.querySelector(".navigation-items");
+  
+  if (window.scrollY > 700) {
+      header.classList.add("scrolled");
+  } else {
+      header.classList.remove("scrolled");
+  }
+
+  var mediaIcons = document.querySelector('.media-icons');
+    if (window.scrollY > 100) {
+        mediaIcons.classList.add('hidden');
+    } else {
+        mediaIcons.classList.remove('hidden');
+    }
+});
