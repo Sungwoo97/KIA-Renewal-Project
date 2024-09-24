@@ -415,7 +415,19 @@ figcaption p.title4 {
     text-decoration: underline;
 }
 
+.divider1{
+    margin-top: 76px;
+    font-size: 48px;
+    text-align: center;
+}
 
+.divider2{
+    margin-top: 76px;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 76px;
+    color: var(--dark_gray);
+}
 /* MQ
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
