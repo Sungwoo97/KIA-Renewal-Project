@@ -143,6 +143,7 @@
   line-height: 24px;
 }
 
+/* TestDrive Modal */
 .modal{
   background: #fff;
   width: 500px;
@@ -158,6 +159,7 @@
   width: 100%;
   box-sizing: border-box;
 }
+
 #modal_text{
   height: 126px;
   overflow-x: hidden;
@@ -202,6 +204,7 @@
   .ex_non_member{
     margin: 48px 125px;
   }
+
   .modal{
     width: 350px;
   }
@@ -266,7 +269,6 @@
 
 .tabs form{
   display: flex;
-
 }
 
 .tabs form input{
@@ -334,6 +336,7 @@
   border: none;
   background: rgba(235,235,235,.2);
 }
+
 .ex_tab_salesNetwork .tabs ul li > button:hover{
   background: var(--primary);
 }
@@ -405,11 +408,12 @@
 
 .ex_slide_container li{
   width: 400px;
-  
 }
+
 .ex_slide_container li img{
   width: 100%;
 }
+
 .ex_slide_container li > a{
   display: block;
   width: 100%;
@@ -631,7 +635,6 @@ footer > p:after{
 }
 
 @media (max-width: 660px){
-
   footer{
     gap: 25px;
   }
