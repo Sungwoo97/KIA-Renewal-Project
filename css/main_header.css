@@ -9,19 +9,6 @@ section.home {
 }
 
 
-/* header {
-    z-index: 9999;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 50px;
-    transition: 0.5s ease;
-} */
-
 header {
     z-index: 9999;
     position: fixed; /* 수정: fixed로 변경 */
@@ -643,7 +630,36 @@ header.scrolled {
     transform: translateY(-50%);
 }
 
+.media-icons {
+    position: fixed; /* 화면에 고정 */
+    right: 20px; /* 오른쪽으로 위치 */
+    bottom: 50px; /* 하단에서 약간 위로 */
+    z-index: 1000; /* 다른 요소 위로 표시 */
+    display: flex;
+    flex-direction: column; /* 아이콘을 세로로 정렬 */
+    gap: 10px; /* 아이콘 간 간격 */
+}
 
+.media-icons a {
+    text-decoration: none; /* 링크 기본 스타일 제거 */
+    color: #fff; /* 아이콘 기본 색상 */
+    background-color: rgba(0, 0, 0, 0.6); /* 반투명한 배경 */
+    padding: 10px;
+    border-radius: 50%; /* 동그란 버튼 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease; /* 호버 시 배경색 전환 */
+}
+
+.media-icons a:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* 호버 시 배경색 진하게 */
+}
+
+.media-icons i {
+    font-size: 18px; /* 아이콘 크기 */
+    color: #fff; /* 아이콘 색상 */
+}
 
 
 
