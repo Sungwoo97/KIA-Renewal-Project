@@ -1,3 +1,6 @@
+$('.parallax-window').parallax({
+  naturalWidth: 100
+});
 
 const trigger = new ScrollTrigger.default({
   trigger: {
@@ -39,10 +42,16 @@ $(document).ready(function() {
       $('.subtitle .sub h3, .subimg img, .subimg svg, .icontab ul li, section .banner p, section .banner h3, section .expanation h3, section .diagram').each(function() {
           if ($(this).offset().top < $(window).scrollTop() + triggerPoint) {
               $(this).addClass('active');
+
+              if ($(this).hasClass('diagram')) {
+                  console.log("Diagram activated"); // 로그 추가
+                  $(this).find('.mobile path').addClass('active');
+              }
           }
       });
   });
 });
+
 
 /* Icontab */
 
@@ -63,7 +72,7 @@ $(document).ready(function() {
 
 $('section .img1').parallax({
   imageSrc: 'img/ma/section_img1.png',
-  speed: 0.5
+  speed: 0.5,
 });
 
 $('section .img2').parallax({

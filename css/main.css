@@ -4,16 +4,18 @@
   left: 5%;top: 15%;
   background:rgba(0,0,0,.5);
   display: flex;
-  z-index: 1000;
+  z-index: 999999;
   justify-content: start;
   align-items: center;
-  border-radius: 6px;
+  border-radius: 0 6px 0 0; 
+  border: 3px solid var(--primary);
+  overflow: hidden;
 }
 
 .main_modal_container{
   width: 500px;
   background: var(--white);
-  border-radius: 5px;
+  border-radius: 0 5px 0 0;
   padding: 10px;
 }
 
@@ -24,8 +26,8 @@
   object-fit: cover
 }
 
-.main_modal_container > * {
-  padding: 10px
+.main_modal_container {
+  padding: 20px 20px 0 20px;
 }
 
 .main_modal h2{
@@ -48,16 +50,16 @@
   top: 0;
   right: 0;
   background: var(--primary);
-  border-radius: 0 5px 0 0;
+
 }
 
 .main_modal div:first-child{
   border: none;
 }
 
-.main_modal div{
+.main_modal_container > div{
   padding: 20px 20px;
-  border-top: 1px solid var(--primary);
+  border-top: 2px solid var(--primary);
 }
 
 .main_modal em{
@@ -81,10 +83,33 @@
 }
 
 .modal_control {
-  padding-bottom: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.modal_control label{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#modal_check{
+  display: none;
+}
+
+.modal_control form label:before { 
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--primary);
+  background: white;
+
+}
+/* on */
+#modal_check:checked ~ label:before {
+  background: #001E33;
 }
 
 @media (max-width:834px){
@@ -527,7 +552,6 @@
   gap: 30px;
 }
 
-
 .me_tab_members{
   margin: 174px 71px 93px 822px;
 }
@@ -562,7 +586,6 @@
   width: 768px;
   height: 340px;
   position: absolute;
- 
 }
 
 .me_icons li:after{
@@ -649,7 +672,6 @@
   .me_tab_ev_members{
     margin: 174px 788px 93px 0px;
   }
-  
 }
 
 @media (max-width:1200px) {
@@ -1031,15 +1053,16 @@
   font-weight: 700;
 }
 
-.tabs .no_notice button,
-.tabs .no_news button{
+.tabs .no_notice a,
+.tabs .no_news a{
   height: 32px;
   border: 1px solid var(--primary);
   background: var(--white);
+  padding: 10px 45px;
 }
 
-.tabs .no_notice button:hover,
-.tabs .no_news button:hover{
+.tabs .no_notice a:hover,
+.tabs .no_news a:hover{
   height: 32px;
   color: var(--white);
   background: var(--primary);
@@ -1421,6 +1444,10 @@ footer > p:after{
 @media (max-width: 480px){
   footer .fo_smallmenu{
     gap: 15px;
+  }
+
+  footer .fo_prize{
+    display: none;
   }
 
   footer .no_guide{
