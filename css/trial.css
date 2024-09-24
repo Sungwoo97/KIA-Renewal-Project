@@ -111,7 +111,7 @@
   text-align: left;
 }
 
-.ex_tab_testDrive > ul span{
+.ex_tab_testDrive > ul a{
   text-decoration: underline;
   cursor: pointer;
 }

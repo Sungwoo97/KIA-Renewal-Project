@@ -375,7 +375,7 @@
     height: 480px;
   }
   .toplank_depth{
-    width: 213px;
+    width: 100%;
   }
   .tabs #be_tabs1 li img{
     margin: 37px 0 48px;
@@ -478,7 +478,7 @@
   }
   .toplank_depth li{
     display: flex;
-    width: 480px;
+    width: 100%;
   }
   .tabs .be_tabs li h3{
     margin-right: 20px;
@@ -765,7 +765,7 @@
     background-position: center center;
     width: 100%;
     height: 208px;
-    left: 5%;
+    left: 0;
   }
   .me_tab_ev_members:after{
     background-size: 100%;
