@@ -653,7 +653,7 @@ header.scrolled {
     }
 
     header .navigation-items li a {
-        font-size: 0.95em;
+        font-size: 1em;
         margin-left: 10px;
     }
 
@@ -760,7 +760,7 @@ header.scrolled {
     }
 
     .main_header_content p {
-        font-size: 12px;
+        font-size: 13px;
         margin-bottom: 12px;
     }
 
