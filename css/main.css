@@ -1238,7 +1238,7 @@ footer{
   left: 0;
   right: 0;
   bottom: 0;
-  margin-top: 220px;
+  /* margin-top: 220px; */
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -1418,9 +1418,9 @@ footer > p:after{
   
 }
 
-@media (max-width: 480px){
+@media (max-width: 550px){
   footer .fo_smallmenu{
-    gap: 15px;
+    gap: 10px;
   }
 
   footer .fo_prize{
@@ -1441,7 +1441,7 @@ footer > p:after{
   }
 
   footer > p:after{
-    width: 400px;
+    width: 300px;
   }
 }
 
