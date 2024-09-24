@@ -104,7 +104,7 @@
   animation: fadeInUp 0.6s ease-in-out 0.5s forwards;
 }
 
-@media (max-width: 430px){
+@media (max-width: 550px){
 
   .maintitle .text h3{
     font-size: 24px;
@@ -230,7 +230,7 @@
   }
 }
 
-@media (max-width: 430px){
+@media (max-width: 550px){
 
   .subtitle .sub h3{
     font-size: 28px;
@@ -356,7 +356,7 @@
 
 }
 
-@media (max-width: 430px){
+@media (max-width: 550px){
   
   .icontab{
     margin-top: 200px;
@@ -670,7 +670,7 @@ section .diagram.active ul li:nth-child(3) {
 
 }
 
-@media (max-width: 430px){
+@media (max-width: 550px){
   
   section .banner{
     position: relative;
@@ -699,7 +699,16 @@ section .diagram.active ul li:nth-child(3) {
     font-size: 30px;
     transform: none;
   }
-  
+
+  section{
+    height: 1180px;
+    margin-bottom: 420px;
+  }
+
+  section:last-child{
+    margin-top: -40px;
+  }
+
   section .expanation{
     width: 300px;
     left: 10%;
@@ -718,19 +727,38 @@ section .diagram.active ul li:nth-child(3) {
   section .diagram .mobile{
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 100%;
     transform: translate(-50%, -50%);
+    display: block;
   }
 
   section .diagram .mobile path {
-    stroke-dasharray: 900;
+    stroke-dasharray: 1200;
     stroke-dashoffset: 1000;
     transition: stroke-dashoffset 2s ease-in-out;
-}
+  }
 
   section .diagram .mobile path.active {
     stroke-dashoffset: 0;
-}
+  }
+
+  section .diagram.active ul li:first-child{
+    transform: translate(310px, -220px);
+  }
+  
+  section .diagram.active ul li:nth-child(2){
+    transform: translate(-210px, 150px);
+  }
+  
+  section .diagram.active ul li:nth-child(3){
+    transform: translate(-190px, 230px);
+  }
+
+  section .diagram.active ul li span
+  section .diagram.active ul li p{
+    position: absolute;
+    left: 20px;
+  }
 
 
   section .diagram .desktop{
@@ -743,7 +771,7 @@ section .diagram.active ul li:nth-child(3) {
 
 
 
-/* Footer */
+/* Footer 최은화 */
 footer{
   left: 0;
   right: 0;
@@ -849,6 +877,10 @@ footer > p:after{
   footer .fo_prize li{
     flex-direction: column;
   }
+
+  footer > p:after{
+    width: 800px;
+  }
 }
 
 @media (max-width: 834px){
@@ -885,7 +917,7 @@ footer > p:after{
   }
 
   footer > p:after{
-    width: 700px;
+    width: 600px;
   }
 
 }
@@ -924,9 +956,13 @@ footer > p:after{
   
 }
 
-@media (max-width: 480px){
+@media (max-width: 550px){
   footer .fo_smallmenu{
     gap: 15px;
+  }
+
+  footer .fo_prize{
+    display: none;
   }
 
   footer .no_guide{
@@ -947,4 +983,4 @@ footer > p:after{
   }
 }
 
-/* // Footer */
+/* // Footer 최은화 
