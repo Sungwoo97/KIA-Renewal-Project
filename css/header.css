@@ -220,7 +220,7 @@ header .navigation-items li a:hover:before {
 
 /* -------------------------서브 서브 메뉴----------------------------*/
 
-#sub_sub_menus {
+.navigation-items .sub_sub_menus {
     display: none;
     position: absolute;
     top: 0;
@@ -237,7 +237,7 @@ header .navigation-items li a:hover:before {
 }
 
 /* 부모 li에 마우스 올렸을 때 sub_sub_menus 표시 */
-.navigation-items li a ul li:hover #sub_sub_menus {
+.navigation-items li a ul li:hover .sub_sub_menus {
     display: block;
     opacity: 1;
     visibility: visible;
