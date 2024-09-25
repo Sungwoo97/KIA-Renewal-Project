@@ -183,7 +183,7 @@ footer a:hover{
 footer .fo_prize{
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0 0 20px 0;
 }
 

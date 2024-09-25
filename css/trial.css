@@ -253,6 +253,7 @@
 }
 
 .ex_salesNetwork_wrapper{
+  margin: 96px 0;
   display: flex;
   flex: 1;
   justify-content: space-between;
@@ -268,7 +269,6 @@
 
 .ex_tab_salesNetwork .ex_maps{
   width: 66%;
-  background: #ccc;
   height: 900px;
 }
 
@@ -295,7 +295,7 @@
 
 .ex_tab_salesNetwork .tabs .map_wrap{
   overflow-x: hidden;
-  height: 845px;
+  height: 768px;
 }
 
 .menu_wrap{
@@ -346,21 +346,21 @@
   gap: 8px;
 }
 
-.ex_tab_salesNetwork  .info_address_icon{
+.ex_tab_salesNetwork  .info_address > div{
   display: flex;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column;
+  gap: 5px;
 }
 
-.ex_tab_salesNetwork  .info_address_icon i {
- font-size: 50px;
+.ex_tab_salesNetwork  .info_address i {
+ font-size: 40px;
  color: var(--primary);
 }
 
 .ex_tab_salesNetwork  .info_address{
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  align-items: center;
+  gap: 20px;
 }
 
 .ex_tab_salesNetwork  .info_address p{

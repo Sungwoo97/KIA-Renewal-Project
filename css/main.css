@@ -1,7 +1,7 @@
 /* MODAL */
 .main_modal{
   position: fixed;
-  left: 5%;top: 15%;
+  left: 5%;top: 10%;
   background:rgba(0,0,0,.5);
   display: flex;
   z-index: 999999;
@@ -69,13 +69,13 @@
 .main_modal strong{
   color: var(--primary);
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .main_modal strong a{
   color: var(--primary);
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .modal_info .info_link img{
@@ -86,6 +86,7 @@
 }
 
 .modal_info .info_link .github{
+  width: 19px;
   filter: invert(1);
 }
 
@@ -1101,12 +1102,31 @@
   font-weight: 700;
 }
 
-.tabs .no_notice a,
+.btn_no{
+  background: var(--white);
+  color: var(--black);
+  line-height: 38px;
+  padding: 0 45px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.3s;
+  border-width: 1px;
+  border-color: var(--primary);
+  display: inline-block;
+}
+
+.btn_no:hover{
+  background: var(--primary);
+  color: var(--white);
+}
+
+.tabs .no_notice .no_img div a,
 .tabs .no_news a{
   height: 32px;
   border: 1px solid var(--primary);
   background: var(--white);
   padding: 10px 45px;
+  display: inline-block;
 }
 
 .tabs .no_notice a:hover,
