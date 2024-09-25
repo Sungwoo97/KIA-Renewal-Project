@@ -403,6 +403,10 @@
     width: 100%;
     height: 500px;
   }
+
+  .ex_tab_salesNetwork .tabs .map_wrap {
+    height: 400px;
+  }
 }
 @media (max-width:834px) {
   .ex_tab_salesNetwork .tabs_menu li a{
