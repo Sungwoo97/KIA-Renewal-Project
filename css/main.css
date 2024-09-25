@@ -653,13 +653,13 @@
 }
 
 .me_ev_icons li:nth-child(2):after{
-  width: 59px;
-  background-position: -84px center;
+  width: 58px;
+  background-position: -83px center;
 }
 
 .me_ev_icons li:nth-child(3):after{
   width: 56px;
-  background-position: -154px center;
+  background-position: -152px center;
 }
 
 .me_ev_icons li:nth-child(4):after{
@@ -929,14 +929,6 @@
 @media (max-width:700px){
   .kia_event > div{
     margin: 0;
-  }
-}
-@media (max-width:400px){
-  .ev_slide_wrapper{
-    width: 300px;
-  }
-  .ev_slide_container figure img{
-    object-fit: cover;
   }
 }
 
@@ -1334,5 +1326,3 @@
   }
 
 }
-
-/* //Section 최은화 */
