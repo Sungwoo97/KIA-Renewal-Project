@@ -152,7 +152,7 @@ transform: translate(-50%, -50%);
 	line-height: 60px;
 	transition: 0.3s;
 }
-@media (max-width:1344px){
+@media (max-width:1350px){
 	.category_list{
 		gap: 34px;
 	}

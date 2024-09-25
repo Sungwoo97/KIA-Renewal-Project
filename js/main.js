@@ -34,6 +34,19 @@ const ev_allslideCount = ev_slideContainer.find('figure').length;
 setLayout();
 // 슬라이드의 너비를 지정하고 복사본의 크기만큼 translateX값을 추가
 function setLayout(){
+  if($(window).width() > 1260){
+    ev_maxSlides = 3;
+    ev_slideWidth = 400;
+ }else if($(window).width() < 1260 && $(window).width() > 768){
+    ev_maxSlides = 2;
+    ev_slideWidth = 400;
+ }else if($(window).width() < 768 && $(window).width() > 400){
+   ev_maxSlides = 1;
+   ev_slideWidth = 400;
+ }else{
+   ev_maxSlides = 1;
+   ev_slideWidth = 300;
+ }
   let ev_originWidth = (ev_slideWidth * ev_slideCount) + (ev_slideGap * ev_slideCount);
   let ev_maxWidth = (ev_slideWidth * ev_allslideCount) + (ev_slideGap * (ev_allslideCount - 1));
   ev_slideContainer.css({width: ev_maxWidth + 'px'});
@@ -43,19 +56,7 @@ function setLayout(){
 // 브라우저의 크기가 변하면 할 일
 $(window).resize(function(){
   // 반응형 슬라이드, 너비에 따라 보여줄 슬라이드 갯수가 변경
-  if($(window).width() > 1260){
-     ev_maxSlides = 3;
-     ev_slideWidth = 400;
-  }else if($(window).width() < 1260 && $(window).width() > 768){
-     ev_maxSlides = 2;
-     ev_slideWidth = 400;
-  }else if($(window).width() < 768 && $(window).width() > 400){
-    ev_maxSlides = 1;
-    ev_slideWidth = 400;
-  }else{
-    ev_maxSlides = 1;
-    ev_slideWidth = 300;
-  }
+ 
   setLayout();
 });
 
