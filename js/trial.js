@@ -30,11 +30,9 @@ function debounce(callback, time){
 $('.ex_modalContainer').hide();
 $('.ex_modalContainer').removeClass('hidden');
 $('.testDrive').click(function(){
-  
   $('.ex_modalContainer').fadeIn();
 });
 $('.modal .cancel').click(function(){
- 
   $('.ex_modalContainer').fadeOut();
 })
 

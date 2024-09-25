@@ -8,7 +8,6 @@ section.home {
     list-style: none;
 }
 
-
 header {
     z-index: 999;
     position: absolute;
@@ -244,12 +243,6 @@ header .navigation-items li a:hover:before {
     transform: translateX(0);
     transition: opacity 0.3s ease, visibility 0s, transform 0.3s ease;
 }
-
-
-
-
-
-
 
 /* 모달 페이지*/
 #search-modal {
