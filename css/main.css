@@ -78,6 +78,23 @@
   font-size: 20px;
 }
 
+.modal_info .info_link img{
+  width: 18px;
+  height: 18px;
+  object-fit: cover;
+  margin-bottom: 1px;
+}
+
+.modal_info .info_link .github{
+  filter: invert(1);
+}
+
+.modal_info .info_link{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .main_modal a{
   text-decoration: underline;
 }
@@ -294,7 +311,6 @@
   color:var(--medium_gray);
   font-size: var(--body_sub_tt);
 }
-
 .safe_modal_container{
   z-index: 2000;
   position: fixed;
@@ -325,7 +341,6 @@
 .safe_modal p:last-child{
   margin-bottom: 0;
 }
-
 @media (max-width:1344px){
 
   .be_tab_wrapper .tabs_menu li a{
@@ -379,10 +394,10 @@
   }
   .be_btn{
     gap:15px;
-    margin-top: 15px;
+    margin-top: 17px;
   }
   .be_btn .btn{
-    width: 285px;
+    width: 281px;
     height: 48px;
   }
   .toplank_depth li span{
@@ -390,9 +405,9 @@
     line-height: var(--body_sub_tt);
     margin-bottom: 25px;
   }
-  .toplanks .pager{
-    margin-bottom: 56px;
-    gap: 30px;
+  .toplanks .pager {
+    margin-bottom: 50px;
+    gap: 20px;
   }
 }
 @media (max-width:625px){
@@ -434,12 +449,13 @@
   }
 }
 @media (max-width:500px){
+  
   .be_tab_wrapper .tabs .slides{
-    width: 100%;
+    width: 100vw;
     height: 475px;
   }
   .be_tab_wrapper .tabs .slides img{
-    width: 483px !important;
+    width: 100vw !important;
     height: 475px;
     position: relative;
   }
@@ -461,9 +477,12 @@
     margin-left: 20px;
     margin-bottom: 15px;
   }
+  .toplank_depth {
+    width: 100%;
+  }
   .toplank_depth li{
     display: flex;
-    width: 480px;
+    width: 100%;
   }
   .tabs .be_tabs li h3{
     margin-right: 20px;
@@ -486,6 +505,7 @@
 }
   .caution{
     top:110%;
+    width: 70%;
   }
 }
 
@@ -575,11 +595,11 @@
 }
 
 .me_icons li:after{
-  background: url(../img/me/me_kia_members_icon.png);
+  background-image: url(../img/me/me_kia_members_icon.png);
 }
 
 .me_ev_icons li:after{
-  background: url(../img/me/me_ev_members_icon.png);
+  background-image: url(../img/me/me_ev_members_icon.png);
 }
 
 .me_icons li:after, .me_ev_icons li:after{
@@ -688,6 +708,7 @@
     width: 100%;
     height: 100%;
   }
+
   .me_tab_ev_members:after{
     left: 0;
     bottom: 100%;
@@ -697,6 +718,7 @@
     height: 100%;
     margin-left: 0;
   }
+
   .me_tab_members.active:after{
     animation: none;
   }
@@ -704,22 +726,27 @@
   .me_tab_ev_members.active:after{
     animation: none;
   }
+
   .me_tab_members{
     margin: 450px 0 93px 0;
   }
+
   .me_tab_ev_members{
     margin: 450px 0 93px 0;
   }
 }
+
 @media (max-width:1000px){
   .me_tab_members:after{
     bottom: 100%;
   }
+
   .me_tab_ev_members:after{
     bottom: 100%;
     margin-left: 0;
   }
 }
+
 @media (max-width:834px) {
   .me_tab_members:after{
     background-size: 100%;
@@ -727,23 +754,28 @@
     width: 100%;
     height: 300px;
   }
+
   .me_tab_ev_members:after{
     background-size: 80%;
     background-position: center center;
     width: 100%;
     height: 300px;
   }
+
   .me_tab_members{
     margin: 350px 0 93px 0;
   }
+
   .me_tab_ev_members{
     margin: 350px 0 93px 0;
   }
+
   .me_icons li, .me_ev_icons li{
     font-size: 12px;
     line-height: 18px;
   }
 }
+
 @media (max-width:480px){
   .me_tab_members:after{
     background-size: 100%;
@@ -752,20 +784,19 @@
     height: 208px;
     left: 5%;
   }
+
   .me_tab_ev_members:after{
     background-size: 100%;
     background-position: center center;
     left: 0;
     width: 100%;
     height: 208px;
-    
   }
-  .me_icons, .me_ev_icons{
-    gap: 10px;
-  }
+
   .me_tab_members{
     margin: 250px 0 93px 0;
   }
+  
   .me_tab_ev_members{
     margin: 250px 0 93px 0;
   }
@@ -968,6 +999,10 @@
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+}
+
+.tabs .no_ntc li em{
+  color: #868686;
 }
 
 .tabs .no_ntc li:after{
@@ -1254,19 +1289,19 @@
   .tabs .news{
     margin: auto;
     height: 30%;
-    gap: 20px;
+    gap: 10px;
   }
   
   .tabs .no_notice{
-    gap: 230px;
+    gap: 200px;
   }
 
   .tabs .no_ntc{
-    width: 400px;
+    width: 370px;
   }
   
   .tabs .no_ntc li:after{
-    width: 400px;
+    width: 370px;
   }
 
 }

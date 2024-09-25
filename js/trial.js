@@ -13,6 +13,18 @@ const ex_tabSalesNetwork = $('.ex_tab_salesNetwork');
 const ex_tabContent = $('.ex_tab_salesNetwork .tabs > div');
 let placeData = [];
 
+function debounce(callback, time){
+  let slideTrigger = true;
+  return (e)=>{
+    if(slideTrigger){
+      callback(e);
+      slideTrigger = false;
+      setTimeout(()=>{
+        slideTrigger = true;
+      }, time);
+    } 
+  }
+}
 
 /* TestDrive Modal */
 $('.ex_modalContainer').hide();
@@ -105,8 +117,23 @@ function autoSlide(){
   },4000)
 }
 
+// 버튼을 누르면 슬라이드 이동 함수가 작동
+$('.ex_slide_next').on('click', debounce(()=>{
+  moveSlide(currentIdx + 1);
+} , 500));
+
+$('.ex_slide_prev').on('click', debounce(()=>{
+  moveSlide(currentIdx - 1);
+}, 500)) ;
+
 //마우스 호버시 자동 슬라이드 종료, 마우스가 나가면 자동 슬라이드 재시작
 ex_slideContainer.hover(function(){
+  clearInterval(timer);
+  },function(){
+    autoSlide();
+  }
+);
+$('.ex_slide_control').hover(function(){
   clearInterval(timer);
   },function(){
     autoSlide();
@@ -292,7 +319,7 @@ function makeMap(){
       var el = document.createElement('li'),
       itemStr = '<span class="markerbg marker_' + (index+1) + ' blind"></span>' +
                   '<div class="info">' +
-                  '   <h5>' + places.place_name + '</h5>';
+                  ' <div class="info_address_icon"><i class="fa-regular fa-address-book"></i>  <div class="info_address"><h5>' + places.place_name + '</h5>';
   
       if (places.road_address_name) {
           itemStr += '    <p>' + places.road_address_name + '</p>' ;
@@ -300,7 +327,7 @@ function makeMap(){
           itemStr += '    <p>' +  places.address_name  + '</p>'; 
       }
                    
-        itemStr += '  <p class="tel">' + places.phone  + '</p>' +
+        itemStr += '  <p class="tel">' + places.phone  + '</p></div></div>' +
                   '</div>' +  '<button class="btn"> <i class="fa-solid fa-user-tie"></i>상담 신청</button>';             
   
       el.innerHTML = itemStr;

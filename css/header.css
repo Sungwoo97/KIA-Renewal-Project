@@ -57,6 +57,7 @@ header .navigation-items li a:hover:before {
     height: 120px;
     position: absolute;
     left: 50%;
+    top: -30%;
     transform: translateX(-50%);
 }
 
@@ -144,12 +145,11 @@ header .navigation-items li a:hover:before {
     cursor: pointer;
 }
 
-#right-arrow_white {
+#right-arrow_black{
     width: 10px;
-    /* 원하는 크기로 조정 */
     height: 10px;
-    /* 원하는 크기로 조정 */
 }
+
 
 /* ------------------드롭다운 메뉴 ------------- */
 /* 기본적으로 ul 숨기기 */
@@ -220,7 +220,7 @@ header .navigation-items li a:hover:before {
 
 /* -------------------------서브 서브 메뉴----------------------------*/
 
-#sub_sub_menus {
+.navigation-items .sub_sub_menus {
     display: none;
     position: absolute;
     top: 0;
@@ -237,7 +237,7 @@ header .navigation-items li a:hover:before {
 }
 
 /* 부모 li에 마우스 올렸을 때 sub_sub_menus 표시 */
-.navigation-items li a ul li:hover #sub_sub_menus {
+.navigation-items li a ul li:hover .sub_sub_menus {
     display: block;
     opacity: 1;
     visibility: visible;
@@ -589,6 +589,7 @@ header .navigation-items li a:hover:before {
     .kia_logo {
         width: 90px;
         height: 90px;
+        top:-10%;
     }
 }
 
@@ -602,6 +603,7 @@ header .navigation-items li a:hover:before {
     .kia_logo {
         width: 80px;
         height: 80px;
+        top: -20%;
     }
 
     header {
