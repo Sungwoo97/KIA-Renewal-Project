@@ -550,3 +550,20 @@ document.addEventListener('DOMContentLoaded', function() {
     gridView.style.marginBottom = '8rem';
   }
 });
+
+function adjustMargin() {
+  var button = document.querySelector('.load-more-button');
+  const gridView = document.querySelector('.grid-view'); // Adjust the selector to match your element
+  if (window.matchMedia('(max-width: 665px)').matches) {
+    // gridView.style.marginBottom = '10px';
+    button.style.marginBottom = '100px';
+  } else {
+    gridView.style.marginBottom = '3rem';
+  }
+}
+
+// Call the function initially
+adjustMargin();
+
+// Optionally, add an event listener to adjust the margin when the window is resized
+window.addEventListener('resize', adjustMargin);
