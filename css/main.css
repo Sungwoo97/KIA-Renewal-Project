@@ -375,7 +375,7 @@
     height: 480px;
   }
   .toplank_depth{
-    width: 100%;
+    width: 213px;
   }
   .tabs #be_tabs1 li img{
     margin: 37px 0 48px;
@@ -394,7 +394,7 @@
   }
   .be_btn{
     gap:15px;
-    margin-top: 15px;
+    margin-top: 17px;
   }
   .be_btn .btn{
     width: 281px;
@@ -405,9 +405,9 @@
     line-height: var(--body_sub_tt);
     margin-bottom: 25px;
   }
-  .toplanks .pager{
-    margin-bottom: 56px;
-    gap: 30px;
+  .toplanks .pager {
+    margin-bottom: 50px;
+    gap: 20px;
   }
 }
 @media (max-width:625px){
