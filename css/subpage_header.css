@@ -64,6 +64,7 @@ header .navigation-items li a ul li{
     top: -30%;
     transform: translateX(-50%); /* 가운데 정렬 수정 */
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+    top: -30%;
 }
 
 /* 아래는 스크롤 시 헤더 스타일을 추가하기 위한 기본 설정입니다. */
@@ -667,7 +668,7 @@ header .navigation-items li a ul li{
     .kia_logo {
         width: 90px;
         height: 90px;
-        top: -20%;
+        top: -10%;
     }
 }
 
@@ -681,8 +682,6 @@ header .navigation-items li a ul li{
     .kia_logo {
         width: 80px;
         height: 80px;
-        top: -20%;
-
     }
 
     header {

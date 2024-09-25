@@ -881,6 +881,11 @@ section .diagram.active ul li:nth-child(3) {
     transform: translate(-130px, 400px);
   }
 
+  section .diagram.active ul li:nth-child(2) span,
+  section .diagram.active ul li:nth-child(2) p{
+    transform: translate(70px, -40px);
+  }
+
   section .diagram.active ul li:last-child span,
   section .diagram.active ul li:last-child p{
     transform: translate(60px, -20px);

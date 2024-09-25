@@ -28,6 +28,7 @@ function debounce(callback, time){
 
 /* TestDrive Modal */
 $('.ex_modalContainer').hide();
+$('.ex_modalContainer').removeClass('hidden');
 $('.testDrive').click(function(){
   $('.ex_modalContainer').fadeIn();
 });
@@ -319,7 +320,7 @@ function makeMap(){
       var el = document.createElement('li'),
       itemStr = '<span class="markerbg marker_' + (index+1) + ' blind"></span>' +
                   '<div class="info">' +
-                  ' <div class="info_address_icon"><i class="fa-regular fa-address-book"></i>  <div class="info_address"><h5>' + places.place_name + '</h5>';
+                  '<h5>' + places.place_name + '</h5>  <div class="info_address"><i class="fa-regular fa-address-book"></i><div>';
   
       if (places.road_address_name) {
           itemStr += '    <p>' + places.road_address_name + '</p>' ;
