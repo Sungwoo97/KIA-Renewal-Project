@@ -141,60 +141,60 @@ window.addEventListener("resize", () => {
   }
 });
 
+document.addEventListener('DOMContentLoaded', (event) => {
 
-var accordions = document.querySelectorAll('.smallpage-accordion');
+  // 메뉴를 열고 닫는 아코디언 기능
+  var acc = document.getElementsByClassName("smallpage-accordion");
+  var panels = document.getElementsByClassName("smallpage-panel");
 
-// 각 아코디언에 클릭 이벤트 리스너 추가
-accordions.forEach(function (accordion) {
-  accordion.addEventListener('click', function () {
-    // 클릭된 아코디언 다음에 있는 패널 찾기
-    var panel = this.nextElementSibling.querySelector('.smallpage-panel');
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      // 현재 열려있는 모든 아코디언과 패널을 닫음
+      for (let j = 0; j < acc.length; j++) {
+        if (acc[j] !== this) {
+          acc[j].classList.remove("activeOnlySmallPage"); // 다른 아코디언에서 active 클래스 제거
+          panels[j].style.display = "none"; // 다른 패널 닫기
+        }
+      }
 
-    // 현재 패널의 표시 여부 확인
-    var isPanelOpen = panel.style.display === 'block';
+      // 클릭된 아코디언을 토글
+      this.classList.toggle("activeOnlySmallPage");
 
-    // 모든 패널 닫기
-    var allPanels = document.querySelectorAll('.smallpage-panel');
-    allPanels.forEach(function (p) {
-      p.style.display = 'none';
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none"; // 이미 열려있다면 닫기
+      } else {
+        panel.style.display = "block"; // 닫혀있다면 열기
+      }
     });
+  }
 
-    // 클릭한 아코디언의 패널을 열거나 닫기
-    if (!isPanelOpen) {
-      panel.style.display = 'block';
-    }
+  // 메뉴 닫기 버튼 기능
+  var closeBtn = document.querySelector('.smallpage-close');
+  var smallPageMenu = document.getElementById('smallpage-menu');
+
+  closeBtn.addEventListener('click', function () {
+    smallPageMenu.style.display = 'none';
+    document.body.style.overflow = 'auto'; // body의 스크롤을 복원
   });
+
 });
 
 
-// 메뉴 닫기 버튼 기능
-var closeBtn = document.querySelector('.smallpage-close');
-var smallPageMenu = document.getElementById('smallpage-menu');
-
-closeBtn.addEventListener('click', function () {
-  smallPageMenu.style.display = 'none';
-  document.body.style.overflow = 'auto'; // body의 스크롤을 복원
-});
-
-
-
-
-
-
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", function() {
   const header = document.querySelector("header");
   const navigationItems = document.querySelector(".navigation-items");
-
+  
   if (window.scrollY > 700) {
-    header.classList.add("scrolled");
+      header.classList.add("scrolled");
   } else {
-    header.classList.remove("scrolled");
+      header.classList.remove("scrolled");
   }
 
   var mediaIcons = document.querySelector('.media-icons');
-  if (window.scrollY > 100) {
-    mediaIcons.classList.add('hidden');
-  } else {
-    mediaIcons.classList.remove('hidden');
-  }
+    if (window.scrollY > 100) {
+        mediaIcons.classList.add('hidden');
+    } else {
+        mediaIcons.classList.remove('hidden');
+    }
 });
