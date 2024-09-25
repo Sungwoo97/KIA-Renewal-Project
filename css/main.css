@@ -1,7 +1,7 @@
 /* MODAL */
 .main_modal{
   position: fixed;
-  left: 5%;top: 10%;
+  left: 5%;top: 15%;
   background:rgba(0,0,0,.5);
   display: flex;
   z-index: 999999;
@@ -69,13 +69,13 @@
 .main_modal strong{
   color: var(--primary);
   font-weight: 700;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .main_modal strong a{
   color: var(--primary);
   font-weight: 700;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .modal_info .info_link img{
@@ -86,7 +86,6 @@
 }
 
 .modal_info .info_link .github{
-  width: 19px;
   filter: invert(1);
 }
 
@@ -207,7 +206,7 @@
   transition: 0.3s;
 }
 .toplanks .pager{
-  margin-bottom: 30px;
+  margin-bottom: 33px;
   display: flex;
   gap: 30px;
 }
@@ -235,7 +234,7 @@
   color: var(--medium_gray);
 }
 .be_btn{
-  margin-top: 20px;
+  margin-top: 21px;
   display: flex;
   gap: 8px;
   position: absolute;
@@ -243,7 +242,6 @@
 }
 .be_btn .btn{
   width: 154px;
-  padding:0;
 }
 .slick-dots{
   position: absolute;
@@ -1102,31 +1100,12 @@
   font-weight: 700;
 }
 
-.btn_no{
-  background: var(--white);
-  color: var(--black);
-  line-height: 38px;
-  padding: 0 45px;
-  font-size: 12px;
-  font-weight: 600;
-  transition: 0.3s;
-  border-width: 1px;
-  border-color: var(--primary);
-  display: inline-block;
-}
-
-.btn_no:hover{
-  background: var(--primary);
-  color: var(--white);
-}
-
-.tabs .no_notice .no_img div a,
+.tabs .no_notice a,
 .tabs .no_news a{
   height: 32px;
   border: 1px solid var(--primary);
   background: var(--white);
   padding: 10px 45px;
-  display: inline-block;
 }
 
 .tabs .no_notice a:hover,
@@ -1325,4 +1304,218 @@
     width: 370px;
   }
 
+}
+
+/* //Section 최은화 */
+
+/* Footer 최은화 */
+footer{
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* margin-top: 220px; */
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  background: var(--primary);
+  font-weight: 100;
+  line-height: 16px;
+}
+
+footer,
+footer a{
+  color: var(--white);
+  text-wrap: nowrap;
+}
+
+footer a:hover{
+  font-weight: 300;
+}
+
+footer .fo_prize{
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 20px 0;
+}
+
+footer .fo_prize li{
+  display: flex;
+  gap: 10px;
+  text-wrap: nowrap;
+  align-items: center;
+  font-size: 12px;
+}
+
+footer .fo_prize li img{
+  width: 88px;
+  height: 50px;
+}
+
+footer .fo_smallmenu,
+footer .no_guide{
+  display: flex;
+  gap: 50px;
+  transition: 0.3s;
+}
+  
+footer .no_guide .fo_top{
+  display: flex;
+  gap: 50px;
+  transition: 0.3s;
+}
+
+footer .no_guide .fo_bottom{
+  display: flex;
+  gap: 50px;
+  transition: 0.3s;
+}
+
+footer .no_sns{
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+footer .no_sns li i{
+  color: var(--white);
+  opacity: 50%;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+footer .no_sns li i:hover{
+  opacity: 100%;
+}
+
+footer > p:after{
+  content: '';
+  background: var(--medium_gray);
+  /* width: 1224px; */
+  width: 1400px;
+  height: 1px;
+  position: absolute;
+  right: 50%;
+  transform: translate(50%, -25px);
+  transition: 0.3s;
+}
+
+@media (max-width: 1200px){
+
+  footer .fo_prize{
+    width: 1200px;
+    gap: 50px;
+    justify-content: center;
+  }
+
+  footer .fo_prize li{
+    flex-direction: column;
+  }
+
+  footer > p:after{
+    width: 800px;
+  }
+}
+
+@media (max-width: 834px){
+
+  footer .fo_prize{
+    width: 100%;
+  }
+
+  footer .fo_prize p,
+  footer .fo_prize h4{
+    display: none;
+  }
+
+  footer .no_guide{
+    gap: 35px;
+    align-items: center;
+    object-fit: cover;
+  }
+  
+  footer .no_guide .fo_top{
+    display: flex;
+    gap: 35px;
+  }
+  
+  footer .no_guide .fo_bottom{
+    display: flex;
+    gap: 35px;
+  }
+
+  footer .fo_smallmenu a,
+  footer .no_guide a{
+    font-size: var(--body_tt);
+    text-wrap: nowrap;
+  }
+
+  footer > p:after{
+    width: 600px;
+  }
+
+}
+
+@media (max-width: 660px){
+
+  footer{
+    gap: 25px;
+  }
+
+  footer .fo_prize li img{
+   width: 68px;
+   height: 40px; 
+  }
+
+  footer .fo_smallmenu{
+    gap: 25px;
+  }
+
+  footer .no_guide{
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  footer .no_guide .fo_top{
+    gap: 30px;
+  }
+  
+  footer .no_guide .fo_bottom{
+    gap: 30px;
+  }
+
+  footer > p:after{
+    width: 500px;
+  }
+  
+}
+
+@media (max-width: 550px){
+  footer .fo_smallmenu{
+    gap: 10px;
+  }
+
+  footer .fo_prize{
+    display: none;
+  }
+
+  footer .no_guide{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  footer .no_guide .fo_top{
+    gap: 30px;
+  }
+  
+  footer .no_guide .fo_bottom{
+    gap: 30px;
+  }
+
+  footer > p:after{
+    width: 300px;
+  }
 }
