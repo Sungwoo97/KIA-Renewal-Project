@@ -808,7 +808,7 @@ header.scrolled {
     .media-icons{
         display: none;
     }
-    .main_header_content p, h3{
+    .speed{
         display: none;
     }
     .main_header_content h2 {
