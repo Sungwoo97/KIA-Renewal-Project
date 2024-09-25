@@ -45,10 +45,16 @@ $(window).resize(function(){
   // 반응형 슬라이드, 너비에 따라 보여줄 슬라이드 갯수가 변경
   if($(window).width() > 1260){
      ev_maxSlides = 3;
+     ev_slideWidth = 400;
   }else if($(window).width() < 1260 && $(window).width() > 768){
      ev_maxSlides = 2;
+     ev_slideWidth = 400;
+  }else if($(window).width() < 768 && $(window).width() > 400){
+    ev_maxSlides = 1;
+    ev_slideWidth = 400;
   }else{
     ev_maxSlides = 1;
+    ev_slideWidth = 300;
   }
   setLayout();
 });
@@ -99,6 +105,18 @@ function autoSlide(){
 }
 // 슬라이드에 호버하면 자동 슬라이드 정지, 나가면 재시작
 ev_slideContainer.hover(function(){
+  clearInterval(timer);
+  },function(){
+    autoSlide();
+  }
+);
+ev_nextBtn.hover(function(){
+  clearInterval(timer);
+  },function(){
+    autoSlide();
+  }
+);
+ev_prevBtn.hover(function(){
   clearInterval(timer);
   },function(){
     autoSlide();
