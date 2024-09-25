@@ -653,13 +653,13 @@
 }
 
 .me_ev_icons li:nth-child(2):after{
-  width: 59px;
-  background-position: -84px center;
+  width: 58px;
+  background-position: -83px center;
 }
 
 .me_ev_icons li:nth-child(3):after{
   width: 56px;
-  background-position: -154px center;
+  background-position: -152px center;
 }
 
 .me_ev_icons li:nth-child(4):after{
@@ -931,14 +931,6 @@
     margin: 0;
   }
 }
-@media (max-width:400px){
-  .ev_slide_wrapper{
-    width: 300px;
-  }
-  .ev_slide_container figure img{
-    object-fit: cover;
-  }
-}
 
 /* Section 최은화 */
 .no_title{
@@ -1110,12 +1102,31 @@
   font-weight: 700;
 }
 
-.tabs .no_notice a,
+.btn_no{
+  background: var(--white);
+  color: var(--black);
+  line-height: 38px;
+  padding: 0 45px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.3s;
+  border-width: 1px;
+  border-color: var(--primary);
+  display: inline-block;
+}
+
+.btn_no:hover{
+  background: var(--primary);
+  color: var(--white);
+}
+
+.tabs .no_notice .no_img div a,
 .tabs .no_news a{
   height: 32px;
   border: 1px solid var(--primary);
   background: var(--white);
   padding: 10px 45px;
+  display: inline-block;
 }
 
 .tabs .no_notice a:hover,
