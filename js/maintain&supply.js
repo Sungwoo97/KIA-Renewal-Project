@@ -7,20 +7,14 @@ const search_wrapper = document.querySelector('.search-wrapper');
 const imageList = document.querySelector('.image-list');
 const btns = document.querySelectorAll('.view-options button');
 // const imageListItem = imageList.querySelectorAll('li')
-const active = 'active';
-const listView = 'list-view';
-const gridView = 'grid-view';
 const dnone = 'd-none';
-const rangeInput = document.querySelector('input[type="range"]');
-const searchInput = document.querySelector('input[type="search"]');
-const zoom = document.querySelector('.zoom');
-// const captions = imageList.querySelectorAll('figcaption p:first-child')
-const count = document.querySelector('span');
-const buttonLow = document.querySelector('.button1');
-const buttonHigh = document.querySelector('.button2');
 let newHtml = '';
 let currentCount = 15; // Start with the initial 15 products
 const loadCount = 5;   // Number of products to load on each click
+
+
+
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -220,14 +214,25 @@ function renderItems() {
 // Initial render
 renderItems();
 
-// Event listener for the "Load More" button
+//버튼 없을때 여백을 좀더 늘려주자.
 const loadMoreButton = document.querySelector('.load-more-button');
 loadMoreButton.addEventListener('click', () => {
   currentCount += loadCount; // Increase the count by loadCount
   renderItems(); // Render the updated list of items
 });
 
-
+//버튼 없을때 여백을 좀더 늘려주자.
+document.addEventListener('DOMContentLoaded', function() {
+  var button = document.querySelector('.load-more-button');
+  var gridView = document.querySelector('.grid-view');
+  
+  // 버튼이 없거나, display가 none일 때 margin-bottom을 8rem으로 설정
+  if (!button || button.style.display === 'none') {
+    gridView.style.marginBottom = '811rem';
+  } else {
+    gridView.style.marginBottom = '5rem';
+  }
+});
 
 
 
@@ -533,3 +538,15 @@ for (let tm of tabMenu) {
       }
     });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  var button = document.querySelector('.load-more-button');
+  var gridView = document.querySelector('.grid-view');
+  
+  // 버튼이 없거나, display가 none일 때 margin-bottom을 8rem으로 설정
+  if (!button || button.style.display === 'none') {
+    gridView.style.marginBottom = '18rem';
+  } else {
+    gridView.style.marginBottom = '8rem';
+  }
+});
