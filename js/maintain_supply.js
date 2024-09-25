@@ -543,8 +543,3 @@ if (!button || button.style.display === 'none') {
   gridView.style.marginBottom = '5rem';
 }
 
-const kiaLogoContainer = document.querySelector('.kia_logo_container');
-kiaLogoContainer.addEventListener('click', function() {
-  console.log('gg')
-  window.location.href = 'index.html'; // Redirect to index.html
-});
