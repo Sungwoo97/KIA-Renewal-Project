@@ -39,7 +39,7 @@
     left: 0;
     bottom: -2.2px;
     width: 0;
-    height: 2.2px;
+    height: 1.2px;
     background-color: var(--primary);
     transition: width 0.3s ease;
     /* 애니메이션 속도 조정 */
@@ -338,8 +338,8 @@ img {
     display: grid;
     grid-gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    margin-bottom: 7rem; /* 원하는 공간 크기만큼 설정 */
 }
-
 /* LIST VIEW
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* list-view 가 있을떄 그 안의 figure에  */
@@ -488,7 +488,7 @@ figcaption p.title4 {
     margin: 20px auto;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+    margin-bottom: 100px;
 }
 
 .load-more-button:hover {

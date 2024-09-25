@@ -138,7 +138,7 @@ header.scrolled {
 
 .main_header_content {
     position: absolute;
-    top: 60%;
+    top: 70%;
     left: 70px;
     color: var(--white);
     opacity: 0;
@@ -514,8 +514,8 @@ header.scrolled {
 .smallpage-panel ul li a {
     text-decoration: none;
     display: block;
-    padding: 10px;
-    font-size: 16px;
+    padding: 5px;
+    font-size: 12px;
     color: black;
     
 }
