@@ -402,9 +402,9 @@ header.scrolled {
 .smallpage-content {
     z-index: 1001;
     margin: 5%  auto 10%;
-    top: 50px;
-    width: 70%;
-    height: 80%;
+    top: 30px;
+    width: 83%;
+    height: 83%;
     position: relative;
 
 }
@@ -426,7 +426,7 @@ header.scrolled {
 }
 
 .smallpage-mainSection2 {
-    height: 28%;
+    height: 24%;
     background-color: #c0c1c7;
 }
 
