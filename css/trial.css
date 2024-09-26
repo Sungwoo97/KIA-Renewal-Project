@@ -516,12 +516,16 @@
   .ex_slide_wrapper{
     width: 400px;
   }
+  .ex_slide_control{
+   right: 15%; 
+  }
 }
 
 @media (max-width:834px) {
   .ex_slide_wrapper{
     width: 400px;
   }
+
 }
 
 @keyframes activeText{
