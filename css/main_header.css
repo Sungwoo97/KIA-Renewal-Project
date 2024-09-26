@@ -267,15 +267,15 @@ header.scrolled {
 .scrolled .navigation-items li a ul {
     background-color : var(--primary); /* 드롭다운 메뉴 배경 투명하게 */
     box-shadow: none; /* 그림자 제거 */
+    
 }
 
-/* 드롭다운 항목 배경색 제거 */
+/* 드롭다운 주요 부분 */
 .scrolled .navigation-items li a ul li,
 .scrolled .navigation-items li a ul li ul li {
-    background-color : var(--primary) /* 항목 배경 투명하게 */
+    background-color : #05141F;
+
 }
-
-
 
 
 /* -------------------------서브 서브 메뉴----------------------------*/
@@ -402,9 +402,9 @@ header.scrolled {
 .smallpage-content {
     z-index: 1001;
     margin: 5%  auto 10%;
-    top: 50px;
-    width: 70%;
-    height: 80%;
+    top: 30px;
+    width: 83%;
+    height: 83%;
     position: relative;
 
 }
@@ -426,7 +426,7 @@ header.scrolled {
 }
 
 .smallpage-mainSection2 {
-    height: 33%;
+    height: 24%;
     background-color: #c0c1c7;
 }
 
@@ -468,7 +468,8 @@ header.scrolled {
 
 
 .smallpage-accordion {
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 600;
     background-color: #f1f1f1;
     padding: 5px;
     cursor: pointer;

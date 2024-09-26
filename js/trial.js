@@ -119,11 +119,13 @@ function autoSlide(){
 }
 
 // 버튼을 누르면 슬라이드 이동 함수가 작동
-$('.ex_slide_next').on('click', debounce(()=>{
+$('.ex_slide_next').on('click', debounce((e)=>{
+  e.preventDefault();
   moveSlide(currentIdx + 1);
 } , 500));
 
-$('.ex_slide_prev').on('click', debounce(()=>{
+$('.ex_slide_prev').on('click', debounce((e)=>{
+  e.preventDefault();
   moveSlide(currentIdx - 1);
 }, 500)) ;
 
